@@ -11,13 +11,14 @@ function peticion() {
 
         this.rutas.post("/Registro/Usuario", ver.verificar, (req, res) => {
 
-            bd.cruds.crudMembresias.buscar(req.body.Ci, (reg) => {
+            bd.cruds.crudMembresias.buscar({Ci:{valor: req.body.Ci, tipo:"igual"}}, (reg) => {
                 if (reg.length > 0) {
+                    reg =reg[0];
                     console.log("----------------------Info---------------------");
                     console.log("Ci: ", req.body.Ci);
                     console.log("Ci: ", reg);
                     console.log("Cargo: ", req.body.Cargo)
-                    bd.cruds.crudMembresias.modificar(req.body._id, req.body.Cargo, () => {
+                    bd.cruds.crudMembresias.modificar(req.body._id, {Cargo: req.body.Cargo}, () => {
                         req.flash('confirm', 'Usuario registrado correctamente');
                         res.redirect('back');
                     });
