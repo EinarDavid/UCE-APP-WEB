@@ -275,6 +275,9 @@ var ret = (passport) => {
   //nuevos
   require('./post/postIglesia.js').iniciar(rutas, bd, ver);
   require('./post/postMembresia.js').iniciar(rutas, bd, ver);
+
+  //Movile
+  require('../HTTP/RutasMovil.js').iniciar(rutas, bd, ver);
   return rutas;
 }
 

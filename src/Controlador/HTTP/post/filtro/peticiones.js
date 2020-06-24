@@ -8,7 +8,7 @@ function peticion() {
  
     this.funciones = (bd, ver) => {
 
-        this.rutas.post("/Filtro/Membresia", ver.verificarAdmin, (req, res) => {
+        this.rutas.post("/Filtro/Membresia", ver.verificar, (req, res) => {
 
             var campo = req.body.membresia;
             var valor = req.body.buscar;
@@ -16,6 +16,7 @@ function peticion() {
             var filtro = {}
             filtro[campo] = { valor, tipo: 'contieneString' }
             console.log(filtro);
+            
             bd.cruds.crudMembresia.buscar(filtro, (respuesta) => {
                 bd.cruds.crudUsuario.leer((car) => {
                     //console.log(""==respuesta);
