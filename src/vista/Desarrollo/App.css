@@ -1,0 +1,1341 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
+
+.demo-app {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 100px;
+  justify-content: center;
+  
+}
+
+.demo-app-top {
+  margin: 0 0 3em;
+}
+
+.demo-app-calendar {
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: rgb(0,0,0);
+  color: white;
+  
+}
+
+/*Menu*/
+.App-logo {
+  height: 9vmin;
+  margin-top: -5px;
+}
+.App-Foto{
+  height: 9vmin;
+  border-radius: 50%;
+  
+}
+.App-Foto-Popover{
+  height: 9vmin;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Center{
+  justify-content: center;
+  text-align: center;
+}
+.Margin{
+  margin: 10px 10px 10px 10px;
+}
+.menu-letra{
+  font-size: 10pt;
+  font-family: 'Gotham Book' !important;
+  
+}
+.menu-letra-IS{
+  font-size: 10pt;
+  font-family: 'FontAwesome Regular' !important;
+  
+}
+
+.Menu_prin{
+  background-color: transparent;
+  width: 100%;
+  transition: all .5s;
+}
+.ColordelMenu{
+  background-color: black;
+}
+.items{
+  justify-content: center;
+ 
+}
+ /*fondo principal  */
+
+.backgroud{
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.headervideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100%;
+  background-size: cover;
+  z-index: 0;
+}
+
+/*Letra de fondo*/
+.title{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.titulo{
+  position: relative;
+  animation: fadeup .4s ease-out;
+  z-index: 11;
+  
+}
+.titulo h1{
+  /*font-family: 'Authenia';*/
+  font-family: 'Adelia Regular' !important;
+    font-size: 37pt;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -.02em;
+    margin-top: -28px;
+    z-index: 12;
+}
+/*contenido background-image: url(/img/Diseño/church-5184596.svg); background: linear-gradient(to right, #983a7a, #412850);*/
+.texto_quienes_somos{
+ 
+    padding-top: 10%;
+    background-image: url(/img/Diseño/Fondo-Texto.jpg);
+    height: 750px;   
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+  
+}
+
+.Imagen-Fondo img{
+  z-index: 120;
+  width: 200px;
+  height: 400px;
+}
+.Encabezado_principal h2{
+  color:#FFB01A;
+  font-size: 37pt;
+  font-family: 'Adelia Regular' !important;
+  z-index: 10;
+}
+.Encabezado_principal h3{
+  font-family: 'Gotham Bold' !important;
+  color:#FFF;
+  font-size: 25pt;
+  
+}
+.Encabezado_principal p{
+  color:#fff;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+.texto_quienes_somos h4{
+  color:#fff;
+  font-family: 'Gotham Book' !important;
+  font-size: 8pt;
+  width: 50%;
+  margin: auto;
+  margin-top: 300px;
+  position: relative;
+  
+}
+.mision_vision{
+  width: 60%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  margin-top: 100px;
+ /* background-color: wheat;*/
+}
+
+.mision{
+ /* background-color: blue;*/
+  width:48%;
+  float: left;
+}
+.titulo_izquierda{
+  float: left;
+  /*background-color:yellow ;*/
+  width:30%;
+  
+}
+.titulo_derecha{
+  float: right;
+  width:67%;
+}
+.titulo_izquierda h2{
+  float: right;
+  margin-top: 30px;
+  
+  font-family: 'Gotham Bold' !important;
+  font-size: 25pt;
+  color: #E1B400;
+}
+.titulo_derecha p{
+ /* background-color: coral;*/
+  float:right;
+  text-align: left;
+  color:#fff;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+.vision{
+/*background-color: brown;*/
+  width:48%;
+  float: right;
+}
+/* NUEVA GALERIA DE IMAGENES */
+.section-wrap {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  display: block;
+  border-left: 0;
+  border-right: 0;
+  position: static;
+}
+.white {
+  background: #000;
+}
+.photogallery {
+  height: 150px;
+  overflow-x: scroll;
+  width: 100%;
+  -ms-overflow-style: none;
+}
+.photogallery-gridview {
+  height: auto;
+  overflow: hidden;
+}
+
+.photogallery-gridview .photogallery-images {
+  width: 100%;
+}
+.photogallery-images {
+  width: 4350px;
+  -ms-overflow-style: none;
+}
+.photogallery-gridview .photogallery-images-frame {
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 767px){
+.photogallery-gridview .photogallery-images-frame {
+    width: 25%;
+    height: auto;
+}}
+.photogallery-images-frame {
+  height: 150px;
+  display: inline-block;
+  float: left;
+  width: auto;
+  height: 150px;
+  background-color: #fff;
+}
+.photogallery-gridview .photogallery-images-frame img {
+  width: 100%;
+  height: auto;
+}
+.photogallery-images-frame img {
+  display: inherit;
+  float: none;
+  width: auto;
+  height: 150px;
+}
+/*Actividades*/
+.white2{
+  background: #fff;
+}
+.section-wrap {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  display: block;
+  border-left: 0;
+  border-right: 0;
+  position: static;
+}
+.section-row {
+  margin: 0 auto;
+  padding: 53px 20px;
+  max-width: 1200px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.section-row {
+  zoom: 1;
+}
+.rowtitles {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.rowtitle {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  color: #464646;
+  letter-spacing: -.02em;
+}
+.grid {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.col2 {
+  display: block;
+  float: left;
+  margin: 0 0 30px 1.6%;
+}
+.imagecomponent-image {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 260px;
+}
+.imagecomponent-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.imagecomponent-text {
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+}
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin-right: -15px;
+    margin-left: -15px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.imagecomponent-image img {
+  max-width: 100%;
+  width: 100%;
+  
+  height: auto;
+}
+@media only screen and (min-width: 979px){
+
+.rowtitles {
+  width: 800px;
+}
+.imagecomponent-image {
+  width: 100%;
+}
+}
+@media only screen and (min-width: 767px){
+.section-row {
+    padding: 100px 40px;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.rowtitles {
+  width: 560px;
+  margin-bottom: 24px;
+}
+.rowtitle {
+  font-size: 36px;
+  line-height: 44px;
+}
+.grid:last-child {
+  margin-bottom: 0;
+}
+.grid {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.col2 {
+  display: block;
+  float: left;
+  margin: 1% 5.6% 3% 5.6%;
+}
+.imagecomponent-image {
+  width: 100%;
+}
+}
+/* Galeria de Imagenes*/
+.contenedor-imagenes-galeria{
+  width: 100%;
+}
+.contenedor-imagenes-galeria ul{
+  list-style: none;
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap; 
+  transform: scale(1,1);  
+  transition: all .3s ease-in-out; 
+  
+}
+.imagenes {
+  width: 25%;
+  transform: scale(1,1);  
+  position: relative;  
+  filter: grayscale(1); 
+}
+
+.imagenes img {
+  width: 100%; 
+  transform: scale(1,1); 
+}
+.imagenes:hover{
+  filter: grayscale(0);
+}
+/* area estrategica background: linear-gradient(to bottom, #f5f0dd, #d1bb7b);*/
+
+.fondo_area_estrategica{
+  background-color: #f5f0dd;
+  height: auto;
+  position: relative;
+    background-image: url(/img/Diseño/Fondo-Area.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover; 
+    overflow: hidden;
+}
+.texto_area_estrategica{
+  padding-top: 10%;
+  text-align: center;
+  position: relative;
+}
+.texto_area_estrategica h2{
+  color:#FFB01A;
+  font-size: 37pt;
+  font-family: 'Adelia Regular' !important;
+}
+.texto_area_estrategica p{
+  color:#000;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+.card-deck-area{
+ 
+  width: 60%;
+  flex-flow: row wrap;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  
+}
+.card-area{
+ position: relative;
+ margin: 3%;
+
+}
+.imagen_area_estrategica{
+  position: relative;
+  height: 146px;
+  width: 146px;
+  border-radius: 50%;
+  transform: scale(1,1); 
+}
+.titulo_area_estrategica.h5{
+  font-size: 18pt;
+  font-family: 'Gotham Bold' !important;
+}
+.card-area{
+  background-color: transparent;
+  perspective: 1000px;
+}
+.flip-card-inner{
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-area:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+  
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-back{
+
+  margin-top: -50px !important;
+  transform: rotateY(180deg);
+}
+
+/*avanzada*/
+.backgroud-avanzada{
+  width: 100%;
+  height: 100vh;
+  /*background-image: url(./image/cielo.PNG);*/
+  background-image: url(/img/Fondo-Avanzada.jpg);
+  background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+.title-avanzada{
+  margin: 0 auto;
+  max-width: 85vw;
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+  animation: fadeup .4s ease-out;
+  font-weight: 700;
+}
+.title-avanzada h1{
+  font-size: 37pt;
+  font-family: 'Adelia Regular' !important;
+  color: #FFB01A;
+
+}
+.title-avanzada p{
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+.card-deck-avanzada{ 
+  width: 100%;
+  flex-flow: row wrap;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 200px;
+}
+.card-avanzada{
+  position: relative;
+  margin: 3%;
+ }
+ .imagen_avanzada{
+  position: relative;
+  height: 146px;
+  width: 146px;
+  border-radius: 50%;
+}
+.card-body-avanzada{
+  margin-top: 20px;
+}
+.titulo-avanzada-igle.h5{
+  font-size: 18pt;
+  font-family: 'Gotham Bold' !important;
+}
+/*contenido 2*/
+.texto_quienes_somos_2{
+    text-align: center;
+    position: relative;
+    padding-top: 10%;
+    background-color: #433480;
+    height: 1100px;
+
+    background-image: url(/img/Diseño/Fondo-Res2.jpg);
+       
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    
+    overflow: hidden;
+    
+}
+.Encabezado_2 h2{
+  color:#FFB01A;
+  font-size: 37pt;
+  font-family: 'Adelia Regular' !important;
+}
+.Encabezado_2 p{
+  color:#fff;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+.Inf_clubes{
+  /*background-color: red;*/
+  width: 40%;
+  margin: auto;
+  height: 110px;
+  margin-top:80px;
+}
+.Inf_clubes_div{
+  
+  float: left;
+  width: 35%;
+  
+}
+.Inf_clubes_div p{
+  text-align: right;
+  
+}
+.Inf_clubes_cont{
+  
+  float: right;
+  width: 60%;
+}
+.Inf_clubes_cont p{
+  text-align: left;
+}
+.niveles_rangos{
+  /*background-color: red;*/
+  width: 40%;
+  margin: auto;
+  height: 160px;
+  margin-top:80px;
+}
+.niveles_rangos_titulo{
+  float: left;
+  width: 35%;
+  
+}
+.niveles_rangos_titulo h3{
+  text-align: right;
+  font-family: 'Gotham Bold' !important;
+  font-size: 30pt;
+  color: #FFB01A;
+}
+.niveles_rangos_contenido{
+  
+  float: right;
+  width: 60%;
+}
+.niveles_rangos_contenido p{
+  text-align: left;
+}
+.pastores{
+  /*background-color: red;*/
+  width: 40%;
+  margin: auto;
+  height: 150px;
+  margin-top:80px;
+}
+.pastores_titulo{
+  float: left;
+  width: 35%;
+  
+}
+.pastores_titulo h3{
+  text-align: right;
+  font-family: 'Gotham Bold' !important;
+  font-size: 30pt;
+  color: #FFB01A;
+}
+.pastores_contenido{
+  float: right;
+  width: 60%;
+}
+.pastores_contenido p{
+  text-align: left;
+}
+/*contenido 3*/
+.texto_quienes_somos_3{
+  text-align: center;
+  position: relative;
+  padding-top: 10%;
+  background-color: #412850;
+  height: 900px;
+
+  background-image: url(/img/Diseño/Fondo-Horario.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+.Encabezado_3 h2{
+color:#FFB01A;
+font-size: 37pt;
+font-family: 'Adelia Regular' !important;
+}
+.Encabezado_3 h3{
+  color:#FFB01A;
+  font-family: 'Gotham Bold' !important;
+  font-size: 25pt;
+  float: left;
+}
+.Encabezado_3 p{
+  color:#fff;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+  float: left
+}
+.horario{
+/*background-color: red;*/
+width: 40%;
+margin: auto;
+height: 400px;
+margin-top:80px;
+}
+.horario_left{
+/*background-color: blue;*/
+float: left;
+width: 38%;
+
+}
+.horario_left p{
+text-align: left;
+}
+.horario_right{
+/*background-color: pink;*/
+float: right;
+width: 60%;
+}
+.horario_right p{
+text-align: left;
+}
+/*footer*/
+.footer{
+  background-color: #000;
+  height: 200px;
+  position: relative;
+}
+.footer_redes_sociales{
+  float: left;
+  width: 43%;
+  margin-top: 85px;
+}
+.footer_redes_sociales h4{
+  text-align: right;
+  font-family: 'FontAwesome Regular' !important;
+  color: #FFB01A;
+  font-size: 25pt;
+}
+.footer_redes_sociales a{
+  color: #FFB01A;
+}
+.footer_redes_sociales a:hover{
+  text-decoration:none;
+  color:white;
+}
+.footer_copyright{
+  float: right;
+  width: 50%;
+  margin-top: 100px;
+}
+.footer_copyright h5{
+  text-align: left;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+  color:#fff;
+}
+/*Otras Vistas*/
+.texto_quienes_somos_vistas{
+  text-align: center;
+    position: relative;
+    padding-top: 10%;
+    background-color: #F5F0DD;
+    height: 450px;   
+}
+.Contenido{
+  width: 30%;
+  margin: auto;
+  
+}
+.Contenido p{
+  color:#000;
+  font-family: 'Gotham Book' !important;
+  font-size: 12pt;
+}
+/*Formulario Login Puma*/
+.Contenedor-Principal{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/Igle.jpg);
+  background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    
+}
+.Form-Contenedor-Puma{
+  height: 550px;
+  position: relative;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 120px;
+}
+.Form-Puma{
+  background: rgb(243, 111, 33, .8);
+  position: relative;
+  color: #fff;
+  padding-top: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+.Form-Puma-Center{
+  justify-content: center;
+  text-align: center;
+  
+}
+.Contenedor-Derecha{
+  
+  width: 60%;
+  float: left;
+  
+  height: 550px;
+}
+.Form-Puma-Image{
+ 
+  float: right;
+  width: 40%;
+  background-color: brown;
+  height: 550px;
+}
+.Form-Puma-Image img{
+  width: 100%;
+  height: 100%;
+}
+/*Vista-Inicio-Puma*/
+.backgroud-Fondo-Puma{
+  width: 100%;
+  height: 100vh;
+  /*background-image: url(./image/cielo.PNG);*/
+  background-image: url(/img/Iglefondo.png);
+  background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+/*Letra de fondo*/
+.title-Fondo{
+  margin: 0 auto;
+  
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.titulo-Fondo{
+  position: relative;
+  animation: fadeup .4s ease-out;
+  
+}
+.titulo-Fondo h1{
+  /*font-family: 'Authenia';*/
+  font-family: 'Adelia Regular' !important;
+    font-size: 37pt;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -.02em;
+    margin-top: -28px;
+}
+/*Mis Forms*/
+.Form-Login-Prin{
+  background: rgb(0, 83, 128, .5);
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+  color: #FFF;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 10%;
+}
+.Form-Login{
+  background: rgb(0, 83, 128);
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: #FFF;
+  padding: 40px;
+  border-radius: 10px;
+}
+.Form-registro{
+  background: rgb(0, 83, 128);
+  width: 100%;
+  margin: 0 auto;
+  color: #FFF;
+  position: relative;
+  padding: 40px;
+  border-radius: 10px;
+}
+.Form-registro-Check{
+  width: 10%;
+}
+.Color-Advertencia{
+  color: rgb(255, 205, 6);
+}
+.Form-filtro{
+  margin-top: 85px;
+  background: rgb(0, 83, 128);
+  width: 100%;
+  
+  
+  position: relative;
+  padding: 40px;
+  
+  color: #FFF;
+}
+.Form-filtro th,td{
+  color: #FFF;
+}
+/*Accion*/
+.accion a{
+  font-family: 'FontAwesome Regular' !important;
+  color: #FFB01A;
+  font-size: 25pt;
+  text-decoration:none !important;
+}
+.accion a:hover{
+  text-decoration:none !important;
+  color:white !important;
+}
+.Reportes{
+  justify-content: center;
+  text-align: center;
+}
+
+/* POA*/
+.fechas{
+  width: 100%;
+}
+.fechas ul{
+  list-style: none;
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.mes {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap; 
+  transform: scale(1,1);  
+  transition: all .3s ease-in-out; 
+  
+}
+.dias {
+  width: 25%;
+  transform: scale(1,1);  
+  position: relative;  
+  filter: grayscale(1); 
+}
+/*
+.imagenes img {
+  width: 100%; 
+  transform: scale(1,1); 
+}*/
+.imagenes:hover{
+  filter: grayscale(0);
+}
+/*Botones del Form de Modificacion*/
+.ContenedorFondo{
+  position: relative;
+}
+.ModFondo{
+  background-color: transparent;
+  color:white;
+  float: right;
+  font-family: 'FontAwesome Regular' !important;
+  margin-top: -40px;
+  margin-right: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  text-decoration: none;
+  z-index: 50;
+}
+.ModFondo:hover,  .ModTexto:hover{
+  background-color: rgb(253, 254, 254);
+  color: #000;
+}
+.ModTexto{
+  background-color: transparent;
+  color:white;
+  float: center;
+  font-family: 'FontAwesome Regular' !important;
+  margin-left: 27%;
+  border: 1px solid;
+  border-radius: 10px;
+  text-decoration: none;
+}
+/*Responsive*/
+
+@media screen and (max-width:950px){
+  .menu-letra{
+    font-size: 8pt;
+  }
+  .items{
+    justify-content: left;
+    text-align: left;
+  }
+  .titulo h1{
+    font-size: 27pt;
+    margin-top: -20px;
+  }
+  /*Contenido 1*/
+  .Encabezado_principal h2{
+    font-size: 27pt;
+    margin-top: 30px;
+  }
+  .Encabezado_principal h3{
+    font-size: 18pt;
+  }
+  .Encabezado_principal p{
+    font-size: 8pt;
+  }
+  /*-------Vistas--------*/
+  .texto_quienes_somos_vistas{
+    height: 340px;
+  }
+  .Contenido{
+    width: 40%;
+  }
+  .Contenido p{
+    font-size: 8pt;
+  }
+  /*---------------------*/
+  .mision_vision{
+    width: 50%;
+    margin-top: 50px;
+  }
+  .mision{
+    width:100%;
+  }
+  .titulo_izquierda h2{
+    font-size: 18pt;
+    margin-top: 10px;
+  }
+  .titulo_derecha p{
+    font-size: 8pt;
+  }
+  .vision{
+    width:100%;
+  }
+  .texto_quienes_somos h4{
+    margin-top: 200px;
+  }
+  /*Area estrategica*/
+  .texto_area_estrategica h2{
+    font-size: 27pt;
+  }
+  .texto_area_estrategica p{
+    font-size: 8pt;
+  }
+  .card-deck-area{
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .imagen_area_estrategica{
+    height: 100px;
+    width: 100px;
+  }
+  .titulo_area_estrategica.h5{
+    font-size: 10pt;
+  }
+  /*Avanzada*/
+  .title-avanzada h1{
+    font-size: 27pt;
+  }
+  .title-avanzada p{
+    font-size: 8pt;
+  }
+  .card-deck-avanzada{
+    width:90%;
+  }
+  .imagen_avanzada{
+    height: 100px;
+    width: 100px;
+  }
+  .titulo-avanzada-igle.h5{
+    font-size: 10pt;
+  }
+  /*Contenido 2*/
+  .texto_quienes_somos_2{
+    height: 700px;
+  }
+
+  .Inf_clubes{
+    margin-top:50px;
+    width: 60%;
+  }
+  .Encabezado_2 h2{
+    font-size: 27pt;
+  }
+  .Encabezado_2 p{
+    font-size: 8pt;
+  }
+/*----------*/
+  .niveles_rangos{
+    margin-top: 12px;
+    width: 60%;
+  }
+  .niveles_rangos_titulo{
+    margin-top: 0px;
+  }
+  .niveles_rangos_titulo h3{
+    font-size: 23pt;
+  }
+  /*--------*/
+  .pastores{
+    margin-top: 12px;
+    width: 60%;
+    height: 100px;
+  }
+  .pastores_titulo{
+    margin-top: 0px;
+  }
+  .pastores_titulo h3{
+    font-size: 23pt;
+  }
+  /*Contenido 3*/
+  .horario{
+    width: 60%;
+    margin-top: 20px;
+    height: 300px;
+  }
+  .texto_quienes_somos_3{
+    height: 500px;
+  }
+  .Encabezado_3 h2{
+    font-size: 27pt;
+  }
+  .Encabezado_3 h3{
+    font-size: 18pt;
+  }
+  .Encabezado_3 p{
+    font-size: 8pt;
+  }
+  /*footer*/
+  .footer{
+    height: 150px;
+  }
+  .footer_redes_sociales{
+    margin-top: 58px;
+  }
+  .footer_copyright{
+    margin-top: 70px;
+  }
+  .footer_redes_sociales h4{
+    font-size: 18pt;
+  }
+  .footer_copyright h5{
+    font-size: 8pt;
+  }
+  
+}
+@media screen and (max-width:600px){
+  .menu-letra{
+    font-size: 6pt;
+  }
+  .titulo h1{
+    font-size: 20pt;
+    margin-top: -20px;
+  }
+  /*Contenido 1*/
+  .Encabezado_principal h2{
+    font-size: 20pt;
+    margin-top: 30px;
+  }
+  .Encabezado_principal h3{
+    font-size: 14pt;
+  }
+  .Encabezado_principal p{
+    font-size: 6pt;
+  }
+  /*-------Vistas--------*/
+  .texto_quienes_somos_vistas{
+    height: 240px;
+  }
+  .Contenido{
+    width: 50%;
+  }
+  .Contenido p{
+    font-size: 6pt;
+  }
+  /*---------------------*/
+  .mision_vision{
+    width: 50%;
+    margin-top: 50px;
+  }
+  .mision{
+    width:100%;
+  }
+  .titulo_izquierda h2{
+    font-size: 14pt;
+    margin-top: 10px;
+  }
+  .titulo_derecha p{
+    font-size: 6pt;
+  }
+  .vision{
+    width:100%;
+  }
+  .texto_quienes_somos h4{
+    margin-top: 150px;
+    font-size: 6pt;
+  }
+  /*Area Estrategica*/
+  .texto_area_estrategica h2{
+    font-size: 20pt;
+  }
+  .texto_area_estrategica p{
+    font-size: 6pt;
+  }
+  .card-deck-area{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .imagen_area_estrategica{
+    height: 70px;
+    width: 70px;
+  }
+  .titulo_area_estrategica.h5{
+    font-size: 6pt;
+  }
+  /*Avanzada*/
+  .title-avanzada h1{
+    font-size: 20pt;
+  }
+  .title-avanzada p{
+    font-size: 6pt;
+  }
+  .card-deck-avanzada{
+    width:100%;
+  }
+  .imagen_avanzada{
+    height: 70px;
+    width: 70px;
+  }
+  .titulo-avanzada-igle.h5{
+    font-size: 6pt;
+  }
+  /*Contenido 2*/
+  .texto_quienes_somos_2{
+    height: 520px;
+    
+  }
+  .Inf_clubes{
+    margin-top:30px;
+    width: 90%;
+    height: 80px;
+  }
+  .Encabezado_2 h2{
+    font-size: 20pt;
+  }
+  .Encabezado_2 p{
+    font-size: 6pt;
+  }
+/*----------*/
+  .niveles_rangos{
+    margin-top: 12px;
+    height: 100px;
+    width: 90%;
+  }
+  .niveles_rangos_titulo h3{
+    font-size: 14pt;
+  }
+  /*--------*/
+  .pastores{
+    margin-top: 12px;
+    height: 100px;
+    width: 90%;
+  }
+  .pastores_titulo h3{
+    font-size: 14pt;
+  }
+  /*Contenido 3*/
+  .horario{
+    width: 70%;
+    height: 250px;
+  }
+  .texto_quienes_somos_3{
+    height: 400px;
+  }
+  .Encabezado_3 h2{
+    font-size: 20pt;
+  }
+  .Encabezado_3 h3{
+    font-size: 14pt;
+  }
+  .Encabezado_3 p{
+    font-size: 6pt;
+  }
+  /*footer*/
+  .footer{
+    height: 100px;
+  }
+  .footer_redes_sociales{
+    margin-top: 38px;
+  }
+  .footer_copyright{
+    margin-top: 48px;
+  }
+  .footer_redes_sociales h4{
+    font-size: 14pt;
+  }
+  .footer_copyright h5{
+    font-size: 6pt;
+  }
+}
+

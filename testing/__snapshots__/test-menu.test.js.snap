@@ -1,0 +1,1508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test 1 1`] = `
+<div>
+  <nav
+    className="fixed-top Menu_prin navbar navbar-expand-lg navbar-dark sticky- top "
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      <img
+        className="App-logo"
+        src="/img/Logo_Igle_Menu.svg"
+      />
+    </a>
+    <button
+      aria-controls="responsive-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="items navbar-collapse collapse"
+      id="responsive-navbar-nav"
+    >
+      <div
+        className="navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/ministerial"
+          data-testid="boton"
+          href="/ministerial"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          MINISTERIAL
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/ev_min"
+          href="/ev_min"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          EVANGELISMO_Y_MISIONES
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/accion_social"
+          href="/accion_social"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          ACCIÓN_SOCIAL
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/edu_cris"
+          href="/edu_cris"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          EDUCACIÓN_CRISTIANA
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/administracion"
+          href="/administracion"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          ADMINISTRACIÓN
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Test 2 1`] = `
+<div>
+  <div
+    className="Form-registro"
+  >
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          CI*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="id_ci"
+          placeholder="CI"
+          required={true}
+          type="number"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridPassword"
+        >
+          Nombre*
+        </label>
+        <input
+          className="form-control"
+          id="formGridPassword"
+          name="nombre"
+          placeholder="Nombre"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Apellido_Paterno*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ap_paterno"
+          placeholder="Apellido Paterno"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Apellido_Materno
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ap_materno"
+          placeholder="Apellido Materno"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlSelect1"
+        >
+          Genero
+        </label>
+        <select
+          className="form-control"
+          id="exampleForm.ControlSelect1"
+          name="genero"
+        >
+          <option
+            value="Masculino"
+          >
+            Masculino
+          </option>
+          <option
+            value="Femenino"
+          >
+            Femenino
+          </option>
+        </select>
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Telefono
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="telefono"
+          placeholder="Telefono"
+          type="number"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Celular
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="celular"
+          placeholder="Celular"
+          type="number"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_nacimiento
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_nac"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Lugar
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="lugar"
+          placeholder="Lugar"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_conversion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_conversion"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_bautizo
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_bautizo"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Profesion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="profesion"
+          placeholder="Profesion"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Ocupacion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ocupacion"
+          placeholder="Ocupacion"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlTextarea1"
+        >
+          Dirección
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleForm.ControlTextarea1"
+          name="direccion"
+          placeholder="direccion"
+          rows="3"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlSelect1"
+        >
+          Estado_civil
+        </label>
+        <select
+          className="form-control"
+          id="exampleForm.ControlSelect1"
+          name="estado_civil"
+        >
+          <option
+            value="Solter@"
+          >
+            Solter@
+          </option>
+          <option
+            value="Casad@"
+          >
+            Casad@
+          </option>
+          <option
+            value="Viud@"
+          >
+            Viud@
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Imagen_Membresia
+        </label>
+        <input
+          accept="image/*"
+          className="form-control-file"
+          id="formGridEmail"
+          name="imagen_membresia"
+          type="file"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Email
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="email"
+          placeholder="Email"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Foto
+        </label>
+        <input
+          accept="image/*"
+          className="form-control-file"
+          id="formGridEmail"
+          name="foto"
+          type="file"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test 3 1`] = `
+<div>
+  <div
+    className="Form-registro"
+  >
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="reloj form-label"
+          htmlFor="formGridEmail"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          CI*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="id_ci"
+          placeholder="CI"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Formulario Registro Bautizo 1`] = `
+<div>
+  <div
+    className="Form-registro"
+  >
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          CI*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="id_ci"
+          placeholder="CI"
+          required={true}
+          type="number"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridPassword"
+        >
+          Nombre*
+        </label>
+        <input
+          className="form-control"
+          id="formGridPassword"
+          name="nombre"
+          placeholder="Nombre"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Apellido_Paterno*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ap_paterno"
+          placeholder="Apellido Paterno"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Apellido_Materno
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ap_materno"
+          placeholder="Apellido Materno"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlSelect1"
+        >
+          Genero
+        </label>
+        <select
+          className="form-control"
+          id="exampleForm.ControlSelect1"
+          name="genero"
+        >
+          <option
+            value="Masculino"
+          >
+            Masculino
+          </option>
+          <option
+            value="Femenino"
+          >
+            Femenino
+          </option>
+        </select>
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Telefono
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="telefono"
+          placeholder="Telefono"
+          type="number"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Celular
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="celular"
+          placeholder="Celular"
+          type="number"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_nacimiento
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_nac"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Lugar
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="lugar"
+          placeholder="Lugar"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_conversion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_conversion"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Fecha_de_bautizo
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="fecha_bautizo"
+          type="date"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Profesion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="profesion"
+          placeholder="Profesion"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Ocupacion
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="ocupacion"
+          placeholder="Ocupacion"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlTextarea1"
+        >
+          Dirección
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleForm.ControlTextarea1"
+          name="direccion"
+          placeholder="direccion"
+          rows="3"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="exampleForm.ControlSelect1"
+        >
+          Estado_civil
+        </label>
+        <select
+          className="form-control"
+          id="exampleForm.ControlSelect1"
+          name="estado_civil"
+        >
+          <option
+            value="Solter@"
+          >
+            Solter@
+          </option>
+          <option
+            value="Casad@"
+          >
+            Casad@
+          </option>
+          <option
+            value="Viud@"
+          >
+            Viud@
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Imagen_Membresia
+        </label>
+        <input
+          accept="image/*"
+          className="form-control-file"
+          id="formGridEmail"
+          name="imagen_membresia"
+          type="file"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Email
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="email"
+          placeholder="Email"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          Foto
+        </label>
+        <input
+          accept="image/*"
+          className="form-control-file"
+          id="formGridEmail"
+          name="foto"
+          type="file"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Galeria 1`] = `
+<div
+  className="contenedor-imagenes-galeria"
+>
+  <ul
+    className="galeria"
+  >
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+  </ul>
+  <ul
+    className="galeria"
+  >
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+    <li
+      className="imagenes"
+    >
+       
+      <img
+        alt=""
+        src="/img/img_380.png"
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Test Menu Principal 1`] = `
+<div>
+  <nav
+    className="fixed-top Menu_prin navbar navbar-expand-lg navbar-dark sticky- top "
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      <img
+        className="App-logo"
+        src="/img/Logo_Igle_Menu.svg"
+      />
+    </a>
+    <button
+      aria-controls="responsive-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="items navbar-collapse collapse"
+      id="responsive-navbar-nav"
+    >
+      <div
+        className="navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/ministerial"
+          data-testid="boton"
+          href="/ministerial"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          MINISTERIAL
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/ev_min"
+          href="/ev_min"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          EVANGELISMO_Y_MISIONES
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/accion_social"
+          href="/accion_social"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          ACCIÓN_SOCIAL
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/edu_cris"
+          href="/edu_cris"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          EDUCACIÓN_CRISTIANA
+        </a>
+        <a
+          className="menu-letra nav-link"
+          data-rb-event-key="/administracion"
+          href="/administracion"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          ADMINISTRACIÓN
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Test Registro de Santa Cena 1`] = `
+<div>
+  <div
+    className="Form-registro"
+  >
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="reloj form-label"
+          htmlFor="formGridEmail"
+        />
+      </div>
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="form-group col"
+      >
+        <label
+          className="form-label"
+          htmlFor="formGridEmail"
+        >
+          CI*
+        </label>
+        <input
+          className="form-control"
+          id="formGridEmail"
+          name="id_ci"
+          placeholder="CI"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Vista Accion Social 1`] = `
+Array [
+  <div>
+    <nav
+      className="fixed-top Menu_prin navbar navbar-expand-lg navbar-dark sticky- top "
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+      >
+        <img
+          className="App-logo"
+          src="/img/Logo_Igle_Menu.svg"
+        />
+      </a>
+      <button
+        aria-controls="responsive-navbar-nav"
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-expanded={null}
+        className="items navbar-collapse collapse"
+        id="responsive-navbar-nav"
+      >
+        <div
+          className="navbar-nav"
+          onKeyDown={[Function]}
+        >
+          <a
+            className="menu-letra nav-link"
+            data-rb-event-key="/ministerial"
+            data-testid="boton"
+            href="/ministerial"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            MINISTERIAL
+          </a>
+          <a
+            className="menu-letra nav-link"
+            data-rb-event-key="/ev_min"
+            href="/ev_min"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            EVANGELISMO_Y_MISIONES
+          </a>
+          <a
+            className="menu-letra nav-link"
+            data-rb-event-key="/accion_social"
+            href="/accion_social"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            ACCIÓN_SOCIAL
+          </a>
+          <a
+            className="menu-letra nav-link"
+            data-rb-event-key="/edu_cris"
+            href="/edu_cris"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            EDUCACIÓN_CRISTIANA
+          </a>
+          <a
+            className="menu-letra nav-link"
+            data-rb-event-key="/administracion"
+            href="/administracion"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            ADMINISTRACIÓN
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="backgroud"
+  >
+    <div
+      className="title"
+    >
+      <div
+        className="titulo"
+      >
+        <h1>
+          Acción Social
+        </h1>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="texto_quienes_somos_vistas"
+  >
+    <div
+      className="Encabezado_principal"
+    >
+      <h2>
+        Sobre Nosotros
+      </h2>
+    </div>
+    <div
+      className="Contenido"
+    >
+      <p>
+        Refleja la administración eficiente de los recursos económicos para la extensión del evangelio a toda latitud, además de la buena mayordomía aplicada de acuerdo a los planes programáticos de la iglesia.
+      </p>
+    </div>
+  </div>,
+  <div
+    className="contenedor-imagenes-galeria"
+  >
+    <ul
+      className="galeria"
+    >
+      <li
+        className="imagenes"
+      >
+         
+        <img
+          alt=""
+          src="/img/galeria/17.jpg"
+        />
+      </li>
+      <li
+        className="imagenes"
+      >
+         
+        <img
+          alt=""
+          src="/img/galeria/18.jpg"
+        />
+      </li>
+      <li
+        className="imagenes"
+      >
+         
+        <img
+          alt=""
+          src="/img/galeria/19.jpg"
+        />
+      </li>
+      <li
+        className="imagenes"
+      >
+         
+        <img
+          alt=""
+          src="/img/galeria/20.jpg"
+        />
+      </li>
+    </ul>
+  </div>,
+  <div
+    className=""
+  >
+    <div
+      className="carousel slide"
+      onKeyDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+    >
+      <ol
+        className="carousel-indicators"
+      >
+        <li
+          className="active"
+          onClick={[Function]}
+        />
+         
+        <li
+          className={null}
+          onClick={[Function]}
+        />
+         
+        <li
+          className={null}
+          onClick={[Function]}
+        />
+         
+      </ol>
+      <div
+        className="carousel-inner"
+      >
+        <div
+          className="active carousel-item"
+        >
+          <img
+            alt="First slide"
+            className="d-block w-100"
+            src="/img/slider_2.png"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt="Third slide"
+            className="d-block w-100"
+            src="/img/slider_2.png"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt="Third slide"
+            className="d-block w-100"
+            src="/img/slider_2.png"
+          />
+        </div>
+      </div>
+      <a
+        className="carousel-control-prev"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-prev-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          Previous
+        </span>
+      </a>
+      <a
+        className="carousel-control-next"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-next-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          Next
+        </span>
+      </a>
+    </div>
+  </div>,
+  <div
+    className="texto_quienes_somos_3"
+  >
+    <div
+      className="Encabezado_3"
+    >
+      <h2>
+        Horarios de Servicio
+      </h2>
+      <div
+        className="horario"
+      >
+        <div
+          className="horario_left"
+        >
+          <h3>
+            MARTES
+          </h3>
+          <p>
+            • 20:00 Servicio de Oración
+          </p>
+          <h3>
+            JUEVES
+          </h3>
+          <p>
+            • 14:00 Sociedad Femenil
+            <br />
+            • 20:00 Estudio Bíblico
+          </p>
+          <h3>
+            VIERNES
+          </h3>
+          <p>
+            • 19:30 Ministerio Pre-juvenil
+          </p>
+          <h3>
+            SÁBADO
+          </h3>
+          <p>
+            • 20:00 Sociedad Juvenil
+          </p>
+        </div>
+        <div
+          className="horario_right"
+        >
+          <h3>
+            DOMINGO
+          </h3>
+          <p>
+            • 05:30 Oración de Madrugada
+            <br />
+            • 08:00 Primer Servicio Dominical (para adultos mayores Quechua, aymara y castellano)
+            <br />
+            • 09:00 Segundo Servicio Dominical (división de clases por edades y estado civil)
+            <br />
+            • 11:00 Tercer Servicio Dominical (culto unido, niños, padres, ancianos, etc)
+            <br />
+            • 14:00 Club OANSA (actividades dinámicas para todas las edades)
+            <br />
+            • 18:00 Culto en Quechua
+            <br />
+            • 19:30 Culto de Evangelismo
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="footer"
+  >
+    <div
+      className="footer_redes_sociales"
+    >
+      <h4>
+        <a
+          href="#"
+        >
+          
+        </a>
+         
+        <a
+          href="#"
+        >
+          
+        </a>
+         
+        <a
+          href="#"
+        >
+          
+        </a>
+         
+        <a
+          href="#"
+        >
+          
+        </a>
+      </h4>
+    </div>
+    <div
+      className="footer_copyright"
+    >
+      <h5>
+        © COPYRIGHT QODE INTERACTIVE
+      </h5>
+    </div>
+  </div>,
+]
+`;

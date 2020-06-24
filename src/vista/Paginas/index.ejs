@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+ 
+
+  <!--<link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Sebastian Pagador church website" />
+
+  <style>
+    .backgroud {
+      background-image: url('/img/fondos/<%= pagina %>.jpg');
+    }
+  </style>
+
+  <script>
+    var datos = '<%- JSON.stringify(datos) %>';
+    datos = JSON.parse(datos);
+  </script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.6.3/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.6.3/umd/react-dom.production.min.js"></script>
+
+  <title>ISP AppWeb</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div id="<%= pagina %>"></div>
+
+  <% if(confirm!="") {%>
+  <div class="confirm alert alert-success" role="alert">
+    <%= confirm %>
+  </div>
+  <% } %>
+  <% if(error!="") {%>
+  <div class="confirm alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+  <% } %>
+  <script type="text/javascript">
+    /*setTimeout(()=>
+    {
+      try {
+        ordenarFichas(20,20,cont,"ficha");
+  
+      } catch (e) {
+  
+      } finally {
+  
+      }
+    },3000);*/
+    $(".confirm").click(() => {
+      $(".confirm").fadeOut(1000, () => {
+        try {
+          ordenarFichas(20, 20, cont, "ficha");
+
+        } catch (e) {
+
+        } finally {
+
+        }
+      });
+    });
+  </script>
+
+  <script src="/react/<%= pagina %>.js"></script>
+  <script src="/reloj.js"></script>
+  <script src="/Menu.js"></script>
+
+</body>
+
+</html>
