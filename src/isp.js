@@ -15,7 +15,7 @@ var puerto = "7000";
 require('./Modelo/Autenticacion/local.js')(passport);
 
 var store = new MongoDBStore({
-  uri: 'mongodb://localhost:27017/ManitaMagica',
+  uri: 'mongodb://localhost:27017/iglesia',
   collection: 'mySessions'
 });
 app.use(session({

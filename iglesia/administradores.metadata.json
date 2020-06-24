@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"iglesia.administradores"}],"uuid":"72109d0579684540b5c62adbb6572a98"}
