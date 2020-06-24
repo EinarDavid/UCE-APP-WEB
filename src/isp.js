@@ -59,7 +59,7 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.set("views", path.join(__dirname, "Vista"));
+app.set("views", path.join(__dirname, "vista"));
 app.set("view engine", "ejs");
 
 app.use(flash());
