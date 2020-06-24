@@ -16,15 +16,12 @@ function peticion() {
                     reg =reg[0];
                     console.log("----------------------Info---------------------");
                     console.log("Ci: ", req.body.Ci);
-                    console.log("Ci: ", reg);
+                    console.log("Ci: ", reg._id);
                     console.log("Cargo: ", req.body.Cargo)
-                    bd.cruds.crudMembresias.modificar(req.body._id, {Cargo: req.body.Cargo}, () => {
+                    bd.cruds.crudMembresias.modificar(reg._id, {Cargo: req.body.Cargo}, () => {
                         req.flash('confirm', 'Usuario registrado correctamente');
                         res.redirect('back');
                     });
-                    console.log("---------------------Registrado-----------------------");
-                    console.log(req.body)
-                    console.log("--------------------------------------------");
                 } else {
                     req.flash('error', 'Membresia no existe');
                     res.redirect('back');
