@@ -60,7 +60,8 @@ function peticion() {
             const id = req.body._id;
             delete req.body.id;
             bd.cruds.crudMembresias.modificar(id, req.body, () => {
-                res.redirect("back");
+                var mensage = 'Guardado Correctamente';
+                res.json({jala:"si", mensage});
             })
 
 
