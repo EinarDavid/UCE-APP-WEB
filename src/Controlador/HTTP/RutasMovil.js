@@ -55,10 +55,10 @@ function peticion() {
                 res.json(igle);
             })
         });
-        this.rutas.post("/Movile/ModMembresia", (req, res) => {
+        this.rutas.post("/Movile/ModMembresia/:id", (req, res) => {
             
-            const id = req.body._id;
-            delete req.body.id;
+            const id = req.params.id;
+            //delete req.body.id;
             console.log("body:", req.body, id);
             bd.cruds.crudMembresias.modificar(id, req.body, () => {
                 var mensage = 'Guardado Correctamente';
