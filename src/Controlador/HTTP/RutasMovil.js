@@ -17,6 +17,8 @@ function peticion() {
             console.log(req.body)
             res.json(req.body)
         });
+        
+  var bcrypt = require('bcryptjs');
         this.rutas.post("/LoginMovil", (req, res) => {
             bd.cruds.crudMembresias.buscar({
                 Ci:
