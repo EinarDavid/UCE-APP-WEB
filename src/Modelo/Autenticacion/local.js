@@ -2,7 +2,7 @@ module.exports = (passport) => {
   var bcrypt = require('bcryptjs');
 
   var bd = require('./../BD/bd.js');
-  bd.iniciar();
+  bd.iniciar(); 
 
   const LocalStrategy = require('passport-local').Strategy;
 
