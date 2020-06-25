@@ -51,6 +51,7 @@ function peticion() {
         });
         this.rutas.post("/VerDatosIglesia", (req, res)=>{
             bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) =>{
+                console.log("Datos Iglesia: ", igle);
                 res.json(igle);
             })
         })
