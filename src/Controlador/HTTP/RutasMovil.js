@@ -17,7 +17,7 @@ function peticion() {
             console.log(req.body)
             res.json(req.body)
         });
-        this.rutas.get("/LoginMovil", (req, res) => {
+        this.rutas.post("/LoginMovil", (req, res) => {
             bd.cruds.crudMembresias.buscar({
                 Ci:
                 {
