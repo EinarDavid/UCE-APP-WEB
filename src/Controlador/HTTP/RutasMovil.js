@@ -49,11 +49,21 @@ function peticion() {
                 }
             });
         });
-        this.rutas.post("/VerDatosIglesia", (req, res)=>{
-            bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) =>{
+        this.rutas.post("/VerDatosIglesia", (req, res) => {
+            bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) => {
                 console.log("Datos Iglesia: ", igle);
                 res.json(igle);
             })
+        });
+        this.rutas.post("/Movile/ModMembresia", (req, res) => {
+            console.log("body:", req.body);
+            const id = req.body._id;
+            delete req.body.id;
+            bd.cruds.crudMembresias.modificar(id, req.body, () => {
+                res.redirect("back");
+            })
+
+
         })
     }
 }
