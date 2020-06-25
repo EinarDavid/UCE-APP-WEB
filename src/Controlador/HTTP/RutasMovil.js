@@ -56,9 +56,10 @@ function peticion() {
             })
         });
         this.rutas.post("/Movile/ModMembresia", (req, res) => {
-            console.log("body:", req.body);
+            
             const id = req.body._id;
             delete req.body.id;
+            console.log("body:", req.body, id);
             bd.cruds.crudMembresias.modificar(id, req.body, () => {
                 var mensage = 'Guardado Correctamente';
                 res.json({jala:"si", mensage});
