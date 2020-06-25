@@ -17,8 +17,8 @@ function peticion() {
             console.log(req.body)
             res.json(req.body)
         });
-        
-  var bcrypt = require('bcryptjs');
+
+        var bcrypt = require('bcryptjs');
         this.rutas.post("/LoginMovil", (req, res) => {
             bd.cruds.crudMembresias.buscar({
                 Ci:
@@ -31,7 +31,7 @@ function peticion() {
                 usuario = usuario[0];
                 if (!(usuario != undefined)) {
                     var mensage = 'CI no registrado';
-                    res.json({jala: "no", mensage})
+                    res.json({ jala: "no", mensage })
                 }
                 else {
 
@@ -39,15 +39,20 @@ function peticion() {
                         if (err) console.log(err);
                         if (resp == true) {
                             var mensage = "Bienvenido de nuevo " + usuario.Nombre;
-                            res.json({usuario, mensage});
+                            res.json({ usuario, mensage });
                         }
                         else {
                             var mensage = 'Contraseña incorrecta';
-                            res.json({jala: "no", mensage})
+                            res.json({ jala: "no", mensage })
                         }
                     });
                 }
             });
+        });
+        this.rutas.post("/VerDatosIglesia", (req, res)=>{
+            bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) =>{
+                res.json(igle);
+            })
         })
     }
 }
