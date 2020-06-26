@@ -14,18 +14,18 @@ class Formulario extends Component {
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Descripcion</Form.Label>
-                            <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion" defaultValue={window.datos.Iglesia.Descripcion} />
+                            <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion"  defaultValue={window.datos.Iglesia.Descripcion} />
                         </Form.Group>
 
                     </Form.Row>
                     <Form.Row>
                         <Form.Group as={Col} >
                             <Form.Label>Misión</Form.Label>
-                            <Form.Control as="textarea" rows="5" placeholder="Misión" name="Mision" defaultValue={window.datos.Iglesia.Mision} />
+                            <Form.Control as="textarea" rows="5" placeholder="Misión" name="Mision" required defaultValue={window.datos.Iglesia.Mision} />
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Visión</Form.Label>
-                            <Form.Control as="textarea" rows="5" placeholder="Visión" name="Vision" defaultValue={window.datos.Iglesia.Vision} />
+                            <Form.Control as="textarea" rows="5" placeholder="Visión" name="Vision" required defaultValue={window.datos.Iglesia.Vision} />
                         </Form.Group>
 
                     </Form.Row>

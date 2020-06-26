@@ -1,0 +1,25 @@
+subir 
+sh github.sh
+
+--------conectar a ip-----------
+ssh root@104.129.131.142
+
+contrasena : ErickAranibar1
+
+
+al entrar--------------
+
+cd proyectos IMPORTANTE----
+
+cd UCE-APP-WEB
+npm start
+ 
+
+para actualizar el proyecto en el servidor
+sh UCE-APP-WEB.sh
+
+para entrar desde el navegador
+104.129.131.142:7000
+
+--------Salir-------
+Exit

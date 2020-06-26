@@ -18,11 +18,11 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Ci*</Form.Label>
-                        <Form.Control type="number" placeholder="CI" name="Ci" />
+                        <Form.Control type="number" placeholder="CI" name="Ci" required />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Iglesia*</Form.Label>
-                        <Form.Control as="select" name="Iglesia">
+                        <Form.Control as="select" name="Iglesia" required>
                             {
                                 this.state.iglesias.map(iglesia => {
                                     return(
@@ -38,7 +38,7 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Contraseña*</Form.Label>
-                        <Form.Control type="Password" placeholder="Contraseña" name="Contraseña" />
+                        <Form.Control type="Password" placeholder="Contraseña" name="Contraseña" required/>
                     </Form.Group>
                 </Form.Row>
 

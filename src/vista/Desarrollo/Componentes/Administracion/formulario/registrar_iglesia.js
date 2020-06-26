@@ -8,13 +8,13 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Nombre*</Form.Label>
-                        <Form.Control type="text" placeholder="Nombre*" name="Nombre" />
+                        <Form.Control type="text" placeholder="Nombre*" name="Nombre" required />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Direccion*</Form.Label>
-                        <Form.Control type="text" placeholder="Direccion*" name="Direccion" />
+                        <Form.Control type="text" placeholder="Direccion*" name="Direccion" required />
                     </Form.Group>
                 </Form.Row>
             </div>

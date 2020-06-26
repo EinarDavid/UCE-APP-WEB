@@ -19,13 +19,13 @@ function Formulario() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Nombre*</Form.Label>
-                        <Form.Control type="text" placeholder="Nombre" name="Nombre" />
+                        <Form.Control type="text" placeholder="Nombre" name="Nombre" required/>
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Paterno*</Form.Label>
-                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" />
+                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno"required />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Materno</Form.Label>

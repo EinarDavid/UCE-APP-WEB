@@ -20,19 +20,19 @@ class Formulario extends Component {
                         <Form.Control type="number" placeholder="CI" name="Ci" required />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Contraseña</Form.Label>
+                        <Form.Label>Contraseña*</Form.Label>
                         <Form.Control type="Password" placeholder="Contraseña" name="Contraseña" required />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Nombre*</Form.Label>
-                        <Form.Control type="text" placeholder="Nombre" name="Nombre" />
+                        <Form.Control type="text" placeholder="Nombre" name="Nombre" required/>
                     </Form.Group>
                 </Form.Row>
 
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Paterno*</Form.Label>
-                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" />
+                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required/>
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Materno</Form.Label>

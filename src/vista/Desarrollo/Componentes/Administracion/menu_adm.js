@@ -402,7 +402,7 @@ class Menu_Admi extends React.Component {
                                     </Form.Group>
                                     <Form.Group as={Col}>
                                         <Form.Label>Search</Form.Label>
-                                        <FormControl type="text" placeholder="Search" className="mr-sm-2" name="buscar" />
+                                        <FormControl type="text" placeholder="Search" className="mr-sm-2" name="buscar" required />
                                     </Form.Group>
                                 </Form.Row>
                             </div>
@@ -535,7 +535,7 @@ class Menu_Admi extends React.Component {
                                     </Form.Group>
                                     <Form.Group as={Col}>
                                         <Form.Label>Search</Form.Label>
-                                        <FormControl type="text" placeholder="Search" className="mr-sm-2" name="buscar" />
+                                        <FormControl type="text" placeholder="Search" className="mr-sm-2" name="buscar" required />
                                     </Form.Group>
                                 </Form.Row>
                             </div>
