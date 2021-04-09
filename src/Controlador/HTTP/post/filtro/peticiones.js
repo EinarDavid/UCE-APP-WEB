@@ -31,7 +31,7 @@ function peticion() {
                     });
                 });
         */
-                console.log("--------------------***************************",respuesta)
+                console.log("--------------------***************************",filtro,respuesta)
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
                     console.log("#########################", req.user)
                     var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
