@@ -394,10 +394,11 @@ class Menu_Admi extends React.Component {
                                     <Form.Group as={Col} controlId="formGridState">
                                         <Form.Label>Selecionar</Form.Label>
                                         <Form.Control as="select" name="membresia">
-                                            <option value="id_ci">Ci</option>
-                                            <option value="nombre">Nombre</option>
-                                            <option value="ap_paterno">Apellido</option>
-                                            <option value="genero">Genero</option>
+
+                                            <option value="Ci">Ci</option>
+                                            <option value="Nombre">Nombre</option>
+                                            <option value="Apellido_Paterno">Apellido</option>
+                                            <option value="Genero">Genero</option>
                                         </Form.Control>
                                     </Form.Group>
                                     <Form.Group as={Col}>
