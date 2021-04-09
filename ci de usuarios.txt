@@ -2,10 +2,13 @@
 
 9367493 admin -> usuario administrador Sebastian Pagador
 69000 user -> usuario normal Sebastian pagador
-
-
-6935749 admin -> usuario administrador Monte de Sion
-
 7958908 user -> usuario administrador de Sebastian Pagador
+7000 user -> sebastian pagador
 
 
+6935749 admin -> usuario administrador Canaan
+
+
+8000 admin -> admi iglesias unidas
+
+63949159 admin -> la palabra de Fe

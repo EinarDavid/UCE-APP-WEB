@@ -15,7 +15,7 @@ function peticion() {
 
             var filtro = {}
             filtro[campo] = { valor, tipo: 'contieneString' }
-            console.log(filtro);
+            console.log(bd.cruds);
             
             bd.cruds.crudMembresia.buscar(filtro, (respuesta) => {
                 bd.cruds.crudUsuario.leer((car) => {
