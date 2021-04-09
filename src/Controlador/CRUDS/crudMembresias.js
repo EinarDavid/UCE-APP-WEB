@@ -73,7 +73,8 @@ function crud()
     {
       if(!error)
       {
-        console.log("}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}{{{{{{{{{{{{{{{{{{{{",res)
+        console.log("}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}{{{{{{{{{{{{{{{{{{{{")
+        console.log(res)
         const buscar=require("./buscar.js");
         res=buscar(res,filtro);
         callback(res);
