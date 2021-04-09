@@ -32,7 +32,8 @@ function peticion() {
                 });
         */
                 console.log("--------------------***************************",respuesta)
-                bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
+                bd.cruds.crudIglesia.buscar1(req.user.idIglesia, (igle) => {
+                    console.log("#########################", req.user)
                     var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
                     datos.user = req.user;
                     datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
