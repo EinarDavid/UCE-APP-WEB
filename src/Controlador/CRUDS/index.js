@@ -7,6 +7,7 @@ function cruds() {
     this.crudMembresias = require("./crudMembresias");
     this.crudArea = require("./crudArea");
     this.crudAdministrador = require("./crudAdministrador");
+    this.crud_usuario = requiere ("./crud_usuario")
   }
 
 
