@@ -31,6 +31,7 @@ class Formulario extends Component {
                             {
 
                                 Object.getOwnPropertyNames(this.state.filtro[0]).map(columna => {
+                                    console.log(columna)
                                     return (
                                         <th>{columna}</th>
                                     )
