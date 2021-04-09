@@ -18,6 +18,7 @@ function peticion() {
             console.log(bd.cruds);
             
             bd.cruds.crudMembresias.buscar(filtro, (respuesta) => {
+        /*
                 bd.cruds.crudUsuario.leer((car) => {
                     //console.log(""==respuesta);
                     cargos = car;
@@ -29,7 +30,11 @@ function peticion() {
                         datos: { titulo: 'Resultados De la Busqueda Membresia', cargos, filtro: respuesta, reporte: 'membresia' }
                     });
                 });
-
+        */
+                res.render("Paginas/index", {
+                    pagina: 'filtro',
+                    datos: { titulo: 'Resultados De la Busqueda Membresia', cargos, filtro: respuesta, reporte: 'membresia' }
+                });
             });
 
 
