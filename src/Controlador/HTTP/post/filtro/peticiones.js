@@ -34,7 +34,7 @@ function peticion() {
                 console.log("--------------------***************************",respuesta)
                 res.render("Paginas/index", {
                     pagina: 'filtro',
-                    datos: { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
+                    datos: datos.assign({ titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' })
                 });
             });
 // git add . || git commit -am "filtros" || git push
