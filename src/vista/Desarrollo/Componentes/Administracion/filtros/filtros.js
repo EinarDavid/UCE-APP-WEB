@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
 
-
+ 
 
 class Formulario extends Component {
     constructor() {

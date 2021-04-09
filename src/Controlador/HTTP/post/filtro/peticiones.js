@@ -33,7 +33,7 @@ function peticion() {
         */
                 res.render("Paginas/index", {
                     pagina: 'filtro',
-                    datos: { titulo: 'Resultados De la Busqueda Membresia', cargos, filtro: respuesta, reporte: 'membresia' }
+                    datos: { titulo: 'Resultados De la Busqueda Membresia', filtro: respuesta, reporte: 'membresia' }
                 });
             });
 
