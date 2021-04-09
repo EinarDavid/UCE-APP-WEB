@@ -93,7 +93,7 @@ var ret = (passport) => {
       });
   });
 
-  rutas.get("/filtro/:idIglesia", (req, res) => {
+  rutas.get("/filtro/", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
     
