@@ -15,7 +15,7 @@ function peticion() {
 
             var filtro = {}
             filtro[campo] = { valor, tipo: 'contieneString' }
-            console.log(bd.cruds);
+            //console.log(bd.cruds);
             
             bd.cruds.crudMembresias.buscar(filtro, (respuesta) => {
         /*
@@ -31,6 +31,7 @@ function peticion() {
                     });
                 });
         */
+                console.log("--------------------***************************",respuesta)
                 res.render("Paginas/index", {
                     pagina: 'filtro',
                     datos: { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
