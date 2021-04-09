@@ -96,11 +96,21 @@ var ret = (passport) => {
   rutas.get("/filtro", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
-    res.render("Paginas/index",
+    
+    bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
+      datos.user = req.user;
+      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+
+      datos.Iglesia = igle;
+      datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
+
+      res.render("Paginas/index",
       {
         pagina: 'filtro',
         datos
       });
+    })
+
   });
   rutas.get("/Iglesia/:idIglesia/poa", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);

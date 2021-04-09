@@ -169,7 +169,7 @@ class Menu_Admi extends React.Component {
 
             <div >
                 <Navbar className="fixed-top Menu_prin" id="ColorMenu" sticky=" top " collapseOnSelect expand="lg" variant="dark" >
-                    <Navbar.Brand href={"/Iglesia/" + window.datos.Iglesia._id2}><img src={'/fotos/Iglesias/' + window.datos.Iglesia.Logo} className="App-logo" /></Navbar.Brand>
+                    <Navbar.Brand href={"/Iglesia/" + window.datos.Iglesia._id}><img src={'/fotos/Iglesias/' + window.datos.Iglesia.Logo} className="App-logo" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="items">
                         <Nav bsPrefix="mr-auto">
