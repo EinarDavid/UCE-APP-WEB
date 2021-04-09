@@ -33,10 +33,10 @@ function peticion() {
         */
                 res.render("Paginas/index", {
                     pagina: 'filtro',
-                    datos: { titulo: 'Resultados De la Busqueda Membresia', filtro: respuesta, reporte: 'membresia' }
+                    datos: { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
                 });
             });
-
+// git add . || git commit -am "filtros" || git push
 
         });
         this.rutas.post("/Filtro/SC", ver.verificarAdmin, (req, res) => {
