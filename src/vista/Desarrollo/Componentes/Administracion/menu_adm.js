@@ -184,7 +184,7 @@ class Menu_Admi extends React.Component {
                                 <NavDropdown.Item onClick={this.handleShow_filtro_membresia}>MEMBRESIA</NavDropdown.Item>
                                 <NavDropdown.Item onClick={this.handleShow_filtro_Usuario}>ENCARGADO</NavDropdown.Item>
                             </NavDropdown >
-
+                            <Nav.Link onClick={this.handleShow_RegistrarActividad} style={menu} className="menu-letra">REG. ACTIVIDAD</Nav.Link>
                             <Nav.Link onClick={this.handleShow_Editar} style={menu} className="menu-letra">EDITAR_VISTA</Nav.Link>
                             <Nav.Link href={'/Iglesia/'+ window.datos.Iglesia._id +'/poa'} style={menu} className="menu-letra">POA</Nav.Link>
                         </Nav>
