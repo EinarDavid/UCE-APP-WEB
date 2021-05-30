@@ -184,9 +184,9 @@ class Menu_Admi extends React.Component {
                                 <NavDropdown.Item onClick={this.handleShow_filtro_membresia}>MEMBRESIA</NavDropdown.Item>
                                 <NavDropdown.Item onClick={this.handleShow_filtro_Usuario}>ENCARGADO</NavDropdown.Item>
                             </NavDropdown >
-                            
-                            <Nav.Link onClick={this.handleShow_Editar} style={menu} className="menu-letra">EDITAR_VISTA</Nav.Link>
 
+                            <Nav.Link onClick={this.handleShow_Editar} style={menu} className="menu-letra">EDITAR_VISTA</Nav.Link>
+                            <Nav.Link href='/poa' style={menu} className="menu-letra">POA</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
@@ -576,7 +576,6 @@ class Menu_Admi extends React.Component {
                         </Modal.Footer>
                     </Form>
                 </Modal>
-            
                 <Modal size="lg" show={this.state.show18} onHide={this.handleClose} centered>
                     <Form action="#" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
