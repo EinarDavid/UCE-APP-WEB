@@ -21,7 +21,8 @@
   </style>
 
   <script>
-    var datos = '<%- JSON.stringify(datos) %>'.replace(/\r/g, ' AAA');
+    var datos = '<%- JSON.stringify(datos) %>'.replace(/\r/g, 'AAA');
+    datos =  datos.replace(/\n/g, 'EEE');
     console.log(datos)
     datos = JSON.parse(datos);
   </script>
