@@ -186,7 +186,7 @@ class Menu_Admi extends React.Component {
                             </NavDropdown >
 
                             <Nav.Link onClick={this.handleShow_Editar} style={menu} className="menu-letra">EDITAR_VISTA</Nav.Link>
-                            <Nav.Link href='/poa' style={menu} className="menu-letra">POA</Nav.Link>
+                            <Nav.Link href={'/Iglesia/'+ window.datos.Iglesia._id +'/poa'} style={menu} className="menu-letra">POA</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
