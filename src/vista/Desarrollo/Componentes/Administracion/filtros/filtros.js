@@ -16,6 +16,8 @@ class Formulario extends Component {
             //console.log("----------------",this.state.filtro[0],"------------------");    
             this.state.filtro = [{}];
         }
+        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;")
+        console.log(this.state)
         console.log(this.state.reporte)
     }
     render() {

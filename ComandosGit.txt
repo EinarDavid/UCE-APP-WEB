@@ -23,3 +23,10 @@ para entrar desde el navegador
 
 --------Salir-------
 Exit
+
+Encender server
+cd src
+pm2 start isp.js
+exit
+
+Aumentar calendario de actividades

@@ -394,8 +394,7 @@ class Menu_Admi extends React.Component {
                                     <Form.Group as={Col} controlId="formGridState">
                                         <Form.Label>Selecionar</Form.Label>
                                         <Form.Control as="select" name="membresia">
-
-                                            <option value="Ci">Cis</option>
+                                            <option value="Ci">Ci</option>
                                             <option value="Nombre">Nombre</option>
                                             <option value="Apellido_Paterno">Apellido</option>
                                             <option value="Genero">Genero</option>

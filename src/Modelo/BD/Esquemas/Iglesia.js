@@ -10,7 +10,7 @@ const actividadSchema = Schema({
     Inicio: String,
     Fin: String,
     Tipo: String,
-    Iglesias: [String],
+    Iglesias: String,
     CI_encargados: [String],
     Presupuesto: Number
 });
