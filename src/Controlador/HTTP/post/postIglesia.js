@@ -108,7 +108,7 @@ function peticion() {
                         iglesia.Actividades.push(
                             {
                                 Codigo: hash,
-                                FotoActividad:req.files[0],
+                                FotoActividad:req.files[0].filename,
                                 Titulo: req.body.Titulo,
                                 Descripcion: req.body.Descripcion,
                                 Inicio: req.body.Inicio,
