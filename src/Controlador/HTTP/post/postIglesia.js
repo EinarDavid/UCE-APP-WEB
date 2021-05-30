@@ -31,6 +31,11 @@ function peticion() {
                 name:'FotosSlider'
             }
         ]);
+        var upload2 = multer({ storage: storage }).fields([
+            {
+                name: 'FotoActividad', maxCount:1
+            }
+        ]);
 
         this.rutas.post("/Registro/Iglesia", ver.verificar, (req, res) => {
             bd.cruds.crudIglesia.ingresar(req.body, () => {
