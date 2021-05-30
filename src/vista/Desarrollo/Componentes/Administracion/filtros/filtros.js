@@ -89,7 +89,7 @@ class Formulario extends Component {
                                     <tr key={i}>
                                         <td>{i}</td>
                                         {
-                                            columnas.map(columna => {
+                                            this.columnas.map(columna => {
                                                 var valor=filtro[columna]
                                                 return (
                                                     <td>{valor.toString()}</td>
