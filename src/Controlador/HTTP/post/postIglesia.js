@@ -83,7 +83,7 @@ function peticion() {
                 var hash = crypto.randomBytes(3).toString('hex');
                 console.log(hash);
 
-                iglesia.actividades.push(
+                iglesia.Actividades.push(
                     {
                         Codigo: hash,
                         FotoActividad:"String",
@@ -96,10 +96,11 @@ function peticion() {
                         Presupuesto: req.body.Presupuesto,
                     }
                 )
-                console.log(iglesia)
+                console.log(iglesia.Actividades)
+                
+                res.redirect("back")
             })
 
-            res.redirect("back")
         });
     }
 }
