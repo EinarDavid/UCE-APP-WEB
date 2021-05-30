@@ -79,7 +79,7 @@ function peticion() {
         });
         this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
 
-            upload(req, res, function (err) {
+            upload2(req, res, function (err) {
                 if (err) {
                     console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
