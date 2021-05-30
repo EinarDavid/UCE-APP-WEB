@@ -91,9 +91,19 @@ class Formulario extends Component {
                                         {
                                             this.columnas.map(columna => {
                                                 var valor=filtro[columna]
-                                                return (
-                                                    <td>{valor}</td>
-                                                )
+                                                if(columna=="FotoPerfil")
+                                                {
+                                                    return (
+                                                        <td><img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
+                                                    )
+                                                }
+                                                else
+                                                {
+                                                    return (
+                                                        <td>{valor}</td>
+                                                    )
+                                                }
+
                                             })
 
                                         }
