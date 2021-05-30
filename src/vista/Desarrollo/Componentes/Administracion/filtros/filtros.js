@@ -9,18 +9,21 @@ class Formulario extends Component {
         var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña"]
         var rellenar = ["Cargo"]
         window.datos.filtro = window.datos.filtro.map(a=>{
-            rellenar.map(b=>{
-                if(a[b]==undefined)
-                {
-                    a[b]=""
-                }
-                return b;
-            })
-            excepciones.map(c=>{
-                delete a[c]
-                return a;
-            })
-        })
+            if(a!=undefined)
+            {
+                rellenar.map(b=>{
+                    if(a[b]==undefined)
+                    {
+                        a[b]=""
+                    }
+                    return b;
+                });
+                excepciones.map(c=>{
+                    delete a[c]
+                    return a;
+                });
+            }
+        });
 /*
         window.datos.filtro = window.datos.filtro.map(a=>{
             delete a.MiembroBautizo;
