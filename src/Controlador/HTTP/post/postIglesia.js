@@ -11,8 +11,18 @@ function peticion() {
     this.funciones = (bd, ver) => {
         const multer = require('multer');
         var ruta = "./public/fotos/Iglesias/";
+        var ruta2 = "./public/fotos/Iglesias/Actividad";
         var storage = multer.diskStorage({
             destination: ruta,
+            filename: function (req, file, callback) {
+                var re = /(?:\.([^.]+))?$/;
+                var extension = re.exec(file.originalname)[1];
+                console.log(extension);
+                callback(null, req.user.Iglesia + " - " + Date.now() + "." + extension);
+            }
+        });
+        var storage2 = multer.diskStorage({
+            destination: ruta2,
             filename: function (req, file, callback) {
                 var re = /(?:\.([^.]+))?$/;
                 var extension = re.exec(file.originalname)[1];
@@ -31,7 +41,7 @@ function peticion() {
                 name:'FotosSlider'
             }
         ]);
-        var upload2 = multer({ storage: storage }).fields([
+        var upload2 = multer({ storage: storage2 }).fields([
             {
                 name: 'FotoActividad', maxCount:1
             }
@@ -98,7 +108,7 @@ function peticion() {
                         iglesia.Actividades.push(
                             {
                                 Codigo: hash,
-                                FotoActividad:"String",
+                                FotoActividad:req.files[0],
                                 Titulo: req.body.Titulo,
                                 Descripcion: req.body.Descripcion,
                                 Inicio: req.body.Inicio,
@@ -108,11 +118,13 @@ function peticion() {
                                 Presupuesto: req.body.Presupuesto,
                             }
                         )
-                        console.log(iglesia.Actividades)
-                        console.log("----------------------------------Imagenes:------------------------------------")
-                        console.log("body:", req.body);
-                        console.log("files:", req.files);
-                        res.redirect("back")
+                        bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, ()=>{
+                            console.log(iglesia.Actividades)
+                            console.log("----------------------------------Imagenes:------------------------------------")
+                            console.log("body:", req.body);
+                            console.log("files:", req.files);
+                            res.redirect("back")
+                        })
                     })
         
 
