@@ -33,14 +33,14 @@ function peticion() {
         */
                 console.log("--------------------***************************",filtro,respuesta)
                 respuesta = respuesta.map(a=>{
-                    delete respuesta.MiembroBautizo;
-                    delete respuesta.MiembroTransferencia;
-                    delete respuesta.MiembroSolicitud;
-                    delete respuesta.Matrimonio;
-                    delete respuesta.Disciplina;
-                    delete respuesta.Hijos;
+                    delete a.MiembroBautizo;
+                    delete a.MiembroTransferencia;
+                    delete a.MiembroSolicitud;
+                    delete a.Matrimonio;
+                    delete a.Disciplina;
+                    delete a.Hijos;
                     
-                    console.log("-->-->", a)
+                    //console.log("-->-->", a)
                     return a;
                 })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
