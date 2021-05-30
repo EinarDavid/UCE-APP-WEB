@@ -171,7 +171,7 @@ var ret = (passport) => {
         else {
           pag = "vistaGeneral";
         }
-
+        console.log("&&&&&&&&&&&&&&777777777777777777777", datos.Iglesia)
         res.render("Paginas/index",
           {
             pagina: pag,
