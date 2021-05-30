@@ -18,7 +18,7 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                         <Form.Label>Area</Form.Label>
-                        <Form.Control as="select" name="area">
+                        <Form.Control as="select" name="Area">
                             <option value="Ministerial">Ministerial</option>
                             <option value="Accion social">Accion Social</option>
                             <option value="Evangelismo y Misiones">Evangelismo y Misiones</option>
@@ -28,7 +28,7 @@ class Formulario extends Component {
                     </Form.Group>
                     <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                         <Form.Label>Departamento</Form.Label>
-                        <Form.Control as="select" name="area">
+                        <Form.Control as="select" name="Departamento">
                             <option value="Pre-Juvenil">Pre-Juvenil</option>
                             <option value="Juvenil">Juvenil</option>
                             <option value="Femenil">Femenil</option>
@@ -55,7 +55,7 @@ class Formulario extends Component {
                         </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Presupuesto</Form.Label>
-                        <Form.Control type="number" placeholder="Presupuesto" name="presupuesto" required/>
+                        <Form.Control type="number" placeholder="Presupuesto" name="Presupuesto" required/>
                     </Form.Group>
                 </Form.Row>
 

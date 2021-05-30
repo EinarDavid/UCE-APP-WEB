@@ -72,5 +72,34 @@ function peticion() {
                 })
             });
         });
+        this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
+            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
+            bd.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
+                if(iglesia.actividades==undefined)
+                {
+                    iglesia.actividades=[]
+                }
+                const crypto = require('crypto');
+                var hash = crypto.randomBytes(3).toString('hex');
+                console.log(hash);
+
+                iglesia.actividades.push(
+                    {
+                        Codigo: hash,
+                        FotoActividad:"String",
+                        Titulo: req.body.Titulo,
+                        Descripcion: req.body.Descripcion,
+                        Inicio: req.body.Inicio,
+                        Fin: req.body.Fin,
+                        Departamento: req.body.Departamento,
+                        Area: req.body.Area,
+                        Presupuesto: req.body.Presupuesto,
+                    }
+                )
+                console.log(iglesia)
+            })
+
+            res.redirect("back")
+        });
     }
 }

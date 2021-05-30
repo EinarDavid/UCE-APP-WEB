@@ -17,6 +17,7 @@
     "connect-flash": "^0.1.1",
     "connect-mongodb-session": "^2.3.1",
     "cookie-parser": "^1.4.4",
+    "crypto": "^1.0.1",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
     "express-mysql-session": "^2.1.0",
@@ -38,7 +39,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "node src/isp.js",
-    "compilar": "webpack --mode development --watch", 
+    "compilar": "webpack --mode development --watch",
     "ini": "nodemon src/isp.js",
     "testear": "./node_modules/.bin/jest"
   },
