@@ -16,7 +16,7 @@ module.exports = (datos, nombre, excepciones = [])=>
     var atributos = [];
     Object.getOwnPropertyNames(datos[0]).map(atributo => {
       atributos.push(atributo);
-      console.log("----------------------a---------", atributo)
+      console.log("----------------------a---------", atributo, dato[0])
     })
     tabla.push(atributos);
     datos.map(dato=>
