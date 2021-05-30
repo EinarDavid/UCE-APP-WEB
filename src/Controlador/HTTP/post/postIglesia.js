@@ -73,34 +73,47 @@ function peticion() {
             });
         });
         this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
-            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
-            bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
-                if(iglesia.actividades==undefined)
-                {
-                    iglesia.actividades=[]
+
+            upload(req, res, function (err) {
+                if (err) {
+                    console.log(err, 'Im in post , inside upload' + ruta);
+                    return res.end('Error subiendo archivo' + err);
                 }
-                const crypto = require('crypto');
-                var hash = crypto.randomBytes(3).toString('hex');
-                console.log(hash);
+                else {
+                    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
+                    bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
+                        if(iglesia.actividades==undefined)
+                        {
+                            iglesia.actividades=[]
+                        }
+                        const crypto = require('crypto');
+                        var hash = crypto.randomBytes(3).toString('hex');
+                        console.log(hash);
+        
+                        iglesia.Actividades.push(
+                            {
+                                Codigo: hash,
+                                FotoActividad:"String",
+                                Titulo: req.body.Titulo,
+                                Descripcion: req.body.Descripcion,
+                                Inicio: req.body.Inicio,
+                                Fin: req.body.Fin,
+                                Departamento: req.body.Departamento,
+                                Area: req.body.Area,
+                                Presupuesto: req.body.Presupuesto,
+                            }
+                        )
+                        console.log(iglesia.Actividades)
+                        console.log("----------------------------------Imagenes:------------------------------------")
+                        console.log("body:", req.body);
+                        console.log("files:", req.files);
+                        res.redirect("back")
+                    })
+        
 
-                iglesia.Actividades.push(
-                    {
-                        Codigo: hash,
-                        FotoActividad:"String",
-                        Titulo: req.body.Titulo,
-                        Descripcion: req.body.Descripcion,
-                        Inicio: req.body.Inicio,
-                        Fin: req.body.Fin,
-                        Departamento: req.body.Departamento,
-                        Area: req.body.Area,
-                        Presupuesto: req.body.Presupuesto,
-                    }
-                )
-                console.log(iglesia.Actividades)
-                
-                res.redirect("back")
-            })
-
+                }
+            });
+          
         });
     }
 }
