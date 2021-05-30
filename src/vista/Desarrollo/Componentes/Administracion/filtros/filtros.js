@@ -20,9 +20,10 @@ class Formulario extends Component {
                 });
                 excepciones.map(c=>{
                     delete a[c]
-                    return a;
+                    return c;
                 });
             }
+            return a;
         });
 /*
         window.datos.filtro = window.datos.filtro.map(a=>{
