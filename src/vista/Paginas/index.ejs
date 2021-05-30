@@ -21,10 +21,10 @@
   </style>
 
   <script>
-    //var datos = '<%- JSON.stringify(datos) %>'.replace(/\r/g, 'AAA');
-    //datos =  datos.replace(/\n/g, 'EEE');
-    var datos = '<%= JSON.stringify(datos) %>';
-    console.log(datos)
+    var datos = '<%- JSON.stringify(datos) %>'.replace(/\r/g, '');
+    datos =  datos.replace(/\n/g, ' ');
+    //var datos = '<%= JSON.stringify(datos) %>';
+    //console.log(datos)
     datos = JSON.parse(datos);
   </script>
 
