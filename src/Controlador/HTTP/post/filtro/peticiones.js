@@ -22,8 +22,7 @@ function peticion() {
                 bd.cruds.crudUsuario.leer((car) => {
                     //console.log(""==respuesta);
                     cargos = car;
-                    const excel = require('./../../reporte.js');
-                    (excel(respuesta, 'membresia', ['id_membresia']));
+                    
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
@@ -42,6 +41,9 @@ function peticion() {
                     datos.Iglesia = igle;
                     datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
               
+                    const excel = require('./../../reporte.js');
+                    (excel(respuesta, 'membresia', ['_id']));
+
                     res.render("Paginas/index", {
                         pagina: 'filtro',
                         datos
