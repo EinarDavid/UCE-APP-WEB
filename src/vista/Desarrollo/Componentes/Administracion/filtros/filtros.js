@@ -7,7 +7,7 @@ class Formulario extends Component {
     constructor() {
         super();
         var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña"]
-        var rellenar = ["Cargo"]
+        var rellenar = ["Cargo", "FotoPerfil"]
         window.datos.filtro = window.datos.filtro.map(a=>{
             if(a!=undefined)
             {
@@ -93,6 +93,10 @@ class Formulario extends Component {
                                                 var valor=filtro[columna]
                                                 if(columna=="FotoPerfil")
                                                 {
+                                                    if (valor =="")
+                                                    {
+                                                        valor="IconoPersona.jpg"
+                                                    }
                                                     return (
                                                         <td><img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
                                                     )
