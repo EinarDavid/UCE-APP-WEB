@@ -6,6 +6,17 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 class Formulario extends Component {
     constructor() {
         super();
+        window.datos.filtro = window.datos.filtro.map(a=>{
+            delete a.MiembroBautizo;
+            delete a.MiembroTransferencia;
+            delete a.MiembroSolicitud;
+            delete a.Matrimonio;
+            delete a.Disciplina;
+            delete a.Hijos;
+            
+            console.log("-->-->", a)
+            return a;
+        })
         this.state = {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
