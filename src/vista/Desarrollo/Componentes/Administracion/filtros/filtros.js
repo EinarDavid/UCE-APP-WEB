@@ -6,6 +6,22 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 class Formulario extends Component {
     constructor() {
         super();
+        var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña"]
+        var rellenar = ["Cargo"]
+        window.datos.filtro = window.datos.filtro.map(a=>{
+            rellenar.map(b=>{
+                if(a[b]==undefined)
+                {
+                    a[b]=""
+                }
+                return b;
+            })
+            excepciones.map(c=>{
+                delete a[c]
+                return a;
+            })
+        })
+/*
         window.datos.filtro = window.datos.filtro.map(a=>{
             delete a.MiembroBautizo;
             delete a.MiembroTransferencia;
@@ -14,10 +30,12 @@ class Formulario extends Component {
             delete a.Disciplina;
             delete a.Hijos;
             delete a.Iglesia;
+            delete a.Contraseña;
             
             console.log("-->-->", a)
             return a;
         })
+        */
         this.state = {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
