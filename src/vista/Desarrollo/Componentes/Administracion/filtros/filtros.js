@@ -53,6 +53,8 @@ class Formulario extends Component {
         console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;")
         console.log(this.state)
         console.log(this.state.reporte)
+        this.columnas = Object.getOwnPropertyNames(this.state.filtro[0]);
+//        Object.values(filtro)
     }
     render() {
         return (
@@ -87,7 +89,8 @@ class Formulario extends Component {
                                     <tr key={i}>
                                         <td>{i}</td>
                                         {
-                                            Object.values(filtro).map(valor => {
+                                            columnas.map(columna => {
+                                                var valor=filtro[columna]
                                                 return (
                                                     <td>{valor.toString()}</td>
                                                 )
