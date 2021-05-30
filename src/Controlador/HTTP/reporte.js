@@ -1,7 +1,7 @@
 const xlsx = require('xlsx');
 module.exports = (datos, nombre, excepciones = [])=>
 {
-  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^_^^^^^^^^^^^^^^^^^^",datos, datos[0])
+  //console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^_^^^^^^^^^^^^^^^^^^",datos, datos[0])
   var tabla = [];
   if(datos[0]!=undefined)
   {
@@ -16,6 +16,7 @@ module.exports = (datos, nombre, excepciones = [])=>
     var atributos = [];
     Object.getOwnPropertyNames(datos[0]).map(atributo => {
       atributos.push(atributo);
+      console.log("----------------------a---------", atributo)
     })
     tabla.push(atributos);
     datos.map(dato=>
