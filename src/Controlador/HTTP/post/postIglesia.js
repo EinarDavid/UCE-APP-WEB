@@ -74,7 +74,7 @@ function peticion() {
         });
         this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
             console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
-            bd.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
+            bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
                 if(iglesia.actividades==undefined)
                 {
                     iglesia.actividades=[]
