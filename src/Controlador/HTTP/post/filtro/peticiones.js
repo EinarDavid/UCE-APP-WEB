@@ -39,7 +39,8 @@ function peticion() {
                     delete respuesta.Matrimonio;
                     delete respuesta.Disciplina;
                     delete respuesta.Hijos;
-
+                    
+                    console.log("-->-->", a)
                     return a;
                 })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
