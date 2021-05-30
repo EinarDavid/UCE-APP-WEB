@@ -40,7 +40,7 @@ function peticion() {
                     delete a.Disciplina;
                     delete a.Hijos;
                     
-                    //console.log("-->-->", a)
+                    console.log("-->-->", a)
                     return a;
                 })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {

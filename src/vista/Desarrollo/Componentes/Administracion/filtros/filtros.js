@@ -55,7 +55,7 @@ class Formulario extends Component {
                                         {
                                             Object.values(filtro).map(valor => {
                                                 return (
-                                                    <td>{valor}</td>
+                                                    <td>{valor.toString()}</td>
                                                 )
                                             })
 
