@@ -1,6 +1,7 @@
 const xlsx = require('xlsx');
 module.exports = (datos, nombre, excepciones = [])=>
 {
+  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^_^^^^^^^^^^^^^^^^^^",datos)
   var tabla = [];
   if(datos[0]!=undefined)
   {
