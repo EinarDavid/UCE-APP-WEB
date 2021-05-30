@@ -32,6 +32,16 @@ function peticion() {
                 });
         */
                 console.log("--------------------***************************",filtro,respuesta)
+                respuesta = respuesta.map(a=>{
+                    delete respuesta.MiembroBautizo;
+                    delete respuesta.MiembroTransferencia;
+                    delete respuesta.MiembroSolicitud;
+                    delete respuesta.Matrimonio;
+                    delete respuesta.Disciplina;
+                    delete respuesta.Hijos;
+
+                    return a;
+                })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
                     console.log("#########################", req.user)
                     var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
