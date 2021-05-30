@@ -38,7 +38,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "node src/isp.js",
-    "compilar": "webpack --mode development --watch",
+    "compilar": "webpack --mode development --watch", 
     "ini": "nodemon src/isp.js",
     "testear": "./node_modules/.bin/jest"
   },
