@@ -21,7 +21,7 @@
   </style>
 
   <script>
-    var datos = '<%- JSON.stringify(datos) %>';
+    var datos = '<%- JSON.stringify(datos) %>'.replace('\r\n',' ');
     datos = JSON.parse(datos);
   </script>
 
