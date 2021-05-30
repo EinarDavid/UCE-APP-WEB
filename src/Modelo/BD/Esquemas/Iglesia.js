@@ -9,29 +9,9 @@ const actividadSchema = Schema({
     Descripcion: String,
     Inicio: String,
     Fin: String,
-    Tipo: String,
-    Iglesias: String,
-    CI_encargados: [String],
+    Departamento: String,
+    Area:String,
     Presupuesto: Number
-});
-
-const presupuestoSchema = Schema({
-    Año: String,
-    Cantidad: Number,
-});
-
-const departamentoSchema = Schema({
-    Nombre: String,
-    Contacto: String,
-    Presupuestos: [presupuestoSchema],
-    Actividades: [actividadSchema]
-});
-
-const areaSchema = Schema({
-    Nombre: String,
-    Color: String,
-    Contacto: String,
-    Departamentos: [departamentoSchema]
 });
 
 const iglesiaSchema = Schema({
@@ -52,6 +32,7 @@ const iglesiaSchema = Schema({
     Horario: String,
 
     Cargos: [String],
-    Areas: [areaSchema]
+
+    Actividades: [actividadSchema]
 });
 module.exports = mongoose.model('iglesia', iglesiaSchema);

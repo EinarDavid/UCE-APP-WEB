@@ -153,5 +153,9 @@ function peticion() {
 
 
         });
+        this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
+            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
+            res.redirect("/")
+        });
     }
 }

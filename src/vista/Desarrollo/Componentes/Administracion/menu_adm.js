@@ -577,7 +577,7 @@ class Menu_Admi extends React.Component {
                     </Form>
                 </Modal>
                 <Modal size="lg" show={this.state.show18} onHide={this.handleClose} centered>
-                    <Form action="#" method="post" enctype="multipart/form-data">
+                    <Form action="/Registrar/Actividad" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
                             <Modal.Title>Registrar Actividad</Modal.Title>
                         </Modal.Header>
