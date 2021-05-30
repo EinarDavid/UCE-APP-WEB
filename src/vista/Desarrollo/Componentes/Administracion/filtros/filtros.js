@@ -13,6 +13,7 @@ class Formulario extends Component {
             delete a.Matrimonio;
             delete a.Disciplina;
             delete a.Hijos;
+            delete a.Iglesia;
             
             console.log("-->-->", a)
             return a;
