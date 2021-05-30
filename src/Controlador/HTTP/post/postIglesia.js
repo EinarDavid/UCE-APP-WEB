@@ -104,11 +104,13 @@ function peticion() {
                         const crypto = require('crypto');
                         var hash = crypto.randomBytes(3).toString('hex');
                         console.log(hash);
-        
+                        console.log("----------------------------------Imagenes:------------------------------------")
+                        console.log("body:", req.body);
+                        console.log("files:", req.files);
                         iglesia.Actividades.push(
                             {
                                 Codigo: hash,
-                                FotoActividad:req.file.filename,
+                                FotoActividad:req.files.FotoActividad.filename,
                                 Titulo: req.body.Titulo,
                                 Descripcion: req.body.Descripcion,
                                 Inicio: req.body.Inicio,
@@ -120,9 +122,7 @@ function peticion() {
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, ()=>{
                             console.log(iglesia.Actividades)
-                            console.log("----------------------------------Imagenes:------------------------------------")
-                            console.log("body:", req.body);
-                            console.log("files:", req.files);
+          
                             res.redirect("back")
                         })
                     })
