@@ -38,14 +38,13 @@ function peticion() {
                     bcrypt.compare(req.body.contra, usuario.Contraseña, function (err, resp) {
                         if (err) console.log(err);
                         if (resp == true) {
-                            var fs     = require('fs');
+                            var fs = require('fs');
                             fs.readFile("./public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
                                 if (err) throw err 
-                                usuario.fotop = "prueba"
-                                usuario.foto = datafoto;
-                                console.log("--------------Movil------------",usuario)
+                                var foto = datafoto;
+                                console.log("--------------Movil------------",foto)
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
-                                res.json({ usuario, mensage });    
+                                res.json({ usuario, mensage, foto });    
                               })
                         }
                         else {
