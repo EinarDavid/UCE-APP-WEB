@@ -43,6 +43,7 @@ function peticion() {
                                 if (err) throw err 
                                 usuario.fotop = "prueba"
                                 usuario.foto = datafoto;
+                                console.log("--------------Movil------------",usuario)
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
                                 res.json({ usuario, mensage });    
                               })
