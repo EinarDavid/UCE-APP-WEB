@@ -84,7 +84,7 @@ class POA extends Component {
                           Titulo: {a.Titulo} <br/>
                           Inicio: {a.Inicio}<br/>
                           Descripcion: {a.Descripcion}<br/>
-                          <img src ={'/fotos/Iglesias/Actividad' + a.FotoActividad} width="400px" height="400px"></img>
+                          <img src ={'/fotos/Iglesias/Actividad/' + a.FotoActividad} width="400px" height="400px"></img>
                         </div>
                       )
                     })
