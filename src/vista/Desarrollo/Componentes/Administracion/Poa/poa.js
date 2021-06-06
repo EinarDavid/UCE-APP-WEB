@@ -116,8 +116,8 @@ class POA extends Component {
     calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
   }
 
-  /*handleDateClick(arg) {
-    if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
+  handleDateClick(arg) {
+  /*  if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
       
       this.setState({  // add new event data
 
@@ -130,8 +130,8 @@ class POA extends Component {
 
 
       })
-    }
-  }*/
+    }*/
+  }
 
 }
 export default POA;
