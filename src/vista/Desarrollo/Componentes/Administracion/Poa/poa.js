@@ -77,14 +77,18 @@ class POA extends Component {
                     {
                       if(a.FotoActividad==undefined)
                       {
-                        a.FotoActividad = "IconoPersona.jpg"
+                        a.FotoActividad = "/fotos/Membresias/IconoPersona.jpg"
+                      }
+                      else
+                      {
+                        a.FotoActividad = '/fotos/Iglesias/Actividad/' + a.FotoActividad
                       }
                       return(
                         <div>
                           Titulo: {a.Titulo} <br/>
                           Inicio: {a.Inicio}<br/>
                           Descripcion: {a.Descripcion}<br/>
-                          <img src ={'/fotos/Iglesias/Actividad/' + a.FotoActividad} width="400px" height="400px"></img>
+                          <img src ={a.FotoActividad} width="400px" height="400px"></img>
                         </div>
                       )
                     })
