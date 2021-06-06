@@ -17,11 +17,14 @@ class POA extends Component {
     this.handleClose = this.handleClose.bind(this);
     this.calendarComponentRef = React.createRef()
 
+    var actividades = window.datos.Iglesia.Actividades.map((a)=>{
+      return {title:a.Titulo, date:a.Inicio}
+    })
+    console.log("Actividades",actividades)
+    console.log("Iglesia", window.datos.Iglesia)
     this.state = {
       calendarWeekends: true,
-      calendarEvents: [ // initial event data
-        { title: 'Event Now', start: new Date() }
-      ],
+      calendarEvents: actividades,
       show: false
     }
 
@@ -113,7 +116,7 @@ class POA extends Component {
     calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
   }
 
-  handleDateClick(arg) {
+  /*handleDateClick(arg) {
     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
       
       this.setState({  // add new event data
@@ -128,7 +131,7 @@ class POA extends Component {
 
       })
     }
-  }
+  }*/
 
 }
 export default POA;
