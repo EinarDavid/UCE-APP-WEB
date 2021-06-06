@@ -115,6 +115,7 @@ class POA extends Component {
 
   handleDateClick(arg) {
     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
+      
       this.setState({  // add new event data
 
         calendarEvents: this.state.calendarEvents.concat({ // creates a new array
@@ -122,7 +123,7 @@ class POA extends Component {
           start: arg.date,
           allDay: arg.allDay
         }),
-        show: true
+        
 
 
       })
@@ -133,6 +134,7 @@ class POA extends Component {
 export default POA;
 
 
+//show: true
 /*
 <div className='demo-app-top'>
             <button onClick={this.toggleWeekends}>toggle weekends</button>&nbsp;
