@@ -39,7 +39,7 @@ function peticion() {
                         if (err) console.log(err);
                         if (resp == true) {
                             var fs     = require('fs');
-                            fs.readFile("../../../public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
+                            fs.readFile("../public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
                                 if (err) throw err 
                                 usuario.foto = datafoto;
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
