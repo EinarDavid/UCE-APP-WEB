@@ -25,7 +25,8 @@ class POA extends Component {
     this.state = {
       calendarWeekends: true,
       calendarEvents: actividades,
-      show: false
+      show: false,
+      actividad: "nada"
     }
 
   }
@@ -117,11 +118,28 @@ class POA extends Component {
   }
 
   handleDateClick(arg) {
-      console.log('FECHA--------------', arg);
-      this.setState({  // add new event data
-        show:true
+      
+      var actividad = window.datos.Iglesia.Actividades.filter(a=>{
+        if(a.Inicio==arg.dateSrt)
+        {
+          return a;
+        }
       })
-    
+      console.log('FECHA--------------', actividad);
+      if(actividad.length>0)
+      {
+        this.setState({  // add new event data
+          show:true,
+          actividad: actividad
+        })
+      }
+      else
+      {
+        this.setState({  // add new event data
+          show:true,
+          actividad: "nada"
+        })
+      }    
   }
 
 }
