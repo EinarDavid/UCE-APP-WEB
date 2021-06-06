@@ -75,6 +75,7 @@ class POA extends Component {
                   :
                   this.state.actividad.map(a=>
                     {
+                      console.log(a)
                       (
                         <div>
                           Titulo: {a.Titulo}
