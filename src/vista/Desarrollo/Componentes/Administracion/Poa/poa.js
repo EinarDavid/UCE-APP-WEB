@@ -117,7 +117,7 @@ class POA extends Component {
   }
 
   handleDateClick(arg) {
-      console.log('FECHA--------------'+ arg);
+      console.log('FECHA--------------', arg);
       this.setState({  // add new event data
         show:true
       })
