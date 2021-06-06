@@ -75,11 +75,16 @@ class POA extends Component {
                   :
                   this.state.actividad.map(a=>
                     {
+                      if(a.FotoActividad==undefined)
+                      {
+                        a.FotoActividad = "IconoPersona.jpg"
+                      }
                       return(
                         <div>
-                          Titulo: {a.Titulo}
-                          Inicio: {a.Inicio}
-                          Descripcion: {a.Descripcion}
+                          Titulo: {a.Titulo} <br/>
+                          Inicio: {a.Inicio}<br/>
+                          Descripcion: {a.Descripcion}<br/>
+                          <img src ={'/fotos/Iglesias/Actividad' + a.FotoActividad} width="400px" height="400px"></img>
                         </div>
                       )
                     })
