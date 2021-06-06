@@ -120,8 +120,8 @@ class POA extends Component {
   handleDateClick(arg) {
       
       var actividad = window.datos.Iglesia.Actividades.filter(a=>{
-        console.log(a.Inicio,arg.dateSrt,a.Inicio==arg.dateSrt)
-        if(a.Inicio==arg.dateSrt)
+        console.log(a.Inicio,arg.dateStr,a.Inicio==arg.dateStr)
+        if(a.Inicio==arg.dateStr)
         {
           return a;
         }
