@@ -41,6 +41,7 @@ function peticion() {
                             var fs     = require('fs');
                             fs.readFile("./public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
                                 if (err) throw err 
+                                usuario.fotop = "prueba"
                                 usuario.foto = datafoto;
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
                                 res.json({ usuario, mensage });    
