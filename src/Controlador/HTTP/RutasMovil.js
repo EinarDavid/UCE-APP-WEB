@@ -38,8 +38,13 @@ function peticion() {
                     bcrypt.compare(req.body.contra, usuario.Contraseña, function (err, resp) {
                         if (err) console.log(err);
                         if (resp == true) {
-                            var mensage = "Bienvenido de nuevo " + usuario.Nombre;
-                            res.json({ usuario, mensage });
+                            var fs     = require('fs');
+                            fs.readFile("./../../../public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
+                                if (err) throw err 
+                                usuario.foto = datafoto;
+                                var mensage = "Bienvenido de nuevo " + usuario.Nombre;
+                                res.json({ usuario, mensage });    
+                              })
                         }
                         else {
                             var mensage = 'Contraseña incorrecta';
@@ -66,6 +71,7 @@ function peticion() {
             })
 
 
-        })
+        });
+
     }
 }
