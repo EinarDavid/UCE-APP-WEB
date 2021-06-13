@@ -68,9 +68,13 @@ function peticion() {
             const id = req.params.id;
             //delete req.body.id;
             console.log("body:", req.body, id);
-            bd.cruds.crudMembresias.modificar(id, req.body, (usuario) => {
+            bd.cruds.crudMembresias.modificar(id, req.body, () => {
                 var mensage = 'Guardado Correctamente';
-                res.json({jala:"si", mensage, usuario});
+                bd.cruds.crudMembresias.buscar1(id,(usuario)=>
+                {
+                    res.json({jala:"si", mensage, usuario});
+                })
+                
             })
 
 
