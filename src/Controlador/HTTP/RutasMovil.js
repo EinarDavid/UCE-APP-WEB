@@ -55,17 +55,7 @@ function peticion() {
             var path = require("path");
             console.log("ññññññññññññññññññññ",nombre);
             console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",path.resolve(__dirname,'/public/fotos/Membresias/',nombre),__dirname,'/public/fotos/Membresias/',nombre)
-            res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))
-            /*
-            var fs = require('fs');
-            fs.readFile("./public/fotos/Membresias/"+nombre, function(err, datafoto) {
-                if (err) throw err 
-                var foto = datafoto;
-                console.log("--------------Movil------------",foto)
-                res.sendFile( foto );   
-              })
-              */
-            
+            res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))            
         })
         this.rutas.post("/VerDatosIglesia", (req, res) => {
             bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) => {
@@ -78,9 +68,9 @@ function peticion() {
             const id = req.params.id;
             //delete req.body.id;
             console.log("body:", req.body, id);
-            bd.cruds.crudMembresias.modificar(id, req.body, () => {
+            bd.cruds.crudMembresias.modificar(id, req.body, (usuario) => {
                 var mensage = 'Guardado Correctamente';
-                res.json({jala:"si", mensage});
+                res.json({jala:"si", mensage, usuario});
             })
 
 
