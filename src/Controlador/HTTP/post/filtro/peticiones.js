@@ -31,7 +31,12 @@ function peticion() {
                 });
         */
           //      console.log("--------------------***************************",filtro,respuesta)
-              
+              respuesta = respuesta.filter(a=>
+                {
+                    if(a.Iglesia==req.user.Iglesia){
+                        return a;
+                    }
+                })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
                     //console.log("#########################", req.user)
                     var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
