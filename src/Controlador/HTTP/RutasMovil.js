@@ -38,14 +38,8 @@ function peticion() {
                     bcrypt.compare(req.body.contra, usuario.Contraseña, function (err, resp) {
                         if (err) console.log(err);
                         if (resp == true) {
-                            var fs = require('fs');
-                            fs.readFile("./public/fotos/Membresias/"+usuario.FotoPerfil, function(err, datafoto) {
-                                if (err) throw err 
-                                var foto = datafoto;
-                                console.log("--------------Movil------------",foto)
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
                                 res.json({ usuario, mensage, foto });    
-                              })
                         }
                         else {
                             var mensage = 'Contraseña incorrecta';
@@ -55,6 +49,23 @@ function peticion() {
                 }
             });
         });
+        this.rutas.get("/FotoPerfil/:foto", (req, res)=>
+        {
+            var nombre = req.params.foto;
+            var path = require("path");
+            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",path.resolve(__dirname,'/public/fotos/Membresias/imagepath.png'),__dirname,'/public/fotos/Membresias/imagepath.png')
+            res.sendFile(path.resolve(__dirname,'/public/fotos/Membresias/imagepath.png'))
+            /*
+            var fs = require('fs');
+            fs.readFile("./public/fotos/Membresias/"+nombre, function(err, datafoto) {
+                if (err) throw err 
+                var foto = datafoto;
+                console.log("--------------Movil------------",foto)
+                res.sendFile( foto );   
+              })
+              */
+            
+        })
         this.rutas.post("/VerDatosIglesia", (req, res) => {
             bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) => {
                 console.log("Datos Iglesia: ", igle);
