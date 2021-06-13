@@ -39,7 +39,7 @@ function peticion() {
                         if (err) console.log(err);
                         if (resp == true) {
                                 var mensage = "Bienvenido de nuevo " + usuario.Nombre;
-                                res.json({ usuario, mensage, foto });    
+                                res.json({ usuario, mensage });    
                         }
                         else {
                             var mensage = 'Contraseña incorrecta';
