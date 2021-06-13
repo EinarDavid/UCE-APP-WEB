@@ -55,7 +55,7 @@ function peticion() {
             var path = require("path");
             console.log("ññññññññññññññññññññ",nombre);
             console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",path.resolve(__dirname,'/public/fotos/Membresias/',nombre),__dirname,'/public/fotos/Membresias/',nombre)
-            res.sendFile(path.resolve('../../../public/fotos/Membresias/', nombre))
+            res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))
             /*
             var fs = require('fs');
             fs.readFile("./public/fotos/Membresias/"+nombre, function(err, datafoto) {
