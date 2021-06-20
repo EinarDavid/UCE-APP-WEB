@@ -50,7 +50,7 @@ function peticion() {
                     if (req.files.FotoPerfil != undefined) {
                         var FotoPerfil = req.files.FotoPerfil[0].filename;
                     }
-                    else {
+                    else { 
                         var FotoPerfil = undefined;
                     }
                     req.body.FotoPerfil= FotoPerfil;
