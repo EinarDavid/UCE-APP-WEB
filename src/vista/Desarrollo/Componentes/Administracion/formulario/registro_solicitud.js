@@ -19,13 +19,13 @@ function Formulario() {
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Nombre*</Form.Label>
-                        <Form.Control type="text" placeholder="Nombre" name="Nombre" required/>
+                        <Form.Control type="text" placeholder="Nombre" name="Nombre" required />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Paterno*</Form.Label>
-                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno"required />
+                        <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Apellido_Materno</Form.Label>
@@ -81,16 +81,26 @@ function Formulario() {
                             <option value="Solter@">Solter@</option>
                             <option value="Casad@">Casad@</option>
                             <option value="Viud@">Viud@</option>
-
                         </Form.Control>
                     </Form.Group>
-                    
+                    <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
+                        <Form.Label>Cargo en la Iglesia</Form.Label>
+                        <Form.Control as="select" name="Cargo_Ministerial">
+                            <option value="Soc. Juvenil">Soc. Juvenil</option>
+                            <option value="Soc. Femenil">Soc. Femenil</option>
+                            <option value="Min. Pre Juvenil">Min. Pre Juvenil</option>
+                        </Form.Control>
+                    </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Imagen_Membresia</Form.Label>
                         <Form.Control type="file" accept="image/*" name="Imagen_Membresia" />
                     </Form.Group>
+                    <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Foto Perfil</Form.Label>
+                            <Form.Control type="file" accept="image/*" name="FotoPerfil" />
+                        </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Formulario</Form.Label>
                         <Form.Control type="file" name="Formulario" />
