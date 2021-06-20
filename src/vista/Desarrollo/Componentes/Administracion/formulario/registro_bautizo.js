@@ -84,16 +84,29 @@ class Formulario extends Component {
                                 <option value="Viud@">Viud@</option>
                             </Form.Control>
                         </Form.Group>
+                        <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
+                            <Form.Label>Cargo en la Iglesia</Form.Label>
+                            <Form.Control as="select" name="Cargo_Ministerial">
+                                <option value="Soc. Juvenil">Soc. Juvenil</option>
+                                <option value="Soc. Femenil">Soc. Femenil</option>
+                                <option value="Min. Pre Juvenil">Min. Pre Juvenil</option>
+                            </Form.Control>
+                        </Form.Group>
+
+
+                    </Form.Row>
+                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Imagen Membresia</Form.Label>
                             <Form.Control type="file" accept="image/*" name="Imagen_Membresia" />
                         </Form.Group>
-                    </Form.Row>
-                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Foto Perfil</Form.Label>
                             <Form.Control type="file" accept="image/*" name="FotoPerfil" />
                         </Form.Group>
+
+                    </Form.Row>
+                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Fecha_Bautizo</Form.Label>
                             <Form.Control type="date" name="Fecha_Bautizo" />

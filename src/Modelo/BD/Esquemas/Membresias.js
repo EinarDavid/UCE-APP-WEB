@@ -57,6 +57,7 @@ FotoPerfil: String,
 Iglesia: String, //combobox
 Contraseña: String, //si
 Cargo: String, //combobox
+Cargo_Ministerial: String,
 MiembroSolicitud:miembrosolicitudSchema,
 Matrimonio: matrimonioSchema,
 MiembroBautizo: miembrobautizoSchema,
