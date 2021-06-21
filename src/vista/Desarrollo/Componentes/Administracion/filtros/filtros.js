@@ -6,7 +6,8 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 class Formulario extends Component {
     constructor() {
         super();
-        var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña"]
+        var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña",
+                            "Email", "Estado_Civil", "Fecha_Nacimineto", "Genero", "Lugar_Nacimiento", "Profesion", "Direccion", "Cargo"]
         var rellenar = ["Cargo", "FotoPerfil"]
         window.datos.filtro = window.datos.filtro.map(a=>{
             if(a!=undefined)
@@ -65,7 +66,7 @@ class Formulario extends Component {
                 <Table responsive striped hover>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Nro</th>
                             {
 
                                 Object.getOwnPropertyNames(this.state.filtro[0]).map(columna => {
