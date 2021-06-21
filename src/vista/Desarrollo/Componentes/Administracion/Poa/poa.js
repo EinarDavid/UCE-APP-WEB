@@ -86,7 +86,7 @@ class POA extends Component {
 
                        
                         <div className="Cotenedor-image">
-                          <img src={a.FotoActividad} width="50%" height="auto"></img>
+                          <img src={a.FotoActividad} width="90%" height="auto"></img>
                         </div>
                         <h2>Titulo: {a.Titulo}</h2>
                         <h3>Descripcion: {a.Descripcion}</h3>

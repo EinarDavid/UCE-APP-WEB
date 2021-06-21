@@ -1016,11 +1016,15 @@ text-align: left;
   font-weight: 500;
   font-size: 22px;
   text-align: center;
+  width: 90%;
 }
 .Actividad-contenedor h3{
   font-family: 'Gotham Book';
   font-size: 18px;
-  
+  width: 90%;
+}
+.Activity-FullCalendar{
+  text-align: center;
 }
 
 .Activity-FullCalendar img{
