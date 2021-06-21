@@ -82,13 +82,14 @@ class POA extends Component {
                     }
                     return (
                       <div className="Activity-FullCalendar">
-                        <h2>Titulo: {a.Titulo}</h2>
-                        <h3>Descripcion: {a.Descripcion}</h3>
+                        
 
                        
                         <div className="Cotenedor-image">
-                          <img src={a.FotoActividad} width="400px" height="400px"></img>
+                          <img src={a.FotoActividad} width="50%" height="auto"></img>
                         </div>
+                        <h2>Titulo: {a.Titulo}</h2>
+                        <h3>Descripcion: {a.Descripcion}</h3>
 
                       </div>
                     )

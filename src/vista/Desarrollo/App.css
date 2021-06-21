@@ -1015,7 +1015,7 @@ text-align: left;
   font-family: 'Gotham Medium';
   font-weight: 500;
   font-size: 22px;
-  text-decoration: center;
+  text-align: center;
 }
 .Actividad-contenedor h3{
   font-family: 'Gotham Book';
@@ -1027,8 +1027,7 @@ text-align: left;
   border-radius: 15px;
 }
 .Cotenedor-image{
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 /*
 .imagenes img {
