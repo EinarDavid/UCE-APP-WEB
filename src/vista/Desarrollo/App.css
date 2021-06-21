@@ -1009,22 +1009,24 @@ text-align: left;
 
 /* Modal CSS*/
 .Actividad-contenedor{
-  background-color: #00796b;
+  background-color: #fff;
 }
 .Actividad-contenedor h2{
   font-family: 'Gotham Medium';
   font-weight: 500;
   font-size: 22px;
-  text-align: center;
-  width: 90%;
+  width: 100%;
 }
 .Actividad-contenedor h3{
   font-family: 'Gotham Book';
   font-size: 18px;
-  width: 90%;
+  font-weight: 400;
+  width: 100%;
 }
 .Activity-FullCalendar{
-  display: block;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .Activity-FullCalendar img{
