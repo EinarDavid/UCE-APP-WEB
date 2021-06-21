@@ -944,6 +944,9 @@ text-align: left;
   color: #FFB01A;
   font-size: 25pt;
   text-decoration:none !important;
+  vertical-align: middle;
+  display: table;
+
 }
 .accion a:hover{
   text-decoration:none !important;

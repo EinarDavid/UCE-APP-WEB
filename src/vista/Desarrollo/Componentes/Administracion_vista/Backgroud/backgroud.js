@@ -5,7 +5,7 @@ function Imagen_fondo() {
         <div className="backgroud">
           <div className="title">
             <div className="titulo">
-              <h1>Administrador</h1>
+              <h1>Busqueda</h1>
             </div> 
           </div>
           

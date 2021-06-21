@@ -77,7 +77,7 @@ class Formulario extends Component {
                                 })
 
                             }
-                            <th>Acción</th>
+                            <th></th>
 
                         </tr>
                     </thead>
@@ -116,7 +116,7 @@ class Formulario extends Component {
                                             <h4 className="accion">
 
                                                 <a href="#"></a>
-                                                <a href="#"></a>
+                                                
                                             </h4>
                                         </td>
                                     </tr>
@@ -140,3 +140,5 @@ class Formulario extends Component {
     }
 }
 export default Formulario;
+
+//<a href="#"></a>
