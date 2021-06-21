@@ -3,15 +3,18 @@
 @import '~@fullcalendar/timegrid/main.css';
 
 .demo-app {
-  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica Neue, Helvetica, sans-serif;*/
   font-size: 14px;
   margin-top: 40px;
   margin-bottom: 40px;
   justify-content: center;
-  border-radius: 15px;
-  
 }
-
+.fc{
+  border-radius: 15px !important;
+}
+.fc-unthemed td.fc-today {
+  background: #000 !important;
+}
 .demo-app-top {
   margin: 0 0 3em;
 }
