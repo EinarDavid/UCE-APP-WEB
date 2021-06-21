@@ -921,15 +921,18 @@ text-align: left;
   color: rgb(255, 205, 6);
 }
 .Form-filtro{
-  margin-top: 85px;
+  
   background: rgb(0, 83, 128);
   width: 90%;
-  justify-content: center;
-  align-items: center;
-  
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  margin-bottom: 40px;
+
   position: relative;
   padding: 40px;
-  
+  border-radius: 15px;
   color: #FFF;
 }
 .Form-filtro th,td{
