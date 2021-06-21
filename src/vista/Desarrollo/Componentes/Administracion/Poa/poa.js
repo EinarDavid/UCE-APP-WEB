@@ -17,10 +17,10 @@ class POA extends Component {
     this.handleClose = this.handleClose.bind(this);
     this.calendarComponentRef = React.createRef()
 
-    var actividades = window.datos.Iglesia.Actividades.map((a)=>{
-      return {title:a.Titulo, date:a.Inicio}
+    var actividades = window.datos.Iglesia.Actividades.map((a) => {
+      return { title: a.Titulo, date: a.Inicio }
     })
-    console.log("Actividades",actividades)
+    console.log("Actividades", actividades)
     console.log("Iglesia", window.datos.Iglesia)
     this.state = {
       calendarWeekends: true,
@@ -58,50 +58,49 @@ class POA extends Component {
         </div>
         <Modal size="lg" show={this.state.show} onHide={this.handleClose} centered>
 
-         
-            <Modal.Header closeButton>
-              <Modal.Title>
-                Actividades del día de {this.state.dia}
-              </Modal.Title>
-            </Modal.Header>
 
-            <Modal.Body>
-              <div className="Actividad-contenedor">
-                {
-                  this.state.actividad=="nada"?
+          <Modal.Header closeButton>
+            <Modal.Title>
+              Actividades del día de {this.state.dia}
+            </Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <div className="Actividad-contenedor">
+              {
+                this.state.actividad == "nada" ?
                   (
                     <h2>No hay actividades programacas para elste día</h2>
                   )
                   :
-                  this.state.actividad.map(a=>
-                    {
-                      if(a.FotoActividad==undefined)
-                      {
-                        a.FotoActividad = "/fotos/Membresias/IconoPersona.jpg"
-                      }
-                      else
-                      {
-                        a.FotoActividad = '/fotos/Iglesias/Actividad/' + a.FotoActividad
-                      }
-                      return(
-                        <div className="Activity-FullCalendar">
-                          <h2>Titulo: {a.Titulo}</h2> <br/>
-                          <h3>Descripcion: {a.Descripcion}</h3><br/>
-                          
-                          Inicio: {a.Inicio}<br/>
-                          
-                          <img src ={a.FotoActividad} width="400px" height="400px"></img>
+                  this.state.actividad.map(a => {
+                    if (a.FotoActividad == undefined) {
+                      a.FotoActividad = "/fotos/Membresias/IconoPersona.jpg"
+                    }
+                    else {
+                      a.FotoActividad = '/fotos/Iglesias/Actividad/' + a.FotoActividad
+                    }
+                    return (
+                      <div className="Activity-FullCalendar">
+                        <h2>Titulo: {a.Titulo}</h2>
+                        <h3>Descripcion: {a.Descripcion}</h3>
+
+                       
+                        <div className="Cotenedor-image">
+                          <img src={a.FotoActividad} width="400px" height="400px"></img>
                         </div>
-                      )
-                    })
-                }
-              </div>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-              <Button type="submit" variant="outline-primary">Save</Button>
-            </Modal.Footer>
-          
+
+                      </div>
+                    )
+                  })
+              }
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+            <Button type="submit" variant="outline-primary">Save</Button>
+          </Modal.Footer>
+
         </Modal>
       </div>
     );
@@ -119,31 +118,28 @@ class POA extends Component {
   }
 
   handleDateClick(arg) {
-      
-      var actividad = window.datos.Iglesia.Actividades.filter(a=>{
-        console.log(a.Inicio,arg.dateStr,a.Inicio==arg.dateStr)
-        if(a.Inicio==arg.dateStr)
-        {
-          return a;
-        }
-      })
-      console.log('FECHA--------------', actividad);
-      if(actividad.length>0)
-      {
-        this.setState({  // add new event data
-          show:true,
-          actividad: actividad,
-          dia: arg.dateStr
-        })
+
+    var actividad = window.datos.Iglesia.Actividades.filter(a => {
+      console.log(a.Inicio, arg.dateStr, a.Inicio == arg.dateStr)
+      if (a.Inicio == arg.dateStr) {
+        return a;
       }
-      else
-      {
-        this.setState({  // add new event data
-          show:true,
-          actividad: "nada",
-          dia: arg.dateStr
-        })
-      }    
+    })
+    //console.log('FECHA--------------', actividad);
+    if (actividad.length > 0) {
+      this.setState({  // add new event data
+        show: true,
+        actividad: actividad,
+        dia: arg.dateStr
+      })
+    }
+    else {
+      this.setState({  // add new event data
+        show: true,
+        actividad: "nada",
+        dia: arg.dateStr
+      })
+    }
   }
 
 }
@@ -157,4 +153,7 @@ export default POA;
             <button onClick={this.gotoPast}>go to a date in the past</button>&nbsp;
             (also, click a date/time to add an event)
           </div>
+
+
+           //Inicio: {a.Inicio}
 */

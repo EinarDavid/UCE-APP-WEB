@@ -1014,10 +1014,21 @@ text-align: left;
 .Actividad-contenedor h2{
   font-family: 'Gotham Medium';
   font-weight: 500;
-  justify-content: center;
+  font-size: 22px;
+  text-decoration: center;
 }
+.Actividad-contenedor h3{
+  font-family: 'Gotham Book';
+  font-size: 18px;
+  
+}
+
 .Activity-FullCalendar img{
- justify-content: center;
+  border-radius: 15px;
+}
+.Cotenedor-image{
+  justify-content: center;
+  align-items: center;
 }
 /*
 .imagenes img {
