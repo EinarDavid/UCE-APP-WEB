@@ -13,7 +13,22 @@
   border-radius: 15px !important;
 }
 .fc-unthemed td.fc-today {
-  background: #000 !important;
+  background: #2c3e50 !important;
+}
+.fc-event, .fc-event-dot {
+  background-color: #00796b !important;
+}
+.fc-event {
+  position: relative;
+  display: block;
+  font-size: 0.85em;
+  line-height: 1.4;
+  border-radius: 3px;
+  border: 1px solid #00796b !important;
+}
+.fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, .fc .fc-row .fc-mirror-skeleton td {
+  /*  background: none;*/
+  border-color: #ffffff !important;
 }
 .demo-app-top {
   margin: 0 0 3em;
