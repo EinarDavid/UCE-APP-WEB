@@ -66,11 +66,11 @@ class POA extends Component {
             </Modal.Header>
 
             <Modal.Body>
-              <div>
+              <div className="Actividad-contenedor">
                 {
                   this.state.actividad=="nada"?
                   (
-                    <div>No hay actividades programacas para elste día</div>
+                    <h2>No hay actividades programacas para elste día</h2>
                   )
                   :
                   this.state.actividad.map(a=>
@@ -84,10 +84,12 @@ class POA extends Component {
                         a.FotoActividad = '/fotos/Iglesias/Actividad/' + a.FotoActividad
                       }
                       return(
-                        <div>
-                          Titulo: {a.Titulo} <br/>
+                        <div className="Activity-FullCalendar">
+                          <h2>Titulo: {a.Titulo}</h2> <br/>
+                          <h3>Descripcion: {a.Descripcion}</h3><br/>
+                          
                           Inicio: {a.Inicio}<br/>
-                          Descripcion: {a.Descripcion}<br/>
+                          
                           <img src ={a.FotoActividad} width="400px" height="400px"></img>
                         </div>
                       )

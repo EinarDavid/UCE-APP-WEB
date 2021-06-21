@@ -1006,6 +1006,19 @@ text-align: left;
   position: relative;  
   filter: grayscale(1); 
 }
+
+/* Modal CSS*/
+.Actividad-contenedor{
+  background-color: #00796b;
+}
+.Actividad-contenedor h2{
+  font-family: 'Gotham Medium';
+  font-weight: 500;
+  justify-content: center;
+}
+.Activity-FullCalendar img{
+ justify-content: center;
+}
 /*
 .imagenes img {
   width: 100%; 
