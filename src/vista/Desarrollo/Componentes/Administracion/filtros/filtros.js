@@ -7,7 +7,7 @@ class Formulario extends Component {
     constructor() {
         super();
         var excepciones = ["_id", "__v","MiembroBautizo","MiembroTransferencia", "MiembroSolicitud","Matrimonio","Disciplina", "Hijos","Iglesia","Contraseña",
-                            "Email", "Estado_Civil", "Fecha_Nacimineto", "Genero", "Lugar_Nacimiento", "Profesion", "Direccion", "Cargo"]
+                            "Email", "Estado_Civil", "Fecha_Nacimineto", "Genero", "Lugar_Nacimiento", "Profesion", "Direccion"]
         var rellenar = ["Cargo", "FotoPerfil"]
         window.datos.filtro = window.datos.filtro.map(a=>{
             if(a!=undefined)
