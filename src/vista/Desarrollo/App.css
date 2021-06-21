@@ -923,8 +923,9 @@ text-align: left;
 .Form-filtro{
   margin-top: 85px;
   background: rgb(0, 83, 128);
-  width: 80%;
-  
+  width: 90%;
+  justify-content: center;
+  align-items: center;
   
   position: relative;
   padding: 40px;
