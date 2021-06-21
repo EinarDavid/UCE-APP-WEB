@@ -44,7 +44,7 @@ class POA extends Component {
             <FullCalendar
               defaultView="dayGridMonth"
               header={{
-                left: 'prev,next today',
+                left: 'prev,next Hoy',
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
               }}
