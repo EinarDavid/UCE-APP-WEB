@@ -2,8 +2,8 @@ import React from 'react';
 
 class Actividades extends React.Component {
     render() {
-        return (
-            <div className="section-wrap white2" id="texto">
+        return ( 
+            <div className="section-wrap fondo_area_estrategica" id="texto">
                 <div className="section-row">
                     <div className="rowtitles">
                         <p className="rowtitle lighttext">
