@@ -8,20 +8,19 @@ function Texto_3() {
         <div className="horario">
           <div className="horario_left">
             <h3>LUNES</h3>
-            <p>• 20:00 Servicio de Oración</p>
+            <p>{window.datos.Iglesia.Horario_Lunes}</p>
             <h3>MARTES</h3>
-            <p>• 14:00 Sociedad Femenil<br></br>
-              • 20:00 Estudio Bíblico</p>
-            <h3>MIERCOLES</h3>
-            <p>• 19:30 Ministerio Pre-juvenil</p>
+            <p>{window.datos.Iglesia.Horario_Martes}</p>
+            <h3>MIÉRCOLES</h3>
+            <p>{window.datos.Iglesia.Horario_Miercoles}</p>
             <h3>JUEVES</h3>
-            <p>• 20:00 Sociedad Juvenil</p>
+            <p>{window.datos.Iglesia.Horario_Jueves}</p>
           </div>
           <div className="horario_right">
             <h3>VIERNES</h3>
-            <p>• 20:00 Sociedad Juvenil</p>
+            <p>{window.datos.Iglesia.Horario_Viernes}</p>
             <h3>SÁBADO</h3>
-            <p>• 20:00 Sociedad Juvenil</p>
+            <p>{window.datos.Iglesia.Horario_Sabado}</p>
             <h3>DOMINGO</h3>
             <p>
               {window.datos.Iglesia.Horario}
