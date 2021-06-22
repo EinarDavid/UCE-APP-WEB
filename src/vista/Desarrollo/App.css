@@ -608,7 +608,7 @@ p {
 .texto_quienes_somos_2{
     text-align: center;
     position: relative;
-    padding-top: 10%;
+    
     background-color: #433480;
     height: 1100px;
 
@@ -617,7 +617,7 @@ p {
     width: 100%;
     background-position: center;
     background-size: cover;
-    
+    display: flex;
     overflow: hidden;
     
 }
@@ -636,13 +636,12 @@ p {
   font-size: 12pt;
 }
 .Res-Social-Des{
-  width: 80%;
+  
   display: flex;
   justify-content: center;
 }
 .Res-Social-Parrafo{
-  margin-right: auto;
-  margin-left: auto;
+  width: 80%;
 }
 .Inf_clubes{
   /*background-color: red;*/
