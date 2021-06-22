@@ -636,7 +636,9 @@ p {
   font-size: 12pt;
 }
 .Res-Social-Des{
-width: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 .Res-Social-Parrafo{
   margin-right: auto;
