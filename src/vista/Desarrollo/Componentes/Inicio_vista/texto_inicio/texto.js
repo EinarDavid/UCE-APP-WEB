@@ -5,8 +5,8 @@ function Texto() {
   return (
     <div className="texto_quienes_somos" id="texto">
       <div className="Encabezado_principal">
-        <h2>Unión Cristiana Evangélica</h2><br></br>
-        <h3>“SIRVIENDO AL SEÑOR DESDE 1950”<br></br></h3>
+        <h2>{window.datos.Iglesia.Denominacion}</h2><br></br>
+        <h3>{window.datos.Iglesia.Titulo_Descripcion}<br></br></h3>
         <p>{window.datos.Iglesia.Descripcion}</p>
       </div>
       <div className="mision_vision">
