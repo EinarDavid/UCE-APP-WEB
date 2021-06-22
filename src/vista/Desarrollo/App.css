@@ -631,6 +631,9 @@ p {
   font-family: 'Gotham Book' !important;
   font-size: 12pt;
 }
+.Res-Social-Des{
+width: 80%;
+}
 .Inf_clubes{
   /*background-color: red;*/
   width: 40%;
@@ -677,7 +680,7 @@ p {
 .niveles_rangos_contenido{
   
   float: right;
-  width: 60%;
+  width: 58%;
 }
 .niveles_rangos_contenido p{
   text-align: left;
@@ -702,7 +705,7 @@ p {
 }
 .pastores_contenido{
   float: right;
-  width: 60%;
+  width: 58%;
 }
 .pastores_contenido p{
   text-align: left;
