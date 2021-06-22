@@ -51,7 +51,7 @@ class Menu extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="items Center">
             <Nav bsPrefix="mr-auto">
-              <Nav.Link href="#Area/Estrategica" style={menu} className="menu-letra">AREAS ESTRATEGICAS</Nav.Link>
+              <Nav.Link href="#Actividades" style={menu} className="menu-letra">ACTIVIDADES</Nav.Link>
               <Nav.Link href="#Responsabilidad/Social" style={menu} className="menu-letra">RESPONSABILIDAD SOCIAL</Nav.Link>
               <Nav.Link href="#Horario/Servicio" style={menu} className="menu-letra">HORARIOS DE SERVICIO</Nav.Link>
               

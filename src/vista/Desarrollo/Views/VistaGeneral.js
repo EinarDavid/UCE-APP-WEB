@@ -11,27 +11,29 @@ import Slider from '../Componentes/Inicio_vista/Galeria_de_imagenes/Slider';
 import Footer from '../Componentes/Inicio_vista/texto_inicio/footer_black';
 import Footer_Contenido from '../Componentes/Inicio_vista/texto_inicio/texto_3';
 
-import Galeria from '../Componentes/Actividades/Galeria'
+import Galeria from '../Componentes/Actividades/Galeria';
+import Actividades from '../Componentes/Actividades/Actividades';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 class Inicio extends React.Component {
     render() {
         return (
             <React.Fragment>
+
+                <Menu />
+                <Imagen_fondo />
+                <Texto />
+                <Galeria />
+                <Actividades />
                 
-                <Menu/>
-                <Imagen_fondo/>
-                <Texto/>
-                <Galeria/>
-                <Areas_Estrategicas/>
-                <Avanzadas/>
-                <Texto_2/>
-                <Slider/>
-                <Footer_Contenido/>
-                <Footer/>
+                <Avanzadas />
+                <Texto_2 />
+                <Slider />
+                <Footer_Contenido />
+                <Footer />
             </React.Fragment>
         );
     }
 }
 export default Inicio;
-// <Galeria/>
+// <Galeria/> <Areas_Estrategicas />
