@@ -88,7 +88,7 @@ class Formulario extends Component {
 
                                 return (
                                     <tr key={i}>
-                                        <td>{i}</td>
+                                        <td>{i}</td> 
                                         {
                                             this.columnas.map(columna => {
                                                 var valor=filtro[columna]
