@@ -23,7 +23,7 @@ class Actividades extends React.Component {
                                         <div  key = {i}>
                                             <div className="imagecomponent col2 colspan_1_of_3 ">
                                                 <div className="imagecomponent-image ">
-                                                    <a ><img src={'/fotos/Iglesias/Actividad' + a.FotoActividad}></img>
+                                                    <a> <img src={'/fotos/Iglesias/Actividad/' + a.FotoActividad}></img>
                                                     </a>
                                                 </div>
                                                 <p className="imagecomponent-title">
