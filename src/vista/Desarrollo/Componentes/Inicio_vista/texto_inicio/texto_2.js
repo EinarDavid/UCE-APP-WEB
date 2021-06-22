@@ -11,7 +11,7 @@ function Texto_2() {
         <h2>Responsabilidad Social</h2>
         <br></br>
         <div className="Res-Social-Des">
-          <p>{window.datos.Iglesia.ResSocial}</p>
+          <p className="Res-Social-Parrafo">{window.datos.Iglesia.ResSocial}</p>
         </div>
         
         <div className="pastores">

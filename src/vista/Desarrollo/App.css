@@ -623,7 +623,7 @@ p {
 }
 .Encabezado_2{
   margin: auto;
-  text-align: center;
+  
 }
 .Encabezado_2 h2{
   color:#FFB01A;
@@ -637,6 +637,10 @@ p {
 }
 .Res-Social-Des{
 width: 80%;
+}
+.Res-Social-Parrafo{
+  margin-right: auto;
+  margin-left: auto;
 }
 .Inf_clubes{
   /*background-color: red;*/
