@@ -60,7 +60,7 @@ class Formulario extends Component {
     render() {
         return (
 
-            <div className="Form-filtro">
+            <div className="Form-filtro" id="texto">
 
                 <h1>{this.state.titulo}</h1>
                 <Table responsive striped hover>

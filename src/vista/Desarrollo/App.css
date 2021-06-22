@@ -77,7 +77,7 @@
 }
 
 .Menu_prin{
-  background-color: #000;
+  background-color: transparent;
   width: 100%;
   transition: all .5s;
 }

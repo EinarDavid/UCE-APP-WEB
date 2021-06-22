@@ -1,5 +1,6 @@
 var menu = document.getElementById('ColorMenu');
 var texto = document.getElementById('texto');
+
 //alert(window.pageYOffset);
 var altura = texto.offsetTop;
 
