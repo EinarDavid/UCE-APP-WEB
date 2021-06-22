@@ -24,8 +24,8 @@ class Inicio extends React.Component {
                 <Texto/>
                 <Galeria/>
                 <Actividades/>
-                <Areas_Estrategicas/>
-                <Avanzadas/>
+                
+                
                 <Texto_2/>
                 <Slider/>
                 <Footer_Contenido/>
@@ -35,4 +35,7 @@ class Inicio extends React.Component {
     }
 }
 export default Inicio;
-//<Galeria/>
+/*<Galeria/>
+<Areas_Estrategicas/>
+<Avanzadas/>
+*/
