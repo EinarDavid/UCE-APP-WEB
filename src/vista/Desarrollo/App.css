@@ -621,6 +621,10 @@ p {
     overflow: hidden;
     
 }
+.Encabezado_2{
+  margin: auto;
+  text-align: center;
+}
 .Encabezado_2 h2{
   color:#FFB01A;
   font-size: 37pt;
