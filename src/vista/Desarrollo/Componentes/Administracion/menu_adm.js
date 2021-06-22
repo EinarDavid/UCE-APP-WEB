@@ -551,7 +551,7 @@ class Menu_Admi extends React.Component {
                 <Modal size="lg" show={this.state.show16} onHide={this.handleClose} centered>
                     <Form action="/Editar/Iglesia" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
-                            <Modal.Title>Editar Pagina</Modal.Title>
+                            <Modal.Title>Administrar Página</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <EditarInformacion />

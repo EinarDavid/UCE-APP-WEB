@@ -13,10 +13,19 @@ class Formulario extends Component {
                             <Form.Control type="text" placeholder="Nombre de la Iglesia" name="Nombre" required defaultValue={window.datos.Iglesia.Nombre} />
                         </Form.Group>
                         <Form.Group as={Col} >
-                            <Form.Label>Descripcion</Form.Label>
-                            <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion"  defaultValue={window.datos.Iglesia.Descripcion} />
+                            <Form.Label>Denominación*</Form.Label>
+                            <Form.Control type="text" placeholder="Denominación" name="Denominacion" required defaultValue={window.datos.Iglesia.Denominacion} />
                         </Form.Group>
-
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col} >
+                            <Form.Label>Titulo de la Descripción*</Form.Label>
+                            <Form.Control type="text" placeholder="Titulo de la Descripción" name="Titulo_Descripcion" required defaultValue={window.datos.Iglesia.Titulo_Descripcion} />
+                        </Form.Group>
+                        <Form.Group as={Col} >
+                            <Form.Label>Descripcion</Form.Label>
+                            <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion" defaultValue={window.datos.Iglesia.Descripcion} />
+                        </Form.Group>
                     </Form.Row>
                     <Form.Row>
                         <Form.Group as={Col} >
@@ -57,13 +66,16 @@ class Formulario extends Component {
                     </Form.Row>
 
                     <Form.Row>
+                    <Form.Group as={Col}>
+                            <Form.Label>Horario</Form.Label>
+                        </Form.Group>
                         <Form.Group as={Col}>
                             <Form.Label>Horario</Form.Label>
                             <Form.Control as="textarea" rows="5" placeholder="Horario" name="Horario" defaultValue={window.datos.Iglesia.Horario} />
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
-                    <Form.Group as={Col}>
+                        <Form.Group as={Col}>
                             <Form.Label className="Color-Advertencia">*Si quieres modificar las Imagenes deselecciona el Checked</Form.Label>
                         </Form.Group>
                     </Form.Row>

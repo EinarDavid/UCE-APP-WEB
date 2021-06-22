@@ -21,7 +21,10 @@ const iglesiaSchema = Schema({
     
     Fotos: [String],
     FotosSlider: [String],
+    Denominacion: String,
+    Titulo_Descripcion: String,
     Descripcion: String,
+
     Mision: String,
     Vision: String,
     NumeroCelular: String,
