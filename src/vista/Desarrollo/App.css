@@ -322,13 +322,13 @@
   margin-bottom: 20px;
 }
 .rowtitle {
-  font-size: 37px;
+  font-size: 37pt;
   line-height: 26px;
-  font-weight: 700;
+  
   text-align: center;
   margin: 0;
   color: #FFB01A;
-  letter-spacing: -.02em;
+  
   font-family: 'Adelia Regular' !important;
 }
 .grid {
@@ -349,7 +349,7 @@
   max-width: 260px;
 }
 .imagecomponent-title {
-  font-size: 25px;
+  font-size: 25pt;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
@@ -364,7 +364,7 @@
   margin: 0 auto;
   margin-bottom: 13px;
   font-family: 'Gotham Book' !important;
-  font-size: 12px;
+  font-size: 12pt;
 }
 .row2 {
     display: flex;
