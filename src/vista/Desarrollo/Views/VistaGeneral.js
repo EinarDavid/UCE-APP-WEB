@@ -19,14 +19,11 @@ class Inicio extends React.Component {
     render() {
         return (
             <React.Fragment>
-
                 <Menu />
                 <Imagen_fondo />
                 <Texto />
                 <Galeria />
                 <Actividades />
-                
-                <Avanzadas />
                 <Texto_2 />
                 <Slider />
                 <Footer_Contenido />
@@ -36,4 +33,4 @@ class Inicio extends React.Component {
     }
 }
 export default Inicio;
-// <Galeria/> <Areas_Estrategicas />
+// <Galeria/> <Areas_Estrategicas /> <Avanzadas />
