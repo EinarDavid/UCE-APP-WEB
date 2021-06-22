@@ -33,6 +33,12 @@ const iglesiaSchema = Schema({
     ResSocial: String,
     Pastores: String,
     Horario: String,
+    Horario_Lunes: String,
+    Horario_Martes: String,
+    Horario_Miercoles: String,
+    Horario_Jueves: String,
+    Horario_Viernes: String,
+    Horario_Sabado: String,
 
     Cargos: [String],
 

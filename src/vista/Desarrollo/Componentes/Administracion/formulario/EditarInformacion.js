@@ -66,11 +66,44 @@ class Formulario extends Component {
                     </Form.Row>
 
                     <Form.Row>
-                    <Form.Group as={Col}>
-                            <Form.Label>Horario</Form.Label>
+                        <Form.Group as={Col}>
+                            <Form.Label>Horarios de Servicio</Form.Label>
+                        </Form.Group>
+
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col}>
+                            <Form.Label>Lunes</Form.Label>
+                            <Form.Control as="text" placeholder="Lunes" name="Horario_Lunes" defaultValue={window.datos.Iglesia.Horario_Lunes} />
                         </Form.Group>
                         <Form.Group as={Col}>
-                            <Form.Label>Horario</Form.Label>
+                            <Form.Label>Martes</Form.Label>
+                            <Form.Control as="text" placeholder="Martes" name="Horario_Martes" defaultValue={window.datos.Iglesia.Horario_Martes} />
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col}>
+                            <Form.Label>Miercoles</Form.Label>
+                            <Form.Control as="text" placeholder="Miercoles" name="Horario_Miercoles" defaultValue={window.datos.Iglesia.Horario_Miercoles} />
+                        </Form.Group>
+                        <Form.Group as={Col}>
+                            <Form.Label>Jueves</Form.Label>
+                            <Form.Control as="text" placeholder="Jueves" name="Horario_Jueves" defaultValue={window.datos.Iglesia.Horario_Jueves} />
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col}>
+                            <Form.Label>Viernes</Form.Label>
+                            <Form.Control as="text" placeholder="Viernes" name="Horario_Viernes" defaultValue={window.datos.Iglesia.Horario_Viernes} />
+                        </Form.Group>
+                        <Form.Group as={Col}>
+                            <Form.Label>Sábado</Form.Label>
+                            <Form.Control as="text" placeholder="Sábado" name="Horario_Sabado" defaultValue={window.datos.Iglesia.Horario_Sabado} />
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col}>
+                            <Form.Label>Domingo</Form.Label>
                             <Form.Control as="textarea" rows="5" placeholder="Horario" name="Horario" defaultValue={window.datos.Iglesia.Horario} />
                         </Form.Group>
                     </Form.Row>
