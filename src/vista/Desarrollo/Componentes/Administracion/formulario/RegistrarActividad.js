@@ -8,11 +8,11 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Titulo*</Form.Label>
-                        <Form.Control type="text" placeholder="Titulo*" name="Titulo" />
+                        <Form.Control type="text" placeholder="Titulo*" name="Titulo" required/>
                     </Form.Group>
                     <Form.Group as={Col} >
                         <Form.Label>Descripcion</Form.Label>
-                        <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion"/>
+                        <Form.Control as="textarea" rows="5" placeholder="Descripcion" name="Descripcion" required/>
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -40,11 +40,11 @@ class Formulario extends Component {
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Fecha Inicio</Form.Label>
-                        <Form.Control type="date" name="Inicio" />
+                        <Form.Control type="date" name="Inicio" required/>
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Fecha Fin</Form.Label>
-                        <Form.Control type="date" name="Fin" />
+                        <Form.Control type="date" name="Fin" required />
                     </Form.Group>
                     
                 </Form.Row>
