@@ -10,7 +10,8 @@ import Texto_2 from '../Componentes/Inicio_vista/texto_inicio/texto_2';
 import Slider from '../Componentes/Inicio_vista/Galeria_de_imagenes/Slider';
 import Footer from '../Componentes/Inicio_vista/texto_inicio/footer_black';
 import Footer_Contenido from '../Componentes/Inicio_vista/texto_inicio/texto_3';
-import Galeria from '../Componentes/Actividades/Galeria'
+import Galeria from '../Componentes/Actividades/Galeria';
+import Actividades from '../Componentes/Actividades/Actividades'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 class Inicio extends React.Component {
@@ -22,6 +23,7 @@ class Inicio extends React.Component {
                 <Imagen_fondo/>
                 <Texto/>
                 <Galeria/>
+                <Actividades/>
                 <Areas_Estrategicas/>
                 <Avanzadas/>
                 <Texto_2/>

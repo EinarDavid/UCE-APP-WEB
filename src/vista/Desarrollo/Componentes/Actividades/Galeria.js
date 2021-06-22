@@ -9,7 +9,7 @@ class Galeria extends React.Component {
                         window.datos.Iglesia.Fotos.map((a) => {
                             return (
                                 <div className="photogallery-images-frame">
-                                    <img src={'/fotos/Iglesias/' + a} />
+                                    <img src={'/fotos/Iglesias/' + a} width="auto" height="150px"/>
                                 </div>
                             )
                         })
