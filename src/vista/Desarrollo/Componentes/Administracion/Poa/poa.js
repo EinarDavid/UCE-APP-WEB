@@ -20,8 +20,8 @@ class POA extends Component {
     var actividades = window.datos.Iglesia.Actividades.map((a) => {
       return { title: a.Titulo, date: a.Inicio }
     })
-    console.log("Actividades", actividades)
-    console.log("Iglesia", window.datos.Iglesia)
+    //console.log("Actividades", actividades)
+    //console.log("Iglesia", window.datos.Iglesia)
     this.state = {
       calendarWeekends: true,
       calendarEvents: actividades,
@@ -29,7 +29,6 @@ class POA extends Component {
       actividad: "nada",
       dia: "hoy"
     }
-
   }
   handleClose() {
     this.setState({
@@ -119,7 +118,7 @@ class POA extends Component {
   handleDateClick(arg) {
 
     var actividad = window.datos.Iglesia.Actividades.filter(a => {
-      console.log(a.Inicio, arg.dateStr, a.Inicio == arg.dateStr)
+      //console.log(a.Inicio, arg.dateStr, a.Inicio == arg.dateStr)
       if (a.Inicio == arg.dateStr) {
         return a;
       }
