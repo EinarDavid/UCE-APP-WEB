@@ -22,9 +22,7 @@ function Texto_3() {
             <h3>SÁBADO</h3>
             <p>{window.datos.Iglesia.Horario_Sabado}</p>
             <h3>DOMINGO</h3>
-            <p>
-              {window.datos.Iglesia.Horario}
-            </p>
+            <p>{window.datos.Iglesia.Horario}</p>
           </div>
         </div>
       </div>
