@@ -772,6 +772,10 @@ text-align: left;
 float: right;
 width: 60%;
 }
+.horario_right h3 {
+width: 100%;
+text-align: left;
+}
 .horario_right p{
 text-align: left;
 }
