@@ -772,7 +772,7 @@ text-align: left;
 float: right;
 width: 60%;
 }
-.horario_right h3 {
+.horario_right h3{
 width: 100%;
 text-align: left;
 
@@ -826,7 +826,6 @@ text-align: left;
 .Contenido{
   width: 30%;
   margin: auto;
-  
 }
 .Contenido p{
   color:#000;
