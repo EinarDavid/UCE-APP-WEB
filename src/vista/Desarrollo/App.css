@@ -336,6 +336,7 @@
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
+  justify-content: center;
 }
 
 .col2 {
@@ -768,9 +769,9 @@ width: 38%;
 text-align: left;
 }
 .horario_right{
-background-color: pink;
+/*background-color: pink;*/
 float: right;
-width: 60%;
+width: 50%;
 }
 .horario_right h3{
 width: 100%;

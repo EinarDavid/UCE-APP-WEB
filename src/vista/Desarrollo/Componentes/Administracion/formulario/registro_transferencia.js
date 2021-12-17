@@ -68,8 +68,8 @@ class Formulario extends Component {
                             <Form.Control type="text" placeholder="Lugar de nacimiento" name="Lugar_Nacimiento" />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Numero Reg Cvil</Form.Label>
-                            <Form.Control type="text" placeholder="Numero Reg Cvil" name="Numero_Registro_Civil" />
+                            <Form.Label>Numero Reg Civil</Form.Label>
+                            <Form.Control type="text" placeholder="Numero Reg Civil" name="Numero_Registro_Civil" />
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Profesion</Form.Label>
@@ -93,9 +93,14 @@ class Formulario extends Component {
                         <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                             <Form.Label>Cargo en la Iglesia</Form.Label>
                             <Form.Control as="select" name="Cargo_Ministerial">
+                            <option value="Anciano">Anciano</option>
+                                <option value="Diacono">Diacono</option>
+                                <option value="Diaconisa">Diaconisa</option>
                                 <option value="Soc. Juvenil">Soc. Juvenil</option>
                                 <option value="Soc. Femenil">Soc. Femenil</option>
                                 <option value="Min. Pre Juvenil">Min. Pre Juvenil</option>
+                                <option value="Oansa">Oansa</option>
+                                <option value="Superintendencia">Superintendencia</option>
                             </Form.Control>
                         </Form.Group>
                     </Form.Row>
