@@ -17,7 +17,7 @@ function Texto_3() {
             <p>{window.datos.Iglesia.Horario_Jueves}</p>
           </div>
           <div className="horario_right">
-            <h3>VIERNES</h3>
+            <h3>VIERNESS</h3>
             <p>{window.datos.Iglesia.Horario_Viernes}</p>
             <h3>SÁBADO</h3>
             <p>{window.datos.Iglesia.Horario_Sabado}</p>
