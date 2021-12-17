@@ -179,10 +179,10 @@ class Menu_Admi extends React.Component {
                                 <NavDropdown.Item onClick={this.handleShow_Transferencia}>REG. POR TRANFERENCIAS</NavDropdown.Item>
                                 <NavDropdown.Item onClick={this.handleShow_Solicitud}>REG. POR SOLICITUD</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link onClick={this.handleShow_Usuario} style={menu} className="menu-letra">CAT. PERSONAL</Nav.Link>
+                            <Nav.Link onClick={this.handleShow_Usuario} style={menu} className="menu-letra">REG. PERSONAL</Nav.Link>
                             <NavDropdown className="menu-letra" title="BUSQUEDAS" id="collasible-nav-dropdown">
                                 <NavDropdown.Item onClick={this.handleShow_filtro_membresia}>MEMBRESIA</NavDropdown.Item>
-                                <NavDropdown.Item onClick={this.handleShow_filtro_Usuario}>ENCARGADO</NavDropdown.Item>
+                                <NavDropdown.Item onClick={this.handleShow_filtro_Usuario}>PERSONAL</NavDropdown.Item>
                             </NavDropdown >
                             <Nav.Link onClick={this.handleShow_RegistrarActividad} style={menu} className="menu-letra">REG. ACTIVIDAD</Nav.Link>
                             
