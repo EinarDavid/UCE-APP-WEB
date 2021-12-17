@@ -176,6 +176,8 @@
   color:#fff;
   font-family: 'Gotham Book' !important;
   font-size: 12pt;
+  width: 80%;
+  margin: auto;
 }
 .texto_quienes_somos h4{
   color:#fff;
@@ -351,7 +353,7 @@
 }
 .imagecomponent-title {
   font-size: 25pt;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 700;
   text-align: center;
   margin: 0 auto;
