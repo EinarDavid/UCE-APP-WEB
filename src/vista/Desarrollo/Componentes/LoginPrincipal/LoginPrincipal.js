@@ -8,7 +8,7 @@ class Login_Principal extends Component {
             <div className="backgroud">
                 <div className="Form-Login-Prin">
                     <Form action="/iniciar/sesion" method="post">
-                        <h3 className="Form-Puma-Center">Iniciar Sesion</h3>
+                        <h3 className="Form-Puma-Center">Iniciar Sesión</h3>
                         <Form.Row>
                             <Form.Group as={Col} controlId="formGridEmail">
                                 <Form.Label>CI</Form.Label>
@@ -22,7 +22,7 @@ class Login_Principal extends Component {
                             </Form.Group>
                         </Form.Row>
                         <div className="Form-Puma-Center">
-                        <Button variant="primary" type="submit">Enviar</Button>
+                        <Button variant="primary" type="submit">INICIAR SESIÓN</Button>
                         </div>
                     </Form>
                 </div>
