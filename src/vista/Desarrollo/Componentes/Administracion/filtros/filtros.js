@@ -111,7 +111,7 @@ class Formulario extends Component {
                                                     }
                                                     return (
                                                         <td>
-                                                            <img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
+                                                            <img src ={'/fotos/Membresias/' + valor} width="150px" height="100px"></img></td>
                                                     )
                                                 }
                                                 else
