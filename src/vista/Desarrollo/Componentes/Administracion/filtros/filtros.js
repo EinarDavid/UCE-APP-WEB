@@ -109,12 +109,6 @@ class Formulario extends Component {
                                                         <td>{valor}</td>
                                                     )
                                                 }
-                                                
-                                            })
-
-                                        }
-                                        {
-                                            this.columnas.map(columna =>{
                                                 var fotoMembresia=filtro[columna]
                                                 if(columna=="Imagen_Membresia"){
                                                     if (fotoMembresia ==""){
@@ -129,8 +123,13 @@ class Formulario extends Component {
                                                         <td>{fotoMembresia}</td>
                                                     )
                                                 }
+                                                
                                             })
+                                           
                                         }
+                                        
+                                            
+                                        
                                         <td>
                                             <h4 className="accion">
 
