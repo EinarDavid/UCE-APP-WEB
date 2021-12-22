@@ -100,7 +100,18 @@ class Formulario extends Component {
                                                         valor="IconoPersona.jpg"
                                                     }
                                                     return (
-                                                        <td><img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
+                                                        <td>
+                                                            <img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
+                                                    )
+                                                }
+                                                if(columna=="Imagen_Membresia"){
+                                                    if (valor =="")
+                                                    {
+                                                        valor="IconoPersona.jpg"
+                                                    }
+                                                    return (
+                                                        <td>
+                                                            <img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
                                                     )
                                                 }
                                                 else
@@ -109,20 +120,7 @@ class Formulario extends Component {
                                                         <td>{valor}</td>
                                                     )
                                                 }
-                                                var fotoMembresia=filtro[columna]
-                                                if(columna=="Imagen_Membresia"){
-                                                    if (fotoMembresia ==""){
-                                                        fotoMembresia="IconoPersona.jpg"
-                                                    }
-                                                    return(
-                                                        <td><img src ={'/fotos/Membresias/' + fotoMembresia} width="100px" height="100px"></img></td>
-                                                    )
-                                                }
-                                                else{
-                                                    return(
-                                                        <td>{fotoMembresia}</td>
-                                                    )
-                                                }
+                                               
                                                 
                                             })
                                            

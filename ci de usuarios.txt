@@ -11,4 +11,23 @@
 
 8000 admin -> admi iglesias unidas
 
-63949159 admin -> la palabra de Fe
+8038559 admin -> la palabra de Fe
+
+var valor=filtro[columna]
+                                                
+                                                if(columna=="FotoPerfil")
+                                                {
+                                                    if (valor =="")
+                                                    {
+                                                        valor="IconoPersona.jpg"
+                                                    }
+                                                    return (
+                                                        <td><img src ={'/fotos/Membresias/' + valor} width="100px" height="100px"></img></td>
+                                                    )
+                                                }
+                                                else
+                                                {
+                                                    return (
+                                                        <td>{valor}</td>
+                                                    )
+                                                }
