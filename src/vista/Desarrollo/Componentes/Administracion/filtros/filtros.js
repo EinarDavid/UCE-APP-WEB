@@ -88,11 +88,11 @@ class Formulario extends Component {
 
                                 return (
                                     <tr key={i}>
-                                        <td>{i}</td> 
+                                        <td>{i+1}</td> 
                                         {
                                             this.columnas.map(columna => {
                                                 var valor=filtro[columna]
-                                                var fotoMembresia=filtro[columna]
+                                                
                                                 if(columna=="FotoPerfil")
                                                 {
                                                     if (valor =="")
@@ -109,6 +109,13 @@ class Formulario extends Component {
                                                         <td>{valor}</td>
                                                     )
                                                 }
+                                                
+                                            })
+
+                                        }
+                                        {
+                                            this.columnas.map(columna =>{
+                                                var fotoMembresia=filtro[columna]
                                                 if(columna=="Imagen_Membresia"){
                                                     if (fotoMembresia ==""){
                                                         fotoMembresia="IconoPersona.jpg"
@@ -123,7 +130,6 @@ class Formulario extends Component {
                                                     )
                                                 }
                                             })
-
                                         }
                                         <td>
                                             <h4 className="accion">
