@@ -79,6 +79,7 @@ class Formulario extends Component {
         this.setState({ show: nshow});
     }
     handleShow_EditarPerfil(i) {
+        
         var nshow =  window.datos.filtro.map((a,ie)=>
         { 
             if(ie==i)
@@ -89,7 +90,8 @@ class Formulario extends Component {
             {
                 return a;
             }
-        })[i]
+        })
+        console.log(nshow)
         this.setState({ show: nshow });
     }
     render() {
