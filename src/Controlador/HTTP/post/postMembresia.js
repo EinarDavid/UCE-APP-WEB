@@ -75,7 +75,7 @@ function peticion() {
                       
                         console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body, nuevo)
                         bd.cruds.crudMembresias.modificar(resu._id, nuevo, () => {
-                            res.redirect("back");
+                            res.redirect("/Iglesia/"+req.user.Iglesia);
                         })
                     })
 
