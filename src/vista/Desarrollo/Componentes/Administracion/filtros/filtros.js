@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Form, Col, Button, Modal } from 'react-bootstrap';
-import ModificarInformacion from '../../Usuario/ModificarInformacion';
+import ModificarInformacion from '../../Usuario/ModificarInformacionUser';
 
 
 
@@ -58,7 +58,7 @@ class Formulario extends Component {
         //        Object.values(filtro)
 
 
-
+        this.handleShow = this.handleShow.bind(this);
         this.handleShow_EditarPerfil = this.handleShow_EditarPerfil.bind(this);
     }
     handleClose() {
