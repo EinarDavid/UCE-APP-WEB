@@ -65,9 +65,9 @@ function peticion() {
                         req.body.Fotos = req.files.Fotos.map((a)=>{return a.filename});
                     if(req.files.FotosSlider != undefined && req.body.MantenerFotosSlider != 'on')
                         req.body.FotosSlider = req.files.FotosSlider.map((a)=>{return a.filename});
-                    console.log("----------------------------------Imagenes:------------------------------------")
-                    console.log("body:", req.body);
-                    console.log("files:", req.files);
+                    //console.log("----------------------------------Imagenes:------------------------------------")
+                    //console.log("body:", req.body);
+                    //console.log("files:", req.files);
                     bd.cruds.crudIglesia.modificar(req.user.Iglesia, req.body, () => {
                         res.redirect("back");
                     });
@@ -91,11 +91,11 @@ function peticion() {
 
             upload2(req, res, function (err) {
                 if (err) {
-                    console.log(err, 'Im in post , inside upload' + ruta);
+                    //console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
-                    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
+                    //console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
                     bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
                         if(iglesia.actividades==undefined)
                         {
@@ -103,10 +103,10 @@ function peticion() {
                         }
                         const crypto = require('crypto');
                         var hash = crypto.randomBytes(3).toString('hex');
-                        console.log(hash);
-                        console.log("----------------------------------Imagenes:------------------------------------")
-                        console.log("body:", req.body);
-                        console.log("files:", req.files);
+                        //console.log(hash);
+                        //console.log("----------------------------------Imagenes:------------------------------------")
+                        //console.log("body:", req.body);
+                        //console.log("files:", req.files);
                         iglesia.Actividades.push(
                             {
                                 Codigo: hash,
