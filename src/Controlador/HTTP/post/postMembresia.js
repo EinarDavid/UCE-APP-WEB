@@ -59,20 +59,10 @@ function peticion() {
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
                         resu = resu[0]
-                        var nuevo = resu;
-                        nuevo.Nombre = req.body.Nombre;
-                        nuevo.Apellido_Paterno = req.body.Apellido_Paterno;
-                        nuevo.Apellido_Materno = req.body.Apellido_Materno;
-                        nuevo.Genero = req.body.Genero;
-                        nuevo.Contacto = req.body.Contacto;
-                        nuevo.Email = req.body.Email;
-                        nuevo.Fecha_Nacimiento = req.body.Fecha_Nacimiento;
-                        nuevo.Lugar_Nacimiento = req.body.Lugar_Nacimiento;
-                        nuevo.Profesion= req.body.Profesion;
-                        nuevo.Direccion = req.body.Direccion;
-                        nuevo.Estado_Civil = req.body.Estado_Civil;
+                       
                         
-                      
+                        var nuevo = {...resu, ...req.body}
+                      //Probas con 3 puntos
                         console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body, nuevo)
                         bd.cruds.crudMembresias.modificar(resu._id, nuevo, () => {
                             res.redirect("/Iglesia/"+req.user.Iglesia);
