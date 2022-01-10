@@ -40,13 +40,14 @@ class Formulario extends Component {
                     return a;
                 })
                 */
-        this.state = {
+                console.log(window.datos.filtro.map(a=>false))
+               this.state = {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
             reporte: '/Descargar/' + window.datos.reporte,
             show: window.datos.filtro.map(a=>false),
         };
-
+        console.log(this.state)
         if (this.state.filtro.length == 0) {
             //console.log("----------------",this.state.filtro[0],"------------------");    
             this.state.filtro = [{}];
@@ -174,7 +175,7 @@ class Formulario extends Component {
                         return (
                             <Modal size="lg" show={this.state.show[i]} onHide={(i)=>this.handleClose(i)} centered>
                                 <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
-                                    <Modal.Header closeButton>
+                                    <Modal.Header closeButton>  console.log(this.state)
                                         <Modal.Title>Modificar perfil</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
