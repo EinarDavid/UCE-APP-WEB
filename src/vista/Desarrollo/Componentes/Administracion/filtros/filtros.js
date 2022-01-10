@@ -91,7 +91,7 @@ class Formulario extends Component {
                 return a;
             }
         })
-        console.log(nshow)
+        console.log("#########################################",nshow)
         this.setState({ show: nshow });
     }
     render() {
