@@ -58,7 +58,7 @@ function peticion() {
                     console.log("eeeeeeeeeeeeeeeeee",req.params.ci)
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
-                        console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu)
+                        console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body)
                         bd.cruds.crudMembresias.modificar(resu._id, req.body, () => {
                             res.redirect("back");
                         })
