@@ -175,7 +175,7 @@ class Formulario extends Component {
                 {
                     this.state.filtro.map((filtro, i) => {
                         return (
-                            <Modal size="lg" show={this.state.show[i]} onHide={(i)=>this.handleClose(i)} centered>
+                            <Modal size="lg" show={this.state.show[i]} onHide={(e)=>this.handleClose(i)} centered>
                                 <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                                     <Modal.Header closeButton>  console.log(this.state)
                                         <Modal.Title>Modificar perfil</Modal.Title>
@@ -184,7 +184,7 @@ class Formulario extends Component {
                                         <ModificarInformacion id={i} />
                                     </Modal.Body>
                                     <Modal.Footer>
-                                        <Button variant="secondary" onClick={(i)=>this.handleClose(i)} >Close</Button>
+                                        <Button variant="secondary" onClick={(e)=>this.handleClose(i)} >Close</Button>
                                         <Button variant="primary" type="submit">Submit</Button>
                                     </Modal.Footer>
                                 </Form>
