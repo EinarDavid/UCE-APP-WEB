@@ -76,8 +76,8 @@ class Formulario extends Component {
             }) });
     }
     handleShow_EditarPerfil(i) {
-        this.setState({ show: window.datos.filtro.map(a,ie=>
-        {
+        this.setState({ show: window.datos.filtro.map((a,ie)=>
+        { 
             if(ie==i)
             {
                 return true;
@@ -86,7 +86,8 @@ class Formulario extends Component {
             {
                 return a;
             }
-        }) });
+        })
+    });
     }
     render() {
         return (
