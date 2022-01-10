@@ -58,7 +58,8 @@ class Formulario extends Component {
         //        Object.values(filtro)
 
 
-        this.handleShow = this.handleShow.bind(this);
+       
+        this.handleClose = this.handleClose.bind(this);
         this.handleShow_EditarPerfil = this.handleShow_EditarPerfil.bind(this);
     }
     handleClose() {
