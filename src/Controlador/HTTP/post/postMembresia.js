@@ -58,7 +58,7 @@ function peticion() {
                     console.log("eeeeeeeeeeeeeeeeee",req.params.ci)
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
-                        
+                        resu = resu[0]
                         var nuevo = resu;
                         nuevo.Nombre = req.body.Nombre;
                         nuevo.Apellido_Paterno = req.body.Apellido_Paterno;
