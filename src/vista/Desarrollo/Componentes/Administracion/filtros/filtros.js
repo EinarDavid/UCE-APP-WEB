@@ -58,7 +58,7 @@ class Formulario extends Component {
         //        Object.values(filtro)
 
 
-       
+
         this.handleClose = this.handleClose.bind(this);
         this.handleShow_EditarPerfil = this.handleShow_EditarPerfil.bind(this);
     }
@@ -68,8 +68,8 @@ class Formulario extends Component {
 
         });
     }
-    handleShow_EditarPerfil(){
-        this.setState({show1: true});
+    handleShow_EditarPerfil() {
+        this.setState({ show1: true });
     }
     render() {
         return (
@@ -160,7 +160,13 @@ class Formulario extends Component {
                             <Modal.Title>Modificar perfil</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <ModificarInformacion />
+                            {
+                                this.state.filtro.map((filtro, i) => {
+                                    return (<ModificarInformacion id={i} />)
+                                })
+                            }
+
+
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={this.handleClose} >Close</Button>
