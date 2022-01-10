@@ -40,6 +40,32 @@ function peticion() {
                 }
             })
         })
+        this.rutas.post("/Modificar/Membresia/user/:ci", ver.verificar, (req, res) => {
+            upload(req,res, function (err){
+                if (err) {
+                    console.log(err, 'Im in post , inside upload' + ruta);
+                    return res.end('Error subiendo archivo' + err);
+                }
+                else
+                {
+                    if(req.files.FotoPerfil != undefined && req.body.MantenerFotoPerfil != 'on')
+                        req.body.FotoPerfil = req.files.FotoPerfil[0].filename;
+
+                    console.log("----------------------------------Imagenes:------------------------------------")
+                    console.log("body:", req.body);
+                    console.log("files:", req.files);
+                    filtro['Ci'] = { valor: req.params.ci, tipo: 'igual' }
+                    bd.cruds.crudMembresias.buscar(filtro, (resu)=>
+                    {
+                        console.log(resu)
+                        bd.cruds.crudMembresias.modificar(resu._id, req.body, () => {
+                            res.redirect("back");
+                        })
+                    })
+
+                }
+            })
+        })
 
     } 
 }
