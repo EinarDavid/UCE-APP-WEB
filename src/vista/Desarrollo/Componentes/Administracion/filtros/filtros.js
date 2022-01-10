@@ -140,7 +140,7 @@ class Formulario extends Component {
                                         <td>
                                             <h4 className="accion">
 
-                                                <a onClick={this.handleShow_Editar} > </a>
+                                                <Button onClick={this.handleShow_EditarPerfil} > </Button>
 
                                             </h4>
                                         </td>
