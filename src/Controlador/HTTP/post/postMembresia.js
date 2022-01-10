@@ -31,9 +31,9 @@ function peticion() {
                     if(req.files.FotoPerfil != undefined && req.body.MantenerFotoPerfil != 'on')
                         req.body.FotoPerfil = req.files.FotoPerfil[0].filename;
 
-                    console.log("----------------------------------Imagenes:------------------------------------")
-                    console.log("body:", req.body);
-                    console.log("files:", req.files);
+                    //console.log("----------------------------------Imagenes:------------------------------------")
+                    //console.log("body:", req.body);
+                    //console.log("files:", req.files);
                     bd.cruds.crudMembresias.modificar(req.user._id, req.body, () => {
                         res.redirect("back");
                     })
@@ -58,8 +58,10 @@ function peticion() {
                     console.log("eeeeeeeeeeeeeeeeee",req.params.ci)
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
-                        console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body)
-                        bd.cruds.crudMembresias.modificar(resu._id, req.body, () => {
+                        
+                        var nuevo = {...resu, ...req.body}
+                        console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body, nuevo)
+                        bd.cruds.crudMembresias.modificar(resu._id, nuevo, () => {
                             res.redirect("back");
                         })
                     })
