@@ -40,12 +40,12 @@ class Formulario extends Component {
                     return a;
                 })
                 */
-                console.log(window.datos.filtro.map(a=>false))
-               this.state = {
+        console.log(window.datos.filtro.map(a => false))
+        this.state = {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
             reporte: '/Descargar/' + window.datos.reporte,
-            show: window.datos.filtro.map(a=>false),
+            show: window.datos.filtro.map(a => false),
         };
         console.log(this.state)
         if (this.state.filtro.length == 0) {
@@ -65,33 +65,27 @@ class Formulario extends Component {
     }
     //Dice que show debe ser un boleano
     handleClose(i) {
-        var nshow =  this.state.show.map((a,ie)=>
-            {
-                if(ie==i)
-                {
-                    return false;
-                }
-                else
-                {
-                    return a;
-                }
-            })
-        this.setState({ show: nshow});
-    }
-    handleShow_EditarPerfil(i) {
-        
-        var nshow = this.state.show.map((a,ie)=>
-        { 
-            if(ie==i)
-            {
-                return true;
+        var nshow = this.state.show.map((a, ie) => {
+            if (ie == i) {
+                return false;
             }
-            else
-            {
+            else {
                 return a;
             }
         })
-        console.log("#########################################",nshow,i)
+        this.setState({ show: nshow });
+    }
+    handleShow_EditarPerfil(i) {
+
+        var nshow = this.state.show.map((a, ie) => {
+            if (ie == i) {
+                return true;
+            }
+            else {
+                return a;
+            }
+        })
+        console.log("#########################################", nshow, i)
         this.setState({ show: nshow });
     }
     render() {
@@ -158,7 +152,7 @@ class Formulario extends Component {
                                         <td>
                                             <h4 className="accion">
 
-                                                <Button onClick={(i)=>this.handleShow_EditarPerfil(i)}> </Button>
+                                                <Button onClick={(e) => { console.log("iiiiiiiiiiiiiiiiiii", i); this.handleShow_EditarPerfil(i) }}> </Button>
 
                                             </h4>
                                         </td>
@@ -175,7 +169,7 @@ class Formulario extends Component {
                 {
                     this.state.filtro.map((filtro, i) => {
                         return (
-                            <Modal size="lg" show={this.state.show[i]} onHide={(e)=>this.handleClose(i)} centered>
+                            <Modal size="lg" show={this.state.show[i]} onHide={(e) => this.handleClose(i)} centered>
                                 <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                                     <Modal.Header closeButton>  console.log(this.state)
                                         <Modal.Title>Modificar perfil</Modal.Title>
@@ -184,7 +178,7 @@ class Formulario extends Component {
                                         <ModificarInformacion id={i} />
                                     </Modal.Body>
                                     <Modal.Footer>
-                                        <Button variant="secondary" onClick={(e)=>this.handleClose(i)} >Close</Button>
+                                        <Button variant="secondary" onClick={(e) => this.handleClose(i)} >Close</Button>
                                         <Button variant="primary" type="submit">Submit</Button>
                                     </Modal.Footer>
                                 </Form>
