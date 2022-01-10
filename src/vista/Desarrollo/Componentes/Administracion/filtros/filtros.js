@@ -44,7 +44,7 @@ class Formulario extends Component {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
             reporte: '/Descargar/' + window.datos.reporte,
-            show1: false,
+            show: window.datos.filtro.map(a=>false),
         };
 
         if (this.state.filtro.length == 0) {
@@ -62,14 +62,31 @@ class Formulario extends Component {
         this.handleClose = this.handleClose.bind(this);
         this.handleShow_EditarPerfil = this.handleShow_EditarPerfil.bind(this);
     }
-    handleClose() {
-        this.setState({
-            show1: false,
-
-        });
+    handleClose(i) {
+        this.setState({ show: window.datos.filtro.map(a,ie=>
+            {
+                if(ie==i)
+                {
+                    return false;
+                }
+                else
+                {
+                    return a;
+                }
+            }) });
     }
-    handleShow_EditarPerfil() {
-        this.setState({ show1: true });
+    handleShow_EditarPerfil(i) {
+        this.setState({ show: window.datos.filtro.map(a,ie=>
+        {
+            if(ie==i)
+            {
+                return true;
+            }
+            else
+            {
+                return a;
+            }
+        }) });
     }
     render() {
         return (
@@ -141,7 +158,7 @@ class Formulario extends Component {
                                         <td>
                                             <h4 className="accion">
 
-                                                <Button onClick={this.handleShow_EditarPerfil} > </Button>
+                                                <Button onClick={this.handleShow_EditarPerfil(i)}> </Button>
 
                                             </h4>
                                         </td>
@@ -154,26 +171,30 @@ class Formulario extends Component {
                     </tbody>
                 </Table>
                 <br></br>
-                <Modal size="lg" show={this.state.show1} onHide={this.handleClose} centered>
-                    <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
-                        <Modal.Header closeButton>
-                            <Modal.Title>Modificar perfil</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            {
-                                this.state.filtro.map((filtro, i) => {
-                                    return (<ModificarInformacion id={i} />)
-                                })
-                            }
+
+                {
+                    this.state.filtro.map((filtro, i) => {
+                        return (
+                            <Modal size="lg" show={this.state.show[i]} onHide={this.handleClose} centered>
+                                <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modificar perfil</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <ModificarInformacion id={i} />
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={this.handleClose} >Close</Button>
+                                        <Button variant="primary" type="submit">Submit</Button>
+                                    </Modal.Footer>
+                                </Form>
+                            </Modal>
+                        )
+                    })
+                }
 
 
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
-                        </Modal.Footer>
-                    </Form>
-                </Modal>
+
                 <div className="Reportes">
                     <Form action={this.state.reporte} method="post">
                         <Form.Group as={Col} controlId="formGridEmail">
