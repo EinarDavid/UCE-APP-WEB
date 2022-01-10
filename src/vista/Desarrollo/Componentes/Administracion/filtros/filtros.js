@@ -64,7 +64,7 @@ class Formulario extends Component {
     }
     //Dice que show debe ser un boleano
     handleClose(i) {
-        var nshow =  window.datos.filtro.map(a,ie=>
+        var nshow =  window.datos.filtro.map((a,ie)=>
             {
                 if(ie==i)
                 {
