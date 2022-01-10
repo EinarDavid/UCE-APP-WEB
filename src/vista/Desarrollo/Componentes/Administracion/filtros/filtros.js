@@ -64,7 +64,7 @@ class Formulario extends Component {
     }
     //Dice que show debe ser un boleano
     handleClose(i) {
-        this.setState({ show: window.datos.filtro.map(a,ie=>
+        var nshow =  window.datos.filtro.map(a,ie=>
             {
                 if(ie==i)
                 {
@@ -74,10 +74,11 @@ class Formulario extends Component {
                 {
                     return a;
                 }
-            })[i] });
+            })[i] 
+        this.setState({ show: nshow});
     }
     handleShow_EditarPerfil(i) {
-        this.setState({ show: window.datos.filtro.map((a,ie)=>
+        var nshow =  window.datos.filtro.map((a,ie)=>
         { 
             if(ie==i)
             {
@@ -88,7 +89,7 @@ class Formulario extends Component {
                 return a;
             }
         })[i]
-    });
+        this.setState({ show: nshow });
     }
     render() {
         return (
