@@ -54,7 +54,7 @@ function peticion() {
                     console.log("----------------------------------Imagenes:------------------------------------")
                     console.log("body:", req.body);
                     console.log("files:", req.files);
-                    filtro['Ci'] = { valor: req.params.ci, tipo: 'igual' }
+                    var filtro  = { 'Ci':{ valor: req.params.ci, tipo: 'igual' }}
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
                         console.log(resu)
