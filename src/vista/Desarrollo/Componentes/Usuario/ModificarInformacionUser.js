@@ -5,7 +5,7 @@ import { Form, Col, Button } from 'react-bootstrap';
 class Formulario extends Component {
     constructor(props){
         super(props);
-        console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", this.props);
+        console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", props);
         console.log("¡¡¡¡¡¡¡¡¡¡¡!!!!!!!!!!!!!!!!", window.datos.filtro);
     }
     render() {
