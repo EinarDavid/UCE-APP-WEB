@@ -170,7 +170,7 @@ class Formulario extends Component {
                     this.state.filtro.map((filtro, i) => {
                         return (
                             <Modal size="lg" show={this.state.show[i]} onHide={(e) => this.handleClose(i)} centered>
-                                <Form action={"/Modificar/Membresia/user/"+filtro[i].Ci} method="post" enctype="multipart/form-data">
+                                <Form action={"/Modificar/Membresia/user/"+filtro.Ci} method="post" enctype="multipart/form-data">
                                     <Modal.Header closeButton>  console.log(this.state)
                                         <Modal.Title>Modificar perfil</Modal.Title>
                                     </Modal.Header>
