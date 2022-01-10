@@ -150,14 +150,8 @@ class Formulario extends Component {
                                                         <td>{valor}</td>
                                                     )
                                                 }
-
-
                                             })
-
                                         }
-
-
-
                                         <td>
                                             <h4 className="accion">
 
@@ -178,7 +172,7 @@ class Formulario extends Component {
                 {
                     this.state.filtro.map((filtro, i) => {
                         return (
-                            <Modal size="lg" show={this.state.show[i]} onHide={this.handleClose} centered>
+                            <Modal size="lg" show={this.state.show[i]} onHide={this.handleClose(i)} centered>
                                 <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                                     <Modal.Header closeButton>
                                         <Modal.Title>Modificar perfil</Modal.Title>
