@@ -20,7 +20,7 @@ class Formulario extends Component {
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Apellido Paterno</Form.Label>
-                            <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required defaultValue={window.datos.filtro[props.id].Apellido_Paterno} />
+                            <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required defaultValue={window.datos.filtro[this.props.id].Apellido_Paterno} />
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Apellido Materno</Form.Label>
