@@ -16,11 +16,11 @@ class Formulario extends Component {
                     <Form.Row>
                         <Form.Group as={Col} >
                             <Form.Label>Nombre*</Form.Label>
-                            <Form.Control type="text" placeholder="Nombre" name="Nombre" required defaultValue={window.datos.user.Nombre} />
+                            <Form.Control type="text" placeholder="Nombre" name="Nombre" required defaultValue={window.datos.filtro[this.props.id].Nombre} />
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Apellido Paterno</Form.Label>
-                            <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required defaultValue={window.datos.user.Apellido_Paterno} />
+                            <Form.Control type="text" placeholder="Apellido Paterno" name="Apellido_Paterno" required defaultValue={window.datos.filtro[props.id].Apellido_Paterno} />
                         </Form.Group>
                         <Form.Group as={Col} >
                             <Form.Label>Apellido Materno</Form.Label>
