@@ -12,7 +12,15 @@ module.exports = (datos, nombre, excepciones = [])=>
         delete dato[exc];
       });
     });
-    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]))
+    var getKeys = function(obj){
+      var keys = [];
+      for(var key in obj){
+         keys.push(key);
+      }
+      return keys;
+   }
+    var llaves = getKeys(datos[0])
+    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),llaves)
     var atributos = [];
     Object.keys(datos[0]).map(atributo => {
       atributos.push(atributo);
