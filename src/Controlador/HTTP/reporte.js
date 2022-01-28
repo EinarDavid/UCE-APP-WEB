@@ -25,10 +25,11 @@ module.exports = (datos, nombre, excepciones = [])=>
     var llaves = getKeys(datos[0].toJSON())
     console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0].toJSON()),"eeeeeeeeeeeeeeeeeeee",llaves)
     var atributos = [];
-    Object.keys(datos[0]).map(atributo => {
+    Object.keys(datos[0].toJSON()).map(atributo => {
       atributos.push(atributo);
       //console.log("----------------------a---------", atributo, datos[0])
     })
+    atributos = llaves;
     tabla.push(atributos);
     datos.map(dato=>
     {

@@ -47,7 +47,7 @@ function peticion() {
                     datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
               
                     const excel = require('./../../reporte.js');
-                    (excel(respuesta, 'membresia', ['_id']));
+                    (excel(respuesta, 'membresia', ['_id','__v']));
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
