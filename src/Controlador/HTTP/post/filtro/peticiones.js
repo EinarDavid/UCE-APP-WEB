@@ -6,7 +6,7 @@ function peticion() {
         this.rutas = rutas;
         this.funciones(bd, ver);
     }
- 
+
     this.funciones = (bd, ver) => {
 
         this.rutas.post("/Filtro/Membresia", ver.verificar, (req, res) => {
@@ -17,24 +17,23 @@ function peticion() {
             var filtro = {}
             filtro[campo] = { valor, tipo: 'contieneString' }
             //console.log(bd.cruds);
-            
-            bd.cruds.crudMembresias.buscar(filtro, (respuesta) => {
-        /*
-                bd.cruds.crudUsuario.leer((car) => {
-                    //console.log(""==respuesta);
-                    cargos = car;
-                    
 
-                    res.render("Paginas/index", {
-                        pagina: 'filtro',
-                        datos: { titulo: 'Resultados De la Busqueda Membresia', cargos, filtro: respuesta, reporte: 'membresia' }
-                    });
-                });
-        */
-          //      console.log("--------------------***************************",filtro,respuesta)
-              respuesta = respuesta.filter(a=>
-                {
-                    if(a.Iglesia==req.user.Iglesia){
+            bd.cruds.crudMembresias.buscar(filtro, (respuesta) => {
+                /*
+                        bd.cruds.crudUsuario.leer((car) => {
+                            //console.log(""==respuesta);
+                            cargos = car;
+                            
+        
+                            res.render("Paginas/index", {
+                                pagina: 'filtro',
+                                datos: { titulo: 'Resultados De la Busqueda Membresia', cargos, filtro: respuesta, reporte: 'membresia' }
+                            });
+                        });
+                */
+                //      console.log("--------------------***************************",filtro,respuesta)
+                respuesta = respuesta.filter(a => {
+                    if (a.Iglesia == req.user.Iglesia) {
                         return a;
                     }
                 })
@@ -43,26 +42,29 @@ function peticion() {
                     var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia', original: respuesta }
                     datos.user = req.user;
                     datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
-              
+
                     datos.Iglesia = igle;
                     datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
-                    
-                    var respuestaexcel = clone(respuesta.toJSON())
-                    respuestaexcel = respuestaexcel.map(a=>{
+
+                    var respuestaexcel = []
+                    respuesta.map(r => {
+                        respuestaexcel.push(clone(r.toJSON()))
+                    })
+                    respuestaexcel = respuestaexcel.map(a => {
                         a.Iglesia = igle.Nombre
                         return a
                     })
                     const excel = require('./../../reporte.js');
-                    (excel(respuestaexcel, 'membresia', ['_id','__v', 'Contraseña', 'Hijos', 'FotoPerfil', 'Disciplina']));
+                    (excel(respuestaexcel, 'membresia', ['_id', '__v', 'Contraseña', 'Hijos', 'FotoPerfil', 'Disciplina']));
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
                         datos
                     });
-                  })
+                })
 
             });
-// git add . || git commit -am "filtros" || git push
+            // git add . || git commit -am "filtros" || git push
 
         });
         this.rutas.post("/Filtro/SC", ver.verificarAdmin, (req, res) => {
@@ -80,7 +82,7 @@ function peticion() {
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
-                        datos: { titulo: 'Resultados De la Busqueda Santa Cena', cargos, filtro: respuesta, reporte:'SC' }
+                        datos: { titulo: 'Resultados De la Busqueda Santa Cena', cargos, filtro: respuesta, reporte: 'SC' }
                     });
                 });
 
@@ -105,7 +107,7 @@ function peticion() {
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
-                        datos: { titulo: 'Resultados De la Busqueda Presentacion de Niños', cargos, filtro: respuesta,reporte:'PN' }
+                        datos: { titulo: 'Resultados De la Busqueda Presentacion de Niños', cargos, filtro: respuesta, reporte: 'PN' }
                     });
                 });
 
@@ -130,7 +132,7 @@ function peticion() {
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
-                        datos: { titulo: 'Resultados De la Busqueda Matrimonio', cargos, filtro: respuesta ,reporte:'Matrimonio'}
+                        datos: { titulo: 'Resultados De la Busqueda Matrimonio', cargos, filtro: respuesta, reporte: 'Matrimonio' }
                     });
                 });
 
@@ -156,7 +158,7 @@ function peticion() {
 
                     res.render("Paginas/index", {
                         pagina: 'filtro',
-                        datos: { titulo: 'Resultados De la Busqueda Usuario', cargos, filtro: respuesta, reporte:'Usuario' }
+                        datos: { titulo: 'Resultados De la Busqueda Usuario', cargos, filtro: respuesta, reporte: 'Usuario' }
                     });
                 });
 
@@ -164,7 +166,7 @@ function peticion() {
 
 
         });
-        
+
     }
 }
 function clone(obj) {
@@ -198,4 +200,4 @@ function clone(obj) {
 
     throw new Error("Unable to copy obj! Its type isn't supported.");
 
-  }
+}
