@@ -24,7 +24,7 @@ module.exports = (datos, nombre, excepciones = [])=>
    }
     var llaves = Object.keys(Object.getPrototypeOf(datos[0]))
     //getKeys(datos[0])
-    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"",llaves,Object.getPrototypeOf(datos[0]), Object.keys(Object.getPrototypeOf(datos[0])))
+    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"eeeeeeeeeeeeeeeeeeee",llaves,Object.getPrototypeOf(datos[0]), Object.keys(Object.getPrototypeOf(datos[0])))
     var atributos = [];
     Object.keys(datos[0]).map(atributo => {
       atributos.push(atributo);
