@@ -6,6 +6,7 @@ class Formulario extends Component {
     constructor(props){
         super(props);
         console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", props);
+        console.log("ñññññññññññññññññññññññññññññññññññ", window.datos.original);
         console.log("¡¡¡¡¡¡¡¡¡¡¡!!!!!!!!!!!!!!!!", window.datos.filtro[this.props.id]);
     }
     render() {
