@@ -47,7 +47,7 @@ function peticion() {
                     datos.Iglesia = igle;
                     datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
                     
-                    var respuestaexcel = clone(respuesta)
+                    var respuestaexcel = clone(respuesta.toJSON())
                     respuestaexcel = respuestaexcel.map(a=>{
                         a.Iglesia = igle.Nombre
                         return a
