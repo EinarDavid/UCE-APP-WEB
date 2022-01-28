@@ -21,11 +21,11 @@ module.exports = (datos, nombre, excepciones = [])=>
       }
       }
       return keys;
-   }
-    var llaves = getKeys(datos[0].toJSON())
-    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0].toJSON()),"eeeeeeeeeeeeeeeeeeee",llaves)
+   } 
+    var llaves = getKeys(datos[0])
+    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"eeeeeeeeeeeeeeeeeeee",llaves)
     var atributos = [];
-    Object.keys(datos[0].toJSON()).map(atributo => {
+    Object.keys(datos[0]).map(atributo => {
       atributos.push(atributo);
       //console.log("----------------------a---------", atributo, datos[0])
     })
