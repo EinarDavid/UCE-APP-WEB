@@ -50,7 +50,7 @@ function peticion() {
                     respuesta.map(r => {
                         respuestaexcel.push(clone(r.toJSON()))
                     })
-                    console.log(respuestaexcel)
+                    console.log("__________________________V____________________________",respuestaexcel)
                     respuestaexcel = respuestaexcel.map(a => {
                         a.Iglesia = igle.Nombre
                         return a
