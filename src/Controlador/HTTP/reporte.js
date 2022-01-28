@@ -29,6 +29,17 @@ module.exports = (datos, nombre, excepciones = [])=>
       atributos.push(atributo);
       //console.log("----------------------a---------", atributo, datos[0])
     })
+    llaves = llaves.filter(a=>
+      {
+       if(excepciones.includes(a))
+       {
+        console.log("se eliminó la excepción:",a)
+       }
+       else
+       {
+         return a
+       }
+      })
     atributos = llaves;
     tabla.push(atributos);
     datos.map(dato=>
