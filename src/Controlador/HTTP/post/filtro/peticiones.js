@@ -39,7 +39,7 @@ function peticion() {
                 })
                 bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (igle) => {
                     //console.log("#########################", req.user)
-                    var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia' }
+                    var datos = { titulo: 'Resultados De la Busqueda Membresia', respuesta, filtro: respuesta, reporte: 'membresia', original: respuesta }
                     datos.user = req.user;
                     datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
               
