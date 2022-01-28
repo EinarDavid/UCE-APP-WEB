@@ -15,15 +15,16 @@ module.exports = (datos, nombre, excepciones = [])=>
     var getKeys = function(obj){
       var keys = [];
       for(var key in obj){
-        if( typeof obj[key] !== 'function') {
-
+        if( typeof obj[key] !== '') {
+          
           keys.push(key);
       }
       }
       return keys;
    }
-    var llaves = getKeys(datos[0])
-    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),llaves)
+    var llaves = Object.keys(Object.getPrototypeOf(datos[0]))
+    //getKeys(datos[0])
+    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"",llaves,Object.getPrototypeOf(datos[0]), Object.keys(Object.getPrototypeOf(datos[0])))
     var atributos = [];
     Object.keys(datos[0]).map(atributo => {
       atributos.push(atributo);
