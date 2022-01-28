@@ -1,7 +1,7 @@
 const xlsx = require('xlsx');
 module.exports = (datos, nombre, excepciones = [])=>
 {
-  //console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^_^^^^^^^^^^^^^^^^^^",datos, datos[0])
+  console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^_^^^^^^^^^^^^^^^^^^",datos, datos[0])
   var tabla = [];
   if(datos[0]!=undefined)
   {
@@ -12,7 +12,7 @@ module.exports = (datos, nombre, excepciones = [])=>
         delete dato[exc];
       });
     });
-    //console.log(datos[0])
+    console.log(datos[0])
     var atributos = [];
     Object.getOwnPropertyNames(datos[0]).map(atributo => {
       atributos.push(atributo);
