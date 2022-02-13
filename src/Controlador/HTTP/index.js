@@ -96,7 +96,7 @@ var ret = (passport) => {
   rutas.get("/filtro/", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
-    
+
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
       datos.user = req.user;
       datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
@@ -105,13 +105,32 @@ var ret = (passport) => {
       datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
 
       res.render("Paginas/index",
-      {
-        pagina: 'filtro',
-        datos
-      });
+        {
+          pagina: 'filtro',
+          datos
+        });
     })
 
   });
+
+  rutas.get("/filtroIglesia/", (req, res) => {
+    req.flash("confirm", req.app.locals.confirm[0]);
+    req.flash("error", req.app.locals.error[0]);
+
+    datos.user = req.user;
+    datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+
+    datos.Iglesia = igle;
+    datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
+
+    res.render("Paginas/index",
+      {
+        pagina: 'filtroIglesia',
+        datos
+      });
+
+  })
+
   rutas.get("/Iglesia/:idIglesia/poa", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
@@ -171,7 +190,7 @@ var ret = (passport) => {
         else {
           pag = "vistaGeneral";
         }
-        console.log("&&&&&&&&&&&&&&777777777777777777777", datos.Iglesia)
+        //console.log("&&&&&&&&&&&&&&777777777777777777777", datos.Iglesia)
         res.render("Paginas/index",
           {
             pagina: pag,
@@ -181,28 +200,28 @@ var ret = (passport) => {
 
     })
 
-  }); 
+  });
 
   rutas.get("/admiCental", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
-    
-      bd.cruds.crudIglesia.buscar({}, (iglesias) => {
-        datos.iglesias = iglesias;
-        datos.user = req.user;
-        datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
-        res.render("Paginas/index",
-          {
-            pagina: 'admiCental',
-            datos
-          });
-      
+
+    bd.cruds.crudIglesia.buscar({}, (iglesias) => {
+      datos.iglesias = iglesias;
+      datos.user = req.user;
+      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+      res.render("Paginas/index",
+        {
+          pagina: 'admiCental',
+          datos
+        });
+
     })
   });
   rutas.get("/viewMod", (req, res) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
-    console.log(cargos)
+    //console.log(cargos)
     res.render("Paginas/index",
       {
         pagina: 'viewmod',
@@ -247,7 +266,7 @@ var ret = (passport) => {
       failureRedirect: '/',
       failureFlash: true
     }), (req, res) => {
-      console.log(req.user);
+      //console.log(req.user);
       var idAdministrador = "5eae3d3a5034545748dbd052";
       if (req.user._id == idAdministrador) {
         res.redirect('/admiCental')

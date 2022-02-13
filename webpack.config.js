@@ -5,6 +5,7 @@ module.exports =
   entry: {
    "inicio": entrada + "inicio.js",
    "filtro": entrada + "filtro.js",
+   "filtroIglesia": entrada + "filtroIglesia.js",
    "admin": entrada + "admin.js",
    "reg_bautizo" : entrada + "administracion/reg_bautizo.js",
    "ministerial" : entrada + "ministerial.js",
