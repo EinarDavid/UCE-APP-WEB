@@ -9,7 +9,7 @@ class filtroIglesia extends React.Component {
 
             <React.Fragment>
                 {/* <Menu_Admi/> */}
-                <Fondo />
+                {/* <Fondo /> */}
                 <FiltroIglesia />
 
             </React.Fragment>
