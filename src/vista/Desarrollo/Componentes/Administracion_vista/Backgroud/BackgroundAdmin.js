@@ -5,7 +5,7 @@ function BackgroundFondo() {
         <div className="backgroud">
           <div className="title">
             <div className="titulo">
-              <h1>Adminitrador General</h1>
+              <h1>Administrador General</h1>
             </div> 
           </div>
           

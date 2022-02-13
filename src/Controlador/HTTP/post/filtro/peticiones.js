@@ -69,6 +69,9 @@ function peticion() {
             // git add . || git commit -am "filtros" || git push
 
         });
+
+        
+
         this.rutas.post("/Filtro/SC", ver.verificarAdmin, (req, res) => {
 
             var valor = req.body.santa_cena;

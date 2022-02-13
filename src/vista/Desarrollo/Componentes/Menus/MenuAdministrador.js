@@ -3,13 +3,11 @@ import { Nav, Navbar, Modal, Button, Form, Col, OverlayTrigger, Popover } from '
 import Reg_Iglesia from '../Administracion/formulario/registrar_iglesia';
 import Reg_Encargado from '../Administracion/formulario/registrar_encargado';
 import ModificarInformacion from '../Usuario/ModificarInformacion';
+
 const menu = {
 
     color: '#fff',
 
-}
-const menu2 = {
-    color: '#000',
 }
 
 class Menu extends React.Component {
@@ -53,6 +51,7 @@ class Menu extends React.Component {
 
                             <Nav.Link onClick={this.handleShow} style={menu} className="menu-letra">REGISTRAR_IGLESIA</Nav.Link>
                             <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ENCARGADO</Nav.Link>
+                            <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REPORTE</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 

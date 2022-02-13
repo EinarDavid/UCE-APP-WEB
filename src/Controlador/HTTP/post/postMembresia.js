@@ -23,7 +23,7 @@ function peticion() {
         this.rutas.post("/Modificar/Membresia", ver.verificar, (req, res) => {
             upload(req,res, function (err){
                 if (err) {
-                    console.log(err, 'Im in post , inside upload' + ruta);
+                    //console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else
@@ -43,7 +43,7 @@ function peticion() {
         this.rutas.post("/Modificar/Membresia/user/:ci", ver.verificar, (req, res) => {
             upload(req,res, function (err){
                 if (err) {
-                    console.log(err, 'Im in post , inside upload' + ruta);
+                    //console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else
@@ -55,7 +55,7 @@ function peticion() {
                     //console.log("body:", req.body);
                     //console.log("files:", req.files);
                     var filtro  = { 'Ci':{ valor: req.params.ci, tipo: 'igual' }}
-                    console.log("eeeeeeeeeeeeeeeeee",req.params.ci)
+                    //console.log("eeeeeeeeeeeeeeeeee",req.params.ci)
                     bd.cruds.crudMembresias.buscar(filtro, (resu)=>
                     {
                         resu = resu[0]
@@ -75,7 +75,7 @@ function peticion() {
                         
                         //var nuevo = {...resu, ...req.body}
                       //Probas con 3 puntos
-                        console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body, nuevo)
+                        //console.log(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",resu, req.body, nuevo)
                         bd.cruds.crudMembresias.modificar(resu._id, nuevo, () => {
                             res.redirect("/Iglesia/"+req.user.Iglesia);
                         })

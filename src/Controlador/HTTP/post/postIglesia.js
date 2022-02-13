@@ -17,7 +17,7 @@ function peticion() {
             filename: function (req, file, callback) {
                 var re = /(?:\.([^.]+))?$/;
                 var extension = re.exec(file.originalname)[1];
-                console.log(extension);
+                //console.log(extension);
                 callback(null, req.user.Iglesia + " - " + Date.now() + "." + extension);
             }
         });
@@ -26,7 +26,7 @@ function peticion() {
             filename: function (req, file, callback) {
                 var re = /(?:\.([^.]+))?$/;
                 var extension = re.exec(file.originalname)[1];
-                console.log(extension);
+                //console.log(extension);
                 callback(null, req.user.Iglesia + " - " + Date.now() + "." + extension);
             }
         });
@@ -55,7 +55,7 @@ function peticion() {
         this.rutas.post("/Editar/Iglesia", ver.verificar, (req, res) => {
             upload(req, res, function (err) {
                 if (err) {
-                    console.log(err, 'Im in post , inside upload' + ruta);
+                    //console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
@@ -121,7 +121,7 @@ function peticion() {
                             }
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, ()=>{
-                            console.log(iglesia.Actividades)
+                            //console.log(iglesia.Actividades)
           
                             res.redirect("back")
                         })

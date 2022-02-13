@@ -41,14 +41,14 @@ class Formulario extends Component {
                     return a;
                 })
                 */
-        console.log(window.datos.filtro.map(a => false))
+        //console.log(window.datos.filtro.map(a => false))
         this.state = {
             filtro: window.datos.filtro,
             titulo: window.datos.titulo,
             reporte: '/Descargar/' + window.datos.reporte,
             show: window.datos.filtro.map(a => false),
         };
-        console.log(this.state)
+        //console.log(this.state)
         if (this.state.filtro.length == 0) {
             //console.log("----------------",this.state.filtro[0],"------------------");    
             this.state.filtro = [{}];
@@ -86,7 +86,7 @@ class Formulario extends Component {
                 return a;
             }
         })
-        console.log("#########################################", nshow, i)
+        //console.log("#########################################", nshow, i)
         this.setState({ show: nshow });
     }
     render() {
