@@ -117,8 +117,8 @@ var ret = (passport) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
 
-    // datos.user = req.user;
-    // datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+    datos.user = req.user;
+    datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
 
     // datos.Iglesia = igle;
     // datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
