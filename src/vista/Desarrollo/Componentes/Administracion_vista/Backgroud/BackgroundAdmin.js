@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Imagen_fondo() {
+function BackgroundFondo() {
     return (  
         <div className="backgroud">
           <div className="title">
@@ -13,5 +13,5 @@ function Imagen_fondo() {
  
     );
   }
-  export default Imagen_fondo;
+  export default BackgroundFondo;
 //{window.datos.iglesia.Nombre}
