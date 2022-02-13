@@ -23,7 +23,7 @@ module.exports = (datos, nombre, excepciones = [])=>
       return keys;
    } 
     var llaves = getKeys(datos[0])
-    console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"eeeeeeeeeeeeeeeeeeee",llaves)
+    //console.log("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡", datos[0], Object.keys(datos[0]),"eeeeeeeeeeeeeeeeeeee",llaves)
     var atributos = [];
     Object.keys(datos[0]).map(atributo => {
       atributos.push(atributo);

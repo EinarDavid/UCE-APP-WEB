@@ -55,7 +55,7 @@ function peticion() {
                         a.Iglesia = igle.Nombre
                         return a
                     })
-                    console.log("__________________________V____________________________",respuestaexcel)
+                    //console.log("__________________________V____________________________",respuestaexcel)
                     const excel = require('./../../reporte.js');
                     (excel(respuestaexcel, 'membresia', ['_id', '__v', 'Contraseña', 'Hijos', 'FotoPerfil', 'Disciplina']));
 
