@@ -51,7 +51,7 @@ class Menu extends React.Component {
 
                             <Nav.Link onClick={this.handleShow} style={menu} className="menu-letra">REGISTRAR_IGLESIA</Nav.Link>
                             <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ENCARGADO</Nav.Link>
-                            <Nav.Link href={'/Iglesia/'+ window.datos.Iglesia._id +'/filtroIglesia'} style={menu} className="menu-letra">REPORTE</Nav.Link>
+                            <Nav.Link href={'/Iglesia/filtroIglesia'} style={menu} className="menu-letra">REPORTE</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
