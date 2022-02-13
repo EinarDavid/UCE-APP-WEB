@@ -5,11 +5,11 @@ import Fondo from '../Componentes/Administracion_vista/Backgroud/backgroud';
 
 export const filtroIglesia = () => {
   return (
-    <>
-        <Menu_Admi/>
+    <React.Fragment>
+        {/* <Menu_Admi/> */}
         <Fondo/>
         <FiltroIglesia/>
         
-    </>
+    </React.Fragment>
   )
 }
