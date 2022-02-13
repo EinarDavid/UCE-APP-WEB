@@ -117,22 +117,21 @@ var ret = (passport) => {
     req.flash("confirm", req.app.locals.confirm[0]);
     req.flash("error", req.app.locals.error[0]);
 
-    datos.user = req.user;
-    datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+    bd.cruds.crudIglesia.buscar({}, (iglesias) => {
+      datos.iglesias = iglesias;
+      datos.user = req.user;
+      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+      //console.log("Datos de iglesiaaaaaaaaaaaa", datos.iglesias)
 
-    // datos.Iglesia = igle;
-    // datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
-    
-    // var idAdministrador = "5eae3d3a5034545748dbd052";
-    // if (req.user._id == idAdministrador) {
-    //   res.redirect('/filtroIglesia')
-    // }
+      res.render("Paginas/index",
+        {
+          pagina: 'filtroIglesia',
+          datos
+        });
 
-    res.render("Paginas/index",
-      {
-        pagina: 'filtroIglesia',
-        datos
-      });
+    })
+
+
 
   })
 
