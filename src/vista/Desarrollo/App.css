@@ -81,6 +81,10 @@
   width: 100%;
   transition: all .5s;
 }
+.Menu_AG{
+  background-color: #000000;
+  width: 100%;
+}
 .ColordelMenu{
   background-color: black;
 }
