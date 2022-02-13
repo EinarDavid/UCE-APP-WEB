@@ -122,12 +122,17 @@ var ret = (passport) => {
 
     // datos.Iglesia = igle;
     // datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
+    
+    var idAdministrador = "5eae3d3a5034545748dbd052";
+    if (req.user._id == idAdministrador) {
+      res.redirect('/filtroIglesia')
+    }
 
-    res.render("Paginas/index",
-      {
-        pagina: 'filtroIglesia',
-        datos
-      });
+    // res.render("Paginas/index",
+    //   {
+    //     pagina: 'filtroIglesia',
+    //     datos
+    //   });
 
   })
 
