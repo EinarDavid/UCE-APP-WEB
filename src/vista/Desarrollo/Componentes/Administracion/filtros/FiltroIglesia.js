@@ -41,7 +41,10 @@ export const FiltroIglesia = () => {
 
                 <form>
                     <div className='SearchReporte'>
-                        <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel' required></input>
+                        <div className='TextContainer' >
+                            <label className='TitleInputText'>Ingresa el dato de busqueda</label>
+                            <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel'></input>
+                        </div>
                         <button type='submit' className='ButtonReporte' > BUSCAR </button>
                     </div>
                 </form>

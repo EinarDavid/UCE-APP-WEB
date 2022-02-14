@@ -69,13 +69,31 @@ body{
 }
 
 /* Style Inputs */
+.TextContainer{
+    width: 85%;
+}
+
+.TitleInputText{
+    margin-left: 9px;
+    margin-bottom: 4px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+
+    color: #383838;
+}
+
 .SearchTextInput{
     background: #FEFEFE;
     border: 1px solid #EAEAEA;
     
     border-radius: 13px;
     height: 50px;
-    width: 85%;
+    width: 100%;
 
     font-family: 'Gotham';
     font-style: normal;
@@ -88,7 +106,7 @@ body{
     color: #747477;
 }
 .SearchTextInput::placeholder{
-    margin-left: 15px;
+    padding-left: 15px;
     /* background-color: #000000; */
 }
 .ButtonReporte{
@@ -114,7 +132,7 @@ body{
 .SearchReporte{
     display: flex;
     flex-direction:row;
-    align-items:flex-start;
+    align-items:flex-end;
     justify-content: space-between;
     padding: 0px;
     width: 100%;
