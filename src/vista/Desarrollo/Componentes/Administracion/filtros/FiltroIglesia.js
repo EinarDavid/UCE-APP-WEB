@@ -38,16 +38,15 @@ export const FiltroIglesia = () => {
                 </div>
 
                 <br />
-                <div className='SearchReporte'>
-                    
-                    <form>
+
+                <form>
+                    <div className='SearchReporte'>
                         <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel' required></input>
                         <button type='submit' className='ButtonReporte' > BUSCAR </button>
-                    </form>
-                   
-                </div>
-                <br />
+                    </div>
+                </form>
 
+                <br />
                 <div className='Form-filtro'>
                     <Table responsive striped hover>
                         <thead>
