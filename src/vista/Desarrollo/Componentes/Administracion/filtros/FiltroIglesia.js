@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Form, Col, Button, Modal } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 import './FiltroIglesia.css';
 
@@ -7,6 +7,7 @@ export const FiltroIglesia = () => {
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
+            <br />
             <br />
             <div>
                 <h1 className='TitleReporte'>Reportes</h1>
@@ -43,7 +44,7 @@ export const FiltroIglesia = () => {
                 </div>
                 <br />
 
-                <div className="Form-filtro">
+                <div className="Form-filtro2">
                     <Table responsive striped hover>
                         <thead>
                             <tr>
