@@ -40,14 +40,14 @@ export const FiltroIglesia = () => {
                 <br />
                 <div className='SearchReporte'>
                     
-                    <Form>
+                    <form>
                         <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel' required></input>
                         <button type='submit' className='ButtonReporte' > BUSCAR </button>
-                    </Form>
+                    </form>
                    
                 </div>
                 <br />
-                
+
                 <div className='Form-filtro'>
                     <Table responsive striped hover>
                         <thead>
