@@ -36,31 +36,17 @@ export const FiltroIglesia = () => {
                         <h1 className='NumCardReporte'>20</h1>
                     </div>
                 </div>
-                <br />
 
                 <div className='SearchReporte'>
+                    <br />
                     <Form>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label>Ingresa el dato de Busqueda</Form.Label>
-                                <Form.Control type="search" placeholder="Ej. Villarroel" className='SearchTextInput' required />
-                            </Form.Group>
-                            {/* <Button variant="primary" type="submit">Submit</Button> */}
-                            <Button type="submit" className='ButtonReporte'>BUSCAR</Button>
-                        </Form.Row>
+                        <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel' required></input>
+                        <button type='submit' className='ButtonReporte' > BUSCAR </button>
                     </Form>
-
-
-                </div>
-
-                <div className='SearchReporte'>
-                    <br />
-                    <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel'></input>
-                    <button type='submit' className='ButtonReporte' > BUSCAR </button>
                     <br />
                 </div>
 
-                <div className='Form-filtro2'>
+                <div className='Form-filtro'>
                     <Table responsive striped hover>
                         <thead>
                             <tr>
