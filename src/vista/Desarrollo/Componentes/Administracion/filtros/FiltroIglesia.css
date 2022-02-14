@@ -102,13 +102,11 @@ body{
     line-height: 13px;
     display: flex;
     align-items: center;
+    padding-left: 15px;
 
     color: #747477;
 }
-.SearchTextInput::placeholder{
-    padding-left: 15px;
-    /* background-color: #000000; */
-}
+
 .ButtonReporte{
     width: 13%;
     height: 50px;

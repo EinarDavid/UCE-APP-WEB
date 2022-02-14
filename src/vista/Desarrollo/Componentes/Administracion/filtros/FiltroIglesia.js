@@ -49,7 +49,7 @@ export const FiltroIglesia = () => {
                     </div>
                 </form>
 
-                <br />
+                {/* <br /> */}
                 <div className='Form-filtro'>
                     <Table responsive striped hover>
                         <thead>
