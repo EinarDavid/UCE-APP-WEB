@@ -37,7 +37,7 @@ export const FiltroIglesia = () => {
                     </div>
                 </div>
                 <br />
-
+                
                 <div className='SearchReporte'>
                     <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel'></input>
                     <button type='submit' className='ButtonReporte' > BUSCAR </button>
