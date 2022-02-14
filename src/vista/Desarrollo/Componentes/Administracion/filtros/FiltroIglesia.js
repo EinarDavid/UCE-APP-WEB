@@ -1,10 +1,13 @@
 import React from 'react';
+import { Table, Form, Col, Button, Modal } from 'react-bootstrap';
+
 import './FiltroIglesia.css';
 
 export const FiltroIglesia = () => {
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
+            <br />
             <div>
                 <h1 className='TitleReporte'>Reportes</h1>
                 <br />
@@ -41,18 +44,20 @@ export const FiltroIglesia = () => {
                 <br />
 
                 <div className="Form-filtro">
-                    <thead>
-                        <tr>
-                            <th>Nro</th>
-                            <th>Datos</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Dave Loose</td>
-                        </tr>
-                    </tbody>
+                    <Table responsive striped hover>
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Datos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Dave Loose</td>
+                            </tr>
+                        </tbody>
+                    </Table>
                 </div>
             </div>
         </div>
