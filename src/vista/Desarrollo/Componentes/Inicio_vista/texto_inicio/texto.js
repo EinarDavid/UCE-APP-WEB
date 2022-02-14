@@ -1,6 +1,7 @@
 import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 function Texto() {
   return (
     <div className="texto_quienes_somos" id="texto">

@@ -1,0 +1,135 @@
+
+
+.TitleReporte{
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 27px;
+    color: #000000;
+}
+
+/* Style_de_Cards */
+.CardDisplay{
+    display: flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+    /* background-color: #747477; */
+}
+
+.CardReporte{
+    width: 22%;
+    height: 135px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.ImageCardReporte{
+    /* position: absolute; */
+    width: 50px;
+    height: 50px;
+    margin-left: 22px;
+    margin-top: 5px;
+    /* background-color: blue; */
+}
+
+.ParrafoCardReporte{
+    margin-left: 22px;
+    margin-top: 5px;
+
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    
+    color: #747477;
+}
+
+.NumCardReporte{
+    margin-left: 22px;
+    margin-top: 5px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+/* Style Inputs */
+.SearchTextInput{
+    background: #FEFEFE;
+    border: 1px solid #EAEAEA;
+    
+    border-radius: 13px;
+    height: 50px;
+    width: 85%;
+
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+
+    color: #747477;
+}
+.SearchTextInput::placeholder{
+    margin-left: 15px;
+    /* background-color: #000000; */
+}
+.ButtonReporte{
+    width: 13%;
+    height: 50px;
+    background: #3275C3;
+    border-radius: 13px;
+    border: none;
+    
+    color: #ffffff;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.SearchReporte{
+    display: flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+
+    
+}
+/* Style de Table */
+/* .From-filtro{
+    background: rgb(0, 83, 128);
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    margin-bottom: 40px;
+
+    position: relative;
+    padding: 40px;
+    border-radius: 15px;
+    color: #FFF;
+} */
