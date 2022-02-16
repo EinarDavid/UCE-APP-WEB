@@ -3,33 +3,7 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 
 import './FiltroIglesia.css';
 
-export const FiltroIglesia = () => {
-
-    console.log("aaaaaaaaaaa", window.datos);
-    console.log("bbbbbbbbbbbb", window.datos.iglesias);
-
-    const iglesia = window.datos.iglesias
-
-    // const iglesias = iglesia.find();
-
-    console.log("Cantidad de Iglesias:", iglesia.length);
-
-    const [inputValue, setInputValue] = useState('');
-
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        // console.log('handleSubmit', inputValue)
-        if (inputValue.trim().length > 2) {
-            setInputValue('');
-        }
-
-    }
+    
 
     // var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
 
@@ -49,12 +23,41 @@ export const FiltroIglesia = () => {
     //     return a;
     // })
 
-    this.state = {
-        iglesias : iglesia,
+    // this.state = {
+    //     iglesias: iglesia,
+    // }
+    // console.log(this.state);
+
+
+
+export const FiltroIglesia = () => {
+    
+
+    console.log("aaaaaaaaaaa", window.datos);
+    console.log("bbbbbbbbbbbb", window.datos.iglesias);
+
+
+    const iglesia = window.datos.iglesias;
+    // const iglesias = iglesia.find();
+
+    // console.log("Cantidad de Iglesias:", iglesia.length);
+
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+
     }
-    console.log(this.state)
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        // console.log('handleSubmit', inputValue)
+        if (inputValue.trim().length > 2) {
+            setInputValue('');
+        }
+
+    }
     //this.columnas = Object.getOwnPropertyNames(this.state.iglesias[0]);
 
     return (
@@ -114,9 +117,9 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    Object.getOwnPropertyNames(this.state.iglesias[0].map(columna => {
-                                        console.log("columna===========================",columna)
-                                        return ( <th>{columna}</th>)
+                                    Object.getOwnPropertyNames(this.iglesia[0].map(columna => {
+                                        console.log("columna===========================", columna)
+                                        return (<th>{columna}</th>)
                                     }))
                                 }
                                 <th>Datos</th>
