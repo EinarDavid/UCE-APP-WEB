@@ -13,8 +13,8 @@ export const FiltroIglesia = () => {
 
     // const iglesias = iglesia.find();
 
-    console.log("eeeeeeeeeeeeeee", iglesia.length);
-    
+    console.log("Cantidad de Iglesias:", iglesia.length);
+
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
@@ -28,7 +28,7 @@ export const FiltroIglesia = () => {
                     <div className='CardReporte'>
                         <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
                         <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
-                        <h1 className='NumCardReporte'>20</h1>
+                        <h1 className='NumCardReporte'>{iglesia.length}</h1>
                     </div>
 
                     <div className='CardReporte'>
