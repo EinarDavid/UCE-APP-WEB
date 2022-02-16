@@ -7,13 +7,29 @@ export const FiltroIglesia = () => {
 
     console.log("aaaaaaaaaaa", window.datos);
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
-    console.log("cccccccccccccc", window.datos.filtro);
 
     const iglesia = window.datos.iglesias
 
     // const iglesias = iglesia.find();
 
     console.log("Cantidad de Iglesias:", iglesia.length);
+
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('handleSubmit', inputValue)
+        if (inputValue.trim().length > 2) {
+            setInputValue('');
+        }
+
+    }
 
     return (
         <div>
@@ -50,11 +66,16 @@ export const FiltroIglesia = () => {
 
                 <br />
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className='SearchReporte'>
                         <div className='TextContainer' >
-                            <label className='TitleInputText'>Ingresa el dato de busqueda</label>
-                            <input type='search' className='SearchTextInput' placeholder='Ej. Villarroel'></input>
+                            <label className='TitleInputText'>Ingresa el dato de busqueda: {inputValue}</label>
+                            <input type='text'
+                                className='SearchTextInput'
+                                placeholder='Ej. Villarroel'
+                                value={inputValue}
+                                onChange={handleInputChange}
+                            ></input>
                         </div>
                         <button type='submit' className='ButtonReporte' > BUSCAR </button>
                     </div>
