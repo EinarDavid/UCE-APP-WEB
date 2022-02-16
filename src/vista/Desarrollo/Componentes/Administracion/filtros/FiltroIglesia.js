@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
 
 import './FiltroIglesia.css';
@@ -77,7 +77,7 @@ export const FiltroIglesia = () => {
                                 onChange={handleInputChange}
                             ></input>
                         </div>
-                        <button type='submit' className='ButtonReporte' > BUSCAR </button>
+                        {/* <button type='submit' className='ButtonReporte' > BUSCAR </button> */}
                     </div>
                 </form>
 
