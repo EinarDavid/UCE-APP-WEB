@@ -38,7 +38,8 @@ export const FiltroIglesia = () => {
 
 
     const iglesia = window.datos.iglesias;
-    const columna = Object.getOwnPropertyNames(this.iglesia[0].map(columna => {
+    
+    const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
         console.log("columna===========================", columna)
         return (<th>{columna}</th>)
     }))
