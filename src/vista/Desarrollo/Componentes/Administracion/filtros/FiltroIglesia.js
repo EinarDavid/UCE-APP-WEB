@@ -49,6 +49,14 @@ export const FiltroIglesia = () => {
     //     return a;
     // })
 
+    this.state = {
+        iglesias : iglesia,
+    }
+    console.log(this.state)
+
+
+    //this.columnas = Object.getOwnPropertyNames(this.state.iglesias[0]);
+
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
@@ -106,7 +114,7 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    Object.getOwnPropertyNames(iglesia[0].map(columna => {
+                                    Object.getOwnPropertyNames(this.state.iglesias[0].map(columna => {
                                         console.log("columna===========================",columna)
                                         return ( <th>{columna}</th>)
                                     }))
