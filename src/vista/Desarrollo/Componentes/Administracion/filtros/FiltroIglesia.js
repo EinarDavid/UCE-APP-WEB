@@ -4,6 +4,10 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 import './FiltroIglesia.css';
 
 export const FiltroIglesia = () => {
+
+    console.log("aaaaaaaaaaa", window.datos);
+    console.log("bbbbbbbbbbbb", window.datos.iglesias);
+    console.log("cccccccccccccc", window.datos.filtro);
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
