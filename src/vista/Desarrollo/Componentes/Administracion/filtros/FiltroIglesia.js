@@ -8,6 +8,11 @@ export const FiltroIglesia = () => {
     console.log("aaaaaaaaaaa", window.datos);
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
     console.log("cccccccccccccc", window.datos.filtro);
+
+    const iglesias = window.datos.iglesias.length();
+
+
+    console.log("eeeeeeeeeeeeeee", iglesias);
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
