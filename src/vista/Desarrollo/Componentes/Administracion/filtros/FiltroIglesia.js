@@ -11,10 +11,10 @@ export const FiltroIglesia = () => {
 
     const iglesia = window.datos.iglesias
 
-    const iglesias = iglesia.find();
+    // const iglesias = iglesia.find();
 
-
-    console.log("eeeeeeeeeeeeeee", iglesias);
+    console.log("eeeeeeeeeeeeeee", iglesia.length);
+    
     return (
         <div>
             {/* <h1>Pagina Iglesia filtro</h1> */}
