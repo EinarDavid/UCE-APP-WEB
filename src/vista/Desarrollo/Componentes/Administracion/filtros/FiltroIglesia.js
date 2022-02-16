@@ -122,7 +122,7 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    Object.getOwnPropertyNames(iglesia.map(columna => {
+                                    Object.getOwnPropertyNames(columnas.map(columna => {
                                         console.log("columna===========================", columna)
                                         return (<th>{columna}</th>)
                                     }))
