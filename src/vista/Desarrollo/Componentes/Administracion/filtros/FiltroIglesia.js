@@ -33,11 +33,14 @@ import './FiltroIglesia.css';
 export const FiltroIglesia = () => {
     
 
-    console.log("aaaaaaaaaaa", window.datos);
+    
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
 
 
     const iglesia = window.datos.iglesias;
+    const columnas = window.datos.iglesias[0];
+
+    console.log("aaaaaaaaaaa", columnas);
 
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
