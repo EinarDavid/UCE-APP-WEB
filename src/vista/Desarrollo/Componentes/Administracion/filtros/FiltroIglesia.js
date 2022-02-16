@@ -38,9 +38,10 @@ export const FiltroIglesia = () => {
 
 
     const iglesia = window.datos.iglesias;
-    // const iglesias = iglesia.find();
-
-    // console.log("Cantidad de Iglesias:", iglesia.length);
+    const columna = Object.getOwnPropertyNames(this.iglesia[0].map(columna => {
+        console.log("columna===========================", columna)
+        return (<th>{columna}</th>)
+    }))
 
     const [inputValue, setInputValue] = useState('');
 
@@ -117,10 +118,7 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    Object.getOwnPropertyNames(this.iglesia[0].map(columna => {
-                                        console.log("columna===========================", columna)
-                                        return (<th>{columna}</th>)
-                                    }))
+                                    columna
                                 }
                                 <th>Datos</th>
                             </tr>
