@@ -9,7 +9,9 @@ export const FiltroIglesia = () => {
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
     console.log("cccccccccccccc", window.datos.filtro);
 
-    const iglesias = window.datos.iglesias.find();
+    const iglesia = window.datos.iglesias
+
+    const iglesias = iglesia.find();
 
 
     console.log("eeeeeeeeeeeeeee", iglesias);
