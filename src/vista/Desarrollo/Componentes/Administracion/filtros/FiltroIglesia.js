@@ -31,23 +31,23 @@ export const FiltroIglesia = () => {
 
     }
 
-    var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
+    // var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
 
-    iglesia = iglesia.map(a => {
-        if (a != undefined) {
-            // rellenar.map(b => {
-            //     if (a[b] == undefined) {
-            //         a[b] = ""
-            //     }
-            //     return b;
-            // });
-            excepciones.map(c => {
-                delete a[c]
-                return c;
-            });
-        }
-        return a;
-    })
+    // iglesia = iglesia.map(a => {
+    //     if (a != undefined) {
+    //         // rellenar.map(b => {
+    //         //     if (a[b] == undefined) {
+    //         //         a[b] = ""
+    //         //     }
+    //         //     return b;
+    //         // });
+    //         excepciones.map(c => {
+    //             delete a[c]
+    //             return c;
+    //         });
+    //     }
+    //     return a;
+    // })
 
     return (
         <div>
