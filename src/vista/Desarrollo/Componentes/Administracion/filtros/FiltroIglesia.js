@@ -24,12 +24,30 @@ export const FiltroIglesia = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log('handleSubmit', inputValue)
+        // console.log('handleSubmit', inputValue)
         if (inputValue.trim().length > 2) {
             setInputValue('');
         }
 
     }
+
+    var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
+
+    iglesia = iglesia.map(a => {
+        if (a != undefined) {
+            // rellenar.map(b => {
+            //     if (a[b] == undefined) {
+            //         a[b] = ""
+            //     }
+            //     return b;
+            // });
+            excepciones.map(c => {
+                delete a[c]
+                return c;
+            });
+        }
+        return a;
+    })
 
     return (
         <div>
@@ -66,7 +84,7 @@ export const FiltroIglesia = () => {
 
                 <br />
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                     <div className='SearchReporte'>
                         <div className='TextContainer' >
                             <label className='TitleInputText'>Ingresa el dato de busqueda: {inputValue}</label>
@@ -87,6 +105,12 @@ export const FiltroIglesia = () => {
                         <thead>
                             <tr>
                                 <th>Nro</th>
+                                {
+                                    Object.getOwnPropertyNames(iglesia[0].map(columna => {
+                                        console.log("columna===========================",columna)
+                                        return ( <th>{columna}</th>)
+                                    }))
+                                }
                                 <th>Datos</th>
                             </tr>
                         </thead>
