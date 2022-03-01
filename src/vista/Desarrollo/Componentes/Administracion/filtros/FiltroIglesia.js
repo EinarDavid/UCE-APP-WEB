@@ -41,7 +41,25 @@ export const FiltroIglesia = () => {
     const iglesia = window.datos.iglesias;
     const columnas = window.datos.iglesias[0];
 
+    var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
+    var rellenar = ["Denominacion"]
     console.log("Columna", Object.getOwnPropertyNames(columnas));
+
+    columnas = columnas.map(a => {
+        if (a != undefined ){
+            rellenar.map(b => {
+                if (a[b] == undefined) {
+                    a[b] = ""
+                }
+                return b;
+            });
+            excepciones.map(c => {
+                delete a[c]
+                return c;
+            })
+        }
+        return a;
+    })
 
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
@@ -122,12 +140,11 @@ export const FiltroIglesia = () => {
                         <thead>
                             <tr>
                                 <th>Nro</th>
-                                {/* {
-                                    Object.getOwnPropertyNames(columnas.map(columna => {
-                                        console.log("columna===========================", columna)
-                                        return (<th>{columna}</th>)
-                                    }))
-                                } */}
+                                {
+                                    Object.getOwnPropertyNames(columnas).map(columna => (
+                                        <th>{columna}</th>
+                                    ))
+                                }
                                 <th>Datos</th>
                             </tr>
                         </thead>
