@@ -45,21 +45,24 @@ export const FiltroIglesia = () => {
     var rellenar = ["Denominacion"]
     console.log("Columna", Object.getOwnPropertyNames(columnas));
 
-    columnas = columnas.map(a => {
-        if (a != undefined ){
-            rellenar.map(b => {
-                if (a[b] == undefined) {
-                    a[b] = ""
-                }
-                return b;
-            });
-            excepciones.map(c => {
-                delete a[c]
+    // columnas = columnas.map(a => {
+    //     if (a != undefined ){
+    //         excepciones.map(c => {
+    //             delete a[c]
+    //             return c;
+    //         })
+    //     }
+    //     return a;
+    // })
+
+    columnas = columnas.filter(a => {
+        if (a != undefined){
+            excepciones.map(c =>{
+                delete a[c];
                 return c;
             })
         }
-        return a;
-    })
+    } )
 
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
