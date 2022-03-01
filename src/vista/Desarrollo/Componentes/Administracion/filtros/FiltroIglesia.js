@@ -32,7 +32,8 @@ import './FiltroIglesia.css';
 
 export const FiltroIglesia = () => {
     
-
+    const [inputValue, setInputValue] = useState('');
+    const [data, setData] = useState([])
     
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
 
@@ -40,14 +41,14 @@ export const FiltroIglesia = () => {
     const iglesia = window.datos.iglesias;
     const columnas = window.datos.iglesias[0];
 
-    console.log("aaaaaaaaaaa", columnas);
+    console.log("Columna", Object.getOwnPropertyNames(columnas));
 
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
     //     return (<th>{columna}</th>)
     // }))
 
-    const [inputValue, setInputValue] = useState('');
+    
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
