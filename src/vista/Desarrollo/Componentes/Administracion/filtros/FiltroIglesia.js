@@ -55,15 +55,7 @@ export const FiltroIglesia = () => {
     //     return a;
     // })
 
-    columnas = columnas.filter(a => {
-        if (a != undefined){
-            excepciones.map(c =>{
-                delete a[c];
-                return c;
-            })
-        }
-    } )
-
+    
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
     //     return (<th>{columna}</th>)
