@@ -44,7 +44,7 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = ['Nombre'];
+    const columnasFiltradas = ['Nombre',"Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
 
 
