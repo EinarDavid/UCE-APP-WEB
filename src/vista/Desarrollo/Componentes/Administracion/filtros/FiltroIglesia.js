@@ -44,7 +44,7 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = ['Nombre',"Correo", "Facebook", "NumeroCelular", "Denominacion"];
+    const columnasFiltradas = ['Nombre', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
 
 
@@ -143,18 +143,30 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    columnasFiltradas.map(columna => (
-                                        <th>{columna}</th>
+                                    columnasFiltradas.map((columna, i) => (
+                                        <th key={i}>{columna}</th>
                                     ))
                                 }
                                 <th>Datos</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Dave Loose</td>
-                            </tr>
+
+                            {
+                                iglesia.map((igle, index) => (
+                                    <tr key={index}>
+                                        <td>{index+1}</td>
+                                        <td>{igle[index].Nombre}</td>
+                                        <td>{igle[index].Correo}</td>
+                                        <td>{igle[index].Facebook}</td>
+                                        <td>{igle[index].NumeroCelular}</td>
+                                        <td>{igle[index].Denominacion}</td>
+                                    </tr>
+                                ))
+
+                            }
+                            <td>Dave Loose</td>
+
                         </tbody>
                     </Table>
                 </div>
