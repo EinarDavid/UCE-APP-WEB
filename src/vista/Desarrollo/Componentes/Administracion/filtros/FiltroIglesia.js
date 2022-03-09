@@ -49,6 +49,7 @@ export const FiltroIglesia = () => {
             if(colum === ex){
                 console.log('Columnaaaa', colum, ex)
                 delete colum;
+                return ex;
             }
         })
         return colum;
