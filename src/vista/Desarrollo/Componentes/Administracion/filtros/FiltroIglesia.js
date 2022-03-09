@@ -163,12 +163,13 @@ export const FiltroIglesia = () => {
                                             <td>{igle.Facebook}</td>
                                             <td>{igle.NumeroCelular}</td>
                                             <td>{igle.Denominacion}</td>
+                                            <td>Acción</td>
                                         </tr>
                                     )
                                 })
 
                             }
-                            <td>Dave Loose</td>
+                            
 
                         </tbody>
                     </Table>
