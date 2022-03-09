@@ -39,11 +39,13 @@ export const FiltroIglesia = () => {
 
 
     const iglesia = window.datos.iglesias;
+    
     const columnas = window.datos.iglesias[0];
+    const columnasFiltradas = Object.getOwnPropertyNames(columnas);
 
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
     var rellenar = ["Denominacion"]
-    console.log("Columna", Object.getOwnPropertyNames(columnas));
+    console.log("Columna", columnasFiltradas);
 
     // columnas = columnas.map(a => {
     //     if (a != undefined ){
