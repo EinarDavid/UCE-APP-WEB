@@ -158,11 +158,11 @@ export const FiltroIglesia = () => {
                                     return (
                                         <tr key={index}>
                                             <td>{index + 1}</td>
-                                            <td>{igle[index].Nombre}</td>
-                                            <td>{igle[index].Correo}</td>
-                                            <td>{igle[index].Facebook}</td>
-                                            <td>{igle[index].NumeroCelular}</td>
-                                            <td>{igle[index].Denominacion}</td>
+                                            <td>{igle.Nombre}</td>
+                                            <td>{igle.Correo}</td>
+                                            <td>{igle.Facebook}</td>
+                                            <td>{igle.NumeroCelular}</td>
+                                            <td>{igle.Denominacion}</td>
                                         </tr>
                                     )
                                 })
