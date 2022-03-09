@@ -43,17 +43,16 @@ export const FiltroIglesia = () => {
     const columnas = window.datos.iglesias[0];
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
-    const columnasFiltradas = Object.getOwnPropertyNames(columnas).map((colum, index) => {
-        console.log('Columna', colum, ' -----Excep', excepciones[index]);
-        excepciones.map((ex) => {
-            if(colum === ex){
-                console.log('Columnaaaa', colum, ex)
-                delete colum;
-                return ex;
-            }
-        })
-        return colum;
-    });
+    const nombreColumna = Object.getOwnPropertyNames(columnas)
+    const columnasFiltradas = BorrarElementos(nombreColumna, excepciones);
+
+    const BorrarElementos = (columna, excepcion) => {
+        for (var i = columna.length - 1; i >= 0; i--) {
+            if (columna[i] == excepcion)
+                columna.splice(i, 1);
+        }
+        return columna
+    }
 
 
     var rellenar = ["Denominacion"]
