@@ -48,8 +48,8 @@ export const FiltroIglesia = () => {
 
     function BorrarElementos(columna, excepcion) {
         for (var i = columna.length - 1; i >= 0; i--) {
-            console.log('--', columna[i], excepcion[i])
-            if (columna[i] == excepcion[i])
+            console.log('--', columna[i], excepcion)
+            if (columna[i] === excepcion[i])
                 columna.splice(i, 1);
         }
         return columna
