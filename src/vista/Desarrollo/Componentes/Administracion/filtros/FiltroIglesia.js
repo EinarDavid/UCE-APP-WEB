@@ -153,16 +153,19 @@ export const FiltroIglesia = () => {
                         <tbody>
 
                             {
-                                iglesia.map((igle, index) => (
-                                    <tr key={index}>
-                                        <td>{index+1}</td>
-                                        <td>{igle[index].Nombre}</td>
-                                        <td>{igle[index].Correo}</td>
-                                        <td>{igle[index].Facebook}</td>
-                                        <td>{igle[index].NumeroCelular}</td>
-                                        <td>{igle[index].Denominacion}</td>
-                                    </tr>
-                                ))
+                                iglesia.map((igle, index) => {
+                                    console.log('-------',igle)
+                                    return (
+                                        <tr key={index}>
+                                            <td>{index + 1}</td>
+                                            <td>{igle[index].Nombre}</td>
+                                            <td>{igle[index].Correo}</td>
+                                            <td>{igle[index].Facebook}</td>
+                                            <td>{igle[index].NumeroCelular}</td>
+                                            <td>{igle[index].Denominacion}</td>
+                                        </tr>
+                                    )
+                                })
 
                             }
                             <td>Dave Loose</td>
