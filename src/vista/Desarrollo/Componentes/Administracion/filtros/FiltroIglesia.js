@@ -138,7 +138,7 @@ export const FiltroIglesia = () => {
                             <tr>
                                 <th>Nro</th>
                                 {
-                                    Object.getOwnPropertyNames(columnas).map(columna => (
+                                    columnasFiltradas.map(columna => (
                                         <th>{columna}</th>
                                     ))
                                 }
