@@ -43,7 +43,7 @@ export const FiltroIglesia = () => {
     const columnas = window.datos.iglesias[0];
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
     
-    const columnasFiltradas = Object.getOwnPropertyNames(columnas).filter((colum, index) => {
+    const columnasFiltradas = Object.getOwnPropertyNames(columnas).map((colum, index) => {
         console.log('Columna', colum[index], ' -----Excep', excepciones[index]);
         return colum[index] !== excepciones[index];
     });
