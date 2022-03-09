@@ -45,13 +45,12 @@ export const FiltroIglesia = () => {
 
     const columnasFiltradas = Object.getOwnPropertyNames(columnas).map((colum, index) => {
         console.log('Columna', colum, ' -----Excep', excepciones[index]);
-        if (colum !== undefined) {
-            excepciones.map(c => {
-                console.log('Columnaaaa',colum[c])
-                delete colum[c]
-                return c;
-            })
-        }
+        excepciones.map((ex) => {
+            if(colum === ex){
+                console.log('Columnaaaa', colum, ex)
+                delete colum;
+            }
+        })
         return colum;
     });
 
