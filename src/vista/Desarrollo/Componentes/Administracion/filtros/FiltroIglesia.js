@@ -46,7 +46,7 @@ export const FiltroIglesia = () => {
     const nombreColumna = Object.getOwnPropertyNames(columnas)
     const columnasFiltradas = BorrarElementos(nombreColumna, excepciones);
 
-    const BorrarElementos = (columna, excepcion) => {
+    function BorrarElementos(columna, excepcion) {
         for (var i = columna.length - 1; i >= 0; i--) {
             if (columna[i] == excepcion)
                 columna.splice(i, 1);
