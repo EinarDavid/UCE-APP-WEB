@@ -44,24 +44,13 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = BorrarElementos(nombreColumna, excepciones);
+    const columnasFiltradas = ['Nombre'];
 
-    function BorrarElementos(columna, excepcion) {
-        for (var i = columna.length - 1; i >= 0; i--) {
-            for (var x = excepcion.length - 1; x >= 0; i--) {
-                console.log('--', columna[i], excepcion[x])
-                if (columna[i] === excepcion[x])
-                    columna.splice(i, 1);
-            }
-            
 
-        }
-        return columna
-    }
 
 
     var rellenar = ["Denominacion"]
-    console.log("Columna", columnasFiltradas);
+    console.log("Columna", nombreColumna);
 
     // columnas = columnas.map(a => {
     //     if (a != undefined ){
