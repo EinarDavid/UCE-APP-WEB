@@ -3,47 +3,50 @@ import { Table, Form, Col, Button } from 'react-bootstrap';
 
 import './FiltroIglesia.css';
 
-    
 
-    // var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
 
-    // iglesia = iglesia.map(a => {
-    //     if (a != undefined) {
-    //         // rellenar.map(b => {
-    //         //     if (a[b] == undefined) {
-    //         //         a[b] = ""
-    //         //     }
-    //         //     return b;
-    //         // });
-    //         excepciones.map(c => {
-    //             delete a[c]
-    //             return c;
-    //         });
-    //     }
-    //     return a;
-    // })
+// var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
 
-    // this.state = {
-    //     iglesias: iglesia,
-    // }
-    // console.log(this.state);
+// iglesia = iglesia.map(a => {
+//     if (a != undefined) {
+//         // rellenar.map(b => {
+//         //     if (a[b] == undefined) {
+//         //         a[b] = ""
+//         //     }
+//         //     return b;
+//         // });
+//         excepciones.map(c => {
+//             delete a[c]
+//             return c;
+//         });
+//     }
+//     return a;
+// })
+
+// this.state = {
+//     iglesias: iglesia,
+// }
+// console.log(this.state);
 
 
 
 export const FiltroIglesia = () => {
-    
+
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
-    
+
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
 
 
     const iglesia = window.datos.iglesias;
-    
+
     const columnas = window.datos.iglesias[0];
-    const columnasFiltradas = Object.getOwnPropertyNames(columnas);
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
-    columnasFiltradas.splice(excepciones)
+    
+    const columnasFiltradas = Object.getOwnPropertyNames(columnas).filter((colum, index) => {
+        return colum[index] !== excepciones[index];
+    });
+
 
     var rellenar = ["Denominacion"]
     console.log("Columna", columnasFiltradas);
@@ -58,13 +61,13 @@ export const FiltroIglesia = () => {
     //     return a;
     // })
 
-    
+
     // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
     //     console.log("columna===========================", columna)
     //     return (<th>{columna}</th>)
     // }))
 
-    
+
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
