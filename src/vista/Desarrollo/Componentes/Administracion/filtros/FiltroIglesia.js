@@ -174,7 +174,7 @@ export const FiltroIglesia = () => {
                                             <td>{igle.miembros}</td>
                                             <td>{igle.Direccion}</td>
 
-                                            <td>{(igle.Facebook != null) ? (<a href={igle.Facebook}> Click</a>) : ('')}</td>
+                                            <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}> Click</a>) : ('')}</td>
 
                                             <td>{igle.Denominacion}</td>
 
