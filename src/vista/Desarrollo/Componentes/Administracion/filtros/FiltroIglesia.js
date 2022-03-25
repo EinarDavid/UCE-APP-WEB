@@ -29,12 +29,26 @@ export const FiltroIglesia = () => {
     console.log("bbbbbbbbbbbb", window.datos.membresias);
 
     const columnas = window.datos.iglesias[0];
-    var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
-    const nombreColumna = Object.getOwnPropertyNames(columnas)
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
+    const DescargarExcel = () => {
+        const XLSX = require('xlsx')
 
+        // array of objects to save in Excel
+        let binary_univers = listaVisible;
+
+        let binaryWS = XLSX.utils.json_to_sheet(binary_univers);
+
+        // Create a new Workbook
+        var wb = XLSX.utils.book_new()
+
+        // Name your sheet
+        XLSX.utils.book_append_sheet(wb, binaryWS, 'Binary values')
+
+        // export your excel
+        XLSX.writeFile(wb, 'Iglesia.xlsx');
+    }
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -169,7 +183,7 @@ export const FiltroIglesia = () => {
                         </tbody>
                     </Table>
                     <div className="Reportes">
-                        <Button type="submit" variant="outline-light">Descargar</Button>
+                        <Button onClick={() => { DescargarExcel() }} variant="outline-light">Descargar</Button>
                     </div>
                 </div>
             </div>
