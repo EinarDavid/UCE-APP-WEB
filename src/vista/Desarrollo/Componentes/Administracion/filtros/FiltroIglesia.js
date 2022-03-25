@@ -19,7 +19,7 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = ['Nombre','Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
+    const columnasFiltradas = ['Nombre', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
 
 
@@ -30,14 +30,18 @@ export const FiltroIglesia = () => {
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
-        
+
 
         const result = [];
 
         if (e.target.value.trim().length > 0) {
             iglesia.forEach(element => {
-                const stringunido = element.Nombre + element.Correo + element.NumeroCelular + element.Direccion;
-                console.log('Valor del texto------',stringunido);
+                const stringunido = (element.Nombre != null) ? (element.Nombre + ' ') : ('') +
+                    (element.Correo != null) ? (element.Correo + ' ') : ('') +
+                        (element.NumeroCelular != null) ? (element.NumeroCelular + ' ') : ('') +
+                            (element.Direccion != null) ? (element.Direccion) : ('');
+                console.log('Valor del texto------', stringunido);
+
                 if (stringunido.match(e.target.value) !== null) {
                     result.push(element);
                 }
@@ -101,7 +105,7 @@ export const FiltroIglesia = () => {
                             <label className='TitleInputText'>Ingresa el dato de busqueda: {inputValue}</label>
                             <input type='text'
                                 className='SearchTextInput'
-                                placeholder='Ej. Villarroel'
+                                placeholder='Ej. Mayorazgo'
                                 value={inputValue}
                                 onChange={handleInputChange}
                             ></input>
