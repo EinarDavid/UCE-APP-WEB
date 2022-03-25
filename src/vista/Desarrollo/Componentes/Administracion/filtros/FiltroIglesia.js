@@ -163,7 +163,7 @@ export const FiltroIglesia = () => {
 
                             {
                                 listaVisible.map((igle, index) => {
-                                    // console.log('-------', igle)
+                                    console.log('-------', igle.Facebook)
                                     // <td>{(igle.Correo != null) ? (<a href={'mailto:' + igle.Correo}> Click </a>) : ({''})}</td>
                                     // <td>{(igle.NumeroCelular != null) ? (<a href={'https://api.whatsapp.com/send?phone=591' + igle.NumeroCelular}></a>) : ({''})}</td>
                                     return (
@@ -173,7 +173,7 @@ export const FiltroIglesia = () => {
                                             <td>{igle.miembros}</td>
                                             <td>{igle.Direccion}</td>
 
-                                            <td>{(igle.Facebook != null) ? (<a href={igle.Facebook}> Click </a>) : ('')}</td>
+                                            <td>{(igle.Facebook !== null) ? (<a href={igle.Facebook}> Click </a>) : ('')}</td>
 
                                             <td>{igle.Denominacion}</td>
 
