@@ -70,7 +70,7 @@ body{
 
 /* Style Inputs */
 .TextContainer{
-    width: 85%;
+    width: 100%;
 }
 
 .TitleInputText{
@@ -131,7 +131,7 @@ body{
     display: flex;
     flex-direction:row;
     align-items:flex-end;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0px;
     width: 100%;
 

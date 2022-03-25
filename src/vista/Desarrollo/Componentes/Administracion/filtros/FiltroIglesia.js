@@ -133,7 +133,7 @@ export const FiltroIglesia = () => {
                 <form onSubmit={handleSubmit} >
                     <div className='SearchReporte'>
                         <div className='TextContainer' >
-                            <label className='TitleInputText'>Ingresa el dato de busqueda: {inputValue}</label>
+                            <label className='TitleInputText'>Ingresa el dato de busqueda</label>
                             <input type='text'
                                 className='SearchTextInput'
                                 placeholder='Ej. Mayorazgo'
