@@ -122,19 +122,10 @@ export const FiltroIglesia = () => {
 
                     <div className='CardReporte'>
                         <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Cantidad de miembros registrados</p>
-                        <h1 className='NumCardReporte'>20</h1>
+                        <p className='ParrafoCardReporte'>Total de miembros registrados</p>
+                        <h1 className='NumCardReporte'>{membresias.length}</h1>
                     </div>
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
-                        <h1 className='NumCardReporte'>20</h1>
-                    </div>
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
-                        <h1 className='NumCardReporte'>20</h1>
-                    </div>
+                   
                 </div>
 
                 <br />
@@ -165,7 +156,7 @@ export const FiltroIglesia = () => {
                                         <th key={i}>{columna}</th>
                                     ))
                                 }
-                                <th>Datos</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -183,7 +174,7 @@ export const FiltroIglesia = () => {
                                             <td>{igle.Facebook}</td>
                                             <td>{igle.NumeroCelular}</td>
                                             <td>{igle.Denominacion}</td>
-                                            <td>Acción</td>
+                                            
                                         </tr>
                                     )
                                 })
