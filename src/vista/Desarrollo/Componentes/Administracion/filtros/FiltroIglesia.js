@@ -10,6 +10,8 @@ export const FiltroIglesia = () => {
     const iglesia = window.datos.iglesias;
     const membresias = window.datos.membresias;
 
+    contarMiembros();
+
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
     const [listaVisible, setListaVisible] = useState(iglesia);
@@ -20,14 +22,19 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = ['Nombre', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
+    const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
-
-
-
-    var rellenar = ["Denominacion"]
-    // console.log("Columna", nombreColumna);
-
+    const contarMiembros = () => {
+        iglesia.forEach(igle => {
+            var contador = 0;
+            membresias.forEach(miembro => {
+                if (igle._id === miembro.Iglesia) {
+                    contador += 1;
+                }
+            });
+            igle.miembros = contador;
+        });
+    }
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -145,6 +152,7 @@ export const FiltroIglesia = () => {
                                         <tr key={index}>
                                             <td>{index + 1}</td>
                                             <td>{igle.Nombre}</td>
+                                            <td>{igle.miembros}</td>
                                             <td>{igle.Direccion}</td>
                                             <td>{igle.Correo}</td>
                                             <td>{igle.Facebook}</td>
