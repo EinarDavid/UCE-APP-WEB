@@ -37,14 +37,25 @@ export const FiltroIglesia = () => {
 
         // array of objects to save in Excel
         let binary_univers = listaVisible;
+        let listaDescargable = [];
 
-        let binaryWS = XLSX.utils.json_to_sheet(binary_univers);
+        binary_univers.forEach(element => {
+            listaDescargable.push({
+                Nombre: element.Nombre, Descripcion: element.Descripcion, Correo: element.Correo, Facebook: element.Facebook,
+                Mision: element.Mision, Vision: element.Vision, NumeroCelular: element.NumeroCelular, Pastores: element.Pastores,
+                Denominacion: element.Denominacion, miembros: element.miembros, Direccion: element.Direccion, HorarioDomingo: element.Horario,
+                Horario_Lunes: element.Horario_Lunes, Horario_Martes: element.Horario_Martes, Horario_Miercoles: element.Horario_Miercoles,
+                Horario_Jueves: element.Horario_Jueves, Horario_Viernes: element.Horario_Viernes, Horario_Sabado: element.Horario_Sabado
+            })
+        });
+
+        let binaryWS = XLSX.utils.json_to_sheet(listaDescargable);
 
         // Create a new Workbook
         var wb = XLSX.utils.book_new()
 
         // Name your sheet
-        XLSX.utils.book_append_sheet(wb, binaryWS, 'Binary values')
+        XLSX.utils.book_append_sheet(wb, binaryWS, 'Iglesia')
 
         // export your excel
         XLSX.writeFile(wb, 'Iglesia.xlsx');
