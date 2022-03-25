@@ -9,7 +9,17 @@ export const FiltroIglesia = () => {
 
     const iglesia = window.datos.iglesias;
     const membresias = window.datos.membresias;
-
+    const contarMiembros = () => {
+        iglesia.forEach(igle => {
+            var contador = 0;
+            membresias.forEach(miembro => {
+                if (igle._id === miembro.Iglesia) {
+                    contador += 1;
+                }
+            });
+            igle.miembros = contador;
+        });
+    }
     contarMiembros();
 
     const [inputValue, setInputValue] = useState('');
@@ -24,17 +34,7 @@ export const FiltroIglesia = () => {
     const nombreColumna = Object.getOwnPropertyNames(columnas)
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
-    const contarMiembros = () => {
-        iglesia.forEach(igle => {
-            var contador = 0;
-            membresias.forEach(miembro => {
-                if (igle._id === miembro.Iglesia) {
-                    contador += 1;
-                }
-            });
-            igle.miembros = contador;
-        });
-    }
+    
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
