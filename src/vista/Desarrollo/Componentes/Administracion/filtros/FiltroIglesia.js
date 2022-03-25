@@ -36,13 +36,20 @@ export const FiltroIglesia = () => {
 
         if (e.target.value.trim().length > 0) {
             iglesia.forEach(element => {
-                const stringunido = (element.Nombre != null) ? (element.Nombre + ' ') : ('') +
-                    (element.Correo != null) ? (element.Correo + ' ') : ('') +
-                        (element.NumeroCelular != null) ? (element.NumeroCelular + ' ') : ('') +
-                            (element.Direccion != null) ? (element.Direccion) : ('');
+                var stringunido = '';
+
+                if (element.Nombre != null)
+                    stringunido += element.Nombre + ' ';
+                if (element.Correo != null)
+                    stringunido += element.Correo + ' ';
+                if (element.NumeroCelular != null)
+                    stringunido += element.NumeroCelular + ' ';
+                if (element.Direccion != null)
+                    stringunido += element.Direccion;
+
                 console.log('Valor del texto------', stringunido);
 
-                if (stringunido.match(e.target.value) !== null) {
+                if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
                     result.push(element);
                 }
             });
