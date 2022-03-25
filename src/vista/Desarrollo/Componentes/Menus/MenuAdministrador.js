@@ -44,7 +44,7 @@ class Menu extends React.Component {
 
             <div >
                 <Navbar className="fixed-top Menu_AG" id="ColorMenu" sticky=" top " collapseOnSelect expand="lg" variant="dark" >
-                    <Navbar.Brand href="/admiCental" ><img src={'/fotos/Iglesias/Iglesia.png'} className="App-logo"  /></Navbar.Brand>
+                    <Navbar.Brand href="/admiCental" ><img src={'/Icons/Logo.svg'} className="App-logo"  /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="items">
                         <Nav bsPrefix="mr-auto">

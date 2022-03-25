@@ -17,7 +17,7 @@ body{
     display: flex;
     flex-direction:row;
     align-items:flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0px;
     width: 100%;
     /* background-color: #747477; */
@@ -30,6 +30,7 @@ body{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 20px;
+    margin-right: 25px;
 }
 
 .ImageCardReporte{
