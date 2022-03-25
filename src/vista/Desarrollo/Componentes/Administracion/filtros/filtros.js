@@ -153,7 +153,7 @@ class Formulario extends Component {
                                         <td>
                                             <h4 className="accion">
 
-                                                <Button onClick={(e) => { console.log("iiiiiiiiiiiiiiiiiii", i); this.handleShow_EditarPerfil(i) }}> </Button>
+                                                <Button onClick={(e) => { console.log("i", i); this.handleShow_EditarPerfil(i) }}>EDIT </Button>
 
                                             </h4>
                                         </td>
