@@ -34,7 +34,7 @@ export const FiltroIglesia = () => {
     const nombreColumna = Object.getOwnPropertyNames(columnas)
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
-    
+
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -168,8 +168,12 @@ export const FiltroIglesia = () => {
 
                         </tbody>
                     </Table>
+                    <div className="Reportes">
+                        <Button type="submit" variant="outline-light">Descargar</Button>
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
