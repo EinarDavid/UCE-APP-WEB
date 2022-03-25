@@ -19,31 +19,31 @@ export const FiltroIglesia = () => {
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
 
     const nombreColumna = Object.getOwnPropertyNames(columnas)
-    const columnasFiltradas = ['Nombre', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
+    const columnasFiltradas = ['Nombre','Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
 
 
 
 
     var rellenar = ["Denominacion"]
-    console.log("Columna", nombreColumna);
+    // console.log("Columna", nombreColumna);
 
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
-        console.log('Valor del texto------', e.target.value);
+        
 
         const result = [];
 
-        if(e.target.value.trim().length > 0){
+        if (e.target.value.trim().length > 0) {
             iglesia.forEach(element => {
-                const stringunido = element.Nombre+element.Correo + element.NumeroCelular;
-                
+                const stringunido = element.Nombre + element.Correo + element.NumeroCelular + element.Direccion;
+                console.log('Valor del texto------',stringunido);
                 if (stringunido.match(e.target.value) !== null) {
                     result.push(element);
                 }
             });
             setListaVisible(result);
-        }else{
+        } else {
             setListaVisible(iglesia);
         }
 
@@ -128,11 +128,12 @@ export const FiltroIglesia = () => {
 
                             {
                                 listaVisible.map((igle, index) => {
-                                    console.log('-------',igle)
+                                    // console.log('-------', igle)
                                     return (
                                         <tr key={index}>
                                             <td>{index + 1}</td>
                                             <td>{igle.Nombre}</td>
+                                            <td>{igle.Direccion}</td>
                                             <td>{igle.Correo}</td>
                                             <td>{igle.Facebook}</td>
                                             <td>{igle.NumeroCelular}</td>
@@ -143,7 +144,7 @@ export const FiltroIglesia = () => {
                                 })
 
                             }
-                            
+
 
                         </tbody>
                     </Table>
