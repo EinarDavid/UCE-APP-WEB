@@ -30,7 +30,7 @@ export const FiltroIglesia = () => {
 
     const columnas = window.datos.iglesias[0];
 
-    const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "NumeroCelular", "Denominacion"];
+    const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
 
     const DescargarExcel = () => {
         const XLSX = require('xlsx')
@@ -111,8 +111,8 @@ export const FiltroIglesia = () => {
             <br />
             <div>
                 {/* <h1 className='TitleReporte'>Reportes</h1>
-                <br /> */}
-
+                */}
+                <br />
                 <div className='CardDisplay'>
                     <div className='CardReporte'>
                         <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
@@ -125,7 +125,7 @@ export const FiltroIglesia = () => {
                         <p className='ParrafoCardReporte'>Total de miembros registrados</p>
                         <h1 className='NumCardReporte'>{membresias.length}</h1>
                     </div>
-                   
+
                 </div>
 
                 <br />
@@ -156,7 +156,7 @@ export const FiltroIglesia = () => {
                                         <th key={i}>{columna}</th>
                                     ))
                                 }
-                                
+
                             </tr>
                         </thead>
                         <tbody>
@@ -170,11 +170,11 @@ export const FiltroIglesia = () => {
                                             <td>{igle.Nombre}</td>
                                             <td>{igle.miembros}</td>
                                             <td>{igle.Direccion}</td>
-                                            <td>{igle.Correo}</td>
-                                            <td>{igle.Facebook}</td>
-                                            <td>{igle.NumeroCelular}</td>
+                                            <td><a href={'mailto:' + igle.Correo}> Click </a></td>
+                                            <td><a href={igle.Facebook}> Click </a></td>
+                                            <td><a href={'https://api.whatsapp.com/send?phone=591' + igle.NumeroCelular}></a></td>
                                             <td>{igle.Denominacion}</td>
-                                            
+
                                         </tr>
                                     )
                                 })

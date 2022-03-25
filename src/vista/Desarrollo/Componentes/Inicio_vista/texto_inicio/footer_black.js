@@ -16,7 +16,7 @@ function Footer_black() {
             </h4>
           </div>
           <div className="footer_copyright">
-            <h5>© COPYRIGHT QODE INTERACTIVE</h5>
+            <h5>© COPYRIGHT QODE INTERACTIVE FOR EINAR DAVID</h5>
           </div>
       </div>
       
