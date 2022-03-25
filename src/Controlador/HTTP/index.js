@@ -90,7 +90,7 @@ var ret = (passport) => {
       {
         pagina: 'admin',
         datos
-      });
+      }); 
   });
 
   rutas.get("/filtro/", (req, res) => {
@@ -118,16 +118,19 @@ var ret = (passport) => {
     req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
-      datos.iglesias = iglesias;
-      datos.user = req.user;
-      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
-      //console.log("Datos de iglesiaaaaaaaaaaaa", datos.iglesias)
-
-      res.render("Paginas/index",
-        {
-          pagina: 'filtroIglesia',
-          datos
-        });
+      bd.cruds.crudMembresias.buscarTodo((membresias)=>{
+        datos.membresias = membresias;
+        datos.iglesias = iglesias;
+        datos.user = req.user;
+        datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+        console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
+  
+        res.render("Paginas/index",
+          {
+            pagina: 'filtroIglesia',
+            datos
+          });
+      })
 
     })
 

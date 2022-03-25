@@ -8,12 +8,13 @@ import './FiltroIglesia.css';
 export const FiltroIglesia = () => {
 
     const iglesia = window.datos.iglesias;
+    const membresias = window.datos.membresias;
 
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
     const [listaVisible, setListaVisible] = useState(iglesia);
 
-    console.log("bbbbbbbbbbbb", window.datos.iglesias);
+    console.log("bbbbbbbbbbbb", window.datos.membresias);
 
     const columnas = window.datos.iglesias[0];
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
