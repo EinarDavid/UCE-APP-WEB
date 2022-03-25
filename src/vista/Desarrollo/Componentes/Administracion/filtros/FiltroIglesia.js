@@ -5,40 +5,15 @@ import './FiltroIglesia.css';
 
 
 
-// var excepciones = ["Actividades", "Cargos", "Fotos", "FotosSlider"]
-
-// iglesia = iglesia.map(a => {
-//     if (a != undefined) {
-//         // rellenar.map(b => {
-//         //     if (a[b] == undefined) {
-//         //         a[b] = ""
-//         //     }
-//         //     return b;
-//         // });
-//         excepciones.map(c => {
-//             delete a[c]
-//             return c;
-//         });
-//     }
-//     return a;
-// })
-
-// this.state = {
-//     iglesias: iglesia,
-// }
-// console.log(this.state);
-
-
-
 export const FiltroIglesia = () => {
+
+    const iglesia = window.datos.iglesias;
 
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
+    const [listaVisible, setListaVisible] = useState(iglesia);
 
     console.log("bbbbbbbbbbbb", window.datos.iglesias);
-
-
-    const iglesia = window.datos.iglesias;
 
     const columnas = window.datos.iglesias[0];
     var excepciones = ['Fotos', 'FotosSlider', 'Cargos', '_id', 'Descripcion', '__v', 'Horario', 'Mision', 'ResSocial', 'Vision', 'Logo', 'Actividades', 'Horario_Jueves', 'Horario_Lunes', 'Horario_Martes', 'Horario_Miercoles', 'Horario_Sabado', 'Horario_Viernes', 'Titulo_Descripcion']
@@ -52,26 +27,25 @@ export const FiltroIglesia = () => {
     var rellenar = ["Denominacion"]
     console.log("Columna", nombreColumna);
 
-    // columnas = columnas.map(a => {
-    //     if (a != undefined ){
-    //         excepciones.map(c => {
-    //             delete a[c]
-    //             return c;
-    //         })
-    //     }
-    //     return a;
-    // })
-
-
-    // const columna = Object.getOwnPropertyNames(iglesia[0].map(columna => {
-    //     console.log("columna===========================", columna)
-    //     return (<th>{columna}</th>)
-    // }))
-
-
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
+        console.log('Valor del texto------', e.target.value);
+
+        const result = [];
+
+        if(e.target.value.trim().length > 0){
+            iglesia.forEach(element => {
+                const stringunido = element.Nombre+element.Correo + element.NumeroCelular;
+                
+                if (stringunido.match(e.target.value) !== null) {
+                    result.push(element);
+                }
+            });
+            setListaVisible(result);
+        }else{
+            setListaVisible(iglesia);
+        }
 
     }
 
@@ -104,7 +78,7 @@ export const FiltroIglesia = () => {
 
                     <div className='CardReporte'>
                         <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
+                        <p className='ParrafoCardReporte'>Cantidad de miembros registrados</p>
                         <h1 className='NumCardReporte'>20</h1>
                     </div>
                     <div className='CardReporte'>
@@ -153,7 +127,7 @@ export const FiltroIglesia = () => {
                         <tbody>
 
                             {
-                                iglesia.map((igle, index) => {
+                                listaVisible.map((igle, index) => {
                                     console.log('-------',igle)
                                     return (
                                         <tr key={index}>

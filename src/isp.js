@@ -18,6 +18,7 @@ var store = new MongoDBStore({
   uri: 'mongodb://localhost:27017/iglesia',
   collection: 'mySessions'
 });
+
 app.use(session({
   key: 'session_cookie_name',
   secret: 'session_cookie_secret',
