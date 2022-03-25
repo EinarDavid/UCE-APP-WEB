@@ -110,8 +110,8 @@ export const FiltroIglesia = () => {
             <br />
             <br />
             <div>
-                <h1 className='TitleReporte'>Reportes</h1>
-                <br />
+                {/* <h1 className='TitleReporte'>Reportes</h1>
+                <br /> */}
 
                 <div className='CardDisplay'>
                     <div className='CardReporte'>
