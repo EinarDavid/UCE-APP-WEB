@@ -92,7 +92,7 @@ class Formulario extends Component {
     render() {
         return (
 
-            <div className="Form-filtro" id="texto">
+            <div className="Form-filtro" id="texto" style={{width:'90%'}}>
 
                 <h1>{this.state.titulo}</h1>
                 <Table responsive striped hover>
