@@ -73,7 +73,7 @@ function peticion() {
                                     var datos = req.body;
                                     console.log("-------------------------", datos);
                                     bd.cruds.crudMembresias.ingresar(datos, () => {
-                                        req.flash('confirm', 'Membresia de: ' + datos.Nombre + ' ' + datos.Apellido_Paterno + ' ' + datos.Apellido_Materno + 'ingresada correctamente');
+                                        req.flash('confirm', 'Membresia de: ' + datos.Nombre + ' ' + datos.Apellido_Paterno + ' ' + datos.Apellido_Materno + ' ingresada correctamente');
                                         res.redirect('back');
                                     });
                                 })

@@ -75,18 +75,30 @@ function peticion() {
             });
 
         });
+
         this.rutas.post("/Registro/Encargado", ver.verificar, (req, res) => {
-            var bcrypt = require('bcryptjs');
-            bcrypt.genSalt(10, function (err, salt) {
-                bcrypt.hash(req.body.Contraseña, salt, function (err, contraEncriptado) {
-                    req.body.Contraseña = contraEncriptado;
-                    req.body.Cargo = "Administrador"
-                    bd.cruds.crudMembresias.ingresar(req.body, () => {
-                        res.redirect("/admiCental");
+            bd.cruds.crudMembresias.buscar({Ci: {valor: req.body.Ci, tipo: "igual"}},(membresia)=>{
+                if(membresia.length>0){
+                    req.flash('error', 'La membresia ya fue registrada');
+                    res.redirect("/admiCental");
+                }
+                else{
+                    var bcrypt = require('bcryptjs');
+                    bcrypt.genSalt(10, function (err, salt) {
+                        bcrypt.hash(req.body.Contraseña, salt, function (err, contraEncriptado) {
+                            req.body.Contraseña = contraEncriptado;
+                            req.body.Cargo = "Administrador"
+                            bd.cruds.crudMembresias.ingresar(req.body, () => {
+                                req.flash('confirm', 'Membresia ingresada correctamente');
+                                res.redirect("/admiCental");
+                            });
+                        })
                     });
-                })
-            });
+                }
+            })
+
         });
+
         this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
 
             upload2(req, res, function (err) {

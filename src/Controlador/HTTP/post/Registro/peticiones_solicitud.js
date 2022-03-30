@@ -69,7 +69,7 @@ function peticion() {
                                     req.body.Contraseña = contraEncriptado;
                                     var datos = req.body;
                                     bd.cruds.crudMembresias.ingresar(datos, () =>{
-                                        req.flash('confirm', 'Membresia de: ' + datos.Nombre + ' ' + datos.Apellido_Paterno + ' ' + datos.Apellido_Materno + 'ingresada correctamente');
+                                        req.flash('confirm', 'Membresia de: ' + datos.Nombre + ' ' + datos.Apellido_Paterno + ' ' + datos.Apellido_Materno + ' ingresada correctamente');
                                         res.redirect('back');
                                     });
                                 });
