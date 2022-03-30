@@ -87,6 +87,7 @@ class Formulario extends Component {
                         <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                             <Form.Label>Cargo en la Iglesia</Form.Label>
                             <Form.Control as="select" name="Cargo_Ministerial">
+                                <option value="Ninguno">Ninguno</option>
                                 <option value="Anciano">Anciano</option>
                                 <option value="Diacono">Diacono</option>
                                 <option value="Diaconisa">Diaconisa</option>

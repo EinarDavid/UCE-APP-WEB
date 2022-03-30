@@ -173,9 +173,9 @@ export const FiltroIglesia = () => {
                                             <td>{igle.Nombre}</td>
                                             <td>{igle.miembros}</td>
                                             <td>{igle.Direccion}</td>
-                                            <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={20}/></a>) : ('')}</td>
-                                            <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={20}/></a>) : ('')}</td>
-                                            <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={20}/></a>) : ('')}</td>
+                                            <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30}/></a>) : ('')}</td>
+                                            <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30}/></a>) : ('')}</td>
+                                            <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30}/></a>) : ('')}</td>
                                             <td>{igle.Denominacion}</td>
 
                                         </tr>
