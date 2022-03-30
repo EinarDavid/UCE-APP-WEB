@@ -39,14 +39,14 @@ function peticion() {
                     req.body.MiembroSolicitud={};
                     req.body.MiembroSolicitud.Formulario= req.body.Formulario;
                     
-                    if (req.files.Imagen_Membresia[0] != undefined) {
+                    if (req.files.Imagen_Membresia != undefined) {
                         var Imagen_Membresia = req.files.Imagen_Membresia[0].filename;
                     }
                     else {
                         var Imagen_Membresia = undefined;
                     }
 
-                    if (req.files.FotoPerfil[0] != undefined) {
+                    if (req.files.FotoPerfil != undefined) {
                         var FotoPerfil = req.files.FotoPerfil[0].filename;
                     }
                     else {

@@ -41,14 +41,14 @@ function peticion() {
                     req.body.MiembroTransferencia.Iglesia_Destino= req.body.Iglesia_Destino;
                     req.body.MiembroTransferencia.Fecha_Transferencia = req.body.Fecha_Transferencia;
 
-                    if (req.files.Imagen_Membresia[0] != undefined) {
+                    if (req.files.Imagen_Membresia != undefined) {
                         var Imagen_Membresia = req.files.Imagen_Membresia[0].filename;
                     }
                     else {
                         var Imagen_Membresia = undefined;
                     }
 
-                    if (req.files.FotoPerfil[0] != undefined) {
+                    if (req.files.FotoPerfil != undefined) {
                         var FotoPerfil = req.files.FotoPerfil[0].filename;
                     }
                     else {
