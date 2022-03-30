@@ -93,7 +93,8 @@ class Formulario extends Component {
                         <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                             <Form.Label>Cargo en la Iglesia</Form.Label>
                             <Form.Control as="select" name="Cargo_Ministerial">
-                            <option value="Anciano">Anciano</option>
+                                <option value="Ninguno">Ninguno</option>
+                                <option value="Anciano">Anciano</option>
                                 <option value="Diacono">Diacono</option>
                                 <option value="Diaconisa">Diaconisa</option>
                                 <option value="Soc. Juvenil">Soc. Juvenil</option>
@@ -114,10 +115,10 @@ class Formulario extends Component {
                             <Form.Label>Foto Perfil</Form.Label>
                             <Form.Control type="file" accept="image/*" name="FotoPerfil" />
                         </Form.Group>
-                        
+
                     </Form.Row>
                     <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Carta de Transferencia</Form.Label>
                             <Form.Control type="text" placeholder="Carta de Transferencia" name="Carta_Transferencia" />
                         </Form.Group>

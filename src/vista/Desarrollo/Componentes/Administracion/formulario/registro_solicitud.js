@@ -86,14 +86,15 @@ function Formulario() {
                     <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                         <Form.Label>Cargo en la Iglesia</Form.Label>
                         <Form.Control as="select" name="Cargo_Ministerial">
-                                <option value="Anciano">Anciano</option>
-                                <option value="Diacono">Diacono</option>
-                                <option value="Diaconisa">Diaconisa</option>
-                                <option value="Soc. Juvenil">Soc. Juvenil</option>
-                                <option value="Soc. Femenil">Soc. Femenil</option>
-                                <option value="Min. Pre Juvenil">Min. Pre Juvenil</option>
-                                <option value="Oansa">Oansa</option>
-                                <option value="Superintendencia">Superintendencia</option>
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Anciano">Anciano</option>
+                            <option value="Diacono">Diacono</option>
+                            <option value="Diaconisa">Diaconisa</option>
+                            <option value="Soc. Juvenil">Soc. Juvenil</option>
+                            <option value="Soc. Femenil">Soc. Femenil</option>
+                            <option value="Min. Pre Juvenil">Min. Pre Juvenil</option>
+                            <option value="Oansa">Oansa</option>
+                            <option value="Superintendencia">Superintendencia</option>
                         </Form.Control>
                     </Form.Group>
                 </Form.Row>
@@ -103,9 +104,9 @@ function Formulario() {
                         <Form.Control type="file" accept="image/*" name="Imagen_Membresia" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Foto Perfil</Form.Label>
-                            <Form.Control type="file" accept="image/*" name="FotoPerfil" />
-                        </Form.Group>
+                        <Form.Label>Foto Perfil</Form.Label>
+                        <Form.Control type="file" accept="image/*" name="FotoPerfil" />
+                    </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Formulario</Form.Label>
                         <Form.Control type="file" name="Formulario" />
