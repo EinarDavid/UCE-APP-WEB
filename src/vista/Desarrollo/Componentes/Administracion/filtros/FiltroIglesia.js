@@ -163,7 +163,17 @@ export const FiltroIglesia = () => {
                     }
                 });
 
-
+                result.sort(function (a, b) {
+                    if (a.NombreIglesia > b.NombreIglesia) {
+                      return 1;
+                    }
+                    if (a.NombreIglesia < b.NombreIglesia) {
+                      return -1;
+                    }
+                    // a must be equal to b
+                    return 0;
+                  });
+                console.log('----------',result);
                 setlistaVisibleMiembros(result);
             } else {
                 setlistaVisibleMiembros(membresias);
