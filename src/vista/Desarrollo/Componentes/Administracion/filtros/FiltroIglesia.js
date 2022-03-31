@@ -139,6 +139,7 @@ export const FiltroIglesia = () => {
                 membresias.forEach(element => {
                     var stringunido = '';
                     const NombreIglesia = getNombreIglesia(element.Iglesia);
+                    element.NombreIglesia= NombreIglesia;
 
                     if (NombreIglesia != '')
                         stringunido += NombreIglesia + ' ';
@@ -159,6 +160,8 @@ export const FiltroIglesia = () => {
                         result.push(element);
                     }
                 });
+
+
                 setlistaVisibleMiembros(result);
             } else {
                 setlistaVisibleMiembros(membresias);
@@ -202,6 +205,7 @@ export const FiltroIglesia = () => {
                     </div>
 
                 </div>
+                <br />
                 <div>
                     <button onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Igleisa</button>
                     <button onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
@@ -285,7 +289,7 @@ export const FiltroIglesia = () => {
                                     {
                                         listaVisibleMiembros.map((miembro, index) => {
                                             // console.log('-------', miembro)
-                                            console.log('-------membresia', miembro)
+                                            // console.log('-------membresia', miembro)
                                             // 
                                             // 
                                             return (
@@ -293,7 +297,7 @@ export const FiltroIglesia = () => {
                                                     <td>{index + 1}</td>
                                                     <td>{getNombreIglesia(miembro.Iglesia)}</td>
                                                     <td>{miembro.Nombre}</td>
-                                                    <td>{miembro.Apellido_Paterno + ' ' + miembro.Apellido_Materno}</td>
+                                                    <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
                                                     <td>{miembro.Contacto}</td>
                                                     <td>{miembro.Profesion}</td>
                                                 </tr>
