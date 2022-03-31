@@ -22,13 +22,39 @@ export const FiltroIglesia = () => {
     }
     contarMiembros();
 
+    const getNombreIglesia = (id) => {
+        for (let i = 0; i < iglesia.length; i++) {
+            if (iglesia[i]._id == id) {
+                return iglesia[i].Nombre;
+            }
+        }
+        return '';
+    }
+
+    membresias.forEach(element => {
+        const NombreIglesia = getNombreIglesia(element.Iglesia);
+        element.NombreIglesia = NombreIglesia;
+    });
+
+    membresias.sort(function (a, b) {
+        if (a.NombreIglesia > b.NombreIglesia) {
+            return 1;
+        }
+        if (a.NombreIglesia < b.NombreIglesia) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
+    console.log('----------', result);
+
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
     const [listaVisible, setListaVisible] = useState(iglesia);
     const [listaVisibleMiembros, setlistaVisibleMiembros] = useState(membresias)
     const [busquedaSeleccionada, setBusquedaSeleccionada] = useState(0);
 
-    console.log("bbbbbbbbbbbb", window.datos.membresias);
+    // console.log("bbbbbbbbbbbb", window.datos.membresias);
 
     const columnas = window.datos.iglesias[0];
 
@@ -92,16 +118,6 @@ export const FiltroIglesia = () => {
         XLSX.writeFile(wb, 'Membresias.xlsx');
     }
 
-
-    const getNombreIglesia = (id) => {
-        for (let i = 0; i < iglesia.length; i++) {
-            if (iglesia[i]._id == id) {
-                return iglesia[i].Nombre;
-            }
-        }
-        return '';
-    }
-
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
 
@@ -138,11 +154,9 @@ export const FiltroIglesia = () => {
             if (e.target.value.trim().length > 0) {
                 membresias.forEach(element => {
                     var stringunido = '';
-                    const NombreIglesia = getNombreIglesia(element.Iglesia);
-                    element.NombreIglesia= NombreIglesia;
 
-                    if (NombreIglesia != '')
-                        stringunido += NombreIglesia + ' ';
+                    if (element.NombreIglesia != '')
+                        stringunido += element.NombreIglesia + ' ';
                     if (element.Nombre != null)
                         stringunido += element.Nombre + ' ';
                     if (element.Apellido_Paterno != null)
@@ -156,24 +170,14 @@ export const FiltroIglesia = () => {
                     if (element.Ci != null)
                         stringunido += element.Ci;
 
-                    console.log('Valor del texto------', stringunido);
+                    // console.log('Valor del texto------', stringunido);
 
                     if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
                         result.push(element);
                     }
                 });
 
-                result.sort(function (a, b) {
-                    if (a.NombreIglesia > b.NombreIglesia) {
-                      return 1;
-                    }
-                    if (a.NombreIglesia < b.NombreIglesia) {
-                      return -1;
-                    }
-                    // a must be equal to b
-                    return 0;
-                  });
-                console.log('----------',result);
+
                 setlistaVisibleMiembros(result);
             } else {
                 setlistaVisibleMiembros(membresias);
