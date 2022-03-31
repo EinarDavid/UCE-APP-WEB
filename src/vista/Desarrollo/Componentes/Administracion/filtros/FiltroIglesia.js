@@ -237,12 +237,12 @@ export const FiltroIglesia = () => {
                     (busquedaSeleccionada === 0) ? (
                         <div className='ContainerButtonReport'>
                             <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                            <div style={{ width: '15px' }}></div>
+                            <div style={{ width: '25px' }}></div>
                             <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
                         </div>) : (
                         <div className='ContainerButtonReport'>
                             <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                            <div style={{ width: '15px' }}></div>
+                            <div style={{ width: '25px' }}></div>
                             <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
                         </div>
                     )
