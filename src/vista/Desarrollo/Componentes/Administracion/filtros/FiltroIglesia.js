@@ -228,7 +228,7 @@ export const FiltroIglesia = () => {
                     <Table responsive striped hover>
                         {
                             (busquedaSeleccionada === 0) ? (
-                                <>
+                                <div>
                                     <thead>
                                         <tr>
                                             <th>Nro</th>
@@ -267,9 +267,9 @@ export const FiltroIglesia = () => {
 
 
                                     </tbody>
-                                </>
+                                </div>
                             ) : (busquedaSeleccionada === 1) ? (
-                                <>
+                                <div>
                                     <thead>
                                         <tr>
                                             {
@@ -304,10 +304,10 @@ export const FiltroIglesia = () => {
 
 
                                     </tbody>
-                                </>
-                            ) : (<>
+                                </div>
+                            ) : (<div>
                                 <h1>Hola</h1>
-                            </>)
+                            </div>)
                         }
 
 
@@ -317,14 +317,15 @@ export const FiltroIglesia = () => {
                             <div className="Reportes">
                                 <Button onClick={() => { DescargarExcel() }} variant="outline-light">Descargar</Button>
                             </div>
-                        ) : (busquedaSeleccionada === 1) ?
-                            (
-                                <div className="Reportes">
-                                    <Button onClick={() => { DescargarExcelMiembros() }} variant="outline-light">Descargar</Button>
-                                </div>
-                            ) : (<>
+                        ) : (busquedaSeleccionada === 1) ? (
+                            <div className="Reportes">
+                                <Button onClick={() => { DescargarExcelMiembros() }} variant="outline-light">Descargar</Button>
+                            </div>
+                        ) : (
+                            <div>
                                 <h1>Busqueda seleccionada es distinto de 0 y 1</h1>
-                            </>)
+                            </div>
+                        )
 
                     }
                 </div>
