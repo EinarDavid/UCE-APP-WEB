@@ -25,12 +25,15 @@ export const FiltroIglesia = () => {
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
     const [listaVisible, setListaVisible] = useState(iglesia);
+    const [listaVisibleMiembros, setlistaVisibleMiembros] = useState(membresias)
+    const [busquedaSeleccionada, setBusquedaSeleccionada] = useState(0);
 
     console.log("bbbbbbbbbbbb", window.datos.membresias);
 
     const columnas = window.datos.iglesias[0];
 
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
+    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión'];
 
     const DescargarExcel = () => {
         const XLSX = require('xlsx')
@@ -61,35 +64,107 @@ export const FiltroIglesia = () => {
         XLSX.writeFile(wb, 'Iglesia.xlsx');
     }
 
+    const DescargarExcelMiembros = () => {
+        const XLSX = require('xlsx')
+
+        // array of objects to save in Excel
+        let binary_univers = listaVisibleMiembros;
+        let listaDescargable = [];
+
+        binary_univers.forEach(element => {
+            listaDescargable.push({
+                Nombre: element.Nombre, Apellido_Paterno: element.Apellido_Paterno, Apellido_Materno: element.Apellido_Materno, Ci: element.Ci,
+                Contacto: element.Contacto, Direccion: element.Direccion, Email: element.Email, Estado_Civil: element.Estado_Civil,
+                Fecha_Nacimiento: element.Fecha_Nacimiento, Genero: element.Genero, Iglesia: getNombreIglesia(element.Iglesia), Lugar_Nacimiento: element.Lugar_Nacimiento,
+                Profesion: element.Profesion
+            })
+        });
+
+        let binaryWS = XLSX.utils.json_to_sheet(listaDescargable);
+
+        // Create a new Workbook
+        var wb = XLSX.utils.book_new()
+
+        // Name your sheet
+        XLSX.utils.book_append_sheet(wb, binaryWS, 'Membresias')
+
+        // export your excel
+        XLSX.writeFile(wb, 'Membresias.xlsx');
+    }
+
+
+    const getNombreIglesia = (id) => {
+        for (let i = 0; i < iglesia.length; i++) {
+            if (iglesia[i]._id == id) {
+                return iglesia[i].Nombre;
+            }
+        }
+        return '';
+    }
+
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
 
+        if (busquedaSeleccionada === 0) {
+            const result = [];
 
-        const result = [];
+            if (e.target.value.trim().length > 0) {
+                iglesia.forEach(element => {
+                    var stringunido = '';
 
-        if (e.target.value.trim().length > 0) {
-            iglesia.forEach(element => {
-                var stringunido = '';
+                    if (element.Nombre != null)
+                        stringunido += element.Nombre + ' ';
+                    if (element.Correo != null)
+                        stringunido += element.Correo + ' ';
+                    if (element.NumeroCelular != null)
+                        stringunido += element.NumeroCelular + ' ';
+                    if (element.Direccion != null)
+                        stringunido += element.Direccion;
 
-                if (element.Nombre != null)
-                    stringunido += element.Nombre + ' ';
-                if (element.Correo != null)
-                    stringunido += element.Correo + ' ';
-                if (element.NumeroCelular != null)
-                    stringunido += element.NumeroCelular + ' ';
-                if (element.Direccion != null)
-                    stringunido += element.Direccion;
+                    // console.log('Valor del texto------', stringunido);
 
-                console.log('Valor del texto------', stringunido);
+                    if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
+                        result.push(element);
+                    }
+                });
+                setListaVisible(result);
+            } else {
+                setListaVisible(iglesia);
+            }
 
-                if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
-                    result.push(element);
-                }
-            });
-            setListaVisible(result);
-        } else {
-            setListaVisible(iglesia);
+        } else if (busquedaSeleccionada === 1) {
+            const result = [];
+
+            if (e.target.value.trim().length > 0) {
+                membresias.forEach(element => {
+                    var stringunido = '';
+                    const NombreIglesia = getNombreIglesia(element.Iglesia);
+
+                    if (NombreIglesia != '')
+                        stringunido += NombreIglesia + ' ';
+                    if (element.Nombre != null)
+                        stringunido += element.Nombre + ' ';
+                    if (element.Apellido_Paterno != null)
+                        stringunido += element.Apellido_Paterno + ' ';
+                    if (element.Apellido_Materno != null)
+                        stringunido += element.Apellido_Materno + ' ';
+                    if (element.Contacto != null)
+                        stringunido += element.Contacto;
+                    if (element.Profesion != null)
+                        stringunido += element.Profesion;
+
+                    console.log('Valor del texto------', stringunido);
+
+                    if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
+                        result.push(element);
+                    }
+                });
+                setlistaVisibleMiembros(result);
+            } else {
+                setlistaVisibleMiembros(membresias);
+            }
         }
+
 
     }
 
@@ -127,7 +202,10 @@ export const FiltroIglesia = () => {
                     </div>
 
                 </div>
-
+                <div>
+                    <button onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Igleisa</button>
+                    <button onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
+                </div>
                 <br />
 
                 <form onSubmit={handleSubmit} >
@@ -148,48 +226,107 @@ export const FiltroIglesia = () => {
                 {/* <br /> */}
                 <div className='Form-filtro'>
                     <Table responsive striped hover>
-                        <thead>
-                            <tr>
-                                <th>Nro</th>
-                                {
-                                    columnasFiltradas.map((columna, i) => (
-                                        <th key={i}>{columna}</th>
-                                    ))
-                                }
-
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            {
-                                listaVisible.map((igle, index) => {
-                                    console.log('-------', igle.Facebook)
-                                    console.log('-------Iglesia', igle)
-                                    // 
-                                    // 
-                                    return (
-                                        <tr key={index}>
-                                            <td>{index + 1}</td>
-                                            <td>{igle.Nombre}</td>
-                                            <td>{igle.miembros}</td>
-                                            <td>{igle.Direccion}</td>
-                                            <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30}/></a>) : ('')}</td>
-                                            <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30}/></a>) : ('')}</td>
-                                            <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30}/></a>) : ('')}</td>
-                                            <td>{igle.Denominacion}</td>
+                        {
+                            (busquedaSeleccionada === 0) ? (
+                                <>
+                                    <thead>
+                                        <tr>
+                                            <th>Nro</th>
+                                            {
+                                                columnasFiltradas.map((columna, i) => (
+                                                    <th key={i}>{columna}</th>
+                                                ))
+                                            }
 
                                         </tr>
-                                    )
-                                })
+                                    </thead>
+                                    <tbody>
 
-                            }
+                                        {
+                                            listaVisible.map((igle, index) => {
+                                                // console.log('-------', igle.Facebook)
+                                                // console.log('-------Iglesia', igle)
+                                                // 
+                                                // 
+                                                return (
+                                                    <tr key={index}>
+                                                        <td>{index + 1}</td>
+                                                        <td>{igle.Nombre}</td>
+                                                        <td>{igle.miembros}</td>
+                                                        <td>{igle.Direccion}</td>
+                                                        <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30} /></a>) : ('')}</td>
+                                                        <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30} /></a>) : ('')}</td>
+                                                        <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
+                                                        <td>{igle.Denominacion}</td>
+
+                                                    </tr>
+                                                )
+                                            })
+
+                                        }
 
 
-                        </tbody>
+                                    </tbody>
+                                </>
+                            ) : (busquedaSeleccionada === 1) ? (
+                                <>
+                                    <thead>
+                                        <tr>
+                                            {
+                                                columnasMiembros.map((columna, i) => (
+                                                    <th key={i}>{columna}</th>
+                                                ))
+                                            }
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        {
+                                            listaVisibleMiembros.map((miembro, index) => {
+                                                // console.log('-------', miembro)
+                                                console.log('-------membresia', miembro)
+                                                // 
+                                                // 
+                                                return (
+                                                    <tr key={index}>
+                                                        <td>{index + 1}</td>
+                                                        <td>{getNombreIglesia(miembro.Iglesia)}</td>
+                                                        <td>{miembro.Nombre}</td>
+                                                        <td>{miembro.Apellido_Paterno + ' ' + miembro.Apellido_Materno}</td>
+                                                        <td>{miembro.Contacto}</td>
+                                                        <td>{miembro.Profesion}</td>
+                                                    </tr>
+                                                )
+                                            })
+
+                                        }
+
+
+                                    </tbody>
+                                </>
+                            ) : (<>
+                                <h1>Hola</h1>
+                            </>)
+                        }
+
+
                     </Table>
-                    <div className="Reportes">
-                        <Button onClick={() => { DescargarExcel() }} variant="outline-light">Descargar</Button>
-                    </div>
+                    {
+                        (busquedaSeleccionada === 0) ? (
+                            <div className="Reportes">
+                                <Button onClick={() => { DescargarExcel() }} variant="outline-light">Descargar</Button>
+                            </div>
+                        ) : (busquedaSeleccionada === 1) ?
+                            (
+                                <div className="Reportes">
+                                    <Button onClick={() => { DescargarExcelMiembros() }} variant="outline-light">Descargar</Button>
+                                </div>
+                            ) : (<>
+                                <h1>Busqueda seleccionada es distinto de 0 y 1</h1>
+                            </>)
+
+                    }
                 </div>
             </div>
 
