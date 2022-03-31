@@ -171,7 +171,7 @@ body{
 
     height: 30px;
     border: none;
-    width: 250px;
+    width: 22%;
     justify-content: center;
 }
 .ButtonUnselected{
@@ -189,8 +189,7 @@ body{
 
     color: #747477;
     height: 30px;
-    border: none;
-    width: 250px;
+    width: 22%;
     justify-content: center;
 }
 .ContainerButtonReport{

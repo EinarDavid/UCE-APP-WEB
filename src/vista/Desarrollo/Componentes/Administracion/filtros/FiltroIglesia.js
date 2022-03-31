@@ -233,11 +233,21 @@ export const FiltroIglesia = () => {
 
                 </div>
                 <br />
-                <div className='ContainerButtonReport'>
-                    <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                    <div style={{width: '15px'}}></div>
-                    <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
-                </div>
+                {
+                    (busquedaSeleccionada === 0) ? (
+                        <div className='ContainerButtonReport'>
+                            <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
+                            <div style={{ width: '15px' }}></div>
+                            <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
+                        </div>) : (
+                        <div className='ContainerButtonReport'>
+                            <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
+                            <div style={{ width: '15px' }}></div>
+                            <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
+                        </div>
+                    )
+                }
+
                 <br />
 
                 <form onSubmit={handleSubmit} >
