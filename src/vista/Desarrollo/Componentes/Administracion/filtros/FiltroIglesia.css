@@ -156,3 +156,31 @@ body{
 .Form-filtro2 th,td{
     color: #FFF;
   }
+.ButtonSelect{
+    background: #3275C3;
+    border-radius: 13px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.ButtonUnselected{
+    background: #FFFFFF;
+    border-radius: 13px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #747477;
+}
