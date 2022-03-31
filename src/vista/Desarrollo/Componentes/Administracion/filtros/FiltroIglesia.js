@@ -225,93 +225,93 @@ export const FiltroIglesia = () => {
 
                 {/* <br /> */}
                 <div className='Form-filtro'>
-                    <Table responsive striped hover>
-                        {
-                            (busquedaSeleccionada === 0) ? (
-                                <div>
-                                    <thead>
-                                        <tr>
-                                            <th>Nro</th>
-                                            {
-                                                columnasFiltradas.map((columna, i) => (
-                                                    <th key={i}>{columna}</th>
-                                                ))
-                                            }
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
+                    {
+                        (busquedaSeleccionada === 0) ? (
+                            <Table responsive striped hover>
+                                <thead>
+                                    <tr>
+                                        <th>Nro</th>
                                         {
-                                            listaVisible.map((igle, index) => {
-                                                // console.log('-------', igle.Facebook)
-                                                // console.log('-------Iglesia', igle)
-                                                // 
-                                                // 
-                                                return (
-                                                    <tr key={index}>
-                                                        <td>{index + 1}</td>
-                                                        <td>{igle.Nombre}</td>
-                                                        <td>{igle.miembros}</td>
-                                                        <td>{igle.Direccion}</td>
-                                                        <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30} /></a>) : ('')}</td>
-                                                        <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30} /></a>) : ('')}</td>
-                                                        <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
-                                                        <td>{igle.Denominacion}</td>
-
-                                                    </tr>
-                                                )
-                                            })
-
+                                            columnasFiltradas.map((columna, i) => (
+                                                <th key={i}>{columna}</th>
+                                            ))
                                         }
 
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                    </tbody>
-                                </div>
-                            ) : (busquedaSeleccionada === 1) ? (
-                                <div>
-                                    <thead>
-                                        <tr>
-                                            {
-                                                columnasMiembros.map((columna, i) => (
-                                                    <th key={i}>{columna}</th>
-                                                ))
-                                            }
+                                    {
+                                        listaVisible.map((igle, index) => {
+                                            // console.log('-------', igle.Facebook)
+                                            // console.log('-------Iglesia', igle)
+                                            // 
+                                            // 
+                                            return (
+                                                <tr key={index}>
+                                                    <td>{index + 1}</td>
+                                                    <td>{igle.Nombre}</td>
+                                                    <td>{igle.miembros}</td>
+                                                    <td>{igle.Direccion}</td>
+                                                    <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30} /></a>) : ('')}</td>
+                                                    <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30} /></a>) : ('')}</td>
+                                                    <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
+                                                    <td>{igle.Denominacion}</td>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                                </tr>
+                                            )
+                                        })
 
+                                    }
+
+
+                                </tbody>
+                            </Table>
+                        ) : (busquedaSeleccionada === 1) ? (
+                            <Table responsive striped hover>
+                                <thead>
+                                    <tr>
                                         {
-                                            listaVisibleMiembros.map((miembro, index) => {
-                                                // console.log('-------', miembro)
-                                                console.log('-------membresia', miembro)
-                                                // 
-                                                // 
-                                                return (
-                                                    <tr key={index}>
-                                                        <td>{index + 1}</td>
-                                                        <td>{getNombreIglesia(miembro.Iglesia)}</td>
-                                                        <td>{miembro.Nombre}</td>
-                                                        <td>{miembro.Apellido_Paterno + ' ' + miembro.Apellido_Materno}</td>
-                                                        <td>{miembro.Contacto}</td>
-                                                        <td>{miembro.Profesion}</td>
-                                                    </tr>
-                                                )
-                                            })
-
+                                            columnasMiembros.map((columna, i) => (
+                                                <th key={i}>{columna}</th>
+                                            ))
                                         }
 
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                    </tbody>
-                                </div>
-                            ) : (<div>
-                                <h1>Hola</h1>
-                            </div>)
-                        }
+                                    {
+                                        listaVisibleMiembros.map((miembro, index) => {
+                                            // console.log('-------', miembro)
+                                            console.log('-------membresia', miembro)
+                                            // 
+                                            // 
+                                            return (
+                                                <tr key={index}>
+                                                    <td>{index + 1}</td>
+                                                    <td>{getNombreIglesia(miembro.Iglesia)}</td>
+                                                    <td>{miembro.Nombre}</td>
+                                                    <td>{miembro.Apellido_Paterno + ' ' + miembro.Apellido_Materno}</td>
+                                                    <td>{miembro.Contacto}</td>
+                                                    <td>{miembro.Profesion}</td>
+                                                </tr>
+                                            )
+                                        })
+
+                                    }
 
 
-                    </Table>
+                                </tbody>
+                            </Table>
+                        ) : (<div>
+                            <h1>Hola</h1>
+                        </div>)
+                    }
+
+
+
                     {
                         (busquedaSeleccionada === 0) ? (
                             <div className="Reportes">
