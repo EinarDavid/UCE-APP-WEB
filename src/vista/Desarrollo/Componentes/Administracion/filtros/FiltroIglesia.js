@@ -57,7 +57,7 @@ export const FiltroIglesia = () => {
         // a must be equal to b
         return 0;
     });
-    console.log('----------', membresias);
+    // console.log('----------', membresias);
 
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
@@ -338,7 +338,7 @@ export const FiltroIglesia = () => {
                                                     <td>{getNombreIglesia(miembro.Iglesia)}</td>
                                                     <td>{miembro.Nombre}</td>
                                                     <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
-                                                    <td>{miembro.Contacto}</td>
+                                                    <td>{(miembro.Contacto != null && miembro.Contacto != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${miembro.Contacto}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
                                                     <td>{miembro.Profesion}</td>
                                                     <td>{miembro.Ci}</td>
                                                 </tr>
