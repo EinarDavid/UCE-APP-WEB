@@ -146,7 +146,9 @@ export const FiltroIglesia = () => {
                     if (element.NumeroCelular != null)
                         stringunido += element.NumeroCelular + ' ';
                     if (element.Direccion != null)
-                        stringunido += element.Direccion;
+                        stringunido += element.Direccion + ' ';
+                    if (element.Denominacion != null)
+                        stringunido += element.Denominacion;
 
                     // console.log('Valor del texto------', stringunido);
 
