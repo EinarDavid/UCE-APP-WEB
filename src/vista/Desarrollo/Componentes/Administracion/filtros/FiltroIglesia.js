@@ -46,7 +46,7 @@ export const FiltroIglesia = () => {
         // a must be equal to b
         return 0;
     });
-    console.log('----------', result);
+    console.log('----------', membresias);
 
     const [inputValue, setInputValue] = useState('');
     const [data, setData] = useState([])
