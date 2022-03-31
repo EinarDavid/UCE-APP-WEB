@@ -31,6 +31,17 @@ export const FiltroIglesia = () => {
         return '';
     }
 
+    iglesia.sort(function (a, b) {
+        if (a.Nombre > b.Nombre) {
+            return 1;
+        }
+        if (a.Nombre < b.Nombre) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
+
     membresias.forEach(element => {
         const NombreIglesia = getNombreIglesia(element.Iglesia);
         element.NombreIglesia = NombreIglesia;
