@@ -33,7 +33,7 @@ export const FiltroIglesia = () => {
     const columnas = window.datos.iglesias[0];
 
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
-    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión'];
+    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión', 'C.I.'];
 
     const DescargarExcel = () => {
         const XLSX = require('xlsx')
@@ -150,9 +150,11 @@ export const FiltroIglesia = () => {
                     if (element.Apellido_Materno != null)
                         stringunido += element.Apellido_Materno + ' ';
                     if (element.Contacto != null)
-                        stringunido += element.Contacto;
+                        stringunido += element.Contacto + ' ';
                     if (element.Profesion != null)
-                        stringunido += element.Profesion;
+                        stringunido += element.Profesion + ' ';
+                    if (element.Ci != null)
+                        stringunido += element.Ci;
 
                     console.log('Valor del texto------', stringunido);
 
@@ -300,6 +302,7 @@ export const FiltroIglesia = () => {
                                                     <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
                                                     <td>{miembro.Contacto}</td>
                                                     <td>{miembro.Profesion}</td>
+                                                    <td>{miembro.Ci}</td>
                                                 </tr>
                                             )
                                         })
