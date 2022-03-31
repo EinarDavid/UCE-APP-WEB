@@ -233,7 +233,7 @@ export const FiltroIglesia = () => {
 
                 </div>
                 <br />
-                <div>
+                <div className='ContainerButtonReport'>
                     <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Igleisa</button>
                     <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
                 </div>

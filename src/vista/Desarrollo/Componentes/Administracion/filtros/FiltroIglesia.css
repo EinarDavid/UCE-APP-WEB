@@ -167,8 +167,12 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #FFFFFF;
+
+    height: 30px;
+    border: none;
+    width: 200px;
+    justify-content: center;
 }
 .ButtonUnselected{
     background: #FFFFFF;
@@ -183,4 +187,13 @@ body{
     text-align: center;
 
     color: #747477;
+    height: 30px;
+    border: none;
+    width: 200px;
+    justify-content: center;
+}
+.ContainerButtonReport{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
 }
