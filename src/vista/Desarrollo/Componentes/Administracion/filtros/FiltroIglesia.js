@@ -235,7 +235,7 @@ export const FiltroIglesia = () => {
                 <br />
                 <div className='ContainerButtonReport'>
                     <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                    <div style={{height: '15px'}}></div>
+                    <div style={{width: '15px'}}></div>
                     <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
                 </div>
                 <br />

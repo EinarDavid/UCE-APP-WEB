@@ -185,6 +185,7 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
+    border: 1px solid #EAEAEA;
 
     color: #747477;
     height: 30px;
@@ -194,6 +195,6 @@ body{
 }
 .ContainerButtonReport{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: aqua;
 }
