@@ -47,8 +47,8 @@ var ret = (passport) => {
 
 
   rutas.get("/", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'loginprincipal',
@@ -56,8 +56,8 @@ var ret = (passport) => {
       });
   });
   rutas.get("/inicio", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'inicio',
@@ -65,8 +65,8 @@ var ret = (passport) => {
       });
   });
   rutas.get("/Vista/Administracion", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'vistaAdministracion',
@@ -75,8 +75,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/Vista/General", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'vistaGeneral',
@@ -84,8 +84,8 @@ var ret = (passport) => {
       });
   });
   rutas.get("/administracion", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'admin',
@@ -94,8 +94,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/filtro/", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
       datos.user = req.user;
@@ -114,8 +114,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/filtroIglesia/", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
       bd.cruds.crudMembresias.buscarTodo((membresias)=>{
@@ -139,8 +139,8 @@ var ret = (passport) => {
   })
 
   rutas.get("/Iglesia/:idIglesia/poa", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
       datos.user = req.user;
@@ -157,8 +157,8 @@ var ret = (passport) => {
     })
   });
   rutas.get("/Iglesia/:idIglesia/accion_social", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
       datos.user = req.user;
       datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
@@ -177,8 +177,8 @@ var ret = (passport) => {
 
   });
   rutas.get("/Iglesia/:idIglesia", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
       bd.cruds.crudIglesia.buscar({}, (iglesias) => {
         datos.iglesias = iglesias;
@@ -210,8 +210,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/admiCental", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
       datos.iglesias = iglesias;
@@ -228,8 +228,8 @@ var ret = (passport) => {
     })
   });
   rutas.get("/viewMod", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     //console.log(cargos)
     res.render("Paginas/index",
       {
@@ -239,8 +239,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/ministerial", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'ministerial',
@@ -249,8 +249,8 @@ var ret = (passport) => {
   });
 
   rutas.get("/ev_min", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'ev_min',
@@ -261,8 +261,8 @@ var ret = (passport) => {
 
 
   rutas.get("/edu_cris", (req, res) => {
-    req.flash("confirm", req.app.locals.confirm[0]);
-    req.flash("error", req.app.locals.error[0]);
+    // req.flash("confirm", req.app.locals.confirm[0]);
+    // req.flash("error", req.app.locals.error[0]);
     res.render("Paginas/index",
       {
         pagina: 'edu_cris',
