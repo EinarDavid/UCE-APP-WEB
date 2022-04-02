@@ -157,7 +157,8 @@ class Menu extends React.Component {
 
                         </Modal.Header>
                         <Modal.Body>
-                            <strong>Esta actividad sera registrada en todas las Iglesias registradas en el sistema</strong>
+                            <strong>Esta actividad sera registrada en todas las Iglesias que estan en el sistema</strong>
+                            <br/>
                             <RegistrarActividad />
                         </Modal.Body>
                         <Modal.Footer>
