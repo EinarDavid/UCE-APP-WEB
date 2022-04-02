@@ -31,7 +31,7 @@ class Menu extends React.Component {
     }
 
     handleClose() {
-        this.setState({ show: false, show2: false, show3: false,show4: false });
+        this.setState({ show: false, show2: false, show3: false, show4: false });
     }
     handleShow() {
         this.setState({ show: true });
@@ -43,7 +43,7 @@ class Menu extends React.Component {
         this.setState({ show3: true });
     }
     RegistrarActividad() {
-        this.setState({ show4: true});
+        this.setState({ show4: true });
     }
     render() {
         return (
@@ -134,7 +134,7 @@ class Menu extends React.Component {
                         </Modal.Footer>
                     </Form>
                 </Modal>
-                
+
                 <Modal size="lg" show={this.state.show3} onHide={this.handleClose} centered>
                     <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
@@ -154,10 +154,11 @@ class Menu extends React.Component {
                     <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
                             <Modal.Title>Registrar Actividad</Modal.Title>
-                            <strong>Esta actividad sera registrada en todas las Iglesias registradas en el sistema</strong>
+
                         </Modal.Header>
                         <Modal.Body>
-                            <RegistrarActividad/>
+                            <strong>Esta actividad sera registrada en todas las Iglesias registradas en el sistema</strong>
+                            <RegistrarActividad />
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={this.handleClose} >Close</Button>
