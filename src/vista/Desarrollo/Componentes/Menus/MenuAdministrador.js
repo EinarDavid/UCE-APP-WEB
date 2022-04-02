@@ -58,7 +58,7 @@ class Menu extends React.Component {
                             <Nav.Link onClick={this.handleShow} style={menu} className="menu-letra">REGISTRAR_IGLESIA</Nav.Link>
                             <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ENCARGADO</Nav.Link>
                             <Nav.Link href={'/filtroIglesia'} style={menu} className="menu-letra">REPORTE</Nav.Link>
-                            <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ACTIVIDAD</Nav.Link>
+                            <Nav.Link onClick={this.RegistrarActividad} style={menu} className="menu-letra">REGISTRAR_ACTIVIDAD</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
@@ -150,7 +150,7 @@ class Menu extends React.Component {
                     </Form>
                 </Modal>
 
-                <Modal size="lg" show={this.state.show3} onHide={this.handleClose} centered>
+                <Modal size="lg" show={this.state.show4} onHide={this.handleClose} centered>
                     <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
                             <Modal.Title>Registrar Actividad</Modal.Title>
