@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Col } from 'react-bootstrap';
 
-class Formulario extends Component {
+class RegistrarActividad extends Component {
     render() {
         return (
             <div className="Form-registro">
@@ -63,4 +63,4 @@ class Formulario extends Component {
         );
     }
 }
-export default Formulario;
+export default RegistrarActividad;

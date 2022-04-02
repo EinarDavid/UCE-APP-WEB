@@ -3,6 +3,7 @@ import { Nav, Navbar, Modal, Button, Form, Col, OverlayTrigger, Popover } from '
 import Reg_Iglesia from '../Administracion/formulario/registrar_iglesia';
 import Reg_Encargado from '../Administracion/formulario/registrar_encargado';
 import ModificarInformacion from '../Usuario/ModificarInformacion';
+import RegistrarActividad from '../Administracion/formulario/RegistrarActividad';
 
 const menu = {
 
@@ -18,17 +19,19 @@ class Menu extends React.Component {
         this.handleClose = this.handleClose.bind(this);
         this.RegistrarEn = this.RegistrarEn.bind(this);
         this.ModificarInformacion = this.ModificarInformacion.bind(this);
+        this.RegistrarActividad = this.RegistrarActividad.bind(this);
 
         this.state = {
             show: false,
             show2: false,
-            shwo3: false,
+            show3: false,
+            show4: false
 
         };
     }
 
     handleClose() {
-        this.setState({ show: false, show2: false, show3: false });
+        this.setState({ show: false, show2: false, show3: false,show4: false });
     }
     handleShow() {
         this.setState({ show: true });
@@ -38,6 +41,9 @@ class Menu extends React.Component {
     }
     ModificarInformacion() {
         this.setState({ show3: true });
+    }
+    RegistrarActividad() {
+        this.setState({ show4: true});
     }
     render() {
         return (
@@ -52,6 +58,7 @@ class Menu extends React.Component {
                             <Nav.Link onClick={this.handleShow} style={menu} className="menu-letra">REGISTRAR_IGLESIA</Nav.Link>
                             <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ENCARGADO</Nav.Link>
                             <Nav.Link href={'/filtroIglesia'} style={menu} className="menu-letra">REPORTE</Nav.Link>
+                            <Nav.Link onClick={this.RegistrarEn} style={menu} className="menu-letra">REGISTRAR_ACTIVIDAD</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
 
@@ -135,6 +142,22 @@ class Menu extends React.Component {
                         </Modal.Header>
                         <Modal.Body>
                             <ModificarInformacion />
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
+                            <Button variant="primary" type="submit">Submit</Button>
+                        </Modal.Footer>
+                    </Form>
+                </Modal>
+
+                <Modal size="lg" show={this.state.show3} onHide={this.handleClose} centered>
+                    <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
+                        <Modal.Header closeButton>
+                            <Modal.Title>Registrar Actividad</Modal.Title>
+                            <strong>Esta actividad sera registrada en todas las Iglesias registradas en el sistema</strong>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <RegistrarActividad/>
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={this.handleClose} >Close</Button>

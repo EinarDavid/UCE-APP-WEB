@@ -29,4 +29,8 @@ cd src
 pm2 start isp.js
 exit
 
-Aumentar calendario de actividades
+
+
+forever start src/isp.js
+forever stop 0
+forever stop list
