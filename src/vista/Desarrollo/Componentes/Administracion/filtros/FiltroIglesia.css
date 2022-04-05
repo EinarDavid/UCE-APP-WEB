@@ -11,6 +11,20 @@ body{
     line-height: 27px;
     color: #000000;
 }
+.DashboardContend{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3275C3;
+}
+.GraficoContend{
+    flex-direction:column;
+    align-items:flex-start;
+    /* justify-content: flex-start; */
+    padding: 0px;
+    width: 50%;
+    background-color: #384567;
+}
 
 /* Style_de_Cards */
 .CardDisplay{
@@ -27,19 +41,19 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #3275C3;
+    /* background-color: #3275C3; */
 }
 .CardContendMiembro{
     padding: 0px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .CardReporte{
     width: 48%;
-    height: 135px;
+    height: 145px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
@@ -49,7 +63,7 @@ body{
 
 .CardMiembroPor{
     width: 31%;
-    height: 135px;
+    height: 100px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
@@ -81,7 +95,7 @@ body{
 
 .NumCardReporte{
     margin-left: 22px;
-    margin-top: 0px;
+    margin-top: -5px;
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
