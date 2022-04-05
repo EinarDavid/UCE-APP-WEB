@@ -38,7 +38,7 @@ function peticion() {
                     req.body.MiembroTransferencia = {};
                     req.body.MiembroTransferencia.Carta_Transferencia= req.body.Carta_Transferencia;
                     req.body.MiembroTransferencia.Iglesia_Salida = req.body.Iglesia_Salida;
-                    req.body.MiembroTransferencia.Iglesia_Destino= req.body.Iglesia_Destino;
+                    // req.body.MiembroTransferencia.Iglesia_Destino= req.body.Iglesia_Destino;
                     req.body.MiembroTransferencia.Fecha_Transferencia = req.body.Fecha_Transferencia;
 
                     if (req.files.Imagen_Membresia != undefined) {

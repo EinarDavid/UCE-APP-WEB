@@ -115,23 +115,25 @@ class Formulario extends Component {
                             <Form.Label>Foto Perfil</Form.Label>
                             <Form.Control type="file" accept="image/*" name="FotoPerfil" />
                         </Form.Group>
+
+
+                    </Form.Row>
+                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Fecha_Bautizo</Form.Label>
                             <Form.Control type="date" name="Fecha_Bautizo" required />
+                        </Form.Group>
+                        <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Carta de Transferencia</Form.Label>
+                            <Form.Control type="text" placeholder="Carta de Transferencia" name="Carta_Transferencia" />
                         </Form.Group>
 
                     </Form.Row>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Carta de Transferencia</Form.Label>
-                            <Form.Control type="text" placeholder="Carta de Transferencia" name="Carta_Transferencia" />
-                        </Form.Group>
-                        <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Fecha de Transferencia</Form.Label>
                             <Form.Control type="date" name="Fecha_Transferencia" />
                         </Form.Group>
-                    </Form.Row>
-                    <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Iglesia de Salida</Form.Label>
                             <Form.Control as="select" name="Iglesia_Salida">
