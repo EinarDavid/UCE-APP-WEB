@@ -276,7 +276,7 @@ var ret = (passport) => {
       failureFlash: true
     }), (req, res) => {
       //console.log(req.user);
-      var idAdministrador = "62486bd866e7a597bdd21832";
+      var idAdministrador = "624c5412a73165aade1ef67a";
       if (req.user._id == idAdministrador) {
         res.redirect('/admiCental')
       }
