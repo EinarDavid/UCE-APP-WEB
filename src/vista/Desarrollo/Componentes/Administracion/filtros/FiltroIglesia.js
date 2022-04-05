@@ -50,13 +50,13 @@ export const FiltroIglesia = () => {
 
         if (element.MiembroBautizo != undefined) {
             element.MiembroPor = 'Bautizo';
-            contBautizo +=1;
+            contBautizo += 1;
         } else if (element.MiembroTransferencia != undefined) {
             element.MiembroPor = 'Transferencia';
-            contTransferencia +=1;
+            contTransferencia += 1;
         } else if (element.MiembroSolicitud != undefined) {
             element.MiembroPor = 'Solicitud';
-            contSolicitud +=1;
+            contSolicitud += 1;
         }
 
     });
@@ -236,27 +236,38 @@ export const FiltroIglesia = () => {
                 */}
                 <br />
                 <div className='CardDisplay'>
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
-                        <h1 className='NumCardReporte'>{iglesia.length}</h1>
+                    <div className='CardContend'>
+                        <div className='CardReporte'>
+                            <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                            <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
+                            <h1 className='NumCardReporte'>{iglesia.length}</h1>
+                        </div>
+
+                        <div className='CardReporte'>
+                            <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                            <p className='ParrafoCardReporte'>Total de miembros registrados</p>
+                            <h1 className='NumCardReporte'>{membresias.length}</h1>
+                        </div>
+
+                    </div>
+                    <div className='CardContendMiembro'>
+                        <div className='CardMiembroPor'>
+                            <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                            <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
+                            <h1 className='NumCardReporte'>{contBautizo}</h1>
+                        </div>
+                        <div className='CardMiembroPor'>
+                            <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                            <p className='ParrafoCardReporte'>Total de miembros por Transferencia</p>
+                            <h1 className='NumCardReporte'>{contTransferencia}</h1>
+                        </div>
+                        <div className='CardMiembroPor'>
+                            <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                            <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
+                            <h1 className='NumCardReporte'>{contSolicitud}</h1>
+                        </div>
                     </div>
 
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de miembros registrados</p>
-                        <h1 className='NumCardReporte'>{membresias.length}</h1>
-                    </div>
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
-                        <h1 className='NumCardReporte'>{contBautizo}</h1>
-                    </div>
-                    <div className='CardReporte'>
-                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                        <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
-                        <h1 className='NumCardReporte'>{contSolicitud}</h1>
-                    </div>
 
                 </div>
                 <br />
