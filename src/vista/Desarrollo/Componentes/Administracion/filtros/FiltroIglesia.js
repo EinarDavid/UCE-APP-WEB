@@ -41,18 +41,22 @@ export const FiltroIglesia = () => {
         // a must be equal to b
         return 0;
     });
-
+    var contBautizo = 0;
+    var contTransferencia = 0;
+    var contSolicitud = 0;
     membresias.forEach(element => {
         const NombreIglesia = getNombreIglesia(element.Iglesia);
         element.NombreIglesia = NombreIglesia;
 
-
         if (element.MiembroBautizo != undefined) {
             element.MiembroPor = 'Bautizo';
+            contBautizo +=1;
         } else if (element.MiembroTransferencia != undefined) {
             element.MiembroPor = 'Transferencia';
+            contTransferencia +=1;
         } else if (element.MiembroSolicitud != undefined) {
             element.MiembroPor = 'Solicitud';
+            contSolicitud +=1;
         }
 
     });
@@ -191,8 +195,9 @@ export const FiltroIglesia = () => {
                     if (element.Profesion != null)
                         stringunido += element.Profesion + ' ';
                     if (element.Ci != null)
-                        stringunido += element.Ci;
-
+                        stringunido += element.Ci + ' ';
+                    if (element.MiembroPor != null)
+                        stringunido += element.MiembroPor;
                     // console.log('Valor del texto------', stringunido);
 
                     if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
@@ -241,6 +246,16 @@ export const FiltroIglesia = () => {
                         <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
                         <p className='ParrafoCardReporte'>Total de miembros registrados</p>
                         <h1 className='NumCardReporte'>{membresias.length}</h1>
+                    </div>
+                    <div className='CardReporte'>
+                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                        <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
+                        <h1 className='NumCardReporte'>{contBautizo}</h1>
+                    </div>
+                    <div className='CardReporte'>
+                        <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                        <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
+                        <h1 className='NumCardReporte'>{contSolicitud}</h1>
                     </div>
 
                 </div>
