@@ -47,15 +47,14 @@ export const FiltroIglesia = () => {
         element.NombreIglesia = NombreIglesia;
 
 
-        if(element.MiembroBautizo._id != undefined){
+        if (element.MiembroBautizo != undefined) {
             element.MiembroPor = 'Bautizo';
-
-        }else if (element.MiembroTransferencia._id != undefined){
+        } else if (element.MiembroTransferencia != undefined) {
             element.MiembroPor = 'Transferencia';
-        }else if(element.MiembroSolicitud._id != undefined){
+        } else if (element.MiembroSolicitud != undefined) {
             element.MiembroPor = 'Solicitud';
         }
-        
+
     });
 
     membresias.sort(function (a, b) {
