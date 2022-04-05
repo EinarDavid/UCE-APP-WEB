@@ -44,7 +44,7 @@ body{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 20px;
-    margin-right: 25px;
+
 }
 
 .CardMiembroPor{
@@ -54,7 +54,7 @@ body{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 20px;
-    margin-right: 25px;
+
 }
 
 .ImageCardReporte{
@@ -68,20 +68,20 @@ body{
 
 .ParrafoCardReporte{
     margin-left: 22px;
-    margin-top: 5px;
+    margin-top: 10px;
 
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 13px;
+    line-height: 16px;
     
     color: #747477;
 }
 
 .NumCardReporte{
     margin-left: 22px;
-    margin-top: 5px;
+    margin-top: 0px;
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
