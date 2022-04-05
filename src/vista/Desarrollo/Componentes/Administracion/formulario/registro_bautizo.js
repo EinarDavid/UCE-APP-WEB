@@ -68,7 +68,7 @@ class Formulario extends Component {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Profesión</Form.Label>
-                            <Form.Control type="text" placeholder="Profesion" name="Profesion" />
+                            <Form.Control type="text" placeholder="Profesion" name="Profesion" required/>
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
@@ -115,7 +115,7 @@ class Formulario extends Component {
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Fecha_Bautizo</Form.Label>
-                            <Form.Control type="date" name="Fecha_Bautizo" />
+                            <Form.Control type="date" name="Fecha_Bautizo" required/>
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Lugar Bautizo</Form.Label>

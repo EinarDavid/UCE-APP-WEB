@@ -108,6 +108,12 @@ function Formulario() {
                         <Form.Control type="file" accept="image/*" name="FotoPerfil" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Label>Fecha_Bautizo</Form.Label>
+                        <Form.Control type="date" name="Fecha_Bautizo" required />
+                    </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                    <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Formulario</Form.Label>
                         <Form.Control type="file" name="Formulario" />
                     </Form.Group>

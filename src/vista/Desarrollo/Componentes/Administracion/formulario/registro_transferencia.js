@@ -115,6 +115,10 @@ class Formulario extends Component {
                             <Form.Label>Foto Perfil</Form.Label>
                             <Form.Control type="file" accept="image/*" name="FotoPerfil" />
                         </Form.Group>
+                        <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Fecha_Bautizo</Form.Label>
+                            <Form.Control type="date" name="Fecha_Bautizo" required />
+                        </Form.Group>
 
                     </Form.Row>
                     <Form.Row>
@@ -142,22 +146,6 @@ class Formulario extends Component {
                                 }
                             </Form.Control>
                         </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Iglesia Destino</Form.Label>
-                            <Form.Control as="select" name="Iglesia_Destino">
-                                {
-                                    this.state.iglesias.map(iglesia => {
-                                        return (
-                                            <option value={iglesia._id} /*selected={option.selected}*/>
-                                                {iglesia.Nombre}
-                                            </option>
-                                        )
-                                    })
-                                }
-                            </Form.Control>
-                        </Form.Group>
-
                     </Form.Row>
 
 

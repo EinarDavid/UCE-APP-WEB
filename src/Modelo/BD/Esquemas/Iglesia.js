@@ -1,6 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const fotosSchema = Schema({
+    Foto:String
+});
+
+const asistenciaActividadSchema = Schema({
+    Miembro:String,
+    Estado: String
+});
+
+const fotosUsuarioSchema = Schema({
+    Miembro: String,
+    Fecha: String,
+    Fotos: [String]
+
+});
 
 const actividadSchema = Schema({
     Codigo: String,
@@ -11,7 +26,10 @@ const actividadSchema = Schema({
     Fin: String,
     Departamento: String,
     Area:String,
-    Presupuesto: Number
+    Presupuesto: Number,
+
+    FotosUsuario:[fotosUsuarioSchema],
+    AsistenciaActividad: [asistenciaActividadSchema]
 });
 
 const iglesiaSchema = Schema({

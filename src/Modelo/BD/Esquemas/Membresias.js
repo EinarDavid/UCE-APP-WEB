@@ -12,14 +12,13 @@ const matrimonioSchema = Schema({
 });
 
 const miembrobautizoSchema = Schema({
-    Fecha_Bautizo: String,
     Lugar_Bautizo: String
 });
 
 const miembrotransferenciaSchema = Schema({
     Carta_Transferencia: String,
     Iglesia_Salida: String,
-    Iglesia_Destino: String,
+    // Iglesia_Destino: String,
     Fecha_Transferencia: String
 });
 
@@ -58,6 +57,7 @@ const membresiaSchema = Schema({
     Contraseña: String, //si
     Cargo: String, //combobox
     Cargo_Ministerial: String,
+    Fecha_Bautizo: String,
     MiembroSolicitud: miembrosolicitudSchema,
     Matrimonio: matrimonioSchema,
     MiembroBautizo: miembrobautizoSchema,

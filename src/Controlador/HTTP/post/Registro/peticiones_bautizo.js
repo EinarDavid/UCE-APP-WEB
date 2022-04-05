@@ -37,7 +37,7 @@ function peticion() {
                 }
                 else {
                     req.body.MiembroBautizo = {};
-                    req.body.MiembroBautizo.Fecha_Bautizo = req.body.Fecha_Bautizo;
+                    // req.body.MiembroBautizo.Fecha_Bautizo = req.body.Fecha_Bautizo;
                     req.body.MiembroBautizo.Lugar_Bautizo = req.body.Lugar_Bautizo;
                     console.log("--------------------Files-------------------",req.files)
                     if (req.files.Imagen_Membresia != undefined) {
