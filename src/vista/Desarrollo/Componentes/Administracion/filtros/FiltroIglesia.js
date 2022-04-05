@@ -45,6 +45,17 @@ export const FiltroIglesia = () => {
     membresias.forEach(element => {
         const NombreIglesia = getNombreIglesia(element.Iglesia);
         element.NombreIglesia = NombreIglesia;
+
+
+        if(element.MiembroBautizo._id != null){
+            element.MiembroPor = 'Bautizo';
+
+        }else if (element.MiembroTransferencia._id != null){
+            element.MiembroPor = 'Transferencia';
+        }else if(element.MiembroSolicitud._id != null){
+            element.MiembroPor = 'Solicitud';
+        }
+        
     });
 
     membresias.sort(function (a, b) {
@@ -70,7 +81,7 @@ export const FiltroIglesia = () => {
     const columnas = window.datos.iglesias[0];
 
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
-    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión', 'C.I.'];
+    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión', 'C.I.', 'Miembro por'];
 
     const DescargarExcel = () => {
         const XLSX = require('xlsx')
@@ -341,6 +352,7 @@ export const FiltroIglesia = () => {
                                                     <td>{(miembro.Contacto != null && miembro.Contacto != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${miembro.Contacto}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
                                                     <td>{miembro.Profesion}</td>
                                                     <td>{miembro.Ci}</td>
+                                                    <td>{miembro.MiembroPor}</td>
                                                 </tr>
                                             )
                                         })

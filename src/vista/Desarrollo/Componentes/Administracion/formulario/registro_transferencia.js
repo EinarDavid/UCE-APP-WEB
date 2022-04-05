@@ -73,7 +73,7 @@ class Formulario extends Component {
                         </Form.Group>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Profesion</Form.Label>
-                            <Form.Control type="text" placeholder="Profesion" name="Profesion" />
+                            <Form.Control type="text" placeholder="Profesion" name="Profesion" required />
                         </Form.Group>
                     </Form.Row>
 
