@@ -47,12 +47,12 @@ export const FiltroIglesia = () => {
         element.NombreIglesia = NombreIglesia;
 
 
-        if(element.MiembroBautizo._id != null){
+        if(element.MiembroBautizo._id != undefined){
             element.MiembroPor = 'Bautizo';
 
-        }else if (element.MiembroTransferencia._id != null){
+        }else if (element.MiembroTransferencia._id != undefined){
             element.MiembroPor = 'Transferencia';
-        }else if(element.MiembroSolicitud._id != null){
+        }else if(element.MiembroSolicitud._id != undefined){
             element.MiembroPor = 'Solicitud';
         }
         
