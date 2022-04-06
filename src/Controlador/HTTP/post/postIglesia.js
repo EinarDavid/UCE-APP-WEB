@@ -128,10 +128,9 @@ function peticion() {
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
-
-                                res.redirect("/admiCental");
                             })
                         });
+                        res.redirect("/admiCental");
                     });
                 }
             })
