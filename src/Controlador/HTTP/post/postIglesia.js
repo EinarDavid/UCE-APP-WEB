@@ -99,7 +99,7 @@ function peticion() {
 
         });
 
-        this.rutas.post("/Registrar/Actividad/Todo", ver.verificarAdmin, (req, res) => {
+        this.rutas.post("/Registrar/Actividad/Todo", ver.verificar, (req, res) => {
             upload2(req, res, function (err) {
                 if (err) {
                     return res.end('Error subiendo archivo' + err);
