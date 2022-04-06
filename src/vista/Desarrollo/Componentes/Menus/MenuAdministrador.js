@@ -151,7 +151,7 @@ class Menu extends React.Component {
                 </Modal>
 
                 <Modal size="lg" show={this.state.show4} onHide={this.handleClose} centered>
-                    <Form action="/Modificar/Membresia" method="post" enctype="multipart/form-data">
+                    <Form action="/Registrar/Actividad/Todo" method="post" enctype="multipart/form-data">
                         <Modal.Header closeButton>
                             <Modal.Title>Registrar Actividad</Modal.Title>
 

@@ -38,12 +38,12 @@ function peticion() {
                 name: 'Fotos'
             },
             {
-                name:'FotosSlider'
+                name: 'FotosSlider'
             }
         ]);
         var upload2 = multer({ storage: storage2 }).fields([
             {
-                name: 'FotoActividad', maxCount:1
+                name: 'FotoActividad', maxCount: 1
             }
         ]);
 
@@ -59,12 +59,12 @@ function peticion() {
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
-                    if(req.files.Logo != undefined && req.body.MantenerLogo != 'on')
+                    if (req.files.Logo != undefined && req.body.MantenerLogo != 'on')
                         req.body.Logo = req.files.Logo[0].filename;
-                    if(req.files.Fotos != undefined && req.body.MantenerFotos != 'on' )
-                        req.body.Fotos = req.files.Fotos.map((a)=>{return a.filename});
-                    if(req.files.FotosSlider != undefined && req.body.MantenerFotosSlider != 'on')
-                        req.body.FotosSlider = req.files.FotosSlider.map((a)=>{return a.filename});
+                    if (req.files.Fotos != undefined && req.body.MantenerFotos != 'on')
+                        req.body.Fotos = req.files.Fotos.map((a) => { return a.filename });
+                    if (req.files.FotosSlider != undefined && req.body.MantenerFotosSlider != 'on')
+                        req.body.FotosSlider = req.files.FotosSlider.map((a) => { return a.filename });
                     //console.log("----------------------------------Imagenes:------------------------------------")
                     //console.log("body:", req.body);
                     //console.log("files:", req.files);
@@ -77,12 +77,12 @@ function peticion() {
         });
 
         this.rutas.post("/Registro/Encargado", ver.verificar, (req, res) => {
-            bd.cruds.crudMembresias.buscar({Ci: {valor: req.body.Ci, tipo: "igual"}},(membresia)=>{
-                if(membresia.length>0){
+            bd.cruds.crudMembresias.buscar({ Ci: { valor: req.body.Ci, tipo: "igual" } }, (membresia) => {
+                if (membresia.length > 0) {
                     req.flash('error', 'La membresia ya fue registrada');
                     res.redirect("/admiCental");
                 }
-                else{
+                else {
                     var bcrypt = require('bcryptjs');
                     bcrypt.genSalt(10, function (err, salt) {
                         bcrypt.hash(req.body.Contraseña, salt, function (err, contraEncriptado) {
@@ -99,6 +99,44 @@ function peticion() {
 
         });
 
+        this.rutas.post("/Registrar/Actividad/Todo", ver.verificarAdmin, (req, res) => {
+            upload2(req, res, function (err) {
+                if (err) {
+                    return res.end('Error subiendo archivo' + err);
+                }
+                else {
+
+                    bd.cruds.crudIglesia.buscar({}, (iglesias) => {
+                        const crypto = require('crypto');
+                        var hash = crypto.randomBytes(3).toString('hex');
+                        iglesias.forEach(igle => {
+                            if (igle.actividades == undefined) {
+                                igle.actividades = []
+                            }
+                            igle.Actividades.push(
+                                {
+                                    Codigo: hash,
+                                    FotoActividad: req.files.FotoActividad[0].filename,
+                                    Titulo: req.body.Titulo,
+                                    Descripcion: req.body.Descripcion,
+                                    Inicio: req.body.Inicio,
+                                    Fin: req.body.Fin,
+                                    Departamento: req.body.Departamento,
+                                    Area: req.body.Area,
+                                    Presupuesto: req.body.Presupuesto,
+                                }
+                            )
+                            bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
+                                //console.log(iglesia.Actividades)
+
+                                res.redirect("back")
+                            })
+                        });
+                    });
+                }
+            })
+        })
+
         this.rutas.post("/Registrar/Actividad", ver.verificarAdmin, (req, res) => {
 
             upload2(req, res, function (err) {
@@ -108,10 +146,9 @@ function peticion() {
                 }
                 else {
                     //console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o@@@@@@@@",req.body, req.user)
-                    bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia)=>{
-                        if(iglesia.actividades==undefined)
-                        {
-                            iglesia.actividades=[]
+                    bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia) => {
+                        if (iglesia.actividades == undefined) {
+                            iglesia.actividades = []
                         }
                         const crypto = require('crypto');
                         var hash = crypto.randomBytes(3).toString('hex');
@@ -122,7 +159,7 @@ function peticion() {
                         iglesia.Actividades.push(
                             {
                                 Codigo: hash,
-                                FotoActividad:req.files.FotoActividad[0].filename,
+                                FotoActividad: req.files.FotoActividad[0].filename,
                                 Titulo: req.body.Titulo,
                                 Descripcion: req.body.Descripcion,
                                 Inicio: req.body.Inicio,
@@ -132,17 +169,17 @@ function peticion() {
                                 Presupuesto: req.body.Presupuesto,
                             }
                         )
-                        bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, ()=>{
+                        bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, () => {
                             //console.log(iglesia.Actividades)
-          
+
                             res.redirect("back")
                         })
                     })
-        
+
 
                 }
             });
-          
+
         });
     }
 }
