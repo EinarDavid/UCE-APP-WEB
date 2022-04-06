@@ -110,8 +110,8 @@ function peticion() {
                         const crypto = require('crypto');
                         var hash = crypto.randomBytes(3).toString('hex');
                         iglesias.forEach(igle => {
-                            if (igle.actividades == undefined) {
-                                igle.actividades = []
+                            if (igle.Actividades == undefined) {
+                                igle.Actividades = []
                             }
                             igle.Actividades.push(
                                 {
