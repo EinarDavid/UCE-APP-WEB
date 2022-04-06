@@ -25,7 +25,10 @@ body{
     width: 48%;
     /* background-color: #384567; */
 }
-
+.FondoGrafico{
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+}
 /* Style_de_Cards */
 .CardDisplay{
     /* display: flex; */

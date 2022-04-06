@@ -252,7 +252,7 @@ export const FiltroIglesia = () => {
                             </div>
 
                         </div>
-                        <div style={{ height: '15px' }} />
+                        <div style={{ height: '25px' }} />
                         <div className='CardContendMiembro'>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
@@ -272,6 +272,7 @@ export const FiltroIglesia = () => {
                         </div>
                     </div>
                     <div className='GraficoContend'>
+                        <div className='FondoGrafico'>
                         <LineChart width={600} height={300} data={iglesia} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
                             <Line type="monotone" dataKey="miembros" stroke="#8884d8" />
                             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -279,6 +280,7 @@ export const FiltroIglesia = () => {
                             <YAxis />
                             <Tooltip />
                         </LineChart>
+                        </div>
                     </div>
                 </div>
                 <br />
