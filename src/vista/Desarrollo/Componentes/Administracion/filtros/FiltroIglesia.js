@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
+import { LineChart, Line } from 'recharts';
 
 import './FiltroIglesia.css';
 
@@ -80,7 +81,7 @@ export const FiltroIglesia = () => {
     const [busquedaSeleccionada, setBusquedaSeleccionada] = useState(0);
 
     // console.log("bbbbbbbbbbbb", window.datos.membresias);
-
+    const dataGrafico = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
     const columnas = window.datos.iglesias[0];
 
     const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
@@ -271,7 +272,9 @@ export const FiltroIglesia = () => {
                         </div>
                     </div>
                     <div className='GraficoContend'>
-
+                        <LineChart width={400} height={400} data={dataGrafico}>
+                            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                        </LineChart>
                     </div>
                 </div>
                 <br />
