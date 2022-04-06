@@ -129,7 +129,7 @@ function peticion() {
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 //console.log(iglesia.Actividades)
 
-                                res.redirect("back")
+                                res.redirect("/filtroIglesia");
                             })
                         });
                     });
