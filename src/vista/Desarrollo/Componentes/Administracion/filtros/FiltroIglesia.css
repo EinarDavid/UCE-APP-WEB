@@ -15,7 +15,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #3275C3;
+    /* background-color: #3275C3; */
 }
 .GraficoContend{
     flex-direction:column;
@@ -23,7 +23,7 @@ body{
     /* justify-content: flex-start; */
     padding: 0px;
     width: 48%;
-    background-color: #384567;
+    /* background-color: #384567; */
 }
 
 /* Style_de_Cards */
@@ -34,7 +34,7 @@ body{
     /* justify-content: flex-start; */
     padding: 0px;
     width: 48%;
-    background-color: #747477;
+    /* background-color: #747477; */
 }
 .CardContend{
     padding: 0px;
