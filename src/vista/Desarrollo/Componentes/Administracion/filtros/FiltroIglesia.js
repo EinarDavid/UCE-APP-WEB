@@ -239,6 +239,7 @@ export const FiltroIglesia = () => {
                 <br />
                 <div className='DashboardContend'>
                     <div className='CardDisplay'>
+                    <h1 className='TituloGraficos'>Registros</h1>
                         <div className='CardContend'>
                             <div className='CardReporte'>
                                 <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
