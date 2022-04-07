@@ -313,6 +313,9 @@ export const FiltroIglesia = () => {
                 <div style={{ height: '15px' }} />
                 <div className='DashboardContend'>
                     <div className='GraficoContend'>
+                        
+                    </div>
+                    <div className='GraficoContend'>
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Asistencia de actividades</h1>
                             <ResponsiveContainer width="100%" height={280}>
