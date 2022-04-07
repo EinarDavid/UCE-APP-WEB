@@ -300,7 +300,7 @@ export const FiltroIglesia = () => {
                             <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
                             <ResponsiveContainer width="100%" height={280}>
                                 <LineChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-                                    <Line type="monotone" dataKey="Actividades" stroke="#8884d8" />
+                                    <Line type="monotone" dataKey="Actividades._id" stroke="#8884d8" />
                                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                                     <XAxis dataKey="Nombre" />
                                     <YAxis />
