@@ -258,16 +258,19 @@ export const FiltroIglesia = () => {
                         <div className='CardContendMiembro'>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
+                                <div style={{height:'5px'}} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
                                 <h1 className='NumCardReporte'>{contBautizo}</h1>
                             </div>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
+                                <div style={{height:'5px'}} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Transferencia</p>
                                 <h1 className='NumCardReporte'>{contTransferencia}</h1>
                             </div>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
+                                <div style={{height:'5px'}} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
                                 <h1 className='NumCardReporte'>{contSolicitud}</h1>
                             </div>
