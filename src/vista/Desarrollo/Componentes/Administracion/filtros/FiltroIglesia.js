@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
-import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar } from 'recharts';
 
 import './FiltroIglesia.css';
 
@@ -280,16 +280,16 @@ export const FiltroIglesia = () => {
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
                             {/* <br/> */}
+                            
                             <ResponsiveContainer width="100%" height={280}>
-                                <LineChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-                                    <Line type="monotone" dataKey="miembros" stroke="#8884d8" />
+                                <BarChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
                                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                                     <XAxis dataKey="Nombre" />
                                     <YAxis />
                                     <Tooltip />
-                                </LineChart>
+                                    <Bar dataKey="miembros" fill="#8884d8" />
+                                </BarChart >
                             </ResponsiveContainer>
-                            
                         </div>
                     </div>
                 </div>
