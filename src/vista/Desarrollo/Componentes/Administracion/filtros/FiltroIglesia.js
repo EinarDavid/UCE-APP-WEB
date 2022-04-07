@@ -312,8 +312,8 @@ export const FiltroIglesia = () => {
                 </Form.Group>
                 <div style={{ height: '10px' }} />
                 <div className='DashboardContend'>
-                    <div className='CardDisplay'>
-                        <div className='FondoGrafico'>
+                    <div className='CardContainerActividades'>
+                        <div className='ContainerActividades'>
                             <h1 className='TituloGraficos'>Actividades</h1>
 
                             <div className='ListActividad'>

@@ -269,10 +269,23 @@ body{
 }
 
 /* Actividades */
-.ListActividad{
+.CardContainerActividades{
+    flex-direction:column;
+    align-items:flex-start;
+    /* justify-content: flex-start; */
+    padding: 0px;
+    width: 40%;
+}
+.ContainerActividades{
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     width: 100%;
+    height: 100%;
+}
+.ListActividad{
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
@@ -284,8 +297,10 @@ body{
 
 .DescriptionActividad{
     width: 80%;
+    padding-left: 10px;
+    padding-right: 10px;
     /* background-color: red; */
-    /* margin-left: 20px; */
+
 }
 .CantAsistencia{
     display: flex;
