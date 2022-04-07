@@ -48,7 +48,7 @@ body{
     display: flex;
     justify-content: space-between;
     /* background-color: #3275C3; */
-    box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
+    
 }
 .CardContendMiembro{
     padding: 0px;
@@ -65,7 +65,10 @@ body{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 20px;
-
+    /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
+}
+.CardReporte::shadow{
+    box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 
 .CardMiembroPor{
