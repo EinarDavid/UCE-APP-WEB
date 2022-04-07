@@ -287,7 +287,7 @@ export const FiltroIglesia = () => {
                                     <XAxis dataKey="Nombre" />
                                     <YAxis />
                                     <Tooltip />
-                                    <Bar dataKey="miembros" fill="#00BCD1" />
+                                    <Bar dataKey="miembros" fill="#73A9FC" />
                                 </BarChart >
                             </ResponsiveContainer>
                         </div>
@@ -295,9 +295,29 @@ export const FiltroIglesia = () => {
                 </div>
                 <div style={{ height: '30px' }} />
                 <div className='DashboardContend'>
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Seleccione la Iglesia*</Form.Label>
+                            <Form.Control as="select" name="Iglesia" required onChange={()=> console.log('Enter')} >
+                                <option value='Default' hidden >--Seleccione--</option>
+                                {
+                                    iglesia.map(iglesia => {
+                                        return (
+                                            <option
+                                                key={iglesia._id}
+                                                value={iglesia._id} /*selected={option.selected}*/>
+                                                {iglesia.Nombre}
+                                            </option>
+                                        )
+                                    })
+                                }
+                            </Form.Control>
+                        </Form.Group>
+                    </Form.Row>
+
                     <div className='GraficoContend'>
                         <div className='FondoGrafico'>
-                            <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
+                            <h1 className='TituloGraficos'>Asistencia de actividades</h1>
                             <ResponsiveContainer width="100%" height={280}>
                                 <LineChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
                                     <Line type="monotone" dataKey="Actividades._id" stroke="#8884d8" />
