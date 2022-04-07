@@ -281,7 +281,7 @@ body{
 .DescriptionActividad{
     width: 80%;
     background-color: red;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .CantAsistencia{
     background-color: aqua;
@@ -291,26 +291,37 @@ body{
 /* .ContAsistencia{
     
 } */
+.ImageActividad{
+    /* position: absolute; */
+    width: 50px;
+    height: 50px;
+    margin-left: 22px;
+    margin-top: 5px;
+    margin: auto;
+    /* background-color: blue; */
+}
 .TitleActividad{
     /* margin-left: 22px; */
-    /* margin-top: 10px; */
+    margin-top: 5px;
 
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 16px;
+    /* line-height: 16px; */
     
     color: #000000;
+    margin: auto;
 }
 .NumAsistencia{
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 16px;
+    /* line-height: 16px; */
     
     color: #747477;
+    margin: auto;
 }
 .ImageCardActividad{
     width: 30px;
@@ -319,4 +330,18 @@ body{
 .Icon-Text{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.EstadoCard{
+    margin-left: 22px;
+    margin-top: 10px;
+
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #747477;
+    margin: auto;
 }

@@ -317,7 +317,7 @@ export const FiltroIglesia = () => {
                             <h1 className='TituloGraficos'>Actividades</h1>
 
                             <div className='ListActividad'>
-                                <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
+                                <img src='./Icons/Icons.png' className='ImageActividad' ></img>
                                 <div className='DescriptionActividad'>
                                     <p className='TitleActividad'>Titulo actividad</p>
                                     <div className='CantAsistencia'>
@@ -326,7 +326,7 @@ export const FiltroIglesia = () => {
                                                 <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
                                                 <p className='NumAsistencia'>10</p>
                                             </div>
-                                            <p className='ParrafoCardReporte'>Asistire</p>
+                                            <p className='EstadoCard'>Asistire</p>
                                         </div>
                                     </div>
                                 </div>
