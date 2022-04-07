@@ -313,8 +313,10 @@ export const FiltroIglesia = () => {
                 <div style={{ height: '15px' }} />
                 <div className='DashboardContend'>
                     <div className='CardDisplay'>
+                        <div className='FondoGrafico'>
 
-                        <h1 className='TituloGraficos'>Actividades</h1>
+                            <h1 className='TituloGraficos'>Actividades</h1>
+                        </div>
 
 
                     </div>
