@@ -315,15 +315,16 @@ export const FiltroIglesia = () => {
                     <div className='CardDisplay'>
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Actividades</h1>
+
                             <div className='ListActividad'>
                                 <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
                                 <div className='DescriptionActividad'>
-                                    <p className='ParrafoCardReporte'>Titulo actividad</p>
+                                    <p className='TitleActividad'>Titulo actividad</p>
                                     <div className='CantAsistencia'>
                                         <div className='ContAsistencia'>
                                             <div className='Icon-Text'>
                                                 <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
-                                                <p className='ParrafoCardReporte'>10</p>
+                                                <p className='NumAsistencia'>10</p>
                                             </div>
                                             <p className='ParrafoCardReporte'>Asistire</p>
                                         </div>

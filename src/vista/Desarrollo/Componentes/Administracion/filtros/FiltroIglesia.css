@@ -273,25 +273,45 @@ body{
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     width: 100%;
-    background-color: #3275C3;
+    background-color: black;
     display: flex;
     justify-content: space-between;
 }
 
 .DescriptionActividad{
     width: 80%;
-    background-color: #747477;
+    background-color: red;
+    margin-left: 20px;
 }
 .CantAsistencia{
     background-color: aqua;
     display: flex;
     justify-content: space-between;
 }
-.ContAsistencia{
-    display: flex;
-    /* justify-content: space-between; */
-}
+/* .ContAsistencia{
+    
+} */
+.TitleActividad{
+    /* margin-left: 22px; */
+    /* margin-top: 10px; */
 
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    
+    color: #000000;
+}
+.NumAsistencia{
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    
+    color: #747477;
+}
 .ImageCardActividad{
     width: 30px;
     height: 30px;
