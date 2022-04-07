@@ -111,6 +111,20 @@ body{
 
     color: #000000;
 }
+.TituloGraficos{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
 
 /* Style Inputs */
 .TextContainer{
