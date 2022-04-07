@@ -293,7 +293,7 @@ export const FiltroIglesia = () => {
                         </div>
                     </div>
                 </div>
-                <br />
+                <div style={{ height: '30px' }} />
                 <div className='DashboardContend'>
                     <div className='GraficoContend'>
                         <div className='FondoGrafico'>
@@ -311,6 +311,7 @@ export const FiltroIglesia = () => {
                     </div>
 
                 </div>
+                <div style={{ height: '30px' }} />
                 {
                     (busquedaSeleccionada === 0) ? (
                         <div className='ContainerButtonReport'>
