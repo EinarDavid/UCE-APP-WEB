@@ -274,7 +274,7 @@ export const FiltroIglesia = () => {
                     </div>
                     <div className='GraficoContend'>
                         <div className='FondoGrafico'>
-                        <LineChart width={600} height={280} data={iglesia} margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
+                        <LineChart width={'100%'} height={280} data={iglesia} margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
                             <Line type="monotone" dataKey="miembros" stroke="#8884d8" />
                             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                             <XAxis dataKey="Nombre" />
