@@ -294,27 +294,24 @@ export const FiltroIglesia = () => {
                     </div>
                 </div>
                 <div style={{ height: '30px' }} />
+                <Form.Group as={Col} controlId="formGridEmail">
+                    <Form.Control as="select" name="Iglesia" required onChange={() => console.log('Enter')} >
+                        <option value='Default' hidden >Seleccione la Iglesia</option>
+                        {
+                            iglesia.map(iglesia => {
+                                return (
+                                    <option
+                                        key={iglesia._id}
+                                        value={iglesia._id} /*selected={option.selected}*/>
+                                        {iglesia.Nombre}
+                                    </option>
+                                )
+                            })
+                        }
+                    </Form.Control>
+                </Form.Group>
+                <div style={{ height: '15px' }} />
                 <div className='DashboardContend'>
-
-                    <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Seleccione la Iglesia*</Form.Label>
-                        <Form.Control as="select" name="Iglesia" required onChange={() => console.log('Enter')} >
-                            <option value='Default' hidden >--Seleccione--</option>
-                            {
-                                iglesia.map(iglesia => {
-                                    return (
-                                        <option
-                                            key={iglesia._id}
-                                            value={iglesia._id} /*selected={option.selected}*/>
-                                            {iglesia.Nombre}
-                                        </option>
-                                    )
-                                })
-                            }
-                        </Form.Control>
-                    </Form.Group>
-
-
                     <div className='GraficoContend'>
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Asistencia de actividades</h1>
