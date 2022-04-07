@@ -267,3 +267,36 @@ body{
     /* justify-content: space-between; */
     /* background-color: aqua; */
 }
+
+/* Actividades */
+.ListActividad{
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+    width: 100%;
+    background-color: #3275C3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DescriptionActividad{
+    width: 80%;
+    background-color: #747477;
+}
+.CantAsistencia{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+.ContAsistencia{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.ImageCardActividad{
+    width: 30px;
+    height: 30px;
+}
+.Icon-Text{
+    display: flex;
+    justify-content: space-between;
+}
