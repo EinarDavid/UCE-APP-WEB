@@ -28,8 +28,8 @@ body{
 .FondoGrafico{
     border-radius: 20px;
     border: 1px solid #EAEAEA;
-    width: 48%;
-    background-color: #3275C3;
+    width: 100%;
+    /* background-color: #3275C3; */
 }
 /* Style_de_Cards */
 .CardDisplay{
