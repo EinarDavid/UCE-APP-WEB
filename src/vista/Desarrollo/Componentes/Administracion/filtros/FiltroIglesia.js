@@ -280,7 +280,7 @@ export const FiltroIglesia = () => {
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
                             {/* <br/> */}
-                            
+
                             <ResponsiveContainer width="100%" height={280}>
                                 <BarChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
                                     <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
@@ -294,6 +294,23 @@ export const FiltroIglesia = () => {
                     </div>
                 </div>
                 <br />
+                <div className='DashboardContend'>
+                    <div className='GraficoContend'>
+                        <div className='FondoGrafico'>
+                            <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
+                            <ResponsiveContainer width="100%" height={280}>
+                                <LineChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
+                                    <Line type="monotone" dataKey={iglesia.Actividades.length} stroke="#8884d8" />
+                                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                                    <XAxis dataKey="Nombre" />
+                                    <YAxis />
+                                    <Tooltip />
+                                </LineChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </div>
+
+                </div>
                 {
                     (busquedaSeleccionada === 0) ? (
                         <div className='ContainerButtonReport'>
