@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 import './FiltroIglesia.css';
 
@@ -239,7 +239,7 @@ export const FiltroIglesia = () => {
                 <br />
                 <div className='DashboardContend'>
                     <div className='CardDisplay'>
-                    <h1 className='TituloGraficos'>Registros</h1>
+                        <h1 className='TituloGraficos'>Registros</h1>
                         <div className='CardContend'>
                             <div className='CardReporte'>
                                 <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
@@ -258,19 +258,19 @@ export const FiltroIglesia = () => {
                         <div className='CardContendMiembro'>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{height:'5px'}} />
+                                <div style={{ height: '5px' }} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
                                 <h1 className='NumCardReporte'>{contBautizo}</h1>
                             </div>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{height:'5px'}} />
+                                <div style={{ height: '5px' }} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Transferencia</p>
                                 <h1 className='NumCardReporte'>{contTransferencia}</h1>
                             </div>
                             <div className='CardMiembroPor'>
                                 {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{height:'5px'}} />
+                                <div style={{ height: '5px' }} />
                                 <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
                                 <h1 className='NumCardReporte'>{contSolicitud}</h1>
                             </div>
@@ -280,13 +280,15 @@ export const FiltroIglesia = () => {
                         <div className='FondoGrafico'>
                             <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
                             {/* <br/> */}
-                            <LineChart width={600} height={280} data={iglesia} margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
-                                <Line type="monotone" dataKey="miembros" stroke="#8884d8" />
-                                <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                                <XAxis dataKey="Nombre" />
-                                <YAxis />
-                                <Tooltip />
-                            </LineChart>
+                            <ResponsiveContainer width="100%" height={280}>
+                                <LineChart data={iglesia} margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
+                                    <Line type="monotone" dataKey="miembros" stroke="#8884d8" />
+                                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                                    <XAxis dataKey="Nombre" />
+                                    <YAxis />
+                                    <Tooltip />
+                                </LineChart>
+                            </ResponsiveContainer>
                         </div>
                     </div>
                 </div>
