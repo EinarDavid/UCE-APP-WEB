@@ -283,11 +283,11 @@ export const FiltroIglesia = () => {
 
                             <ResponsiveContainer width="100%" height={280}>
                                 <BarChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-                                    <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
+                                    <CartesianGrid stroke="#E1F1FF" strokeDasharray="3 3" />
                                     <XAxis dataKey="Nombre" />
                                     <YAxis />
                                     <Tooltip />
-                                    <Bar dataKey="miembros" fill="#8884d8" />
+                                    <Bar dataKey="miembros" fill="#00BCD1" />
                                 </BarChart >
                             </ResponsiveContainer>
                         </div>
