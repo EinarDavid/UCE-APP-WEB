@@ -30,6 +30,9 @@ body{
     border: 1px solid #EAEAEA;
     width: 100%;
     /* background-color: #3275C3; */
+    /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
+}
+.FondoGrafico:hover{
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 /* Style_de_Cards */
@@ -81,6 +84,9 @@ body{
     border-radius: 20px;
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 
+}
+.CardMiembroPor:hover{
+    box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 
 .ImageCardReporte{
