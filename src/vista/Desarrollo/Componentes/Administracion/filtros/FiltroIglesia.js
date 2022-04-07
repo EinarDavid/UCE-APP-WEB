@@ -328,6 +328,20 @@ export const FiltroIglesia = () => {
                                             </div>
                                             <p className='EstadoCard'>Asistire</p>
                                         </div>
+                                        <div className='ContAsistencia'>
+                                            <div className='Icon-Text'>
+                                                <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
+                                                <p className='NumAsistencia'>10</p>
+                                            </div>
+                                            <p className='EstadoCard'>Asistire</p>
+                                        </div>
+                                        <div className='ContAsistencia'>
+                                            <div className='Icon-Text'>
+                                                <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
+                                                <p className='NumAsistencia'>10</p>
+                                            </div>
+                                            <p className='EstadoCard'>Asistire</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
