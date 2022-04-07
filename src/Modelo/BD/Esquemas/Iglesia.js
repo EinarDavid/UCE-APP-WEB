@@ -6,7 +6,7 @@ const fotosSchema = Schema({
 });
 
 const asistenciaActividadSchema = Schema({
-    Miembro:String,
+    Id_miembro:String,
     Estado: String
 });
 

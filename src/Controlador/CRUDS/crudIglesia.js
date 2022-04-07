@@ -28,6 +28,7 @@ function crud() {
     });
   }
 
+
   this.eliminar = (cod_docente, callback) => {
     Iglesia.deleteone({ "_id": cod_docente }, (error, res) => {
       if (!error) {

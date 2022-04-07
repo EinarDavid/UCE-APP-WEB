@@ -38,8 +38,8 @@ function peticion() {
                     bcrypt.compare(req.body.contra, usuario.Contraseña, function (err, resp) {
                         if (err) console.log(err);
                         if (resp == true) {
-                                var mensage = "Bienvenido de nuevo " + usuario.Nombre;
-                                res.json({ usuario, mensage });    
+                            var mensage = "Bienvenido de nuevo " + usuario.Nombre;
+                            res.json({ usuario, mensage });
                         }
                         else {
                             var mensage = 'Contraseña incorrecta';
@@ -49,13 +49,12 @@ function peticion() {
                 }
             });
         });
-        this.rutas.get("/FotoPerfil/:foto", (req, res)=>
-        {
+        this.rutas.get("/FotoPerfil/:foto", (req, res) => {
             var nombre = req.params.foto;
             var path = require("path");
-            console.log("ññññññññññññññññññññ",nombre);
-            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",path.resolve(__dirname,'/public/fotos/Membresias/',nombre),__dirname,'/public/fotos/Membresias/',nombre)
-            res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))            
+            console.log("ññññññññññññññññññññ", nombre);
+            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", path.resolve(__dirname, '/public/fotos/Membresias/', nombre), __dirname, '/public/fotos/Membresias/', nombre)
+            res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))
         })
         this.rutas.post("/VerDatosIglesia", (req, res) => {
             bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) => {
@@ -64,21 +63,41 @@ function peticion() {
             })
         });
         this.rutas.post("/Movile/ModMembresia/:id", (req, res) => {
-            
+
             const id = req.params.id;
             //delete req.body.id;
             console.log("body:", req.body, id);
             bd.cruds.crudMembresias.modificar(id, req.body, () => {
                 var mensage = 'Guardado Correctamente';
-                bd.cruds.crudMembresias.buscar1(id,(usuario)=>
-                {
-                    res.json({jala:"si", mensage, usuario});
+                bd.cruds.crudMembresias.buscar1(id, (usuario) => {
+                    res.json({ jala: "si", mensage, usuario });
                 })
-                
+
+            })
+        });
+        this.rutas.post("/ModificarEstado/", (req, res) => {
+            var id_Iglesia = req.body.id_iglesia;
+            var id_Actividad = req.body.id_actividad;
+            var id_Miembro = req.body.id_miembro;
+
+            bd.cruds.crudIglesia.buscar1(id_Iglesia, (igle) =>{
+                igle.Actividades.forEach(actividad => {
+                    if(actividad._id == id_Actividad){
+                        if(actividad.AsistenciaActividad.length == 0){
+                            igle.actividad
+                        }
+                        else{
+                            actividad.AsistenciaActividad.forEach(miembro => {
+                                if(miembro.id_miembro == id_Miembro){
+                                    console.log('Aqui')
+                                }
+                            });
+                        }
+                    }
+                });
             })
 
-
-        });
+        })
 
     }
 }
