@@ -295,25 +295,25 @@ export const FiltroIglesia = () => {
                 </div>
                 <div style={{ height: '30px' }} />
                 <div className='DashboardContend'>
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Seleccione la Iglesia*</Form.Label>
-                            <Form.Control as="select" name="Iglesia" required onChange={()=> console.log('Enter')} >
-                                <option value='Default' hidden >--Seleccione--</option>
-                                {
-                                    iglesia.map(iglesia => {
-                                        return (
-                                            <option
-                                                key={iglesia._id}
-                                                value={iglesia._id} /*selected={option.selected}*/>
-                                                {iglesia.Nombre}
-                                            </option>
-                                        )
-                                    })
-                                }
-                            </Form.Control>
-                        </Form.Group>
-                    </Form.Row>
+
+                    <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Label>Seleccione la Iglesia*</Form.Label>
+                        <Form.Control as="select" name="Iglesia" required onChange={() => console.log('Enter')} >
+                            <option value='Default' hidden >--Seleccione--</option>
+                            {
+                                iglesia.map(iglesia => {
+                                    return (
+                                        <option
+                                            key={iglesia._id}
+                                            value={iglesia._id} /*selected={option.selected}*/>
+                                            {iglesia.Nombre}
+                                        </option>
+                                    )
+                                })
+                            }
+                        </Form.Control>
+                    </Form.Group>
+
 
                     <div className='GraficoContend'>
                         <div className='FondoGrafico'>
