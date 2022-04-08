@@ -28,6 +28,56 @@ function crud() {
     });
   }
 
+  this.modificarAsistenciaMiembro = (_idIglesia, _idActividad, _idMiembro, datosnuevos, callback) => {
+
+    Iglesia.updateOne({
+      "_id": _idIglesia,
+      "Actividades._id": _idActividad,
+      "Actividades.AsistenciaActividad._id": {
+        "$ne": _idMiembro
+      }
+    },
+      {
+        "$push": {
+          "Actividades.$.AsistenciaActividad": {
+            datosnuevos
+          }
+        }
+      }, (error, res) => {
+        if (!error) {
+
+          callback(res);
+        }
+        else {
+          Iglesia.updateOne({
+            "_id": _idIglesia,
+          },
+            {
+              "$set": {
+                "Actividades.$[act].AsistenciaActividad.$[miem].Estado": datosnuevos.Estado
+              }
+            },
+            {
+              arrayFilters: [
+                {
+                  "act.id": _idActividad
+                },
+                {
+                  "miem.id": _idMiembro
+                }
+              ]
+            }, (error, res) => {
+              if (!error) {
+
+                callback(res);
+              }
+              else {
+                console.log("Error modificando en la tabla: " + tabla + "-", error);
+              }
+            })
+        }
+      })
+  }
 
   this.eliminar = (cod_docente, callback) => {
     Iglesia.deleteone({ "_id": cod_docente }, (error, res) => {

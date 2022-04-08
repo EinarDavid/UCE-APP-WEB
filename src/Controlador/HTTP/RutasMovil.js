@@ -99,5 +99,22 @@ function peticion() {
 
         })
 
+        this.rutas.post("/ActividadAsistencia/", (req, res) =>{
+            var id_Iglesia = req.body.id_iglesia;
+            var id_Actividad = req.body.id_actividad;
+            var id_Miembro = req.body.id_miembro;
+
+            var datos = {
+                Id_miembro: req.body.Id_miembro,
+                Estado: req.body.Estado
+            }
+
+            bd.cruds.crudIglesia.modificarAsistenciaMiembro(id_Iglesia, id_Actividad, id_Miembro, datos, ()=>{
+                var mensage = 'Guardado Correctamente';
+                res.json({ jala: "si", mensage });
+                console.log("Entro", res);
+            })
+        })
+
     }
 }
