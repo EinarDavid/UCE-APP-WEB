@@ -106,7 +106,7 @@ function peticion() {
 
             var datos = {
                 Id_miembro: req.body.id_miembro,
-                Estado: req.body.estadoS
+                Estado: req.body.estado
             }
 
             bd.cruds.crudIglesia.modificarAsistenciaMiembro(id_Iglesia, id_Actividad, id_Miembro, datos, ()=>{
