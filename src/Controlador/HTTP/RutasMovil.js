@@ -111,7 +111,7 @@ function peticion() {
 
             bd.cruds.crudIglesia.modificarAsistenciaMiembro(id_Iglesia, id_Actividad, id_Miembro, datos, ()=>{
                 var mensage = 'Guardado Correctamente';
-                console.log("Entro", res);
+                console.log("Entro", res.json());
                 res.json({ jala: "si", mensage });
             })
         })
