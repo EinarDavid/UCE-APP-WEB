@@ -3,7 +3,7 @@ import React from 'react';
 class Actividades extends React.Component {
     render() {
         return (
-            <div className="section-wrap fondo_area_estrategica" id="texto" id="Actividades">
+            <div className="section-wrap fondo_area_estrategica" id="texto Actividades" >
                 <div className="section-row">
                     <div className="rowtitles">
                         <p className="rowtitle lighttext">

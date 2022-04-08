@@ -318,14 +318,10 @@ export const FiltroIglesia = () => {
                             {
                                 iglesia[0].Actividades.map((actividad) => {
                                     return(
-                                        <p>{actividad.Titulo}</p>
-                                    )
-                                })
-                            }
-                            <div className='ListActividad'>
-                                <img src='./Icons/Icons.png' className='ImageActividad' ></img>
+                                        <div className='ListActividad'>
+                                <img src={'/fotos/Iglesias/Actividad/' + actividad.FotoActividad} className='ImageActividad' ></img>
                                 <div className='DescriptionActividad'>
-                                    <p className='TitleActividad'>Titulo actividad</p>
+                                    <p className='TitleActividad'>{actividad.Titulo}</p>
                                     <div className='CantAsistencia'>
                                         <div className='ContAsistencia'>
                                             <div className='Icon-Text'>
@@ -351,6 +347,10 @@ export const FiltroIglesia = () => {
                                     </div>
                                 </div>
                             </div>
+                                    )
+                                })
+                            }
+                            
                         </div>
 
 
