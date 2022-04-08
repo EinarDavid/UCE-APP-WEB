@@ -29,7 +29,7 @@ function crud() {
   }
 
   this.modificarAsistenciaMiembro = (_idIglesia, _idActividad, _idMiembro, datosnuevos, callback) => {
-
+    console.log('Datos nuevos', datosnuevos)
     Iglesia.updateOne({
       "_id": _idIglesia,
       "Actividades._id": _idActividad,
