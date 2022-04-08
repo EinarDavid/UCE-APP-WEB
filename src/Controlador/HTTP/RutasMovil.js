@@ -109,9 +109,9 @@ function peticion() {
                 Estado: req.body.estado
             }
 
-            bd.cruds.crudIglesia.modificarAsistenciaMiembro(id_Iglesia, id_Actividad, id_Miembro, datos, ()=>{
+            bd.cruds.crudIglesia.modificarAsistenciaMiembro(id_Iglesia, id_Actividad, id_Miembro, datos, (Asistencia)=>{
                 var mensage = 'Guardado Correctamente';
-                console.log("Entro");
+                console.log("Entro", Asistencia);
                 // res.json({ jala: "si", mensage });
             })
         })
