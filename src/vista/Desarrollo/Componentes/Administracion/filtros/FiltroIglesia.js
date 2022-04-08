@@ -315,7 +315,13 @@ export const FiltroIglesia = () => {
                     <div className='CardContainerActividades'>
                         <div className='ContainerActividades'>
                             <h1 className='TituloGraficos'>Actividades</h1>
-
+                            {
+                                iglesia[0].Actividades.map((actividad) => {
+                                    return(
+                                        <p>{actividad.Titulo}</p>
+                                    )
+                                })
+                            }
                             <div className='ListActividad'>
                                 <img src='./Icons/Icons.png' className='ImageActividad' ></img>
                                 <div className='DescriptionActividad'>
@@ -326,21 +332,21 @@ export const FiltroIglesia = () => {
                                                 <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
                                                 <p className='NumAsistencia'>10</p>
                                             </div>
-                                            <p className='EstadoCard'>Asistire</p>
+                                            <p className='EstadoCard'>Asistiran</p>
                                         </div>
                                         <div className='ContAsistencia'>
                                             <div className='Icon-Text'>
                                                 <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
                                                 <p className='NumAsistencia'>10</p>
                                             </div>
-                                            <p className='EstadoCard'>Asistire</p>
+                                            <p className='EstadoCard'>Les interesa</p>
                                         </div>
                                         <div className='ContAsistencia'>
                                             <div className='Icon-Text'>
                                                 <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
                                                 <p className='NumAsistencia'>10</p>
                                             </div>
-                                            <p className='EstadoCard'>Asistire</p>
+                                            <p className='EstadoCard'>No les interesa</p>
                                         </div>
                                     </div>
                                 </div>
