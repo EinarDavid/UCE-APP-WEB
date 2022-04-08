@@ -1,9 +1,8 @@
-
-body{
+body {
     padding: 70px;
 }
 
-.TitleReporte{
+.TitleReporte {
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
@@ -11,49 +10,63 @@ body{
     line-height: 27px;
     color: #000000;
 }
-.DashboardContend{
+
+.DashboardContend {
     width: 100%;
     display: flex;
     justify-content: space-between;
     /* background-color: #3275C3; */
 }
-.GraficoContend{
-    flex-direction:column;
-    align-items:flex-start;
-    /* justify-content: flex-start; */
+
+.GraficoContend {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0px;
     width: 48%;
     /* background-color: #384567; */
+    /* justify-content: flex-start; */
 }
-.FondoGrafico{
+
+.GraficoContendAsistencia {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 60%;
+}
+
+.FondoGrafico {
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     width: 100%;
     /* background-color: #3275C3; */
     /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
 }
-.FondoGrafico:hover{
+
+.FondoGrafico:hover {
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
+
 /* Style_de_Cards */
-.CardDisplay{
+.CardDisplay {
     /* display: flex; */
-    flex-direction:column;
-    align-items:flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     /* justify-content: flex-start; */
     padding: 0px;
     width: 48%;
     /* background-color: #747477; */
 }
-.CardContend{
+
+.CardContend {
     padding: 0px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     /* background-color: #3275C3; */
-    
+
 }
-.CardContendMiembro{
+
+.CardContendMiembro {
     padding: 0px;
     width: 100%;
     display: flex;
@@ -61,7 +74,7 @@ body{
     /* background-color: aqua; */
 }
 
-.CardReporte{
+.CardReporte {
     width: 48%;
     height: 145px;
     background: #E1F1FF;
@@ -70,12 +83,13 @@ body{
     border-radius: 20px;
     /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
 }
-.CardReporte:hover{
+
+.CardReporte:hover {
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 
 
-.CardMiembroPor{
+.CardMiembroPor {
     width: 31%;
     height: 115px;
     background: #FFFFFF;
@@ -85,11 +99,12 @@ body{
     /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
 
 }
-.CardMiembroPor:hover{
+
+.CardMiembroPor:hover {
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 
-.ImageCardReporte{
+.ImageCardReporte {
     /* position: absolute; */
     width: 50px;
     height: 50px;
@@ -98,7 +113,7 @@ body{
     /* background-color: blue; */
 }
 
-.ParrafoCardReporte{
+.ParrafoCardReporte {
     margin-left: 22px;
     margin-top: 10px;
 
@@ -107,11 +122,11 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    
+
     color: #747477;
 }
 
-.NumCardReporte{
+.NumCardReporte {
     margin-left: 22px;
     margin-top: -5px;
     font-family: 'Gotham';
@@ -124,7 +139,8 @@ body{
 
     color: #000000;
 }
-.TituloGraficos{
+
+.TituloGraficos {
     margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -140,11 +156,11 @@ body{
 }
 
 /* Style Inputs */
-.TextContainer{
+.TextContainer {
     width: 100%;
 }
 
-.TitleInputText{
+.TitleInputText {
     margin-left: 9px;
     margin-bottom: 4px;
     font-family: 'Gotham';
@@ -158,10 +174,10 @@ body{
     color: #383838;
 }
 
-.SearchTextInput{
+.SearchTextInput {
     background: #FEFEFE;
     border: 1px solid #EAEAEA;
-    
+
     border-radius: 13px;
     height: 50px;
     width: 100%;
@@ -178,13 +194,13 @@ body{
     color: #747477;
 }
 
-.ButtonReporte{
+.ButtonReporte {
     width: 13%;
     height: 50px;
     background: #3275C3;
     border-radius: 13px;
     border: none;
-    
+
     color: #ffffff;
     font-family: 'Gotham';
     font-style: normal;
@@ -198,18 +214,19 @@ body{
 
 }
 
-.SearchReporte{
+.SearchReporte {
     display: flex;
-    flex-direction:row;
-    align-items:flex-end;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: flex-start;
     padding: 0px;
     width: 100%;
 
-    
+
 }
+
 /* Style de Table */
-.From-filtro2{
+.From-filtro2 {
     background: rgb(0, 83, 128);
     width: 100%;
     margin-top: 40px;
@@ -223,10 +240,13 @@ body{
     border-radius: 15px;
     color: #FFF;
 }
-.Form-filtro2 th,td{
+
+.Form-filtro2 th,
+td {
     color: #FFF;
-  }
-.ButtonSelect{
+}
+
+.ButtonSelect {
     background: #3275C3;
     border-radius: 13px;
     font-family: 'Gotham';
@@ -244,7 +264,8 @@ body{
     width: 22%;
     justify-content: center;
 }
-.ButtonUnselected{
+
+.ButtonUnselected {
     background: #FFFFFF;
     border-radius: 13px;
     font-family: 'Gotham';
@@ -262,27 +283,34 @@ body{
     width: 22%;
     justify-content: center;
 }
-.ContainerButtonReport{
+
+.ContainerButtonReport {
     display: flex;
     /* justify-content: space-between; */
     /* background-color: aqua; */
 }
 
 /* Actividades */
-.CardContainerActividades{
-    flex-direction:column;
-    align-items:flex-start;
+.CardContainerActividades {
+    flex-direction: column;
+    align-items: flex-start;
     /* justify-content: flex-start; */
     padding: 0px;
-    width: 40%;
+    width: 36%;
 }
-.ContainerActividades{
+
+.CardContainerActividades:hover {
+    box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
+}
+
+.ContainerActividades {
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     width: 100%;
     height: 100%;
 }
-.ListActividad{
+
+.ListActividad {
     border-radius: 20px;
     border: 1px solid #EAEAEA;
     width: 90%;
@@ -295,22 +323,24 @@ body{
     /* background-color: black; */
 }
 
-.DescriptionActividad{
+.DescriptionActividad {
     width: 75%;
     padding-left: 20px;
     padding-right: 20px;
     /* background-color: red; */
 
 }
-.CantAsistencia{
+
+.CantAsistencia {
     display: flex;
     justify-content: space-between;
     /* background-color: aqua; */
 }
+
 /* .ContAsistencia{
     
 } */
-.ImageActividad{
+.ImageActividad {
     /* position: absolute; */
     width: 50px;
     height: 50px;
@@ -319,7 +349,8 @@ body{
     margin: auto;
     /* background-color: blue; */
 }
-.TitleActividad{
+
+.TitleActividad {
     /* margin-left: 22px; */
     margin-top: 5px;
 
@@ -328,31 +359,35 @@ body{
     font-weight: 500;
     font-size: 18px;
     /* line-height: 16px; */
-    
+
     color: #000000;
     margin: auto;
 }
-.NumAsistencia{
+
+.NumAsistencia {
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     /* line-height: 16px; */
-    
+
     color: #747477;
     margin: auto;
     padding-left: 10px;
 }
-.ImageCardActividad{
+
+.ImageCardActividad {
     width: 30px;
     height: 30px;
 }
-.Icon-Text{
+
+.Icon-Text {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.EstadoCard{
+
+.EstadoCard {
     margin-left: 22px;
     margin-top: 10px;
 
@@ -361,7 +396,7 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    
+
     color: #747477;
     margin: auto;
     text-align: center;
