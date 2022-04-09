@@ -56,7 +56,7 @@ function crud() {
         }
       }, (error, res) => {
         if (!error) {
-          callback(res);
+          
           if (res.modifiedCount == 0) {
             Iglesia.updateOne({
               "_id": ObjectID(_idIglesia),
@@ -85,6 +85,7 @@ function crud() {
                 }
               })
           }
+          callback(res);
           // console.log("", res)
         }
         else {
