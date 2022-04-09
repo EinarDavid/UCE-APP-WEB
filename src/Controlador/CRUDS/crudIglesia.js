@@ -42,10 +42,18 @@ function crud() {
 
     Iglesia.updateOne({
       "_id": ObjectID(_idIglesia),
-      "Actividades._id": ObjectID(_idActividad),
-      "Actividades.AsistenciaActividad.Id_miembro": {
-        "$ne": _idMiembro
-      }
+      // "Actividades._id": ObjectID(_idActividad),
+      // "Actividades.AsistenciaActividad.Id_miembro": {
+      //   "$ne": _idMiembro
+      // }
+      Actividades: {
+        $elemMatch: {
+            "_id": ObjectID(_idActividad),
+            "AsistenciaActividad.Id_miembro": {
+                "$ne": _idMiembro
+            }
+        }
+    }
     },
       {
         "$push": {
