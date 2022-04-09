@@ -40,16 +40,16 @@ function crud() {
     var idMiembro2 = {"$oid":_idMiembro};
 
     Iglesia.updateOne({
-      "_id": idIglesia2,
-      "Actividades._id": idActividad2,
+      "_id": {"$oid":_idIglesia},
+      "Actividades._id": {"$oid":_idActividad},
       "Actividades.AsistenciaActividad.Id_miembro": {
-        "$ne": idMiembro2
+        "$ne": {"$oid":_idMiembro}
       }
     },
       {
         "$push": {
           "Actividades.$.AsistenciaActividad": {
-            Id_miembro: idMiembro2,
+            Id_miembro: {"$oid":_idMiembro},
             Estado: datosnuevos.Estado
           }
         }
@@ -58,7 +58,7 @@ function crud() {
           callback(res);
           if (res.modifiedCount == 0) {
             Iglesia.updateOne({
-              "_id": idIglesia2,
+              "_id": {"$oid":_idIglesia},
             },
               {
                 "$set": {
@@ -68,10 +68,10 @@ function crud() {
               {
                 arrayFilters: [
                   {
-                    "act._id": idActividad2
+                    "act._id": {"$oid":_idActividad}
                   },
                   {
-                    "miem.Id_miembro": idMiembro2
+                    "miem.Id_miembro": {"$oid":_idMiembro}
                   }
                 ]
               }, (error, res) => {
