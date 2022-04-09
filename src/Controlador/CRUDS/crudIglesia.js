@@ -43,13 +43,13 @@ function crud() {
       "_id": {"$oid":_idIglesia},
       "Actividades._id": {"$oid":_idActividad},
       "Actividades.AsistenciaActividad.Id_miembro": {
-        "$ne": {"$oid":_idMiembro}
+        "$ne": _idMiembro
       }
     },
       {
         "$push": {
           "Actividades.$.AsistenciaActividad": {
-            Id_miembro: {"$oid":_idMiembro},
+            Id_miembro: _idMiembro,
             Estado: datosnuevos.Estado
           }
         }
@@ -71,7 +71,7 @@ function crud() {
                     "act._id": {"$oid":_idActividad}
                   },
                   {
-                    "miem.Id_miembro": {"$oid":_idMiembro}
+                    "miem.Id_miembro": {_idMiembro}
                   }
                 ]
               }, (error, res) => {
