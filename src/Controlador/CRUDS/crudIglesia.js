@@ -3,6 +3,7 @@ module.exports = new crud();
 function crud() {
   const Iglesia = require('./../../Modelo/BD/Esquemas/Iglesia.js');
   var tabla = "iglesias";
+  var ObjectID = require('mongodb').ObjectID;
 
   //Funciones
   this.ingresar = (datos, callback) => {
@@ -35,13 +36,13 @@ function crud() {
     // var idActividad2 = ObjectId(_idActividad);
     // var idMiembro2 = ObjectId(_idMiembro);
 
-    var idIglesia2 = {"$oid": _idIglesia};
-    var idActividad2 = {"$oid":_idActividad};
-    var idMiembro2 = {"$oid":_idMiembro};
+    var idIglesia2 = ObjectID( _idIglesia);
+    var idActividad2 = ObjectID(_idActividad);
+    var idMiembro2 = ObjectID(_idMiembro);
 
     Iglesia.updateOne({
-      "_id": {"$oid":_idIglesia},
-      "Actividades._id": {"$oid":_idActividad},
+      "_id": ObjectID(_idIglesia),
+      "Actividades._id": ObjectID(_idActividad),
       "Actividades.AsistenciaActividad.Id_miembro": {
         "$ne": _idMiembro
       }
@@ -58,7 +59,7 @@ function crud() {
           callback(res);
           if (res.modifiedCount == 0) {
             Iglesia.updateOne({
-              "_id": {"$oid":_idIglesia},
+              "_id": ObjectID(_idIglesia),
             },
               {
                 "$set": {
@@ -68,7 +69,7 @@ function crud() {
               {
                 arrayFilters: [
                   {
-                    "act._id": {"$oid":_idActividad}
+                    "act._id": ObjectID(_idActividad)
                   },
                   {
                     "miem.Id_miembro": {_idMiembro}
