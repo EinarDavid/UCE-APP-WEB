@@ -31,9 +31,13 @@ function crud() {
   this.modificarAsistenciaMiembro = (_idIglesia, _idActividad, _idMiembro, datosnuevos, callback) => {
     console.log('Datos nuevos', datosnuevos)
 
-    var idIglesia2 = ObjectId(_idIglesia);
-    var idActividad2 = ObjectId(_idActividad);
-    var idMiembro2 = ObjectId(_idMiembro);
+    // var idIglesia2 = ObjectId(_idIglesia);
+    // var idActividad2 = ObjectId(_idActividad);
+    // var idMiembro2 = ObjectId(_idMiembro);
+
+    var idIglesia2 = {"$oid": _idIglesia};
+    var idActividad2 = {"$oid":_idActividad};
+    var idMiembro2 = {"$oid":_idMiembro};
 
     Iglesia.updateOne({
       "_id": idIglesia2,
