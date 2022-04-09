@@ -56,7 +56,7 @@ function crud() {
         }
       }, (error, res) => {
         if (!error) {
-          callback(res);
+          // callback(res);
           if (res.modifiedCount == 0) {
             Iglesia.updateOne({
               "_id": ObjectID(_idIglesia),
@@ -77,7 +77,7 @@ function crud() {
                 ]
               }, (error, res) => {
                 if (!error) {
-
+                  console.log("Entro a Modificar Estado");
                   callback(res);
                 }
                 else {
