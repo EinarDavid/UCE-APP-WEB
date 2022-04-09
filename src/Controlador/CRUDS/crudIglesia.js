@@ -30,51 +30,60 @@ function crud() {
 
   this.modificarAsistenciaMiembro = (_idIglesia, _idActividad, _idMiembro, datosnuevos, callback) => {
     console.log('Datos nuevos', datosnuevos)
+
+    var idIglesia2 = ObjectId(_idIglesia);
+    var idActividad2 = ObjectId(_idActividad);
+    var idMiembro2 = ObjectId(_idMiembro);
+
     Iglesia.updateOne({
-      "_id": _idIglesia,
-      "Actividades._id": _idActividad,
-      "Actividades.AsistenciaActividad._id": {
-        "$ne": _idMiembro
+      "_id": idIglesia2,
+      "Actividades._id": idActividad2,
+      "Actividades.AsistenciaActividad.Id_miembro": {
+        "$ne": idMiembro2
       }
     },
       {
         "$push": {
           "Actividades.$.AsistenciaActividad": {
-            datosnuevos
+            Id_miembro: idMiembro2,
+            Estado: datosnuevos.Estado
           }
         }
       }, (error, res) => {
         if (!error) {
-
           callback(res);
+          if (res.modifiedCount == 0) {
+            Iglesia.updateOne({
+              "_id": idIglesia2,
+            },
+              {
+                "$set": {
+                  "Actividades.$[act].AsistenciaActividad.$[miem].Estado": datosnuevos.Estado
+                }
+              },
+              {
+                arrayFilters: [
+                  {
+                    "act._id": idActividad2
+                  },
+                  {
+                    "miem.Id_miembro": idMiembro2
+                  }
+                ]
+              }, (error, res) => {
+                if (!error) {
+
+                  callback(res);
+                }
+                else {
+                  console.log("Error modificando en la tabla: " + tabla + "-", error);
+                }
+              })
+          }
+          // console.log("", res)
         }
         else {
-          Iglesia.updateOne({
-            "_id": _idIglesia,
-          },
-            {
-              "$set": {
-                "Actividades.$[act].AsistenciaActividad.$[miem].Estado": datosnuevos.Estado
-              }
-            },
-            {
-              arrayFilters: [
-                {
-                  "act.id": _idActividad
-                },
-                {
-                  "miem.id": _idMiembro
-                }
-              ]
-            }, (error, res) => {
-              if (!error) {
-
-                callback(res);
-              }
-              else {
-                console.log("Error modificando en la tabla: " + tabla + "-", error);
-              }
-            })
+          console.log("Error modificando en la tabla: " + tabla + "-", error);
         }
       })
   }
