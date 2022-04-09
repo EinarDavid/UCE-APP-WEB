@@ -72,7 +72,7 @@ function crud() {
                     "act._id": ObjectID(_idActividad)
                   },
                   {
-                    "miem.Id_miembro": {_idMiembro}
+                    "miem.Id_miembro": _idMiembro
                   }
                 ]
               }, (error, res) => {
