@@ -118,7 +118,7 @@ function peticion() {
 
         this.rutas.post("/SubirFoto/", (req,res)=>{
             var fotos = req.body.foto;
-            console.log(foto);
+            console.log(fotos);
         })
         
 
