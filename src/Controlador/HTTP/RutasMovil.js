@@ -115,6 +115,11 @@ function peticion() {
                 // res.json({ jala: "si", mensage });
             })
         })
+
+        this.rutas.post("/SubirFoto/", (req,res)=>{
+            var fotos = req.body.foto;
+            console.log(foto);
+        })
         
 
     }
