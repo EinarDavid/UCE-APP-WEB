@@ -146,7 +146,7 @@ function peticion() {
                     console.log("----------------------------------Imagenes:------------------------------------")
                     console.log("body:", req.body);
                     console.log("files:", req.files);
-                    var fotos = req.body.foto;
+                    var fotos = req.body.photo;
                     console.log(fotos);
 
                 }
