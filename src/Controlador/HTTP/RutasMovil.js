@@ -140,8 +140,8 @@ function peticion() {
                 }
                 else {
                    
-                    if (req.files.photo != undefined)
-                        req.body.photo = req.files.photo.map((a) => { return a.filename });
+                    if (req.files != undefined)
+                        req.body = req.files.map((a) => { return a.filename });
                    
                     console.log("----------------------------------Imagenes:------------------------------------")
                     console.log("body:", req.body);
