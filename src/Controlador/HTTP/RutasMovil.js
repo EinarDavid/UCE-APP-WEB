@@ -116,9 +116,42 @@ function peticion() {
             })
         })
 
+        const multer = require('multer');
+        var ruta = "./public/fotos/Iglesias/Actividad/Prueba";
+        var storage = multer.diskStorage({
+            destination: ruta,
+            filename: function (req, file, callback) {
+                var re = /(?:\.([^.]+))?$/;
+                var extension = re.exec(file.originalname)[1];
+                //console.log(extension);
+                callback(null, Date.now() + "." + extension);
+            }
+        });
+        var upload = multer({ storage: storage }).fields([
+            {
+                name: 'photo'
+            }
+        ]);
         this.rutas.post("/SubirFoto/", (req,res)=>{
-            var fotos = req.body.foto;
-            console.log(fotos);
+            upload(req, res, function (err) {
+                if (err) {
+                    //console.log(err, 'Im in post , inside upload' + ruta);
+                    return res.end('Error subiendo archivo' + err);
+                }
+                else {
+                   
+                    if (req.files.photo != undefined)
+                        req.body.photo = req.files.photo.map((a) => { return a.filename });
+                   
+                    console.log("----------------------------------Imagenes:------------------------------------")
+                    console.log("body:", req.body);
+                    console.log("files:", req.files);
+                    var fotos = req.body.foto;
+                    console.log(fotos);
+
+                }
+            });
+
         })
         
 
