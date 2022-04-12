@@ -13,7 +13,7 @@ const asistenciaActividadSchema = Schema({
 const fotosUsuarioSchema = Schema({
     Miembro: String,
     Fecha: String,
-    Fotos: [String]
+    Fotos: String
 
 });
 

@@ -163,17 +163,25 @@ function peticion() {
                             {
                                 if(a._id == req.body.Actividad)
                                 {
+                                    var fotosusu = 
+                                    {
+                                        Fotos: req.body.Fotos[0],
+                                        Fecha : req.body.Fecha,
+                                        Miembro : req.body.Miembro
+                                    }
                                     if(a.FotosUsuario != undefined)
                                     {
-                                        a.FotosUsuario.push(req.body.Fotos[0])
+                                        a.FotosUsuario.push(fotosusu)
                                     }
                                     else
                                     {
-                                        a.FotosUsuario = req.body.Fotos
+                                       a.FotosUsuario = [];
+                                       a.FotosUsuario.push(fotosusu)
                                     }
                                 }
                                 return a;
                             })
+                        
                         bd.cruds.crudIglesia.modificar(req.body.Iglesia, igle, () => {
                             res.json({ jala: "si", igle });
                         });
