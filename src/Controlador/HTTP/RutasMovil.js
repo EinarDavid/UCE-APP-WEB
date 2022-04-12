@@ -133,14 +133,16 @@ function peticion() {
             }
         ]);
         this.rutas.post("/SubirFoto/", (req,res)=>{
+            console.log("----------------------------------Imagenes:------------------------------------")
             upload(req, res, function (err) {
+                console.log("----------------------------------upload:------------------------------------")
                 if (err) {
                     //console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
                    
-                    console.log("----------------------------------Imagenes:------------------------------------")
+                    
                     console.log("body:", req.body);
                     console.log("files:", req.files);
                     if (req.files.photo != undefined)
