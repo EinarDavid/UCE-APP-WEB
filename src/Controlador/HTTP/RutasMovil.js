@@ -137,7 +137,7 @@ function peticion() {
             upload(req, res, function (err) {
                 console.log("----------------------------------upload:------------------------------------")
                 if (err) {
-                    //console.log(err, 'Im in post , inside upload' + ruta);
+                    console.log(err, 'Im in post , inside upload' + ruta);
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
