@@ -141,19 +141,25 @@ function peticion() {
                     return res.end('Error subiendo archivo' + err);
                 }
                 else {
-                   
+                    const fecha = new Date();
+                    const a = fecha.getFullYear();
+                    const m = fecha.getMonth() + 1;
+                    const d = fecha.getDate();
+                    const fechaActual = `${a}-${m}-${d}`;
                     
+                    req.body.Fecha = fechaActual;
+                    
+                   
+                    if (req.files.photo != undefined)
+                        req.body.Fotos = req.files.photo.map((a) => { return a.filename });
+                   
+                
                     console.log("body:", req.body);
                     console.log("files:", req.files);
-                    if (req.files.photo != undefined)
-                        req.body.photo = req.files.photo.map((a) => { return a.filename });
-                   
-                    
-                        console.log("body:", req.body);
-                        console.log("files:", req.files);
-                    var fotos = req.body.photo;
-                    console.log(fotos);
-
+  
+                    // bd.cruds.crudIglesia.modificar(req.user.Iglesia, req.body, () => {
+                    //     res.redirect("back");
+                    // });
                 }
             });
 
