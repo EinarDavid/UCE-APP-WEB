@@ -157,9 +157,28 @@ function peticion() {
                     console.log("body:", req.body);
                     console.log("files:", req.files);
   
-                    // bd.cruds.crudIglesia.modificar(req.user.Iglesia, req.body, () => {
-                    //     res.redirect("back");
-                    // });
+                    bd.cruds.crudIglesia.buscar1(req.body.Iglesia,(igle)=>
+                    {
+                        igle.Actividades = igle.Actividades.map(a=>
+                            {
+                                if(a._id == req.body.Actividad)
+                                {
+                                    if(a.FotosUsuario != undefined)
+                                    {
+                                        a.FotosUsuario.push(req.body.Fotos[0])
+                                    }
+                                    else
+                                    {
+                                        a.FotosUsuario = req.body.Fotos
+                                    }
+                                }
+                                return a;
+                            })
+                        bd.cruds.crudIglesia.modificar(req.body.Iglesia, igle, () => {
+                            res.json({ jala: "si", igle });
+                        });
+                    })
+                    
                 }
             });
 
