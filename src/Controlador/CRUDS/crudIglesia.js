@@ -93,7 +93,9 @@ function crud() {
                 }
               })
           }
-         // callback(res);
+          else{
+            callback(res);
+          }
           // console.log("", res)
         }
         else {
