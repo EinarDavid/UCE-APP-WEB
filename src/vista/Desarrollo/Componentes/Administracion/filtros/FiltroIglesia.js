@@ -77,7 +77,7 @@ export const FiltroIglesia = () => {
     console.log('Iglesias-------', iglesia);
 
     const [inputValue, setInputValue] = useState('');
-    const [graficoVisible, setGraficoVisible] = useState([])
+
     const [listaVisible, setListaVisible] = useState(iglesia);
     const [listaVisibleMiembros, setlistaVisibleMiembros] = useState(membresias)
     const [busquedaSeleccionada, setBusquedaSeleccionada] = useState(0);
