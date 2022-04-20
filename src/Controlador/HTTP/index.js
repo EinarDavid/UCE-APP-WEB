@@ -123,7 +123,7 @@ var ret = (passport) => {
         datos.iglesias = iglesias;
         datos.user = req.user;
         datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
-        console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
+        // console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
   
         res.render("Paginas/index",
           {
@@ -131,12 +131,26 @@ var ret = (passport) => {
             datos
           });
       })
-
     })
-
-
-
   })
+
+  rutas.get("/dashboardIglesia/", (req, res) =>{
+    bd.cruds.crudIglesia.buscar({}, (iglesias) => {
+      bd.cruds.crudMembresias.buscarTodo((membresias)=>{
+        datos.membresias = membresias;
+        datos.iglesias = iglesias;
+        datos.user = req.user;
+        datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+        // console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
+  
+        res.render("Paginas/index",
+          {
+            pagina: 'dashboardIglesia',
+            datos
+          });
+      })
+    })
+  });
 
   rutas.get("/Iglesia/:idIglesia/poa", (req, res) => {
     // req.flash("confirm", req.app.locals.confirm[0]);

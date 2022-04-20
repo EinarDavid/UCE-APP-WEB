@@ -6,6 +6,7 @@ module.exports =
    "inicio": entrada + "inicio.js",
    "filtro": entrada + "filtro.js",
    "filtroIglesia": entrada + "filtroIglesia.js",
+   "dashboardIglesia": entrada + "dashboardIglesia.js",
    "admin": entrada + "admin.js",
    "reg_bautizo" : entrada + "administracion/reg_bautizo.js",
    "ministerial" : entrada + "ministerial.js",
@@ -18,6 +19,7 @@ module.exports =
    "viewmod" : entrada + "ViewMod/View.js",
    "vistaAdministracion" : entrada + "VistaAdministracion.js",
    "vistaGeneral" : entrada + "VistaGeneral.js",
+   
   },
   output:
   {

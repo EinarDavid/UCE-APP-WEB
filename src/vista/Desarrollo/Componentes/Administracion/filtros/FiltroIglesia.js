@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
 import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar } from 'recharts';
+import { GraficoActividad } from './GraficoActividad';
 
 import './FiltroIglesia.css';
-import { GraficoActividad } from './GraficoActividad';
 
 
 
