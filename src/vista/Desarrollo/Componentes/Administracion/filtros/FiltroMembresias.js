@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FiltroIglesia.css';
 
 export const FiltroMembresias = () => {
@@ -6,10 +6,10 @@ export const FiltroMembresias = () => {
     const membresias = window.datos.membresias;
 
     console.log('User....', window.datos.user)
-    
-    var TotalMiembros= 0;
+
+    var TotalMiembros = 0;
     const MiembrosIglesia = [];
-    
+
     const contarMiembros = () => {
         var contador = 0;
         membresias.forEach(miembro => {
@@ -38,16 +38,31 @@ export const FiltroMembresias = () => {
             contSolicitud += 1;
         }
     });
+
     MiembrosIglesia.sort(function (a, b) {
-        if (a.NombreIglesia > b.NombreIglesia) {
+        if (a.Apellido_Paterno > b.Apellido_Paterno) {
             return 1;
         }
-        if (a.NombreIglesia < b.NombreIglesia) {
+        if (a.Apellido_Paterno < b.Apellido_Paterno) {
             return -1;
         }
         // a must be equal to b
         return 0;
     });
+
+    const [inputValue, setInputValue] = useState('');
+    
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // console.log('handleSubmit', inputValue)
+        if (inputValue.trim().length > 2) {
+            setInputValue('');
+        }
+
+    }
+
     console.log('----------', MiembrosIglesia);
 
     return (
@@ -78,6 +93,23 @@ export const FiltroMembresias = () => {
                     <h1 className='NumCardReporte'>{contSolicitud}</h1>
                 </div>
             </div>
+
+            <br />
+
+            <form onSubmit={handleSubmit} >
+                <div className='SearchReporte'>
+                    <div className='TextContainer' >
+                        <label className='TitleInputText'>Ingresa el dato de busqueda</label>
+                        <input type='text'
+                            className='SearchTextInput'
+                            placeholder='Ej. Villarroel'
+                            value={inputValue}
+                            // onChange={handleInputChange}
+                        ></input>
+                    </div>
+                    {/* <button type='submit' className='ButtonReporte' > BUSCAR </button> */}
+                </div>
+            </form>
         </div>
     )
 }

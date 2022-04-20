@@ -62,10 +62,10 @@ export const DashboardIglesia = () => {
     });
 
     membresias.sort(function (a, b) {
-        if (a.Apellido_Paterno > b.Apellido_Paterno) {
+        if (a.NombreIglesia > b.NombreIglesia) {
             return 1;
         }
-        if (a.Apellido_Paterno < b.Apellido_Paterno) {
+        if (a.NombreIglesia < b.NombreIglesia) {
             return -1;
         }
         // a must be equal to b
