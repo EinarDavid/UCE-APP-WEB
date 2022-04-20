@@ -12,7 +12,7 @@ class Filtros extends React.Component {
         return (
             <React.Fragment>
                 <Menu_Adm/>
-                <Fondo/>
+                {/* <Fondo/> */}
                 {/* <Filtro/> */}
                 <FiltroMembresias/>
                 

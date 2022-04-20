@@ -88,6 +88,18 @@ body {
     box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
 }
 
+.CardReporte4 {
+    width: 24%;
+    height: 145px;
+    background: #E1F1FF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 20px;
+    /* box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4); */
+}
+.CardReporte4:hover {
+    box-shadow: 7px 7px 10px rgb(0, 0, 0, 0.4);
+}
 
 .CardMiembroPor {
     width: 31%;
