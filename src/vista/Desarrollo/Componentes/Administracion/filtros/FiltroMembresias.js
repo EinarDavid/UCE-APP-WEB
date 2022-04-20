@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Table, Form, Col, Button } from 'react-bootstrap';
+
 import './FiltroIglesia.css';
 
 export const FiltroMembresias = () => {
