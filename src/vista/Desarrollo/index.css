@@ -25,11 +25,11 @@ code {
 *::-webkit-scrollbar {
   width: 12px;
 }
-/* *::-webkit-scrollbar-track {
-  background: orange;
-} */
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
 *::-webkit-scrollbar-thumb {
-  background-color: #49484d;
+  background-color: #514560;
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
