@@ -25,9 +25,9 @@ code {
 *::-webkit-scrollbar {
   width: 12px;
 }
-*::-webkit-scrollbar-track {
+/* *::-webkit-scrollbar-track {
   background: orange;
-}
+} */
 *::-webkit-scrollbar-thumb {
   background-color: #49484d;
   border-radius: 20px;
