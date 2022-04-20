@@ -308,22 +308,22 @@ td {
     height: 338px;
     overflow-y: scroll;
 }
-.CardContainerActividades::-webkit-scrollbar{
+.ContainerActividades::-webkit-scrollbar{
     -webkit-appearance: none;
 }
-.CardContainerActividades::-webkit-scrollbar:vertical {
+.ContainerActividades::-webkit-scrollbar:vertical {
     width:10px;
 }
 
-.CardContainerActividades::-webkit-scrollbar-button:increment,.CardContainerActividades::-webkit-scrollbar-button {
+.ContainerActividades::-webkit-scrollbar-button:increment,.ContainerActividades::-webkit-scrollbar-button {
     display: none;
 } 
 
-.CardContainerActividades::-webkit-scrollbar:horizontal {
+.ContainerActividades::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.CardContainerActividades::-webkit-scrollbar-thumb {
+.ContainerActividades::-webkit-scrollbar-thumb {
     background-color: #797979;
     border-radius: 20px;
     border: 2px solid #f1f2f3;
