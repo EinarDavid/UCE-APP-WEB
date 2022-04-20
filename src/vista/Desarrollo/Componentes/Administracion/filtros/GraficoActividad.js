@@ -159,8 +159,8 @@ export const GraficoActividad = ({ iglesia }) => {
                                         <XAxis dataKey="Titulo" />
                                         <YAxis />
                                         <Tooltip />
-                                        <Bar dataKey="ContTeInteresa" fill="#00BCD1" />
                                         <Bar dataKey="ContAsistire" fill="#00D8AF" />
+                                        <Bar dataKey="ContTeInteresa" fill="#00BCD1" />
                                         <Bar dataKey="ContNoMeIteresa" fill="#9A51E0" />
                                     </BarChart >
                                 </ResponsiveContainer>
