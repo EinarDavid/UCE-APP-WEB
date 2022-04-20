@@ -312,7 +312,7 @@ td {
     -webkit-appearance: none;
 }
 .ContainerActividades::-webkit-scrollbar:vertical {
-    display: none;  /* Ocultar scroll */
+    /* display: none;  Ocultar scroll */
     height: 8px;    /* Tamaño del scroll en horizontal */
     width:12px;     /* Tamaño del scroll en vertical */
 }
