@@ -5,21 +5,24 @@ export const FiltroMembresias = () => {
 
     const membresias = window.datos.membresias;
 
-    console.log('----------', membresias);
     console.log('User....', window.datos.user)
-
+    
     var TotalMiembros= 0;
-
+    const MiembrosIglesia = [];
+    
     const contarMiembros = () => {
         var contador = 0;
         membresias.forEach(miembro => {
             if (window.datos.user.Iglesia === miembro.Iglesia) {
                 contador += 1;
+                MiembrosIglesia.push(miembro);
             }
         });
         TotalMiembros = contador;
     }
     contarMiembros();
+    
+    console.log('----------', MiembrosIglesia);
 
     return (
         <div>
