@@ -312,7 +312,9 @@ td {
     -webkit-appearance: none;
 }
 .ContainerActividades::-webkit-scrollbar:vertical {
-    width:15px;
+    display: none;  /* Ocultar scroll */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    width:12px;     /* Tamaño del scroll en vertical */
 }
 
 .ContainerActividades::-webkit-scrollbar-button:increment,.ContainerActividades::-webkit-scrollbar-button {
@@ -324,7 +326,7 @@ td {
 }
 
 .ContainerActividades::-webkit-scrollbar-thumb {
-    background-color: #797979;
+    background-color: #E1F1FF;
     border-radius: 20px;
     border: 2px solid #f1f2f3;
 }
