@@ -41,7 +41,7 @@ var ret = (passport) => {
     next();
   });
 
-  console.log(datos)
+  // console.log(datos)
   var ver = require('./../../Modelo/Autenticacion/verificar.js')
   require('./get/usuario.js')(rutas, bd, ver);
 
@@ -90,7 +90,7 @@ var ret = (passport) => {
       {
         pagina: 'admin',
         datos
-      }); 
+      });
   });
 
   rutas.get("/filtro/", (req, res) => {
@@ -118,13 +118,13 @@ var ret = (passport) => {
     // req.flash("error", req.app.locals.error[0]);
 
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
-      bd.cruds.crudMembresias.buscarTodo((membresias)=>{
+      bd.cruds.crudMembresias.buscarTodo((membresias) => {
         datos.membresias = membresias;
         datos.iglesias = iglesias;
         datos.user = req.user;
         datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
         // console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
-  
+
         res.render("Paginas/index",
           {
             pagina: 'filtroIglesia',
@@ -134,15 +134,15 @@ var ret = (passport) => {
     })
   })
 
-  rutas.get("/dashboardIglesia/", (req, res) =>{
+  rutas.get("/dashboardIglesia/", (req, res) => {
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
-      bd.cruds.crudMembresias.buscarTodo((membresias)=>{
+      bd.cruds.crudMembresias.buscarTodo((membresias) => {
         datos.membresias = membresias;
         datos.iglesias = iglesias;
         datos.user = req.user;
         datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
         // console.log("Datos de iglesiaaaaaaaaaaaa", datos.membresias)
-  
+
         res.render("Paginas/index",
           {
             pagina: 'dashboardIglesia',
@@ -151,6 +151,22 @@ var ret = (passport) => {
       })
     })
   });
+
+  rutas.get("/Iglesia/:idIglesia/filtro", (req, res) => {
+    bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
+      datos.user = req.user;
+      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+
+      datos.Iglesia = igle;
+      datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
+
+      res.render("Paginas/index",
+        {
+          pagina: 'filtro',
+          datos
+        });
+    })
+  })
 
   rutas.get("/Iglesia/:idIglesia/poa", (req, res) => {
     // req.flash("confirm", req.app.locals.confirm[0]);
