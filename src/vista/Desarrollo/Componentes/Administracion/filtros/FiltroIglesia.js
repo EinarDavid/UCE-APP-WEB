@@ -231,75 +231,11 @@ export const FiltroIglesia = () => {
 
     return (
         <div>
-            {/* <h1>Pagina Iglesia filtro</h1> */}
             <br />
             <br />
             <div>
                 {/* <h1 className='TitleReporte'>Reportes</h1>
                 */}
-                <br />
-                <div className='DashboardContend'>
-                    <div className='CardDisplay'>
-                        <h1 className='TituloGraficos'>Registros</h1>
-                        <div className='CardContend'>
-                            <div className='CardReporte'>
-                                <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                                <p className='ParrafoCardReporte'>Total de Iglesias registradas</p>
-                                <h1 className='NumCardReporte'>{iglesia.length}</h1>
-                            </div>
-
-                            <div className='CardReporte'>
-                                <img src='./Icons/Icons.png' className='ImageCardReporte' ></img>
-                                <p className='ParrafoCardReporte'>Total de miembros registrados</p>
-                                <h1 className='NumCardReporte'>{membresias.length}</h1>
-                            </div>
-
-                        </div>
-                        <div style={{ height: '25px' }} />
-                        <div className='CardContendMiembro'>
-                            <div className='CardMiembroPor'>
-                                {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{ height: '5px' }} />
-                                <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
-                                <h1 className='NumCardReporte'>{contBautizo}</h1>
-                            </div>
-                            <div className='CardMiembroPor'>
-                                {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{ height: '5px' }} />
-                                <p className='ParrafoCardReporte'>Total de miembros por Transferencia</p>
-                                <h1 className='NumCardReporte'>{contTransferencia}</h1>
-                            </div>
-                            <div className='CardMiembroPor'>
-                                {/* <img src='./Icons/Icons.png' className='ImageCardReporte' ></img> */}
-                                <div style={{ height: '5px' }} />
-                                <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
-                                <h1 className='NumCardReporte'>{contSolicitud}</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='GraficoContend'>
-                        <div className='FondoGrafico'>
-                            <h1 className='TituloGraficos'>Miembros por Iglesia</h1>
-                            {/* <br/> */}
-
-                            <ResponsiveContainer width="100%" height={280}>
-                                <BarChart data={iglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-                                    <CartesianGrid stroke="#E1F1FF" strokeDasharray="3 3" />
-                                    <XAxis dataKey="Nombre" />
-                                    <YAxis />
-                                    <Tooltip />
-                                    <Bar dataKey="miembros" fill="#73A9FC" />
-                                </BarChart >
-                            </ResponsiveContainer>
-                        </div>
-                    </div>
-                </div>
-                <div style={{ height: '30px' }} />
-
-
-                {/* GRAFICO */}
-                <GraficoActividad iglesia={iglesia} />
-
                 <div style={{ height: '30px' }} />
                 {
                     (busquedaSeleccionada === 0) ? (

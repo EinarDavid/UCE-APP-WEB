@@ -296,152 +296,17 @@ export const DashboardIglesia = () => {
 
 
                 {/* GRAFICO */}
+                
                 <GraficoActividad iglesia={iglesia} />
 
                 <div style={{ height: '30px' }} />
-                {
-                    (busquedaSeleccionada === 0) ? (
-                        <div className='ContainerButtonReport'>
-                            <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                            <div style={{ width: '25px' }}></div>
-                            <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
-                        </div>) : (
-                        <div className='ContainerButtonReport'>
-                            <button className='ButtonUnselected' onClick={() => { setBusquedaSeleccionada(0) }}>Busqueda de Iglesias</button>
-                            <div style={{ width: '25px' }}></div>
-                            <button className='ButtonSelect' onClick={() => { setBusquedaSeleccionada(1) }}>Busqueda de Miembros</button>
-                        </div>
-                    )
-                }
-
-                <br />
-
-                <form onSubmit={handleSubmit} >
-                    <div className='SearchReporte'>
-                        <div className='TextContainer' >
-                            <label className='TitleInputText'>Ingresa el dato de busqueda</label>
-                            <input type='text'
-                                className='SearchTextInput'
-                                placeholder='Ej. Mayorazgo'
-                                value={inputValue}
-                                onChange={handleInputChange}
-                            ></input>
-                        </div>
-                        {/* <button type='submit' className='ButtonReporte' > BUSCAR </button> */}
-                    </div>
-                </form>
-
-                {/* <br /> */}
-                <div className='Form-filtro'>
-
-                    {
-                        (busquedaSeleccionada === 0) ? (
-                            <Table responsive striped hover>
-                                <thead>
-                                    <tr>
-                                        <th>Nro</th>
-                                        {
-                                            columnasFiltradas.map((columna, i) => (
-                                                <th key={i}>{columna}</th>
-                                            ))
-                                        }
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    {
-                                        listaVisible.map((igle, index) => {
-                                            // console.log('-------', igle.Facebook)
-                                            // console.log('-------Iglesia', igle)
-                                            // 
-                                            // 
-                                            return (
-                                                <tr key={index}>
-                                                    <td>{index + 1}</td>
-                                                    <td>{igle.Nombre}</td>
-                                                    <td>{igle.miembros}</td>
-                                                    <td>{igle.Direccion}</td>
-                                                    <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30} /></a>) : ('')}</td>
-                                                    <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30} /></a>) : ('')}</td>
-                                                    <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
-                                                    <td>{igle.Denominacion}</td>
-
-                                                </tr>
-                                            )
-                                        })
-
-                                    }
-
-
-                                </tbody>
-                            </Table>
-                        ) : (busquedaSeleccionada === 1) ? (
-                            <Table responsive striped hover>
-                                <thead>
-                                    <tr>
-                                        {
-                                            columnasMiembros.map((columna, i) => (
-                                                <th key={i}>{columna}</th>
-                                            ))
-                                        }
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    {
-                                        listaVisibleMiembros.map((miembro, index) => {
-                                            // console.log('-------', miembro)
-                                            // console.log('-------membresia', miembro)
-                                            // 
-                                            // 
-                                            return (
-                                                <tr key={index}>
-                                                    <td>{index + 1}</td>
-                                                    <td>{getNombreIglesia(miembro.Iglesia)}</td>
-                                                    <td>{miembro.Nombre}</td>
-                                                    <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
-                                                    <td>{(miembro.Contacto != null && miembro.Contacto != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${miembro.Contacto}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
-                                                    <td>{miembro.Profesion}</td>
-                                                    <td>{miembro.Ci}</td>
-                                                    <td>{miembro.MiembroPor}</td>
-                                                </tr>
-                                            )
-                                        })
-
-                                    }
-
-
-                                </tbody>
-                            </Table>
-                        ) : (<div>
-                            <h1>Hola</h1>
-                        </div>)
-                    }
-
-
-
-                    {
-                        (busquedaSeleccionada === 0) ? (
-                            <div className="Reportes">
-                                <Button onClick={() => { DescargarExcel() }} variant="outline-light">Descargar</Button>
-                            </div>
-                        ) : (busquedaSeleccionada === 1) ? (
-                            <div className="Reportes">
-                                <Button onClick={() => { DescargarExcelMiembros() }} variant="outline-light">Descargar</Button>
-                            </div>
-                        ) : (
-                            <div>
-                                <h1>Busqueda seleccionada es distinto de 0 y 1</h1>
-                            </div>
-                        )
-
-                    }
-                </div>
+                
             </div>
 
         </div>
     
   )
 }
+
+
+

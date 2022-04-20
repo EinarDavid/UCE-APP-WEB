@@ -92,16 +92,18 @@ export const GraficoActividad = ({ iglesia }) => {
             <div style={{ height: '10px' }} />
             {
                 (!iglesiaSeleccionada) ? (
-                    <ResponsiveContainer width="100%" height={280}>
-
-                        <BarChart data={listaGraficoIglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
-                            <CartesianGrid stroke="#E1F1FF" strokeDasharray="3 3" />
-                            <XAxis dataKey="Nombre" />
-                            <YAxis />
-                            <Tooltip />
-                            <Bar dataKey="CantidadActividades" fill="#73A9FC" />
-                        </BarChart >
-                    </ResponsiveContainer>
+                    <div>
+                        <h1 className='TituloGraficos'>Cantidad de Actividades de las Iglesias</h1>
+                        <ResponsiveContainer width="100%" height={280}>
+                            <BarChart data={listaGraficoIglesia} margin={{ top: 10, right: 30, bottom: 10, left: 0 }}>
+                                <CartesianGrid stroke="#E1F1FF" strokeDasharray="3 3" />
+                                <XAxis dataKey="Nombre" />
+                                <YAxis />
+                                <Tooltip />
+                                <Bar dataKey="CantidadActividades" fill="#00BCD1" />
+                            </BarChart >
+                        </ResponsiveContainer>
+                    </div>
                 ) : (
                     <div className='DashboardContend'>
                         <div className='CardContainerActividades'>
@@ -157,9 +159,9 @@ export const GraficoActividad = ({ iglesia }) => {
                                         <XAxis dataKey="Titulo" />
                                         <YAxis />
                                         <Tooltip />
-                                        <Bar dataKey="ContTeInteresa" fill="#73A9FC" />
-                                        <Bar dataKey="ContAsistire" fill="#73A9FC" />
-                                        <Bar dataKey="ContNoMeIteresa" fill="#73A9FC" />
+                                        <Bar dataKey="ContTeInteresa" fill="#00BCD1" />
+                                        <Bar dataKey="ContAsistire" fill="#00D8AF" />
+                                        <Bar dataKey="ContNoMeIteresa" fill="#9A51E0" />
                                     </BarChart >
                                 </ResponsiveContainer>
 
@@ -170,7 +172,7 @@ export const GraficoActividad = ({ iglesia }) => {
                     </div>)
             }
 
-        </div>
+        </div >
     )
 }
 
