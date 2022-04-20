@@ -71,8 +71,8 @@ export const DashboardIglesia = () => {
         // a must be equal to b
         return 0;
     });
-    console.log('----------', membresias);
-    console.log('Iglesias-------', iglesia);
+    // console.log('----------', membresias);
+    // console.log('Iglesias-------', iglesia);
 
     const [inputValue, setInputValue] = useState('');
 

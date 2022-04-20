@@ -154,17 +154,20 @@ var ret = (passport) => {
 
   rutas.get("/Iglesia/:idIglesia/filtro", (req, res) => {
     bd.cruds.crudIglesia.buscar1(req.params.idIglesia, (igle) => {
-      datos.user = req.user;
-      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+      bd.cruds.crudMembresias.buscarTodo((membresias) => {
+        datos.membresias = membresias;
+        datos.user = req.user;
+        datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
 
-      datos.Iglesia = igle;
-      datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
+        datos.Iglesia = igle;
+        datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
 
-      res.render("Paginas/index",
-        {
-          pagina: 'filtro',
-          datos
-        });
+        res.render("Paginas/index",
+          {
+            pagina: 'filtro',
+            datos
+          });
+      })
     })
   })
 
