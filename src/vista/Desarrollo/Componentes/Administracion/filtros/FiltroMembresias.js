@@ -21,7 +21,33 @@ export const FiltroMembresias = () => {
         TotalMiembros = contador;
     }
     contarMiembros();
-    
+
+    var contBautizo = 0;
+    var contTransferencia = 0;
+    var contSolicitud = 0;
+
+    MiembrosIglesia.forEach(element => {
+        if (element.MiembroBautizo != undefined) {
+            element.MiembroPor = 'Bautizo';
+            contBautizo += 1;
+        } else if (element.MiembroTransferencia != undefined) {
+            element.MiembroPor = 'Transferencia';
+            contTransferencia += 1;
+        } else if (element.MiembroSolicitud != undefined) {
+            element.MiembroPor = 'Solicitud';
+            contSolicitud += 1;
+        }
+    });
+    MiembrosIglesia.sort(function (a, b) {
+        if (a.NombreIglesia > b.NombreIglesia) {
+            return 1;
+        }
+        if (a.NombreIglesia < b.NombreIglesia) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
     console.log('----------', MiembrosIglesia);
 
     return (
@@ -38,18 +64,18 @@ export const FiltroMembresias = () => {
                 <div className='CardReporte4'>
                     <img src='../../Icons/Icons.png' className='ImageCardReporte' ></img>
                     <p className='ParrafoCardReporte'>Total de miembros por Bautizo</p>
-                    <h1 className='NumCardReporte'>10</h1>
+                    <h1 className='NumCardReporte'>{contBautizo}</h1>
                 </div>
 
                 <div className='CardReporte4'>
                     <img src='../../Icons/Icons.png' className='ImageCardReporte' ></img>
                     <p className='ParrafoCardReporte'>Total de miembros por Transferencia</p>
-                    <h1 className='NumCardReporte'>10</h1>
+                    <h1 className='NumCardReporte'>{contTransferencia}</h1>
                 </div>
                 <div className='CardReporte4'>
                     <img src='../../Icons/Icons.png' className='ImageCardReporte' ></img>
                     <p className='ParrafoCardReporte'>Total de miembros por Solicitud</p>
-                    <h1 className='NumCardReporte'>10</h1>
+                    <h1 className='NumCardReporte'>{contSolicitud}</h1>
                 </div>
             </div>
         </div>
