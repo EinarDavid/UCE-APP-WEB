@@ -11,17 +11,15 @@ export const FiltroMembresias = () => {
     var TotalMiembros= 0;
 
     const contarMiembros = () => {
-
         var contador = 0;
         membresias.forEach(miembro => {
-            if (window.datos.user._id === miembro.Iglesia) {
+            if (window.datos.user.Iglesia === miembro.Iglesia) {
                 contador += 1;
             }
         });
         TotalMiembros = contador;
-
     }
-    // contarMiembros();
+    contarMiembros();
 
     return (
         <div>
@@ -32,7 +30,7 @@ export const FiltroMembresias = () => {
                 <div className='CardReporte4'>
                     <img src='../../Icons/Icons.png' className='ImageCardReporte' ></img>
                     <p className='ParrafoCardReporte'>Total de miembros registrados</p>
-                    <h1 className='NumCardReporte'>10</h1>
+                    <h1 className='NumCardReporte'>{TotalMiembros}</h1>
                 </div>
                 <div className='CardReporte4'>
                     <img src='../../Icons/Icons.png' className='ImageCardReporte' ></img>
