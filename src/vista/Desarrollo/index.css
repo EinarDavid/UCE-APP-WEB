@@ -23,17 +23,22 @@ code {
   
 }
 *::-webkit-scrollbar {
+  -webkit-appearance: none;
+  
+}
+.ContainerActividades::-webkit-scrollbar:vertical {
   width: 12px;
   padding-right: 2px;
 }
-*::-webkit-scrollbar-track {
+*::-webkit-scrollbar-button:increment, *::-webkit-scrollbar-button {
+  display: none;
+} 
+
+/* *::-webkit-scrollbar-track {
   background: transparent;
-}
+} */
 *::-webkit-scrollbar-thumb {
   background-color: #514560;
   border-radius: 20px;
   /* border: 2px solid #f1f2f3; */
 }
-*::-webkit-scrollbar-button:increment, *::-webkit-scrollbar-button {
-  display: none;
-} 
