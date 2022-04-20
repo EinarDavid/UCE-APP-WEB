@@ -51,16 +51,58 @@ export const FiltroMembresias = () => {
     });
 
     const [inputValue, setInputValue] = useState('');
-    
+    const [listaVisibleMiembros, setlistaVisibleMiembros] = useState(MiembrosIglesia);
+
+    const columnasMiembros = ['Nro', 'Nombre', 'Apellidos', 'Contacto', 'Profesión', 'C.I.', 'Miembro por'];
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+
+        const result = [];
+
+        if (e.target.value.trim().length > 0) {
+            MiembrosIglesia.forEach(element => {
+                var stringunido = '';
+
+                if (element.NombreIglesia != '')
+                    stringunido += element.NombreIglesia + ' ';
+                if (element.Nombre != null)
+                    stringunido += element.Nombre + ' ';
+                if (element.Apellido_Paterno != null)
+                    stringunido += element.Apellido_Paterno + ' ';
+                if (element.Apellido_Materno != null)
+                    stringunido += element.Apellido_Materno + ' ';
+                if (element.Contacto != null)
+                    stringunido += element.Contacto + ' ';
+                if (element.Profesion != null)
+                    stringunido += element.Profesion + ' ';
+                if (element.Ci != null)
+                    stringunido += element.Ci + ' ';
+                if (element.MiembroPor != null)
+                    stringunido += element.MiembroPor;
+                // console.log('Valor del texto------', stringunido);
+
+                if (stringunido.toLowerCase().match(e.target.value.toLowerCase()) !== null) {
+                    result.push(element);
+                }
+            });
+
+
+            setlistaVisibleMiembros(result);
+        } else {
+            setlistaVisibleMiembros(MiembrosIglesia);
+        }
+
+
+
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         // console.log('handleSubmit', inputValue)
         if (inputValue.trim().length > 2) {
             setInputValue('');
         }
-
     }
 
     console.log('----------', MiembrosIglesia);
@@ -104,12 +146,51 @@ export const FiltroMembresias = () => {
                             className='SearchTextInput'
                             placeholder='Ej. Villarroel'
                             value={inputValue}
-                            // onChange={handleInputChange}
+                            onChange={handleInputChange}
                         ></input>
                     </div>
                     {/* <button type='submit' className='ButtonReporte' > BUSCAR </button> */}
                 </div>
             </form>
+            <div className='Form-filtro'>
+                <Table responsive striped hover>
+                    <thead>
+                        <tr>
+                            {
+                                columnasMiembros.map((columna, i) => (
+                                    <th key={i}>{columna}</th>
+                                ))
+                            }
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {
+                            listaVisibleMiembros.map((miembro, index) => {
+                                // console.log('-------', miembro)
+                                // console.log('-------membresia', miembro)
+                            
+                                {/* <td>{getNombreIglesia(miembro.Iglesia)}</td> */}
+                                return (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td>{miembro.Nombre}</td>
+                                        <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
+                                        <td>{(miembro.Contacto != null && miembro.Contacto != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${miembro.Contacto}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
+                                        <td>{miembro.Profesion}</td>
+                                        <td>{miembro.Ci}</td>
+                                        <td>{miembro.MiembroPor}</td>
+                                    </tr>
+                                )
+                            })
+
+                        }
+
+
+                    </tbody>
+                </Table>
+            </div>
         </div>
     )
 }
