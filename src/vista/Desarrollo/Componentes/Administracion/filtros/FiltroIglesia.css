@@ -312,7 +312,7 @@ td {
     -webkit-appearance: none;
 }
 .ContainerActividades::-webkit-scrollbar:vertical {
-    width:10px;
+    width:15px;
 }
 
 .ContainerActividades::-webkit-scrollbar-button:increment,.ContainerActividades::-webkit-scrollbar-button {
