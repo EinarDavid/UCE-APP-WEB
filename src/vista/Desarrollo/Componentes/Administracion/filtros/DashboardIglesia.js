@@ -299,7 +299,7 @@ export const DashboardIglesia = () => {
                 
                 <GraficoActividad iglesia={iglesia} />
 
-                <div style={{ height: '30px' }} />
+                {/* <div style={{ height: '30px' }} /> */}
                 
             </div>
 
