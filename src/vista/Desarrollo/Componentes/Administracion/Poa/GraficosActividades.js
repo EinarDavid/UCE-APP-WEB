@@ -11,40 +11,38 @@ export const GraficosActividades = () => {
     const ActualizarGrafico = () => {
 
         var Actividad = [];
-        iglesia.forEach(element => {
 
-            element.Actividades.forEach(act => {
-                var ContTeInteresa = 0;
-                var ContAsistire = 0;
-                var ContNoMeIteresa = 0;
+        iglesia.Actividades.forEach(act => {
+            var ContTeInteresa = 0;
+            var ContAsistire = 0;
+            var ContNoMeIteresa = 0;
 
-                act.AsistenciaActividad.forEach(asistencia => {
-                    if (asistencia.Estado == '1') {
-                        ContTeInteresa += 1;
-                    } else if (asistencia.Estado == '2') {
-                        ContAsistire += 1;
-                    } else if (asistencia.Estado == '3') {
-                        ContNoMeIteresa += 1;
-                    }
-                });
-
-                Actividad.push({
-                    Id: act._id,
-                    Titulo: act.Titulo,
-                    FotoActividad: act.FotoActividad,
-
-                    ContTeInteresa: ContTeInteresa,
-                    ContAsistire: ContAsistire,
-                    ContNoMeIteresa: ContNoMeIteresa,
-
-                })
+            act.AsistenciaActividad.forEach(asistencia => {
+                if (asistencia.Estado == '1') {
+                    ContTeInteresa += 1;
+                } else if (asistencia.Estado == '2') {
+                    ContAsistire += 1;
+                } else if (asistencia.Estado == '3') {
+                    ContNoMeIteresa += 1;
+                }
             });
 
+            Actividad.push({
+                Id: act._id,
+                Titulo: act.Titulo,
+                FotoActividad: act.FotoActividad,
 
+                ContTeInteresa: ContTeInteresa,
+                ContAsistire: ContAsistire,
+                ContNoMeIteresa: ContNoMeIteresa,
+
+            })
         });
+
         setGraficoVisible(Actividad);
 
     }
+    
     useEffect(() => {
         ActualizarGrafico();
     }, [])
