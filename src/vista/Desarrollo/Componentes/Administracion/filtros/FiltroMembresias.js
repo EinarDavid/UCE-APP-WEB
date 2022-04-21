@@ -88,15 +88,10 @@ export const FiltroMembresias = () => {
                     result.push(element);
                 }
             });
-
-
             setlistaVisibleMiembros(result);
         } else {
             setlistaVisibleMiembros(MiembrosIglesia);
         }
-
-
-
     }
 
     const handleSubmit = (e) => {
@@ -105,6 +100,34 @@ export const FiltroMembresias = () => {
         if (inputValue.trim().length > 2) {
             setInputValue('');
         }
+    }
+
+    const DescargarExcelMiembros = () => {
+        const XLSX = require('xlsx')
+
+        // array of objects to save in Excel
+        let binary_univers = listaVisibleMiembros;
+        let listaDescargable = [];
+
+        binary_univers.forEach(element => {
+            listaDescargable.push({
+                Nombre: element.Nombre, Apellido_Paterno: element.Apellido_Paterno, Apellido_Materno: element.Apellido_Materno, Ci: element.Ci,
+                Contacto: element.Contacto, Direccion: element.Direccion, Email: element.Email, Estado_Civil: element.Estado_Civil,
+                Fecha_Nacimiento: element.Fecha_Nacimiento, Genero: element.Genero, Lugar_Nacimiento: element.Lugar_Nacimiento,
+                Profesion: element.Profesion
+            })
+        });
+
+        let binaryWS = XLSX.utils.json_to_sheet(listaDescargable);
+
+        // Create a new Workbook
+        var wb = XLSX.utils.book_new()
+
+        // Name your sheet
+        XLSX.utils.book_append_sheet(wb, binaryWS, 'Membresias')
+
+        // export your excel
+        XLSX.writeFile(wb, 'Membresias.xlsx');
     }
 
     console.log('----------', MiembrosIglesia);
@@ -172,8 +195,8 @@ export const FiltroMembresias = () => {
                             listaVisibleMiembros.map((miembro, index) => {
                                 // console.log('-------', miembro)
                                 // console.log('-------membresia', miembro)
-                            
-                                {/* <td>{getNombreIglesia(miembro.Iglesia)}</td> */}
+
+                                {/* <td>{getNombreIglesia(miembro.Iglesia)}</td> */ }
                                 return (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
@@ -189,9 +212,11 @@ export const FiltroMembresias = () => {
 
                         }
 
-
                     </tbody>
                 </Table>
+                <div className="Reportes">
+                    <Button onClick={() => { DescargarExcelMiembros() }} variant="outline-light">Descargar</Button>
+                </div>
             </div>
         </div>
     )
