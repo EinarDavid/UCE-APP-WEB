@@ -6,6 +6,7 @@ export const GraficosActividades = () => {
 
     const [graficoVisible, setGraficoVisible] = useState([]);
     const iglesia = window.datos.Iglesia;
+    console.log('----', iglesia);
 
     const ActualizarGrafico = () => {
 

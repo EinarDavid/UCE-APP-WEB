@@ -284,7 +284,7 @@
 .photogallery-images-frame {
   height: 150px;
   display: inline-block;
-  float: left;
+  /* float: left; */
   width: auto;
   height: 150px;
   background-color: #fff;
