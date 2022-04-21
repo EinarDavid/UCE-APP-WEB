@@ -53,6 +53,7 @@ export const GraficosActividades = () => {
         <div>
             <br/>
             <br/>
+            <br/>
             <div className='DashboardContend'>
                 <div className='CardContainerActividades'>
                     <div className='ContainerActividades'>
