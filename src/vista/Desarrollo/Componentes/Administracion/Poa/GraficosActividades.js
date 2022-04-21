@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Table, Form, Col, Button } from 'react-bootstrap';
 import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar } from 'recharts';
 
+import '../filtros/FiltroIglesia.css';
+
 export const GraficosActividades = () => {
 
     const [graficoVisible, setGraficoVisible] = useState([]);
@@ -42,7 +44,7 @@ export const GraficosActividades = () => {
         setGraficoVisible(Actividad);
 
     }
-    
+
     useEffect(() => {
         ActualizarGrafico();
     }, [])
