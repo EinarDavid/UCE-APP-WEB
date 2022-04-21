@@ -51,6 +51,8 @@ export const GraficosActividades = () => {
 
     return (
         <div>
+            <br/>
+            <br/>
             <div className='DashboardContend'>
                 <div className='CardContainerActividades'>
                     <div className='ContainerActividades'>
@@ -65,21 +67,21 @@ export const GraficosActividades = () => {
                                             <div className='CantAsistencia'>
                                                 <div className='ContAsistencia'>
                                                     <div className='Icon-Text'>
-                                                        <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
+                                                        <img src='../../Icons/Icons.png' className='ImageCardActividad' ></img>
                                                         <p className='NumAsistencia'>{actividad.ContAsistire}</p>
                                                     </div>
                                                     <p className='EstadoCard'>Asistiran</p>
                                                 </div>
                                                 <div className='ContAsistencia'>
                                                     <div className='Icon-Text'>
-                                                        <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
+                                                        <img src='../../Icons/Icons.png' className='ImageCardActividad' ></img>
                                                         <p className='NumAsistencia'>{actividad.ContTeInteresa}</p>
                                                     </div>
                                                     <p className='EstadoCard'>Les interesa</p>
                                                 </div>
                                                 <div className='ContAsistencia'>
                                                     <div className='Icon-Text'>
-                                                        <img src='./Icons/Icons.png' className='ImageCardActividad' ></img>
+                                                        <img src='../../Icons/Icons.png' className='ImageCardActividad' ></img>
                                                         <p className='NumAsistencia'>{actividad.ContNoMeIteresa}</p>
                                                     </div>
                                                     <p className='EstadoCard'>No les interesa</p>
