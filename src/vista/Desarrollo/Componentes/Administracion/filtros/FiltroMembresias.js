@@ -66,8 +66,8 @@ export const FiltroMembresias = () => {
             MiembrosIglesia.forEach(element => {
                 var stringunido = '';
 
-                if (element.NombreIglesia != '')
-                    stringunido += element.NombreIglesia + ' ';
+                // if (element.NombreIglesia != '')
+                //     stringunido += element.NombreIglesia + ' ';
                 if (element.Nombre != null)
                     stringunido += element.Nombre + ' ';
                 if (element.Apellido_Paterno != null)
@@ -114,7 +114,7 @@ export const FiltroMembresias = () => {
                 Nombre: element.Nombre, Apellido_Paterno: element.Apellido_Paterno, Apellido_Materno: element.Apellido_Materno, Ci: element.Ci,
                 Contacto: element.Contacto, Direccion: element.Direccion, Email: element.Email, Estado_Civil: element.Estado_Civil,
                 Fecha_Nacimiento: element.Fecha_Nacimiento, Genero: element.Genero, Lugar_Nacimiento: element.Lugar_Nacimiento,
-                Profesion: element.Profesion
+                Profesion: element.Profesion, MiembroPor: element.MiembroPor, Fecha_Bautizo:element.Fecha_Bautizo,
             })
         });
 
