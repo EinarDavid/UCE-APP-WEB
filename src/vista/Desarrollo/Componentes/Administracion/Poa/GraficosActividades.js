@@ -33,6 +33,7 @@ export const GraficosActividades = () => {
                 Id: act._id,
                 Titulo: act.Titulo,
                 FotoActividad: act.FotoActividad,
+                Inicio: act.Inicio ,
 
                 ContTeInteresa: ContTeInteresa,
                 ContAsistire: ContAsistire,
