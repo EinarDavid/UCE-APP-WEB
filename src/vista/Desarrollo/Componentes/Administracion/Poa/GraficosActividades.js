@@ -65,7 +65,7 @@ export const GraficosActividades = () => {
                                     <div className='ListActividad' key={actividad.Id} >
                                         <img src={'/fotos/Iglesias/Actividad/' + actividad.FotoActividad} className='ImageActividad' ></img>
                                         <div className='DescriptionActividad'>
-                                            <p className='TitleActividad'>{actividad.Titulo+ " " +actividad.Inicio}</p>
+                                            <p className='TitleActividad'>{actividad.Titulo+ ": " +actividad.Inicio}</p>
                                             <div className='CantAsistencia'>
                                                 <div className='ContAsistencia'>
                                                     <div className='Icon-Text'>
