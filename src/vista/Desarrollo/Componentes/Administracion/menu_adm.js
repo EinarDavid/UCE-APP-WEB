@@ -370,7 +370,7 @@ class Menu_Admi extends React.Component {
                 <Modal size="lg" show={this.state.show9} onHide={this.handleClose} centered>
                     <Form action="/Registro/Usuario" method="post" >
                         <Modal.Header closeButton>
-                            <Modal.Title>Registro de Usuario</Modal.Title>
+                            <Modal.Title>Registro de Personal</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <Registro_Usario />

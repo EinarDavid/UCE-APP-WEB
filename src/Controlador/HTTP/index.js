@@ -224,7 +224,7 @@ var ret = (passport) => {
         datos.Iglesia.FotosSlider = (datos.Iglesia.FotosSlider == undefined) ? [] : datos.Iglesia.FotosSlider;
         var pag = "";
 
-        if (req.user.Cargo == "Administrador") {
+        if (req.user.Cargo == "Administrador" || req.user.Cargo == "Pastor") {
           pag = "vistaAdministracion";
         }
         else {

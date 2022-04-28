@@ -15,7 +15,7 @@ class Formulario extends Component {
 
             <div className="Form-registro">
 
-                <Form.Row> 
+                <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>CI*</Form.Label>
                         <Form.Control type="number" placeholder="CI" name="Ci" required />
@@ -25,8 +25,9 @@ class Formulario extends Component {
                     <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
                         <Form.Label>Cargo</Form.Label>
                         <Form.Control as="select" name="Cargo">
-                            <option value="Administrador">Administrador</option>
-                            <option value="Secretaria">Secretaria</option>
+                            <option value="Pastor">Pastor</option>
+                            <option value="Administrador">Administrador@</option>
+                            
                         </Form.Control>
                     </Form.Group>
                 </Form.Row>
