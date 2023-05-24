@@ -1037,6 +1037,8 @@ text-align: left;
 /* Modal CSS*/
 .Actividad-contenedor{
   background-color: #fff;
+  width: 100%;
+  
 }
 .Actividad-contenedor h2{
   font-family: 'Gotham Medium';
@@ -1053,7 +1055,8 @@ text-align: left;
 .Activity-FullCalendar{
   display: inline-flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  width: 100%;
 }
 
 .Activity-FullCalendar img{
@@ -1061,10 +1064,13 @@ text-align: left;
 }
 .Cotenedor-image{
   text-align: center;
-  width: 50%;
+  width: 38%;
 }
 .Contenedor-Contenido{
-  width: 48%;
+  width: 60%;
+  /* background-color: red; */
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /*

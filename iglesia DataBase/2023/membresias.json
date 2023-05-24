@@ -1,0 +1,249 @@
+[{
+  "_id": {
+    "$oid": "624c5412a73165aade1ef67a"
+  },
+  "Ci": 9367495,
+  "Nombre": "Jony",
+  "Contraseña": "$2y$10$7aKVCOxIl/6aZH9aQd03Y.dgZWNCCcUtQX1Sm9EWBEH25xs3qznLC",
+  "Apellido_Materno": "Pita",
+  "Apellido_Paterno": "Marca",
+  "Contacto": "75495664",
+  "Direccion": "",
+  "Email": "",
+  "Estado_Civil": "Casad@",
+  "Fecha_Nacimiento": "",
+  "Genero": "Masculino",
+  "Lugar_Nacimiento": "",
+  "Profesion": "Pastor",
+  "FotoPerfil": "FotoPerfil-1679696580617.png"
+},{
+  "_id": {
+    "$oid": "624c5aec95d5e442fe0979ff"
+  },
+  "Ci": "9367497",
+  "Iglesia": "624c566795d5e442fe0979fe",
+  "Contraseña": "$2a$10$uJ5ahauhaSB2V4jhbGK5t.DPRE4R4xzXUIHRlesprmfrNX1c3j0ZK",
+  "Cargo": "Administrador",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0,
+  "Apellido_Materno": "Flores",
+  "Apellido_Paterno": "Velasco",
+  "Contacto": "63947125",
+  "Direccion": "Heroinas",
+  "Email": "gabo@gmail.com",
+  "Estado_Civil": "Solter@",
+  "Fecha_Nacimiento": "",
+  "Genero": "Masculino",
+  "Lugar_Nacimiento": "",
+  "Nombre": "Gabriel Alberto",
+  "Profesion": "Pastor",
+  "FotoPerfil": "FotoPerfil-1650484751198.png"
+},{
+  "_id": {
+    "$oid": "624c655095d5e442fe097a00"
+  },
+  "Ci": "7179763",
+  "Contraseña": "$2a$10$xu7AaHoW3pKYOGwS8tgFV.SeaQ06iAyDck5W3kvq7t5mj718sHLRi",
+  "Nombre": "Felipe",
+  "Apellido_Paterno": "Renjifo",
+  "Apellido_Materno": "",
+  "Genero": "Masculino",
+  "Contacto": "",
+  "Email": "",
+  "Fecha_Nacimiento": "",
+  "Lugar_Nacimiento": "",
+  "Numero_Registro_Civil": "",
+  "Profesion": "Administrador de Empresas",
+  "Direccion": "",
+  "Estado_Civil": "Solter@",
+  "Cargo_Ministerial": "Superintendencia",
+  "Fecha_Bautizo": "2022-01-05",
+  "MiembroBautizo": {
+    "_id": {
+      "$oid": "624c655095d5e442fe097a01"
+    },
+    "Lugar_Bautizo": "Punata"
+  },
+  "Iglesia": "624c566795d5e442fe0979fe",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624c763f8bbc1944f84cdf01"
+  },
+  "Ci": "7935302",
+  "Contraseña": "$2a$10$oSAN5dEJZ.p48JEbJEnwDOVQHwe/1mn7F4vsya9LIVt1Fxg5ctNdm",
+  "Nombre": "Maria Elena",
+  "Apellido_Paterno": "Rojas",
+  "Apellido_Materno": "Clemente",
+  "Genero": "Femenino",
+  "Contacto": "",
+  "Email": "",
+  "Fecha_Nacimiento": "",
+  "Lugar_Nacimiento": "",
+  "Numero_Registro_Civil": "",
+  "Profesion": "",
+  "Direccion": "",
+  "Estado_Civil": "Solter@",
+  "Cargo_Ministerial": "Ninguno",
+  "Fecha_Bautizo": "2022-02-06",
+  "MiembroTransferencia": {
+    "_id": {
+      "$oid": "624c763f8bbc1944f84cdf02"
+    },
+    "Carta_Transferencia": "",
+    "Iglesia_Salida": "624c75388bbc1944f84cdefd",
+    "Fecha_Transferencia": "2022-04-05"
+  },
+  "Iglesia": "624c566795d5e442fe0979fe",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624c76e48bbc1944f84cdf05"
+  },
+  "Ci": "7435591",
+  "Contraseña": "$2a$10$IVt7uyKSHXb89QdfC39K2eYnGNs9l5foSg0PdLBVOwR7exGVFTAZa",
+  "Nombre": "Rosario Cassia",
+  "Apellido_Paterno": "Solano",
+  "Apellido_Materno": "",
+  "Genero": "Femenino",
+  "Contacto": "",
+  "Email": "",
+  "Fecha_Nacimiento": "",
+  "Lugar_Nacimiento": "",
+  "Numero_Registro_Civil": "",
+  "Profesion": "",
+  "Direccion": "",
+  "Estado_Civil": "Casad@",
+  "Cargo_Ministerial": "Diacono",
+  "Fecha_Bautizo": "2022-02-06",
+  "MiembroSolicitud": {
+    "_id": {
+      "$oid": "624c76e48bbc1944f84cdf06"
+    }
+  },
+  "Iglesia": "624c566795d5e442fe0979fe",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624cfc83f9d24e50030f72ce"
+  },
+  "Ci": "9367494",
+  "Iglesia": "624c75388bbc1944f84cdefd",
+  "Contraseña": "$2a$10$ywmmF7ZCK2tYNdZVyV0agO/abYK566VNflMea7OYmArB62H0DVUoq",
+  "Cargo": "Administrador",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0,
+  "Apellido_Materno": "Ramos",
+  "Apellido_Paterno": "Colque",
+  "Contacto": "",
+  "Direccion": "",
+  "Email": "",
+  "Estado_Civil": "Solter@",
+  "Fecha_Nacimiento": "",
+  "Genero": "Masculino",
+  "Lugar_Nacimiento": "",
+  "Nombre": "Milercito",
+  "Profesion": "Pastor"
+},{
+  "_id": {
+    "$oid": "624cfd66f9d24e50030f72f3"
+  },
+  "Ci": "9367496",
+  "Iglesia": "624cfccdf9d24e50030f72e4",
+  "Contraseña": "$2a$10$qyKdpmGDSXTEWaU04hHq4uVoWW9g0QUwtWvTqvouSX.jU8QKj0M3m",
+  "Cargo": "Administrador",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624cfe7cf9d24e50030f730f"
+  },
+  "Ci": "7271998",
+  "Contraseña": "$2a$10$Lyca82YWONn0sejUMQiUu.wUoX/WL0LsHoMsWoZunXr.dP4YIrJ/a",
+  "Nombre": "Zulma",
+  "Apellido_Paterno": "Hurtado",
+  "Apellido_Materno": "Barrancos",
+  "Genero": "Femenino",
+  "Contacto": "",
+  "Email": "",
+  "Fecha_Nacimiento": "",
+  "Lugar_Nacimiento": "",
+  "Numero_Registro_Civil": "",
+  "Profesion": "Comerciante",
+  "Direccion": "",
+  "Estado_Civil": "Solter@",
+  "Cargo_Ministerial": "Ninguno",
+  "Fecha_Bautizo": "2022-02-06",
+  "MiembroBautizo": {
+    "_id": {
+      "$oid": "624cfe7cf9d24e50030f7310"
+    },
+    "Lugar_Bautizo": ""
+  },
+  "Iglesia": "624c75388bbc1944f84cdefd",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624f16a2f5ab996773accfc8"
+  },
+  "Ci": "9367498",
+  "Iglesia": "624f0b92f5ab996773accf9b",
+  "Contraseña": "$2a$10$OwXi50sPI1bzZHHKrpWQbe9R3/D61/eixYKxTYpGNtJDOHn7XYhom",
+  "Cargo": "Administrador",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624f16f2f5ab996773accfd9"
+  },
+  "Ci": "9367499",
+  "Iglesia": "624cfca9f9d24e50030f72d9",
+  "Contraseña": "$2a$10$t09rg9Xix.rYNSPNo0kEHOjzMV8BQwA5ilJ8afxjSbv24M/NuKxr2",
+  "Cargo": "Administrador",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62853e4158211a3481137fd8"
+  },
+  "Ci": "9304431",
+  "Contraseña": "$2a$10$KX00h9w.vFFNmaJzLlZZY.ipfk8shC2RxtJYHk/MNkgHDVdAQUoXe",
+  "Nombre": "Jaquelin",
+  "Apellido_Paterno": "Mamani",
+  "Apellido_Materno": "Vizalla",
+  "Genero": "Femenino",
+  "Contacto": "",
+  "Email": "",
+  "Fecha_Nacimiento": "",
+  "Lugar_Nacimiento": "",
+  "Numero_Registro_Civil": "",
+  "Profesion": "Admistradora",
+  "Direccion": "",
+  "Estado_Civil": "Solter@",
+  "Cargo_Ministerial": "Ninguno",
+  "Fecha_Bautizo": "2022-05-08",
+  "MiembroBautizo": {
+    "_id": {
+      "$oid": "62853e4158211a3481137fd9"
+    },
+    "Lugar_Bautizo": "Punata"
+  },
+  "Iglesia": "624c75388bbc1944f84cdefd",
+  "Disciplina": [],
+  "Hijos": [],
+  "__v": 0,
+  "Cargo": "Administrador"
+}]

@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require("mongoose");
 var MongoDBStore = require('connect-mongodb-session')(session);
 
+
 var app = express();
 
 var puerto = "7000";

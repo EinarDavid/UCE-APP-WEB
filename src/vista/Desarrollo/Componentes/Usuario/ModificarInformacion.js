@@ -9,7 +9,7 @@ class Formulario extends Component {
 
                     <Form.Row>
                         <Form.Group as={Col} >
-                            <Form.Label>Nombre*</Form.Label>
+                            <Form.Label>Nombres*</Form.Label>
                             <Form.Control type="text" placeholder="Nombre" name="Nombre" required defaultValue={window.datos.user.Nombre} />
                         </Form.Group>
                         <Form.Group as={Col} >

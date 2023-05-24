@@ -99,6 +99,8 @@ function peticion() {
 
         });
 
+
+
         this.rutas.post("/Registrar/Actividad/Todo", ver.verificar, (req, res) => {
             upload2(req, res, function (err) {
                 if (err) {
@@ -120,7 +122,9 @@ function peticion() {
                                     Titulo: req.body.Titulo,
                                     Descripcion: req.body.Descripcion,
                                     Inicio: req.body.Inicio,
+                                    HoraInicio: req.body.HoraInicio,
                                     Fin: req.body.Fin,
+                                    HoraFin: req.body.HoraFin,
                                     Departamento: req.body.Departamento,
                                     Area: req.body.Area,
                                     Presupuesto: req.body.Presupuesto,
@@ -162,7 +166,9 @@ function peticion() {
                                 Titulo: req.body.Titulo,
                                 Descripcion: req.body.Descripcion,
                                 Inicio: req.body.Inicio,
+                                HoraInicio: req.body.HoraInicio,
                                 Fin: req.body.Fin,
+                                HoraFin: req.body.HoraFin,
                                 Departamento: req.body.Departamento,
                                 Area: req.body.Area,
                                 Presupuesto: req.body.Presupuesto,
@@ -180,5 +186,32 @@ function peticion() {
             });
 
         });
+
+        this.rutas.post("/Editar/Actividad/:id", (req, res) =>{
+            try {
+                console.log("editar----------------")
+                console.log( req.body, req.params)
+
+                bd.cruds.crudIglesia.buscar1(req.user.Iglesia, (iglesia) =>{
+                    //console.log("Iglesia", iglesia)
+                    iglesia.Actividades = iglesia.Actividades.map((a, index) =>{
+                        if(a._id == req.params.id){
+                            a.Asistencia = req.body.Asistencia
+                            a.Resultado = req.body.Resultado
+                        }
+                        console.log("------------", a)
+                        return a;
+                    });
+                    //console.log("-------igleActividad", iglesia.Actividades)
+                    bd.cruds.crudIglesia.modificar(iglesia._id, iglesia, () => {
+                        //console.log("ress--------------",iglesia.Actividades)
+                        res.redirect("back")
+                    })
+                });
+                
+            } catch (error) {
+                
+            }
+        })
     }
 }

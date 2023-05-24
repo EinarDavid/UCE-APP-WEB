@@ -23,10 +23,14 @@ const actividadSchema = Schema({
     Titulo: String,
     Descripcion: String,
     Inicio: String,
+    HoraInicio: String,
     Fin: String,
+    HoraFin: String,
     Departamento: String,
     Area:String,
     Presupuesto: Number,
+    Asistencia: Number,
+    Resultado: String,
 
     FotosUsuario:[fotosUsuarioSchema],
     AsistenciaActividad: [asistenciaActividadSchema]

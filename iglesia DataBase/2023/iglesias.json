@@ -1,0 +1,1025 @@
+[{
+  "_id": {
+    "$oid": "624c566795d5e442fe0979fe"
+  },
+  "Fotos": [
+    "624c566795d5e442fe0979fe - 1650422151649.jpg",
+    "624c566795d5e442fe0979fe - 1650422153795.jpg",
+    "624c566795d5e442fe0979fe - 1650422155560.jpg",
+    "624c566795d5e442fe0979fe - 1650422157399.jpg",
+    "624c566795d5e442fe0979fe - 1650422158889.jpg",
+    "624c566795d5e442fe0979fe - 1650422160625.jpg",
+    "624c566795d5e442fe0979fe - 1650422162649.jpg",
+    "624c566795d5e442fe0979fe - 1650422164590.jpg"
+  ],
+  "FotosSlider": [
+    "624c566795d5e442fe0979fe - 1650422229551.jpg",
+    "624c566795d5e442fe0979fe - 1650422231483.jpg",
+    "624c566795d5e442fe0979fe - 1650422233223.jpg",
+    "624c566795d5e442fe0979fe - 1650422234648.jpg"
+  ],
+  "Cargos": [],
+  "Nombre": "La Palabra de Fe",
+  "Direccion": "Raul General Prada (Cruce Taquiña)",
+  "Actividades": [
+    {
+      "_id": {
+        "$oid": "6269f695cfc13c2d5b3e5d95"
+      },
+      "Codigo": "279f04",
+      "FotoActividad": "undefined - 1651111570175.jpg",
+      "Titulo": "Reu de Jovenes",
+      "Descripcion": "#CruzIgualAmor | Sábado 17:30 Hrs",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [
+        {
+          "_id": {
+            "$oid": "6269fcadcfc13c2d5b3e5e8e"
+          },
+          "Fotos": "1651113132485.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fccfcfc13c2d5b3e5ea3"
+          },
+          "Fotos": "1651113166379.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fce9cfc13c2d5b3e5eb9"
+          },
+          "Fotos": "1651113192383.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd01cfc13c2d5b3e5ed0"
+          },
+          "Fotos": "1651113217060.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd25cfc13c2d5b3e5ee8"
+          },
+          "Fotos": "1651113252502.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd35cfc13c2d5b3e5f01"
+          },
+          "Fotos": "1651113268163.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd4ccfc13c2d5b3e5f1b"
+          },
+          "Fotos": "1651113291810.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd68cfc13c2d5b3e5f36"
+          },
+          "Fotos": "1651113319979.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd70cfc13c2d5b3e5f52"
+          },
+          "Fotos": "1651113328002.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fd7dcfc13c2d5b3e5f6f"
+          },
+          "Fotos": "1651113340766.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        }
+      ],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "6269faf9cfc13c2d5b3e5e0c"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        },
+        {
+          "_id": {
+            "$oid": "626a0216cfc13c2d5b3e620d"
+          },
+          "Id_miembro": "624c655095d5e442fe097a00",
+          "Estado": "1"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "6269f7c9cfc13c2d5b3e5dbf"
+      },
+      "Codigo": "b2443d",
+      "FotoActividad": "624c566795d5e442fe0979fe - 1651111878307.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "¡Este viernes, no te lo pierdas.!!!",
+      "Inicio": "2022-06-03",
+      "Fin": "2022-06-03",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [
+        {
+          "_id": {
+            "$oid": "6269fb76cfc13c2d5b3e5e1a"
+          },
+          "Fotos": "1651112821652.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fb77cfc13c2d5b3e5e28"
+          },
+          "Fotos": "1651112822964.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fb77cfc13c2d5b3e5e37"
+          },
+          "Fotos": "1651112823504.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fb78cfc13c2d5b3e5e47"
+          },
+          "Fotos": "1651112824042.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fb78cfc13c2d5b3e5e58"
+          },
+          "Fotos": "1651112824592.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269fb79cfc13c2d5b3e5e6a"
+          },
+          "Fotos": "1651112825143.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        }
+      ],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "6269fafdcfc13c2d5b3e5e0e"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        },
+        {
+          "_id": {
+            "$oid": "626a021acfc13c2d5b3e620f"
+          },
+          "Id_miembro": "624c655095d5e442fe097a00",
+          "Estado": "1"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "6269f84dcfc13c2d5b3e5dc8"
+      },
+      "Codigo": "b89858",
+      "FotoActividad": "624c566795d5e442fe0979fe - 1651111994966.jpg",
+      "Titulo": "Noche de Oración",
+      "Descripcion": "Este Jueves a las 20:00",
+      "Inicio": "2022-06-02",
+      "Fin": "2022-06-02",
+      "Departamento": "DEM",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "6269fb10cfc13c2d5b3e5e10"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        },
+        {
+          "_id": {
+            "$oid": "626a021ecfc13c2d5b3e6211"
+          },
+          "Id_miembro": "624c655095d5e442fe097a00",
+          "Estado": "2"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "6269f97bcfc13c2d5b3e5df0"
+      },
+      "Codigo": "60eeee",
+      "FotoActividad": "624c566795d5e442fe0979fe - 1651112314972.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Sábado 20:00 hrs por Zoom",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [
+        {
+          "_id": {
+            "$oid": "626a0098cfc13c2d5b3e607b"
+          },
+          "Fotos": "1651114135644.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a00accfc13c2d5b3e60a1"
+          },
+          "Fotos": "1651114155984.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a00c6cfc13c2d5b3e60c8"
+          },
+          "Fotos": "1651114181122.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a00dacfc13c2d5b3e60f0"
+          },
+          "Fotos": "1651114201345.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a00ebcfc13c2d5b3e6119"
+          },
+          "Fotos": "1651114218960.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a00f7cfc13c2d5b3e6143"
+          },
+          "Fotos": "1651114230537.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a010acfc13c2d5b3e616e"
+          },
+          "Fotos": "1651114249069.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "626a012ccfc13c2d5b3e61c7"
+          },
+          "Fotos": "1651114283373.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        }
+      ],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "6269fb13cfc13c2d5b3e5e12"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        },
+        {
+          "_id": {
+            "$oid": "626a022bcfc13c2d5b3e6213"
+          },
+          "Id_miembro": "624c655095d5e442fe097a00",
+          "Estado": "3"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "6269f9e0cfc13c2d5b3e5dfb"
+      },
+      "Codigo": "b9fa8a",
+      "FotoActividad": "624c566795d5e442fe0979fe - 1651112415450.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "¡Domingo 10:00 hrs, Te esperamos.!!",
+      "Inicio": "2022-06-05",
+      "Fin": "2022-06-05",
+      "Departamento": "DEM",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [
+        {
+          "_id": {
+            "$oid": "6269ff20cfc13c2d5b3e5f8d"
+          },
+          "Fotos": "1651113759087.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff3bcfc13c2d5b3e5fac"
+          },
+          "Fotos": "1651113786413.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff47cfc13c2d5b3e5fcc"
+          },
+          "Fotos": "1651113798600.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff51cfc13c2d5b3e5fed"
+          },
+          "Fotos": "1651113808227.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff6bcfc13c2d5b3e600f"
+          },
+          "Fotos": "1651113834533.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff79cfc13c2d5b3e6032"
+          },
+          "Fotos": "1651113848672.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        },
+        {
+          "_id": {
+            "$oid": "6269ff83cfc13c2d5b3e6056"
+          },
+          "Fotos": "1651113858710.jpg",
+          "Fecha": "2022-4-28",
+          "Miembro": "624c5aec95d5e442fe0979ff"
+        }
+      ],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "6269fb15cfc13c2d5b3e5e14"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        },
+        {
+          "_id": {
+            "$oid": "626a022ecfc13c2d5b3e6215"
+          },
+          "Id_miembro": "624c655095d5e442fe097a00",
+          "Estado": "2"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "63a333f20f919bd05e5816fd"
+      },
+      "Codigo": "dea219",
+      "FotoActividad": "undefined - 1671640049218.jpg",
+      "Titulo": "#CruzIgualCorazon",
+      "Descripcion": "Sábado 17:30 Hrs\r\nTe esperamos.!!",
+      "Inicio": "2023-12-02",
+      "Fin": "2023-12-03",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": [
+        {
+          "_id": {
+            "$oid": "641e24932cdcc0b6050e95a0"
+          },
+          "Id_miembro": "624c5aec95d5e442fe0979ff",
+          "Estado": "2"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "63a334a00f919bd05e581753"
+      },
+      "Codigo": "40eda9",
+      "FotoActividad": "undefined - 1671640223986.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "Domingo 10:00 Hrs.\r\n¡No faltes!",
+      "Inicio": "2023-12-03",
+      "Fin": "2023-12-04",
+      "Departamento": "Juvenil",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a335d30f919bd05e58179e"
+      },
+      "Codigo": "396c65",
+      "FotoActividad": "undefined - 1671640530667.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Este Sábado por Zoom",
+      "Inicio": "2023-12-09",
+      "Fin": "2023-12-09",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336480f919bd05e5817ee"
+      },
+      "Codigo": "c421fc",
+      "FotoActividad": "undefined - 1671640647401.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "Este viernes 17:00 Hrs\r\n¡Imperdible!",
+      "Inicio": "2023-12-15",
+      "Fin": "2023-12-15",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336f00f919bd05e581843"
+      },
+      "Codigo": "d12b7a",
+      "FotoActividad": "undefined - 1671640814912.jpg",
+      "Titulo": "Cena de Acción de Gracias",
+      "Descripcion": "Noche de Gala 180\r\nSábado 18:30 Hrs.",
+      "Inicio": "2023-12-23",
+      "Fin": "2023-12-23",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "641e26f22cdcc0b6050e95e8"
+      },
+      "Codigo": "ae8236",
+      "FotoActividad": "624c566795d5e442fe0979fe - 1679697649695.jpg",
+      "Titulo": "Prueba",
+      "Descripcion": "Test",
+      "Inicio": "2023-03-25",
+      "Fin": "2023-03-25",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    }
+  ],
+  "__v": 0,
+  "Correo": "info@boliviafe.org",
+  "Denominacion": "Pentecostal",
+  "Descripcion": "Queremos invitarte a formar parte del Ministerio La Palabra de Fé y disfrutar las muchas oportunidades que se presentan en esta obra para madurar espiritualmente y ser bendición para muchas personas.",
+  "Facebook": "https://www.facebook.com/minlpf/",
+  "Horario": "- 10:00 Culto Familiar presencial",
+  "Horario_Jueves": "- 20:30 Servicio de oración por zoom",
+  "Horario_Lunes": "- 20:00 Servicio de Discipulado",
+  "Horario_Martes": "- 20:00 servicio de Oración",
+  "Horario_Miercoles": "- 20:00 Estudio Bliblico",
+  "Horario_Sabado": "- 17:30 Jovenes 180 presencial",
+  "Horario_Viernes": "- 17:30 Teens 180 por zoom",
+  "Logo": "624c566795d5e442fe0979fe - 1650422110106.png",
+  "Mision": "Desarrollar y mantener un ambiente de comunión, unidad, paz y gozo en la presencia de Dios. Fortalecer familias y multiplicar creyentes preparados a través de discipulado, enseñanzas y entretenimiento, para juntos realizar la obra del ministerio con eficiencia, expresando el amor y el poder de Dios en acción.",
+  "NumeroCelular": "75465245",
+  "Pastores": "Entrenar a hombres y mujeres para la obra de ministerio, enfatizando la excelencia, la integridad y el equilibrio. Entre nuestros pastores tenemos a Gabriel Velasco, Jacobo Castro y Edson Jofre",
+  "ResSocial": "Realizar cultos efectivos, disfrutando un tiempo de adoración y música celestial con un sonido nítido, esforzándonos para transmitir el evangelio a los niños, jóvenes y adultos en una manera que transforma vidas. Cada culto con un propósito cierto y definido para proveer un programa completo, amplio y equilibrado.",
+  "Titulo_Descripcion": "Bienvenidos al Ministerio La Palabra de Fe",
+  "Vision": "Juntos presentar el Evangelio de Jesucristo a todas las personas en Bolivia y el Mundo."
+},{
+  "_id": {
+    "$oid": "624c75388bbc1944f84cdefd"
+  },
+  "Fotos": [
+    "624c75388bbc1944f84cdefd - 1663719326529.jpg",
+    "624c75388bbc1944f84cdefd - 1663719328215.jpg"
+  ],
+  "FotosSlider": [],
+  "Cargos": [],
+  "Nombre": "Sebastián Pagador",
+  "Direccion": "Plaza 10 de Febrero - Villa Pagador",
+  "Actividades": [
+    {
+      "_id": {
+        "$oid": "6269f695cfc13c2d5b3e5d96"
+      },
+      "Codigo": "279f04",
+      "FotoActividad": "undefined - 1651111570175.jpg",
+      "Titulo": "Reu de Jovenes",
+      "Descripcion": "#CruzIgualAmor | Sábado 17:30 Hrs",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "632a40bf98e233a88dc719a6"
+      },
+      "Codigo": "a9e81f",
+      "FotoActividad": "624c75388bbc1944f84cdefd - 1663713460488.jpg",
+      "Titulo": "Jovenes",
+      "Descripcion": "asdas",
+      "Inicio": "2022-09-21",
+      "Fin": "2022-09-30",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a333f20f919bd05e5816fe"
+      },
+      "Codigo": "dea219",
+      "FotoActividad": "undefined - 1671640049218.jpg",
+      "Titulo": "#CruzIgualCorazon",
+      "Descripcion": "Sábado 17:30 Hrs\r\nTe esperamos.!!",
+      "Inicio": "2023-12-02",
+      "Fin": "2023-12-03",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a334a00f919bd05e581754"
+      },
+      "Codigo": "40eda9",
+      "FotoActividad": "undefined - 1671640223986.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "Domingo 10:00 Hrs.\r\n¡No faltes!",
+      "Inicio": "2023-12-03",
+      "Fin": "2023-12-04",
+      "Departamento": "Juvenil",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a335d30f919bd05e58179f"
+      },
+      "Codigo": "396c65",
+      "FotoActividad": "undefined - 1671640530667.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Este Sábado por Zoom",
+      "Inicio": "2023-12-09",
+      "Fin": "2023-12-09",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336480f919bd05e5817ef"
+      },
+      "Codigo": "c421fc",
+      "FotoActividad": "undefined - 1671640647401.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "Este viernes 17:00 Hrs\r\n¡Imperdible!",
+      "Inicio": "2023-12-15",
+      "Fin": "2023-12-15",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336f00f919bd05e581844"
+      },
+      "Codigo": "d12b7a",
+      "FotoActividad": "undefined - 1671640814912.jpg",
+      "Titulo": "Cena de Acción de Gracias",
+      "Descripcion": "Noche de Gala 180\r\nSábado 18:30 Hrs.",
+      "Inicio": "2023-12-23",
+      "Fin": "2023-12-23",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    }
+  ],
+  "__v": 0,
+  "Correo": "",
+  "Denominacion": "Unión Cristiana Evangélica",
+  "Descripcion": "",
+  "Facebook": "",
+  "Horario": "",
+  "Horario_Jueves": "",
+  "Horario_Lunes": "",
+  "Horario_Martes": "",
+  "Horario_Miercoles": "",
+  "Horario_Sabado": "",
+  "Horario_Viernes": "",
+  "Logo": "624c75388bbc1944f84cdefd - 1651117752416.png",
+  "Mision": "Honrar a Dios evangelizando. discipulando y demostrando su amor a todo ser humano para que tengan vida nueva y estén preparados para toda buena obra.",
+  "NumeroCelular": "",
+  "Pastores": "",
+  "ResSocial": "",
+  "Titulo_Descripcion": "“SIRVIENDO AL SEÑOR DESDE 1945”",
+  "Vision": "Somos discipulos al servicio de Dios, desarrollando y aplicando dones y talentos e involucrados en el bienestar de la sociedad."
+},{
+  "_id": {
+    "$oid": "624cfca9f9d24e50030f72d9"
+  },
+  "Fotos": [],
+  "FotosSlider": [],
+  "Cargos": [],
+  "Nombre": "Monte de Sion",
+  "Direccion": "Cerro Verde",
+  "Actividades": [
+    {
+      "_id": {
+        "$oid": "6269f695cfc13c2d5b3e5d97"
+      },
+      "Codigo": "279f04",
+      "FotoActividad": "undefined - 1651111570175.jpg",
+      "Titulo": "Reu de Jovenes",
+      "Descripcion": "#CruzIgualAmor | Sábado 17:30 Hrs",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a333f20f919bd05e5816ff"
+      },
+      "Codigo": "dea219",
+      "FotoActividad": "undefined - 1671640049218.jpg",
+      "Titulo": "#CruzIgualCorazon",
+      "Descripcion": "Sábado 17:30 Hrs\r\nTe esperamos.!!",
+      "Inicio": "2023-12-02",
+      "Fin": "2023-12-03",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a334a00f919bd05e581755"
+      },
+      "Codigo": "40eda9",
+      "FotoActividad": "undefined - 1671640223986.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "Domingo 10:00 Hrs.\r\n¡No faltes!",
+      "Inicio": "2023-12-03",
+      "Fin": "2023-12-04",
+      "Departamento": "Juvenil",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a335d30f919bd05e5817a0"
+      },
+      "Codigo": "396c65",
+      "FotoActividad": "undefined - 1671640530667.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Este Sábado por Zoom",
+      "Inicio": "2023-12-09",
+      "Fin": "2023-12-09",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336480f919bd05e5817f0"
+      },
+      "Codigo": "c421fc",
+      "FotoActividad": "undefined - 1671640647401.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "Este viernes 17:00 Hrs\r\n¡Imperdible!",
+      "Inicio": "2023-12-15",
+      "Fin": "2023-12-15",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336f00f919bd05e581845"
+      },
+      "Codigo": "d12b7a",
+      "FotoActividad": "undefined - 1671640814912.jpg",
+      "Titulo": "Cena de Acción de Gracias",
+      "Descripcion": "Noche de Gala 180\r\nSábado 18:30 Hrs.",
+      "Inicio": "2023-12-23",
+      "Fin": "2023-12-23",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624cfccdf9d24e50030f72e4"
+  },
+  "Fotos": [],
+  "FotosSlider": [],
+  "Cargos": [],
+  "Nombre": "Mayorazgo",
+  "Direccion": "Av. Circunvalación esquina Ruben Dario",
+  "Actividades": [
+    {
+      "_id": {
+        "$oid": "6269f695cfc13c2d5b3e5d98"
+      },
+      "Codigo": "279f04",
+      "FotoActividad": "undefined - 1651111570175.jpg",
+      "Titulo": "Reu de Jovenes",
+      "Descripcion": "#CruzIgualAmor | Sábado 17:30 Hrs",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a333f20f919bd05e581700"
+      },
+      "Codigo": "dea219",
+      "FotoActividad": "undefined - 1671640049218.jpg",
+      "Titulo": "#CruzIgualCorazon",
+      "Descripcion": "Sábado 17:30 Hrs\r\nTe esperamos.!!",
+      "Inicio": "2023-12-02",
+      "Fin": "2023-12-03",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a334a00f919bd05e581756"
+      },
+      "Codigo": "40eda9",
+      "FotoActividad": "undefined - 1671640223986.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "Domingo 10:00 Hrs.\r\n¡No faltes!",
+      "Inicio": "2023-12-03",
+      "Fin": "2023-12-04",
+      "Departamento": "Juvenil",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a335d30f919bd05e5817a1"
+      },
+      "Codigo": "396c65",
+      "FotoActividad": "undefined - 1671640530667.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Este Sábado por Zoom",
+      "Inicio": "2023-12-09",
+      "Fin": "2023-12-09",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336480f919bd05e5817f1"
+      },
+      "Codigo": "c421fc",
+      "FotoActividad": "undefined - 1671640647401.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "Este viernes 17:00 Hrs\r\n¡Imperdible!",
+      "Inicio": "2023-12-15",
+      "Fin": "2023-12-15",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336f00f919bd05e581846"
+      },
+      "Codigo": "d12b7a",
+      "FotoActividad": "undefined - 1671640814912.jpg",
+      "Titulo": "Cena de Acción de Gracias",
+      "Descripcion": "Noche de Gala 180\r\nSábado 18:30 Hrs.",
+      "Inicio": "2023-12-23",
+      "Fin": "2023-12-23",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624f0b92f5ab996773accf9b"
+  },
+  "Fotos": [],
+  "FotosSlider": [],
+  "Cargos": [],
+  "Nombre": "La casa del Padre",
+  "Direccion": "Av. Ruben Dario",
+  "Actividades": [
+    {
+      "_id": {
+        "$oid": "6269f695cfc13c2d5b3e5d99"
+      },
+      "Codigo": "279f04",
+      "FotoActividad": "undefined - 1651111570175.jpg",
+      "Titulo": "Reu de Jovenes",
+      "Descripcion": "#CruzIgualAmor | Sábado 17:30 Hrs",
+      "Inicio": "2022-06-04",
+      "Fin": "2022-06-04",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a333f20f919bd05e581701"
+      },
+      "Codigo": "dea219",
+      "FotoActividad": "undefined - 1671640049218.jpg",
+      "Titulo": "#CruzIgualCorazon",
+      "Descripcion": "Sábado 17:30 Hrs\r\nTe esperamos.!!",
+      "Inicio": "2023-12-02",
+      "Fin": "2023-12-03",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a334a00f919bd05e581757"
+      },
+      "Codigo": "40eda9",
+      "FotoActividad": "undefined - 1671640223986.jpg",
+      "Titulo": "Culto Familiar",
+      "Descripcion": "Domingo 10:00 Hrs.\r\n¡No faltes!",
+      "Inicio": "2023-12-03",
+      "Fin": "2023-12-04",
+      "Departamento": "Juvenil",
+      "Area": "Educacion Cristiana",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a335d30f919bd05e5817a2"
+      },
+      "Codigo": "396c65",
+      "FotoActividad": "undefined - 1671640530667.jpg",
+      "Titulo": "Reunión de Matrimonios",
+      "Descripcion": "Este Sábado por Zoom",
+      "Inicio": "2023-12-09",
+      "Fin": "2023-12-09",
+      "Departamento": "Femenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336480f919bd05e5817f2"
+      },
+      "Codigo": "c421fc",
+      "FotoActividad": "undefined - 1671640647401.jpg",
+      "Titulo": "Noche de Chicos y Chicas",
+      "Descripcion": "Este viernes 17:00 Hrs\r\n¡Imperdible!",
+      "Inicio": "2023-12-15",
+      "Fin": "2023-12-15",
+      "Departamento": "Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    },
+    {
+      "_id": {
+        "$oid": "63a336f00f919bd05e581847"
+      },
+      "Codigo": "d12b7a",
+      "FotoActividad": "undefined - 1671640814912.jpg",
+      "Titulo": "Cena de Acción de Gracias",
+      "Descripcion": "Noche de Gala 180\r\nSábado 18:30 Hrs.",
+      "Inicio": "2023-12-23",
+      "Fin": "2023-12-23",
+      "Departamento": "Pre-Juvenil",
+      "Area": "Ministerial",
+      "Presupuesto": 0,
+      "FotosUsuario": [],
+      "AsistenciaActividad": []
+    }
+  ],
+  "__v": 0
+}]
