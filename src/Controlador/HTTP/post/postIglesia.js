@@ -136,7 +136,7 @@ function peticion() {
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
-                                notificarActividadNueva(actividad, "todos")
+                                notificarActividadNueva(io, actividad, "todos")
                             })
                         });
                         res.redirect("/admiCental");
@@ -182,7 +182,7 @@ function peticion() {
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, () => {
                             //console.log(iglesia.Actividades)
-                            notificarActividadNueva(actividad, iglesia._id)
+                            notificarActividadNueva(io, actividad, iglesia._id)
                             res.redirect("back")
                         })
                     })
@@ -223,6 +223,6 @@ function peticion() {
     }
 }
 
-function notificarActividadNueva(actividad, iglesia){
+function notificarActividadNueva(io, actividad, iglesia){
     io.sockets.emit("nuevaActividad:::"+iglesia, actividad);
 }
