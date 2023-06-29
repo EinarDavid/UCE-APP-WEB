@@ -3,8 +3,10 @@ module.exports = new peticion();
 
 function peticion() {
     this.rutas;
-    this.iniciar = (rutas, bd, ver) => {
+    this.io;
+    this.iniciar = (rutas, bd, ver, io) => {
         this.rutas = rutas;
+        this.io = io;
         this.funciones(bd, ver);
     }
     const fs = require("fs")
@@ -115,23 +117,26 @@ function peticion() {
                             if (igle.Actividades == undefined) {
                                 igle.Actividades = []
                             }
+                            const actividad = {
+                              Codigo: hash,
+                              FotoActividad:
+                                req.files.FotoActividad[0].filename,
+                              Titulo: req.body.Titulo,
+                              Descripcion: req.body.Descripcion,
+                              Inicio: req.body.Inicio,
+                              HoraInicio: req.body.HoraInicio,
+                              Fin: req.body.Fin,
+                              HoraFin: req.body.HoraFin,
+                              Departamento: req.body.Departamento,
+                              Area: req.body.Area,
+                              Presupuesto: req.body.Presupuesto,
+                            };
                             igle.Actividades.push(
-                                {
-                                    Codigo: hash,
-                                    FotoActividad: req.files.FotoActividad[0].filename,
-                                    Titulo: req.body.Titulo,
-                                    Descripcion: req.body.Descripcion,
-                                    Inicio: req.body.Inicio,
-                                    HoraInicio: req.body.HoraInicio,
-                                    Fin: req.body.Fin,
-                                    HoraFin: req.body.HoraFin,
-                                    Departamento: req.body.Departamento,
-                                    Area: req.body.Area,
-                                    Presupuesto: req.body.Presupuesto,
-                                }
+                                actividad
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
+                                notificarActividadNueva(actividad, "todos")
                             })
                         });
                         res.redirect("/admiCental");
@@ -159,24 +164,25 @@ function peticion() {
                         //console.log("----------------------------------Imagenes:------------------------------------")
                         //console.log("body:", req.body);
                         //console.log("files:", req.files);
+                        const actividad = {
+                          Codigo: hash,
+                          FotoActividad: req.files.FotoActividad[0].filename,
+                          Titulo: req.body.Titulo,
+                          Descripcion: req.body.Descripcion,
+                          Inicio: req.body.Inicio,
+                          HoraInicio: req.body.HoraInicio,
+                          Fin: req.body.Fin,
+                          HoraFin: req.body.HoraFin,
+                          Departamento: req.body.Departamento,
+                          Area: req.body.Area,
+                          Presupuesto: req.body.Presupuesto,
+                        };
                         iglesia.Actividades.push(
-                            {
-                                Codigo: hash,
-                                FotoActividad: req.files.FotoActividad[0].filename,
-                                Titulo: req.body.Titulo,
-                                Descripcion: req.body.Descripcion,
-                                Inicio: req.body.Inicio,
-                                HoraInicio: req.body.HoraInicio,
-                                Fin: req.body.Fin,
-                                HoraFin: req.body.HoraFin,
-                                Departamento: req.body.Departamento,
-                                Area: req.body.Area,
-                                Presupuesto: req.body.Presupuesto,
-                            }
+                          actividad  
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, () => {
                             //console.log(iglesia.Actividades)
-
+                            notificarActividadNueva(actividad, iglesia._id)
                             res.redirect("back")
                         })
                     })
@@ -186,6 +192,7 @@ function peticion() {
             });
 
         });
+        
 
         this.rutas.post("/Editar/Actividad/:id", (req, res) =>{
             try {
@@ -214,4 +221,8 @@ function peticion() {
             }
         })
     }
+}
+
+function notificarActividadNueva(actividad, iglesia){
+    io.sockets.emit("nuevaActividad:::"+iglesia, actividad);
 }

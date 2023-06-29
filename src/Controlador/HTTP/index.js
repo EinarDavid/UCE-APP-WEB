@@ -1,7 +1,7 @@
 //module.exports = rutas;
 //function rutas(bd)
 
-var ret = (passport) => {
+var ret = (passport, io) => {
 
   var bd = require('./../../Modelo/BD/bd.js');
   bd.iniciar();
@@ -217,7 +217,7 @@ var ret = (passport) => {
         datos.iglesias = iglesias;
 
         datos.user = req.user;
-        datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+        datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
         datos.Iglesia = igle;
         datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
         datos.Iglesia.Fotos = (datos.Iglesia.Fotos == undefined) ? [] : datos.Iglesia.Fotos;
@@ -249,7 +249,7 @@ var ret = (passport) => {
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
       datos.iglesias = iglesias;
       datos.user = req.user;
-      datos.user.FotoPerfil = (datos.user.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+      datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
       //console.log("Datos de iglesiaaaaaaaaaaaa", datos.iglesias)
 
       res.render("Paginas/index",
@@ -326,6 +326,10 @@ var ret = (passport) => {
     req.session.destroy();
     res.redirect("/");
   });
+
+  io.on("connection", function (socket) {
+    console.log("Alguien se ha conectado con Sockets");
+  });
   /*
       rutas.get("*",(req,res)=>
       {
@@ -344,7 +348,7 @@ var ret = (passport) => {
   require('./post/filtro/peticiones.js').iniciar(rutas, bd, ver);
   require('./post/reportes/peticiones.js').iniciar(rutas, bd, ver);
   //nuevos
-  require('./post/postIglesia.js').iniciar(rutas, bd, ver);
+  require('./post/postIglesia.js').iniciar(rutas, bd, ver, io);
   require('./post/postMembresia.js').iniciar(rutas, bd, ver);
 
   //Movile

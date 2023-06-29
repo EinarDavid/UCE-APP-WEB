@@ -11,12 +11,15 @@ var MongoDBStore = require('connect-mongodb-session')(session);
 
 var app = express();
 
+var server = require('http').Server(app);
+var io = require('socket.io').listen(server);
+
 var puerto = "7000";
 
 require('./Modelo/Autenticacion/local.js')(passport);
 
 var store = new MongoDBStore({
-  uri: 'mongodb://localhost:27017/iglesia',
+  uri: 'mongodb://127.0.0.1:27017/iglesia',
   collection: 'mySessions'
 });
 
@@ -42,7 +45,11 @@ app.use(express.static(path.join(__dirname,"../public")));
 
 app.use(cookieParser());
 
-mongoose.connect('mongodb://localhost/iglesia')
+mongoose.connect('mongodb://localhost:27017/iglesia',{
+  useNewUrlParser: true, 
+  useUnifiedTopology: true,
+  family: 4,
+})
 .then(db => console.log('db connected'))
 .catch(err => console.log(err));
 
@@ -81,9 +88,9 @@ app.use((req, res, next) => {
 //app.use(favicon(path.join(__dirname,'public','img','favicon2.ico')));
 
 var rutas = require('./Controlador/HTTP/index.js');
-app.use(rutas(passport));
+app.use(rutas(passport, io));
 
-app.listen(puerto, ()=>
+server.listen(puerto, ()=>
 //app.listen(4000, ()=>
 {
   console.log("Servidor lanzado en el puerto:",puerto);
