@@ -7,10 +7,10 @@ function peticion() {
     this.iniciar = (rutas, bd, ver, io) => {
         this.rutas = rutas;
         this.io = io;
-        this.funciones(bd, ver);
+        this.funciones(bd, ver, io);
     }
     const fs = require("fs")
-    this.funciones = (bd, ver) => {
+    this.funciones = (bd, ver, io) => {
         const multer = require('multer');
         var ruta = "./public/fotos/Iglesias/";
         var ruta2 = "./public/fotos/Iglesias/Actividad";
@@ -136,7 +136,7 @@ function peticion() {
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
-                                notificarActividadNueva(this.io, actividad, "todos")
+                                notificarActividadNueva(io, actividad, "todos")
                             })
                         });
                         res.redirect("/admiCental");
@@ -182,7 +182,7 @@ function peticion() {
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, () => {
                             //console.log(iglesia.Actividades)
-                            notificarActividadNueva(this.io, actividad, iglesia._id)
+                            notificarActividadNueva(io, actividad, iglesia._id)
                             res.redirect("back")
                         })
                     })
