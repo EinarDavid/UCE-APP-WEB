@@ -136,7 +136,7 @@ function peticion() {
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
-                                notificarActividadNueva(io, actividad, "todos")
+                                notificarActividadNueva(this.io, actividad, "todos")
                             })
                         });
                         res.redirect("/admiCental");
@@ -182,7 +182,7 @@ function peticion() {
                         )
                         bd.cruds.crudIglesia.modificar(req.user.Iglesia, iglesia, () => {
                             //console.log(iglesia.Actividades)
-                            notificarActividadNueva(io, actividad, iglesia._id)
+                            notificarActividadNueva(this.io, actividad, iglesia._id)
                             res.redirect("back")
                         })
                     })
