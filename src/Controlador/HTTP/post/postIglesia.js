@@ -136,7 +136,7 @@ function peticion() {
                             )
                             bd.cruds.crudIglesia.modificar(igle._id, igle, () => {
                                 console.log(igle.Actividades)
-                                notificarActividadNueva(io, actividad, "todos")
+                                notificarActividadNueva(io, actividad, igle._id)
                             })
                         });
                         res.redirect("/admiCental");
