@@ -40,7 +40,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "node src/isp.js",
+    "start": "node src/server.js",
     "compilar": "webpack --mode development --watch",
     "ini": "nodemon src/isp.js",
     "testear": "jest"
