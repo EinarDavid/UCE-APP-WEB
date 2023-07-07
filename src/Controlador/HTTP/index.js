@@ -249,7 +249,7 @@ var ret = (passport, io) => {
     bd.cruds.crudIglesia.buscar({}, (iglesias) => {
       datos.iglesias = iglesias;
       datos.user = req.user;
-      datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+      datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user?.FotoPerfil;
       //console.log("Datos de iglesiaaaaaaaaaaaa", datos.iglesias)
 
       res.render("Paginas/index",

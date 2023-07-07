@@ -241,8 +241,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Bautizo />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -256,8 +256,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Tranferencia />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -271,8 +271,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Solicitud />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -286,8 +286,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Tranferida />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -301,8 +301,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Disciplina />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -316,8 +316,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Restauracion />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -331,8 +331,8 @@ class Menu_Admi extends React.Component {
                             <Registro_SC />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -346,8 +346,8 @@ class Menu_Admi extends React.Component {
                             <Registro_niños />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -361,8 +361,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Matrimonio />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -376,8 +376,8 @@ class Menu_Admi extends React.Component {
                             <Registro_Usario />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -408,7 +408,7 @@ class Menu_Admi extends React.Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
                             <Button type="submit" variant="outline-primary">Search</Button>
                         </Modal.Footer>
                     </Form>
@@ -445,7 +445,7 @@ class Menu_Admi extends React.Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
                             <Button type="submit" variant="outline-primary">Search</Button>
                         </Modal.Footer>
                     </Form>
@@ -477,7 +477,7 @@ class Menu_Admi extends React.Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
                             <Button type="submit" variant="outline-primary">Search</Button>
                         </Modal.Footer>
                     </Form>
@@ -509,7 +509,7 @@ class Menu_Admi extends React.Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
                             <Button type="submit" variant="outline-primary">Search</Button>
                         </Modal.Footer>
                     </Form>
@@ -541,7 +541,7 @@ class Menu_Admi extends React.Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
                             <Button type="submit" variant="outline-primary">Search</Button>
                         </Modal.Footer>
                     </Form>
@@ -556,8 +556,8 @@ class Menu_Admi extends React.Component {
                             <EditarInformacion />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose}>Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose}>Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -571,8 +571,8 @@ class Menu_Admi extends React.Component {
                             <ModificarInformacion />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -585,8 +585,8 @@ class Menu_Admi extends React.Component {
                             <RegistrarActividad/>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>            

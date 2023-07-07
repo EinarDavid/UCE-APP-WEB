@@ -64,11 +64,11 @@ class RegistrarActividad extends Component {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Hora Inicio</Form.Label>
-            <Form.Control type="date" name="HoraInicio" required />
+            <Form.Control type="time" name="HoraInicio" required />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Hora Fin</Form.Label>
-            <Form.Control type="date" name="HoraFin" required />
+            <Form.Control type="time" name="HoraFin" required />
           </Form.Group>
         </Form.Row>
 

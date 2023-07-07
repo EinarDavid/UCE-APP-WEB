@@ -116,8 +116,8 @@ class Menu extends React.Component {
                             <Reg_Iglesia></Reg_Iglesia>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -130,8 +130,8 @@ class Menu extends React.Component {
                             <Reg_Encargado></Reg_Encargado>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -145,8 +145,8 @@ class Menu extends React.Component {
                             <ModificarInformacion />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
@@ -163,8 +163,8 @@ class Menu extends React.Component {
                             <RegistrarActividad />
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={this.handleClose} >Close</Button>
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button variant="secondary" onClick={this.handleClose} >Cerrar</Button>
+                            <Button variant="primary" type="submit">Enviar</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal>
