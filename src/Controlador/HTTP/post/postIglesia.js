@@ -68,7 +68,7 @@ function peticion() {
                     if (req.files.FotosSlider != undefined && req.body.MantenerFotosSlider != 'on')
                         req.body.FotosSlider = req.files.FotosSlider.map((a) => { return a.filename });
                     //console.log("----------------------------------Imagenes:------------------------------------")
-                    //console.log("body:", req.body);
+                    console.log("body:", req.body);
                     //console.log("files:", req.files);
                     bd.cruds.crudIglesia.modificar(req.user.Iglesia, req.body, () => {
                         res.redirect("back");

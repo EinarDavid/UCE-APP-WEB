@@ -58,6 +58,8 @@ const membresiaSchema = Schema({
     Cargo: String, //combobox
     Cargo_Ministerial: String,
     Fecha_Bautizo: String,
+    Latitud:String,
+    Longitud:String,
     MiembroSolicitud: miembrosolicitudSchema,
     Matrimonio: matrimonioSchema,
     MiembroBautizo: miembrobautizoSchema,

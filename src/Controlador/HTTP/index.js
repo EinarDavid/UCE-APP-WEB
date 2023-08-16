@@ -217,7 +217,7 @@ var ret = (passport, io) => {
         datos.iglesias = iglesias;
 
         datos.user = req.user;
-        datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user.FotoPerfil;
+        datos.user.FotoPerfil = (datos.user?.FotoPerfil == undefined) ? "IconoPersona.jpg" : datos.user?.FotoPerfil;
         datos.Iglesia = igle;
         datos.Iglesia.Logo = (datos.Iglesia.Logo == undefined) ? "Iglesia.png" : datos.Iglesia.Logo;
         datos.Iglesia.Fotos = (datos.Iglesia.Fotos == undefined) ? [] : datos.Iglesia.Fotos;

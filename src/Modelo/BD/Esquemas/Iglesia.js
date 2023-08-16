@@ -39,6 +39,9 @@ const actividadSchema = Schema({
 const iglesiaSchema = Schema({
     Nombre: String,
     Direccion: String,
+    Latitud: String,
+    Longitud: String,
+    
     Logo: String,
     
     Fotos: [String],

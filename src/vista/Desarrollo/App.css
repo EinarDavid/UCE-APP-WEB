@@ -2,6 +2,40 @@
 @import '~@fullcalendar/daygrid/main.css';
 @import '~@fullcalendar/timegrid/main.css';
 
+/* Mapa */
+.map-container {
+  height: 300px;
+  border-radius: 16px;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+  }
+
+  .coordinates {
+
+    background: rgba(0, 0, 0, 0.5);
+    color: #000000;
+    position: relative;
+    bottom: 40px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+    }
+
 .demo-app {
   /*font-family: Arial, Helvetica Neue, Helvetica, sans-serif;*/
   font-size: 14px;
@@ -971,6 +1005,10 @@ text-align: left;
   
   background: rgb(0, 83, 128);
   width: 100%;
+  min-height: auto;
+  /* height: 100vh; */
+  /* overflow-x: scroll; */
+  
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;

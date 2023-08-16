@@ -4,6 +4,7 @@ import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tool
 import { GraficoActividad } from './GraficoActividad';
 
 import './FiltroIglesia.css';
+import Mapa from './Mapa';
 
 
 
@@ -86,8 +87,8 @@ export const FiltroIglesia = () => {
     const dataGrafico = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 },];
     const columnas = window.datos.iglesias[0];
 
-    const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Denominacion"];
-    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', 'Profesión', 'C.I.', 'Miembro por'];
+    const columnasFiltradas = ['Nombre', 'Cant. Miembros', 'Direccion', "Correo", "Facebook", "WhatsApp", "Ubicación","Denominacion"];
+    const columnasMiembros = ['Nro', 'Iglesia', 'Nombre', 'Apellidos', 'Contacto', "Ubicación", 'Profesión', 'C.I.', 'Miembro por'];
 
     const DescargarExcel = () => {
         const XLSX = require('xlsx')
@@ -228,7 +229,7 @@ export const FiltroIglesia = () => {
 
     }
     //this.columnas = Object.getOwnPropertyNames(this.state.iglesias[0]);
-
+console.log("LISTAS------------",listaVisible, listaVisibleMiembros)
     return (
         <div>
             <br />
@@ -292,8 +293,6 @@ export const FiltroIglesia = () => {
                                         listaVisible.map((igle, index) => {
                                             // console.log('-------', igle.Facebook)
                                             // console.log('-------Iglesia', igle)
-                                            // 
-                                            // 
                                             return (
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
@@ -303,6 +302,7 @@ export const FiltroIglesia = () => {
                                                     <td>{(igle.Correo != null && igle.Correo != '') ? (<a href={`mailto:${igle.Correo}`}><img src={'/Icons/mail.svg'} width={30} /></a>) : ('')}</td>
                                                     <td>{(igle.Facebook != null && igle.Facebook != '') ? (<a href={igle.Facebook}><img src={'/Icons/facebook.svg'} width={30} /></a>) : ('')}</td>
                                                     <td>{(igle.NumeroCelular != null && igle.NumeroCelular != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${igle.NumeroCelular}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
+                                                    <td>{(igle.Latitud != null && igle.Latitud != '') ? (<a href={`https://www.google.com/maps?q=${igle.Latitud},${igle.Longitud}`}><img src={'/Icons/ubicacion.svg'} width={30} /></a>):('')}</td>
                                                     <td>{igle.Denominacion}</td>
 
                                                 </tr>
@@ -315,6 +315,7 @@ export const FiltroIglesia = () => {
                                 </tbody>
                             </Table>
                         ) : (busquedaSeleccionada === 1) ? (
+
                             <Table responsive striped hover>
                                 <thead>
                                     <tr>
@@ -330,7 +331,7 @@ export const FiltroIglesia = () => {
 
                                     {
                                         listaVisibleMiembros.map((miembro, index) => {
-                                            // console.log('-------', miembro)
+                                             //console.log('Miembros-------', miembro)
                                             // console.log('-------membresia', miembro)
                                             // 
                                             // 
@@ -341,6 +342,7 @@ export const FiltroIglesia = () => {
                                                     <td>{miembro.Nombre}</td>
                                                     <td>{((miembro.Apellido_Paterno != undefined) ? (miembro.Apellido_Paterno + ' ') : ('')) + ((miembro.Apellido_Materno != undefined) ? (miembro.Apellido_Materno) : (''))}</td>
                                                     <td>{(miembro.Contacto != null && miembro.Contacto != '') ? (<a href={`https://api.whatsapp.com/send?phone=591${miembro.Contacto}`}><img src={'/Icons/whatsapp.svg'} width={30} /></a>) : ('')}</td>
+                                                    <td>{(miembro.Latitud != null && miembro.Latitud != '') ? (<a href={`https://www.google.com/maps?q=${miembro.Latitud},${miembro.Longitud}`}><img src={'/Icons/ubicacion.svg'} width={30} /></a>):('')}</td>
                                                     <td>{miembro.Profesion}</td>
                                                     <td>{miembro.Ci}</td>
                                                     <td>{miembro.MiembroPor}</td>
@@ -353,6 +355,9 @@ export const FiltroIglesia = () => {
 
                                 </tbody>
                             </Table>
+                                
+                            
+                            
                         ) : (<div>
                             <h1>Hola</h1>
                         </div>)
@@ -377,6 +382,22 @@ export const FiltroIglesia = () => {
 
                     }
                 </div>
+
+                {
+                 (busquedaSeleccionada === 0) ? (
+                    
+                        <Mapa Location={listaVisible}/>
+                    
+                ) : (busquedaSeleccionada === 1) ? (
+                   
+                        <Mapa Location={listaVisibleMiembros}/>
+                    
+                ) : (
+                    <div>
+                        <h1>Busqueda seleccionada es distinto de 0 y 1</h1>
+                    </div>
+                )   
+                }
             </div>
 
         </div>

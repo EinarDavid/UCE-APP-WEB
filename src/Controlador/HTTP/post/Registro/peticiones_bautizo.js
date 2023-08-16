@@ -39,7 +39,7 @@ function peticion() {
                     req.body.MiembroBautizo = {};
                     // req.body.MiembroBautizo.Fecha_Bautizo = req.body.Fecha_Bautizo;
                     req.body.MiembroBautizo.Lugar_Bautizo = req.body.Lugar_Bautizo;
-                    console.log("--------------------Files-------------------",req.files)
+                    //console.log("--------------------Files-------------------",req.files)
                     if (req.files.Imagen_Membresia != undefined) {
                         var Imagen_Membresia = req.files.Imagen_Membresia[0].filename;
                     }
@@ -56,6 +56,7 @@ function peticion() {
                     req.body.FotoPerfil= FotoPerfil;
                     req.body.Imagen_Membresia = Imagen_Membresia;
                     req.body.Iglesia = req.user.Iglesia;
+                    //console.log("Datos Membresia----------------", req.body.Latitud)
 
                     bd.cruds.crudMembresias.buscar({ Ci: { valor: req.body.Ci, tipo: "igual" } }, (membresia) => {
                         console.log("Membresia nueva ---------------------------------------------", membresia);
@@ -76,7 +77,6 @@ function peticion() {
                                     });
                                 })
                             });
-
                         }
                     });
                 }
