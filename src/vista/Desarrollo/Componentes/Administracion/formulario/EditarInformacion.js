@@ -7,11 +7,19 @@ mapboxgl.accessToken =
 
 
 class Formulario extends Component {
+ 
   constructor() {
     super();
+    var Lng = -66.1599;
+    var Lat =-17.379;
+
+    if(window.datos.Iglesia.Longitud != undefined){
+      Lng = window.datos.Iglesia.Longitud;
+      Lat = window.datos.Iglesia.Latitud;
+    }
     this.state = {
-      lng: window.datos.Iglesia.Longitud,
-      lat: window.datos.Iglesia.Latitud,
+      lng: Lng,
+      lat: Lat,
       zoom: 12,
     };
     this.mapContainer = React.createRef();
