@@ -155,7 +155,7 @@ class Formulario extends Component {
 
                                                 <Button onClick={(e) => { console.log("i", i); this.handleShow_EditarPerfil(i) }}>EDIT </Button>
 
-                                            </h4>
+                                            </h4> 
                                         </td>
                                     </tr>
                                 )

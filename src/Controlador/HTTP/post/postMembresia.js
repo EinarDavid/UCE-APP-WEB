@@ -72,6 +72,8 @@ function peticion() {
                         nuevo.Profesion= req.body.Profesion;
                         nuevo.Direccion = req.body.Direccion;
                         nuevo.Estado_Civil = req.body.Estado_Civil;
+                        nuevo.Latitud = req.body.Latitud;
+                        nuevo.Longitud = req.body.Longitud;
                         
                         //var nuevo = {...resu, ...req.body}
                       //Probas con 3 puntos
