@@ -1,13 +1,16 @@
 import React, { createRef, useRef, useState } from "react";
-import { Table, Form, Col, Button } from "react-bootstrap";
+import { Table, Form, Col, Button, Modal } from "react-bootstrap";
+import ModificarInformacion from '../../Usuario/ModificarInformacionUser';
 
 import "./FiltroIglesia.css";
 import Mapa from "./Mapa";
+import { useEffect } from "react";
 
 export const FiltroMembresias = () => {
   const membresias = window.datos.membresias;
 
-  console.log("User....", window.datos.user);
+  const [show, setShow] = useState(false)
+  const [position, setPosition] = useState(0)
 
   var TotalMiembros = 0;
   const MiembrosIglesia = [];
@@ -147,7 +150,20 @@ export const FiltroMembresias = () => {
     XLSX.writeFile(wb, "Membresias.xlsx");
   };
 
-  console.log("----------Membresias", MiembrosIglesia);
+  const handleShow_EditarPerfil = (i) => {
+    setShow(true)
+    setPosition(i)
+  };
+
+  const handleClose = () => {
+    setShow(false)
+    setPosition(0)
+  }
+
+  useEffect(() => {
+    window.datos.original = listaVisibleMiembros;
+  }, [listaVisibleMiembros])
+  
 
   return (
     <div>
@@ -239,10 +255,32 @@ export const FiltroMembresias = () => {
                       ""
                     )}
                   </td>
-                  <td>{(miembro.Latitud != null && miembro.Latitud != '') ? (<a href={`https://www.google.com/maps?q=${miembro.Latitud},${miembro.Longitud}`}><img src={'/Icons/ubicacion.svg'} width={30} /></a>):('')}</td>
+                  <td>
+                    {miembro.Latitud != null && miembro.Latitud != "" ? (
+                      <a
+                        href={`https://www.google.com/maps?q=${miembro.Latitud},${miembro.Longitud}`}
+                      >
+                        <img src={"/Icons/ubicacion.svg"} width={30} />
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                  </td>
                   <td>{miembro.Profesion}</td>
                   <td>{miembro.Ci}</td>
                   <td>{miembro.MiembroPor}</td>
+                  <td>
+                    <h4 className="accion">
+                      <Button
+                        onClick={(e) => {
+                          //console.log("i", i);
+                          handleShow_EditarPerfil(index);
+                        }}
+                      >
+                        EDIT
+                      </Button>
+                    </h4>
+                  </td>
                 </tr>
               );
             })}
@@ -259,9 +297,38 @@ export const FiltroMembresias = () => {
           </Button>
         </div>
       </div>
-      
+
       <Mapa Location={MiembrosIglesia} />
 
+      {
+        (listaVisibleMiembros[position] != undefined) ? (<Modal
+          size="lg"
+          show={show}
+          onHide={(e) => handleClose()}
+          centered
+        >
+          <Form
+            action={"/Modificar/Membresia/user/" + listaVisibleMiembros[position].Ci}
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Modificar perfil</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <ModificarInformacion id={position} />
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={(e) => handleClose()}>
+                Close
+              </Button>
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Modal.Footer>
+          </Form>
+        </Modal>) : (<p></p>)
+      }
     </div>
   );
 };

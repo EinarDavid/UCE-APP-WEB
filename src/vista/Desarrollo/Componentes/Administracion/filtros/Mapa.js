@@ -43,7 +43,7 @@ class Mapa extends Component {
     });
 
     map.on("load", () => {
-      console.log("#########################")
+      //console.log("#########################")
       map.on("move", () => {
         this.setState({
           lng: map.getCenter().lng.toFixed(4),
@@ -63,7 +63,7 @@ class Mapa extends Component {
 
       this.state.Location.map((user) => {
         if (user.Latitud != undefined && user.Longitud != undefined) {
-          console.log("User-------", user.Latitud, user.Longitud, user.Nombre);
+          //console.log("User-------", user.Latitud, user.Longitud, user.Nombre);
             var NombreCompleto=""
           if(user.Ci != undefined){
             NombreCompleto =user.Nombre +" " +user.Apellido_Paterno + " " +user.Apellido_Materno;
