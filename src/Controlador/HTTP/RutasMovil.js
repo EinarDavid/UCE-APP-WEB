@@ -52,21 +52,30 @@ function peticion() {
         this.rutas.get("/FotoPerfil/:foto", (req, res) => {
             var nombre = req.params.foto;
             var path = require("path");
-            console.log("ññññññññññññññññññññ", nombre);
-            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", path.resolve(__dirname, '/public/fotos/Membresias/', nombre), __dirname, '/public/fotos/Membresias/', nombre)
+            //console.log("ññññññññññññññññññññ", nombre);
+            //console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", path.resolve(__dirname, '/public/fotos/Membresias/', nombre), __dirname, '/public/fotos/Membresias/', nombre)
             res.sendFile(path.resolve('./public/fotos/Membresias/', nombre))
         })
         this.rutas.post("/VerDatosIglesia", (req, res) => {
             bd.cruds.crudIglesia.buscar1(req.body.idIglesia, (igle) => {
-                console.log("Datos Iglesia: ", igle);
+                //console.log("Datos Iglesia: ", igle);
                 res.json(igle);
             })
         });
+
+        this.rutas.get("/AllIglesia", (req, res) => {
+            bd.cruds.crudIglesia.buscar({}, (todos) => {
+                //console.log("Iglesia: ", todos);
+                res.json(todos);
+            })
+        });
+
+
         this.rutas.post("/Movile/ModMembresia/:id", (req, res) => {
 
             const id = req.params.id;
             //delete req.body.id;
-            console.log("body:", req.body, id);
+            //console.log("body:", req.body, id);
             bd.cruds.crudMembresias.modificar(id, req.body, () => {
                 var mensage = 'Guardado Correctamente';
                 bd.cruds.crudMembresias.buscar1(id, (usuario) => {
