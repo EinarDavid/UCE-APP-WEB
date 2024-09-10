@@ -61,7 +61,14 @@ class Formulario extends Component {
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>CI*</Form.Label>
-              <Form.Control type="number" placeholder="CI" name="Ci" required />
+              <Form.Control
+                type="number"
+                placeholder="CI"
+                name="Ci"
+                required
+                pattern="^\d+$"
+                title="El campo solo puede contener números"
+              />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Contraseña</Form.Label>
@@ -70,6 +77,8 @@ class Formulario extends Component {
                 placeholder="Contraseña"
                 name="Contraseña"
                 required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Debe contener al menos un número, una letra mayúscula, una letra minúscula y al menos 8 caracteres"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridPassword">
@@ -79,6 +88,8 @@ class Formulario extends Component {
                 placeholder="Nombre"
                 name="Nombre"
                 required
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+                title="El nombre solo puede contener letras y espacios"
               />
             </Form.Group>
           </Form.Row>
@@ -90,6 +101,8 @@ class Formulario extends Component {
                 placeholder="Apellido Paterno"
                 name="Apellido_Paterno"
                 required
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$"
+                title="El apellido solo puede contener letras sin espacios"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
@@ -98,6 +111,8 @@ class Formulario extends Component {
                 type="text"
                 placeholder="Apellido Materno"
                 name="Apellido_Materno"
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$"
+                title="El apellido solo puede contener letras sin espacios"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
@@ -115,15 +130,29 @@ class Formulario extends Component {
                 type="number"
                 placeholder="Celular"
                 name="Contacto"
+                pattern="^\d+$"
+                title="El campo solo puede contener números"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Email" name="Email" />
+              <Form.Control
+                type="email"
+                placeholder="Email"
+                name="Email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Ingresa un correo electrónico válido"
+              />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Fecha_de_nacimiento</Form.Label>
-              <Form.Control type="date" name="Fecha_Nacimiento" />
+              <Form.Control
+                type="date"
+                name="Fecha_Nacimiento"
+                min="1924-01-01"
+                max="2024-09-11"
+                title="Debes tener entre 100 y 0 años"
+              />
             </Form.Group>
           </Form.Row>
           <Form.Row>
@@ -133,6 +162,8 @@ class Formulario extends Component {
                 type="text"
                 placeholder="Lugar de nacimiento"
                 name="Lugar_Nacimiento"
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+                title="El campo solo puede contener letras y espacios"
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
@@ -144,19 +175,21 @@ class Formulario extends Component {
               />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Profesión</Form.Label>
+              <Form.Label>Profesión*</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Profesion"
+                placeholder="Profesión"
                 name="Profesion"
                 required
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+                title="El campo solo puede contener letras y espacios"
               />
             </Form.Group>
           </Form.Row>
           <Form.Label>Dirección</Form.Label>
-        
-            <div ref={this.mapContainer} className="map-container" />
-          
+
+          <div ref={this.mapContainer} className="map-container" />
+
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Latitud</Form.Label>
@@ -217,8 +250,15 @@ class Formulario extends Component {
           </Form.Row>
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Fecha_Bautizo</Form.Label>
-              <Form.Control type="date" name="Fecha_Bautizo" required />
+              <Form.Label>Fecha_Bautizo*</Form.Label>
+              <Form.Control
+                type="date"
+                name="Fecha_Bautizo"
+                required
+                min="1924-01-01"
+                max="2024-09-10"
+                title="Debes ser menor a la fecha actual"
+              />
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Lugar Bautizo</Form.Label>
@@ -226,6 +266,8 @@ class Formulario extends Component {
                 type="text"
                 placeholder="Lugar Bautizo"
                 name="Lugar_Bautizo"
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+                title="El campo solo puede contener letras y espacios"
               />
             </Form.Group>
           </Form.Row>

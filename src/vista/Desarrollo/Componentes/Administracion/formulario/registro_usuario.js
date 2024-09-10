@@ -1,41 +1,41 @@
-import React, { Component } from 'react';
-import { Form, Col } from 'react-bootstrap';
-
-
+import React, { Component } from "react";
+import { Form, Col } from "react-bootstrap";
 
 class Formulario extends Component {
-    constructor() {
-        super();
-        this.state = {
-            cargos: window.datos.cargos
-        };
-    }
-    render() {
-        return (
-
-            <div className="Form-registro">
-
-                <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>CI*</Form.Label>
-                        <Form.Control type="number" placeholder="CI" name="Ci" required />
-                    </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
-                        <Form.Label>Cargo</Form.Label>
-                        <Form.Control as="select" name="Cargo">
-                            <option value="Pastor">Pastor</option>
-                            <option value="Administrador">Administrador@</option>
-                            
-                        </Form.Control>
-                    </Form.Group>
-                </Form.Row>
-
-
-            </div>
-        );
-    }
+  constructor() {
+    super();
+    this.state = {
+      cargos: window.datos.cargos,
+    };
+  }
+  render() {
+    return (
+      <div className="Form-registro">
+        <Form.Row>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>CI*</Form.Label>
+            <Form.Control
+              type="number"
+              placeholder="CI"
+              name="Ci"
+              required
+              pattern="^\d+$"
+              title="El campo solo puede contener números"
+            />
+          </Form.Group>
+        </Form.Row>
+        <Form.Row>
+          <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
+            <Form.Label>Cargo</Form.Label>
+            <Form.Control as="select" name="Cargo">
+              <option value="Pastor">Pastor</option>
+              <option value="Administrador">Administrador@</option>
+            </Form.Control>
+          </Form.Group>
+        </Form.Row>
+      </div>
+    );
+  }
 }
 export default Formulario;
 

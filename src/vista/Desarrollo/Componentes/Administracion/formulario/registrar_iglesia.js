@@ -64,6 +64,8 @@ class Formulario extends Component {
               placeholder="Nombre*"
               name="Nombre"
               required
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+              title="El nombre solo puede contener letras y espacios"
             />
           </Form.Group>
         </Form.Row>

@@ -13,6 +13,8 @@ class RegistrarActividad extends Component {
               placeholder="Titulo*"
               name="Titulo"
               required
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+              title="El campo solo puede contener letras y espacios"
             />
           </Form.Group>
           <Form.Group as={Col}>
@@ -23,6 +25,8 @@ class RegistrarActividad extends Component {
               placeholder="Descripcion"
               name="Descripcion"
               required
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+              title="El campo solo puede contener letras y espacios"
             />
           </Form.Group>
         </Form.Row>
@@ -52,12 +56,14 @@ class RegistrarActividad extends Component {
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Fecha Inicio</Form.Label>
-            <Form.Control type="date" name="Inicio" required />
+            <Form.Label>Fecha Inicio*</Form.Label>
+            <Form.Control type="date" name="Inicio" required min="2024-09-10"
+                title="Debes ser mayor o igual a la fecha actual" />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Fecha Fin</Form.Label>
-            <Form.Control type="date" name="Fin" required />
+            <Form.Label>Fecha Fin*</Form.Label>
+            <Form.Control type="date" name="Fin" required min="2024-09-10"
+                title="Debes ser mayor o igual a la fecha actual" />
           </Form.Group>
         </Form.Row>
 
@@ -74,7 +80,7 @@ class RegistrarActividad extends Component {
 
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Foto de la Actividad</Form.Label>
+            <Form.Label>Foto de la Actividad*</Form.Label>
             <Form.Control
               type="file"
               accept="image/*"
@@ -83,12 +89,14 @@ class RegistrarActividad extends Component {
             />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Presupuesto</Form.Label>
+            <Form.Label>Presupuesto*</Form.Label>
             <Form.Control
               type="number"
               placeholder="Presupuesto"
               name="Presupuesto"
               required
+              pattern="^\d+$"
+                title="El campo solo puede contener números"
             />
           </Form.Group>
         </Form.Row>
