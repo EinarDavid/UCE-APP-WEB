@@ -277,7 +277,7 @@ export const FiltroMembresias = () => {
                           handleShow_EditarPerfil(index);
                         }}
                       >
-                        EDIT
+                        Editar
                       </Button>
                     </h4>
                   </td>
@@ -320,10 +320,10 @@ export const FiltroMembresias = () => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={(e) => handleClose()}>
-                Close
+                Cerrar
               </Button>
               <Button variant="primary" type="submit">
-                Submit
+                Enviar
               </Button>
             </Modal.Footer>
           </Form>

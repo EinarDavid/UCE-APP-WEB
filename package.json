@@ -42,7 +42,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "node src/server.js",
-    "compilar": "webpack --mode development --watch",
+    "compilar": "webpack --mode development --watch --openssl-legacy-provider",
     "ini": "nodemon src/isp.js",
     "testear": "jest"
   },

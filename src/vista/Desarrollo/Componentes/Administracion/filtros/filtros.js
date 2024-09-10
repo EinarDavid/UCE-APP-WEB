@@ -153,7 +153,7 @@ class Formulario extends Component {
                                         <td>
                                             <h4 className="accion">
 
-                                                <Button onClick={(e) => { console.log("i", i); this.handleShow_EditarPerfil(i) }}>EDIT </Button>
+                                                <Button onClick={(e) => { console.log("i", i); this.handleShow_EditarPerfil(i) }}>Editar</Button>
 
                                             </h4> 
                                         </td>
@@ -179,8 +179,8 @@ class Formulario extends Component {
                                         <ModificarInformacion id={i} />
                                     </Modal.Body>
                                     <Modal.Footer>
-                                        <Button variant="secondary" onClick={(e) => this.handleClose(i)} >Close</Button>
-                                        <Button variant="primary" type="submit">Submit</Button>
+                                        <Button variant="secondary" onClick={(e) => this.handleClose(i)} >Cerrar</Button>
+                                        <Button variant="primary" type="submit">Enviar</Button>
                                     </Modal.Footer>
                                 </Form>
                             </Modal>
